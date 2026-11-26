@@ -1,0 +1,1 @@
+{"technical_tables":14,"business_tables":24,"technical_foreign_keys":19,"verified_at":"2026-11-26T02:53:04.983762500Z","application_references":12,"database":"MySQL 8.4 / Testcontainers disposable","columns_pk_fk_engine_schema_match":true,"business_foreign_keys":44,"technical_fields":110,"business_fields":209}

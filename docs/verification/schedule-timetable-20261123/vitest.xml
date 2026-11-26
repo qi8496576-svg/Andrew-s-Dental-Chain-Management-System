@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="6" failures="0" errors="0" time="0.8235757">
+    <testsuite name="src/views/schedules/index.spec.ts" timestamp="2026-11-23T14:24:42.659Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.8142292">
+        <testcase classname="src/views/schedules/index.spec.ts" name="keeps scheduling independent from booking and denies booking-only authority" time="0.0288538">
+        </testcase>
+        <testcase classname="src/views/schedules/index.spec.ts" name="opens the separate schedule page for a schedule reader" time="0.7835926">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/schedules/timetable.spec.ts" timestamp="2026-11-23T14:24:42.662Z" hostname="LAPTOP-5TVHSQNK" tests="3" failures="0" errors="0" skipped="0" time="0.0043634">
+        <testcase classname="src/views/schedules/timetable.spec.ts" name="extends the visible day to include early and late shifts" time="0.0023326">
+        </testcase>
+        <testcase classname="src/views/schedules/timetable.spec.ts" name="separates concurrent doctors and returns full width to a later independent shift" time="0.000512">
+        </testcase>
+        <testcase classname="src/views/schedules/timetable.spec.ts" name="reuses lanes at an exact boundary without hiding short or nested shifts" time="0.0002847">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/schedules/week.spec.ts" timestamp="2026-11-23T14:24:42.666Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0049831">
+        <testcase classname="src/views/schedules/week.spec.ts" name="uses a Monday week across month and year boundaries without relying on browser time zone" time="0.003873">
+        </testcase>
+    </testsuite>
+</testsuites>

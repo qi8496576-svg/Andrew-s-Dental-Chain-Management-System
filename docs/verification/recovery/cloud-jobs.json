@@ -1,0 +1,43 @@
+{
+  "release": "adc-recovery-20261125-1795614415813",
+  "date": "2026-11-25T13:47:05.548Z",
+  "daily_full": true,
+  "archive_interval_seconds": 300,
+  "health_interval_seconds": 300,
+  "no_pruning": true,
+  "database_container_recreated": false,
+  "files": [
+    {
+      "file": "full-backup.sh",
+      "sha256": "cc0717d517d2a6f3fb3f725d4397babc4aabc5b1fdf9bd7c2b645231bbc6b2e2"
+    },
+    {
+      "file": "verify-manifest.sh",
+      "sha256": "bd6bce228549b553854ebcb397de17f86ac2fd75ae74c6d05eb0e8eaaf278051"
+    },
+    {
+      "file": "archive-binlog.sh",
+      "sha256": "32743de92d44e3bc4753caeff9394937e7f710cf839f5de72293f838df5fbe3c"
+    },
+    {
+      "file": "restore-to-position.sh",
+      "sha256": "75a2bb1cfe72c3de4e2a7b489940cd2f35a73887d8ade3e94f2a125c6d4ef0b0"
+    },
+    {
+      "file": "verify-consistency.sh",
+      "sha256": "1de1d3e10ba37b501a654eb54f7046570c248f1f83f21803518fba68455f6a03"
+    },
+    {
+      "file": "cloud-cycle.sh",
+      "sha256": "b9438dcc4b5601d8c33a1c57d3b21b774a78c64158c5314d04d47dcb29b2015d"
+    },
+    {
+      "file": "mysqlbinlog",
+      "sha256": "9fe9d1865a201373e11d7702820dde2b2208ab13a2de8282c80620a2098ad8c5"
+    },
+    {
+      "file": "provenance.json",
+      "sha256": "e25c9830056ba31ef9dd760f487a32bcb911a6a0ee3cf214610ee12410456656"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "task_name": "ADC-Recovery-OffServer",
+  "state": "Ready",
+  "last_result": 0,
+  "last_run": "2026-11-25T22:07:09.0000000+08:00",
+  "next_run": "2026-11-25T22:12:09.0000000+08:00",
+  "interval_seconds": 300,
+  "requires_windows_awake_and_user_logged_in": true
+}

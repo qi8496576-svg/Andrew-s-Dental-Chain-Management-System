@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-26",
+  "engineering_review": "COMPLETE",
+  "production_release": "NOT_AUTHORIZED_OR_EXECUTED",
+  "candidate_release": "adc-billing-fix-20261125-1795660119820",
+  "backend_image": "sha256:a9135851776476574881e10618cce16953c32828640e878a9a44b700dcff73ea",
+  "full_integration_counts": {
+    "completed": 174,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "unit_tests": 24,
+  "admin_component_tests": 53,
+  "browser_tests": 19,
+  "patient_tests": 32,
+  "contract_tests": 12,
+  "quarter_acceptance": "PASS: controlled fictional complete-quarter drill; not real operations",
+  "documentation_pdf": "export once after final Word stabilizes",
+  "remaining_production_conditions": [
+    "负责人对具体候选的正式发布批准",
+    "小程序ICP备案及平台发布条件由负责人自行办理",
+    "正式持续运行前确认持续在线的服务器外备份接收位置，当前Windows任务需要开机联网并登录"
+  ],
+  "limitations": [
+    "演示支付，不扣真实款；真实商户支付未接入",
+    "本轮微信工具未连接；已有真实微信联调与当前自动化范围分别保留，不伪称新增真机实验"
+  ]
+}

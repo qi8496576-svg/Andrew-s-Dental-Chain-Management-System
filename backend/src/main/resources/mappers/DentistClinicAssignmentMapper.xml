@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.DentistClinicAssignmentMapper">
+  <resultMap id="row" type="com.adc.domain.model.DentistClinicAssignment">
+    <constructor>
+      <idArg column="assignment_id" javaType="java.lang.Long"/>
+      <arg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="clinic_id" javaType="java.lang.Long"/>
+      <arg column="start_date" javaType="java.time.LocalDate"/>
+      <arg column="end_date" javaType="java.time.LocalDate"/>
+      <arg column="availability_note" javaType="java.lang.String"/>
+      <arg column="is_active" javaType="java.lang.Boolean"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `assignment_id`, `dentist_id`, `clinic_id`, `start_date`, `end_date`, `availability_note`, `is_active` FROM adc_business.`DentistClinicAssignment` WHERE `assignment_id` = #{assignment_id}
+  </select>
+</mapper>

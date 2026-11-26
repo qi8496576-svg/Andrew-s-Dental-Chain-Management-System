@@ -1,0 +1,15 @@
+import { expect,type Browser,type Page } from '@playwright/test'
+export async function clinicSession(page:Page,browser:Browser,capabilities:string[],role:'RECEPTION'|'CASHIER'|'HEADQUARTERS'='RECEPTION'){
+  const root=process.env.ADC_AUTH_BASE_URL!,manager=await browser.newContext({ignoreHTTPSErrors:true})
+  const initial=await (await manager.request.get(`${root}/api/v1/auth/csrf`)).json()
+  const signed=await manager.request.post(`${root}/api/v1/auth/staff-sessions`,{headers:{'X-CSRF-Token':initial.csrf_token,Origin:root},data:{username:process.env.ADC_MANAGER_USERNAME,password:process.env.ADC_MANAGER_PASSWORD}});expect(signed.status()).toBe(200);const csrf=(await signed.json()).csrf_token
+  async function headquarters(path:string,data:unknown,method:'POST'|'PUT'|'PATCH'='POST'){const headers:Record<string,string>={'X-CSRF-Token':csrf,Origin:root,'Idempotency-Key':crypto.randomUUID()};if(method==='PATCH'){const current=await manager.request.get(`${root}/api/v1${path}`);expect(current.status()).toBe(200);const etag=current.headers().etag;expect(etag).toBeTruthy();headers['If-Match']=etag!}const response=await manager.request.fetch(`${root}/api/v1${path}`,{method,headers,data});expect(response.status(),await response.text()).toBe(200);return response.json()}
+  const accounts=await (await manager.request.get(`${root}/api/v1/identity/staff-accounts`)).json(),subject=accounts.items.find((a:{username:string})=>a.username===process.env.ADC_TEST_USERNAME).subject_id
+  const grant=await headquarters('/identity/grants',{subject_id:subject,role,clinic_ids:['1'],capabilities,valid_from:new Date().toISOString(),valid_until:null})
+  await page.goto('/authentication');await page.getByLabel('个人账号').fill(process.env.ADC_TEST_USERNAME!);await page.getByLabel('密码',{exact:true}).fill(process.env.ADC_TEST_PASSWORD!);const signedIn=page.waitForResponse(r=>r.url().endsWith('/api/v1/auth/staff-sessions') && r.request().method()==='POST');await page.getByRole('button',{name:'登录管理后台'}).click();let userCsrf=(await (await signedIn).json()).csrf_token
+  // The real SPA may fetch/rotate its CSRF cookie. Follow its actual request header.
+  page.on('request',request=>{const token=request.headers()['x-csrf-token'];if(token)userCsrf=token})
+  async function employee(path:string,data:unknown,key=crypto.randomUUID()){const response=await page.request.post(`${root}/api/v1${path}`,{headers:{'X-CSRF-Token':userCsrf,Origin:root,'Idempotency-Key':key},data});expect(response.status(),await response.text()).toBe(200);return response.json()}
+  return {headquarters,employee,root,manager,grant,get csrf(){return userCsrf},async doctor(){const doctor=await headquarters('/dentists',{employee_number:`D-${crypto.randomUUID().slice(0,8)}`,full_name:'虚构牙医 周排班验证',date_of_birth:'1980-01-02',phone:'000',hire_date:'2020-01-01',is_active:true});await headquarters(`/dentists/${doctor.dentist_id}/clinic-assignments`,{clinic_id:'1',start_date:'2020-01-01',end_date:null,availability_note:null,is_active:true});return doctor},async close(){await manager.close()}}
+}
+

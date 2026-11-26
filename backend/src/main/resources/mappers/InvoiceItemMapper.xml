@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.InvoiceItemMapper">
+  <resultMap id="row" type="com.adc.domain.model.InvoiceItem">
+    <constructor>
+      <idArg column="invoice_item_id" javaType="java.lang.Long"/>
+      <arg column="invoice_id" javaType="java.lang.Long"/>
+      <arg column="applied_treatment_id" javaType="java.lang.Long"/>
+      <arg column="line_number" javaType="java.lang.Integer"/>
+      <arg column="treatment_name" javaType="java.lang.String"/>
+      <arg column="standard_units" javaType="java.math.BigDecimal"/>
+      <arg column="unit_price" javaType="java.math.BigDecimal"/>
+      <arg column="subtotal" javaType="java.math.BigDecimal"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `invoice_item_id`, `invoice_id`, `applied_treatment_id`, `line_number`, `treatment_name`, `standard_units`, `unit_price`, `subtotal` FROM adc_business.`InvoiceItem` WHERE `invoice_item_id` = #{invoice_item_id}
+  </select>
+</mapper>

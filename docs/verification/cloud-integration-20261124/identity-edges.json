@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-24T05:14:28.471Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "strict_https": true,
+  "checks": [
+    "Real wx.login and code2Session produce a genuine cloud patient session",
+    "Revoked binding blocks the next direct patient request using the still-authenticated old session",
+    "Identity remains distinct from binding; a new request and authorized approval restore the same synthetic profile",
+    "Logout invalidates the actual server session; old bearer receives 401",
+    "Missing WeChat code and invalid staff CSRF are refused"
+  ],
+  "second_wechat_account_rebind": "NOT_RUN",
+  "real_device": "NOT_RUN",
+  "status": "PASS"
+}

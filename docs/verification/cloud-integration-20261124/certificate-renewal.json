@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-24",
+  "domain": "andrewdental.cn",
+  "issuer": "Let's Encrypt",
+  "owner_agreed_to_acme_terms": true,
+  "account_email": "not supplied, owner selected no-email registration",
+  "challenge": "HTTP-01 standalone",
+  "certificate_valid_until": "2027-02-22",
+  "fullchain": "/etc/letsencrypt/live/andrewdental.cn/fullchain.pem",
+  "private_key_location_only": "/etc/letsencrypt/live/andrewdental.cn/privkey.pem",
+  "certbot_timer_enabled_by_package": true,
+  "deploy_hook_installed": "/etc/letsencrypt/renewal-hooks/deploy/andrew-dental.sh",
+  "deploy_hook_actual_run": "PASS",
+  "nginx_reload": "PASS",
+  "renew_dry_run": "PASS",
+  "renew_dry_run_output": "Congratulations, all simulated renewals succeeded: /etc/letsencrypt/live/andrewdental.cn/fullchain.pem (success)",
+  "production_release": false
+}

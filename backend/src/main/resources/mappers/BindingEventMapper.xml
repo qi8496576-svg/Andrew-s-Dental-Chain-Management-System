@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.BindingEventMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.BindingEventRecord">
+    <constructor>
+      <idArg column="event_id" javaType="java.lang.String"/>
+      <arg column="action" javaType="java.lang.String"/>
+      <arg column="patient_id" javaType="java.lang.Long"/>
+      <arg column="old_subject_id" javaType="java.lang.String"/>
+      <arg column="new_subject_id" javaType="java.lang.String"/>
+      <arg column="operator_subject_id" javaType="java.lang.String"/>
+      <arg column="binding_request_id" javaType="java.lang.String"/>
+      <arg column="occurred_at" javaType="java.time.Instant"/>
+      <arg column="reason" javaType="java.lang.String"/>
+      <arg column="verification_basis" javaType="java.lang.String"/>
+      <arg column="request_key" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `event_id`, `action`, `patient_id`, `old_subject_id`, `new_subject_id`, `operator_subject_id`, `binding_request_id`, `occurred_at`, `reason`, `verification_basis`, `request_key` FROM adc_identity.`BindingEvent` WHERE `event_id` = #{event_id}
+  </select>
+</mapper>

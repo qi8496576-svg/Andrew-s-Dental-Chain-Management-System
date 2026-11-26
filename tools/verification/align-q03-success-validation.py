@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path(__file__).resolve().parents[2]/'tools/verification/run-q03-small.mjs';s=p.read_text('utf-8')
+needle=' assert.equal(report.after.applied_treatments-200000,report.operations.treatments);'
+replace=" const successful={candidates:0,treatments:0,invoices:0};for(const line of fs.readFileSync(path.join(work,'raw-samples.json'),'utf8').trim().split('\\n')){const point=JSON.parse(line);if(point.type==='Point'&&point.metric==='q03_successes')successful[point.data.tags.kind]+=point.data.value}report.successful_operations=successful;assert.ok(Object.values(successful).reduce((a,b)=>a+b,0)>=5000);\n assert.equal(report.after.applied_treatments-200000,successful.treatments);"
+assert needle in s;s=s.replace(needle,replace).replace('report.after[k],report.operations.invoices','report.after[k],successful.invoices').replace('report.after.mutation_receipts,report.operations.invoices+report.operations.treatments','report.after.mutation_receipts,successful.invoices+successful.treatments');p.write_text(s,'utf-8')

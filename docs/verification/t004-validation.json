@@ -1,0 +1,150 @@
+{
+  "checked_at": "2026-11-10T15:33:06.761076+00:00",
+  "task": "T004",
+  "status": "PASS_INITIALIZATION_ONLY",
+  "task_count": 186,
+  "completed_tasks": [
+    "T001",
+    "T002",
+    "T003",
+    "T004"
+  ],
+  "protected_inputs_unchanged": [
+    "specs/001-system-specification/business-baseline-audit.json",
+    "specs/001-system-specification/business-baseline-audit.md",
+    "specs/001-system-specification/data-model.md",
+    "specs/001-system-specification/plan-approval.json",
+    "specs/001-system-specification/plan-approval.md",
+    "specs/001-system-specification/plan-dependency-amendment.json",
+    "specs/001-system-specification/plan-dependency-amendment.md",
+    "specs/001-system-specification/plan-supplement-review.md",
+    "specs/001-system-specification/plan.md",
+    "specs/001-system-specification/preimplement-sync.json",
+    "specs/001-system-specification/quickstart.md",
+    "specs/001-system-specification/research.md",
+    "specs/001-system-specification/spec.md",
+    "specs/001-system-specification/task-traceability.md",
+    "specs/001-system-specification/tasks-catalog.json",
+    "specs/001-system-specification/tasks-validation.json",
+    "specs/001-system-specification/technical-data-model.md",
+    "specs/001-system-specification/technical-schema.json",
+    "specs/001-system-specification/traceability.md",
+    "specs/001-system-specification/checklists/requirements.md",
+    "specs/001-system-specification/contracts/api.md",
+    "specs/001-system-specification/contracts/identity.md",
+    "specs/001-system-specification/contracts/openapi.json",
+    "specs/001-system-specification/contracts/operations.md",
+    "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+    "specs/001-system-specification/diagrams/technical-erd.mmd",
+    "specs/001-system-specification/diagrams/technical-storage-overview.png",
+    "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+    ".specify/memory/constitution.md",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx",
+    "docs/diagrams/database/schema.json"
+  ],
+  "devtools_preview_executed": false,
+  "real_wechat_verified": false,
+  "task_change": "Only T004 checkbox, byte-for-byte comparison before/after, original CRLF retained",
+  "fingerprints": [
+    {
+      "path": "apps/patient-miniprogram/.npmrc",
+      "sha256": "60d44b93ef9759dc1b8b8df67d4fabd8e41af6a9956fefb5128166644c9c7298"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/app.json",
+      "sha256": "947273341e041542021a28700d6664ca903cab29bb5fb6df6f9c2485609f68fc"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/app.ts",
+      "sha256": "d814a0466bd6df377180ec1f110be48b59761ea41cbc5aba0b27dea0034e0043"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/app.wxss",
+      "sha256": "ab488e726feefb97cba6b5b3116591daf8de6462945ea3638d047e65fa106c3e"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/index/index.json",
+      "sha256": "825333fc7034a55ca1dff6eee57c3e8aa5341d3345fa2b0884b52eecfc772456"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/index/index.ts",
+      "sha256": "78fff94c4121e69f0b88cb189d627553ee9f022197e6aa3bcc7f441b52fb3ba3"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/index/index.wxml",
+      "sha256": "3d627bbd75a6f3daa411175bee86524fffdf98582722da65480433fd5a900832"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/index/index.wxss",
+      "sha256": "b2bf90da00933b94269a07eeb6fa3ab5172c2b6c8ebd2deded9e3606b0cc0b85"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/sitemap.json",
+      "sha256": "4a41ca40b8cf3e0555e0774b3be401c84d040a4ba6504a3d4729596f8cffaed6"
+    },
+    {
+      "path": "apps/patient-miniprogram/package-lock.json",
+      "sha256": "39d339e50331eeea4a42a1e97faae8da0d61564e05da550bb0e5e39129c41d77"
+    },
+    {
+      "path": "apps/patient-miniprogram/package.json",
+      "sha256": "ba506336d515b7c28a57d731280f048799b09c602e1c09f43b2f8bc8607536dc"
+    },
+    {
+      "path": "apps/patient-miniprogram/project.config.json",
+      "sha256": "27fb4c365fdadb38c5372d08bb947afe6ad786988df91e5f62afdb1f9a9c2db6"
+    },
+    {
+      "path": "apps/patient-miniprogram/README.md",
+      "sha256": "9255e8069f3a78eff638351c734d404b4f81139067c5200f8fc2281035680b5d"
+    },
+    {
+      "path": "apps/patient-miniprogram/scripts/build.mjs",
+      "sha256": "090e6d0ad7d2719a985f0e15c9f4684325eb4e5ec7d063c5a7b319831b24a1bb"
+    },
+    {
+      "path": "apps/patient-miniprogram/tsconfig.json",
+      "sha256": "4165a6e5fb48065b2f6f11017136d397599f466f4f4d3a7f2ea4ad26689073c1"
+    },
+    {
+      "path": "docs/verification/implementation-status.md",
+      "sha256": "653aa9e7ca5c948edae58f822a7af9698f91344dee866a462f5e559d5e621469"
+    },
+    {
+      "path": "docs/verification/t004-build-result.json",
+      "sha256": "b141e4d48ba315ed1b6d3f2bf0315476f6124b7b5a0706963dabbba578113529"
+    },
+    {
+      "path": "docs/verification/t004-build.log",
+      "sha256": "3ec57834e57b9c66f8a4f1f7fde30b9f8776e5a259b384e3d1c50c3cb5597425"
+    },
+    {
+      "path": "docs/verification/t004-ci.log",
+      "sha256": "2b75b6977a0ab9ba5795652b350c0de045c1b2495443929370d3eacf72027ec6"
+    },
+    {
+      "path": "docs/verification/t004-dependencies.log",
+      "sha256": "bbd75970d8ffae77fa9c78d5a51292a859841f846854205cf70f103d84c925bd"
+    },
+    {
+      "path": "docs/verification/t004-lock.log",
+      "sha256": "0a386ba71bf7803f107f14e550a0e67639646f60edc67366e54cd885717103cb"
+    },
+    {
+      "path": "docs/verification/t004-miniprogram-build.md",
+      "sha256": "cddb4a423f0e28d40be23f002021c742cb6e14e1fbf9d065505e29414e215e8c"
+    },
+    {
+      "path": "docs/verification/t004-typecheck.log",
+      "sha256": "250bf76f8faee30f9335b45527aa49b70af63c2d94f786e7c505d2b5fd3564d0"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "13d9c5f70dd41f1478fbd9d4da9e01462a34c2a2c62d2ec840b8237056d9b753"
+    },
+    {
+      "path": "tools/verification/Verify-MiniProgramBuild.ps1",
+      "sha256": "127f18cb798cf9cd07f90e134f9c49b4f4d61238b60e7df26d9dd881c34c986b"
+    }
+  ]
+}

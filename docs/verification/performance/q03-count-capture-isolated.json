@@ -1,0 +1,10 @@
+{
+  "kind": "adc-q03-real-mysql-counts",
+  "clinics": 30,
+  "dentists": 100,
+  "patients": 10000,
+  "server_uuid": "f5e422fb-e8d8-11f1-8157-b6519142fa84",
+  "appointments": 100000,
+  "observed_at_utc": "2026-11-25T14:04:06.649360Z",
+  "applied_treatments": 200000
+}

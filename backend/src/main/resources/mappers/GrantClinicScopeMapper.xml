@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.GrantClinicScopeMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.GrantClinicScopeRecord">
+    <constructor>
+      <idArg column="grant_id" javaType="java.lang.String"/>
+      <idArg column="clinic_id" javaType="java.lang.Long"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `grant_id`, `clinic_id` FROM adc_identity.`GrantClinicScope` WHERE `grant_id` = #{grant_id} AND `clinic_id` = #{clinic_id}
+  </select>
+</mapper>

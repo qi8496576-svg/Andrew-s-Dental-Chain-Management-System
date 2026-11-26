@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "at": "2026-11-24T14:45:30.619Z",
+  "current_patient_confirmed": true,
+  "registration_method": "SELF_DECLARED",
+  "busy": false,
+  "error": ""
+}

@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-24T05:57:55.943Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "stage": "COMPLETE",
+  "status": "PASS",
+  "original_account_unbound": true,
+  "submission_explicitly_waits_for_frontdesk": true,
+  "no_automatic_binding": true,
+  "loading_settled": true,
+  "second_account_current_binding_preserved": true,
+  "screenshot": "PASS"
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.AppointmentEventMapper">
+  <resultMap id="row" type="com.adc.domain.model.AppointmentEvent">
+    <constructor>
+      <idArg column="appointment_event_id" javaType="java.lang.Long"/>
+      <arg column="appointment_id" javaType="java.lang.Long"/>
+      <arg column="event_type" javaType="java.lang.String"/>
+      <arg column="from_status" javaType="java.lang.String"/>
+      <arg column="to_status" javaType="java.lang.String"/>
+      <arg column="occurred_at" javaType="java.time.Instant"/>
+      <arg column="actor_role" javaType="java.lang.String"/>
+      <arg column="actor_reference" javaType="java.lang.String"/>
+      <arg column="reason" javaType="java.lang.String"/>
+      <arg column="request_key" javaType="java.lang.String"/>
+      <arg column="details" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `appointment_event_id`, `appointment_id`, `event_type`, `from_status`, `to_status`, `occurred_at`, `actor_role`, `actor_reference`, `reason`, `request_key`, `details` FROM adc_business.`AppointmentEvent` WHERE `appointment_event_id` = #{appointment_event_id}
+  </select>
+</mapper>

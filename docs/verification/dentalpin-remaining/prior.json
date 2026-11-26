@@ -1,0 +1,735 @@
+{
+  "date": "2026-11-19T02:07:15.559Z",
+  "observations": [
+    {
+      "name": "home",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good morning, Admin"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood morning, Admin\n\nThursday, November 19, 2026\n\nNew patient\nNew appointment",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out"
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "admin-menu",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good morning, Admin"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood morning, Admin\n\nThursday, November 19, 2026\n\nNew patient\nNew appointment\n\nAppointments today\n\n2\n\n1\nupcoming\n1\ncancelled\n\nIn clinic now\n\n0\n\nNo one in clinic\n\nOverdue payments\n\n1\n\nMAD 410.00",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        },
+        {
+          "text": "Overdue payments\n\n1\n\nMAD 410.00",
+          "href": "/invoices?filter=overdue"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out"
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-0",
+      "url": "https://demo.dentalpin.com/settings/invoice-series",
+      "headings": [
+        "Invoice Series",
+        "Invoices",
+        "Credit Notes"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nBilling & tax\nInvoice Series\n\nConfigure invoice prefixes and numbering\n\nShow inactive\nInvoices\nNew series\nFAC-\nDefault\nYearly reset\nNext number: 9\nPreview: FAC-2026-9\n\nSerie principal de facturas\n\nCredit Notes\nNew series\nRECT-\nDefault\nYearly reset\nNext number: 2\nPreview: RECT-2026-2\n\nNotas de crédito",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New series",
+        "",
+        "",
+        "New series",
+        "",
+        "",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-0-add",
+      "url": "https://demo.dentalpin.com/settings/invoice-series",
+      "headings": [
+        "Invoice Series",
+        "Invoices",
+        "Credit Notes",
+        "New Invoices series"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nBilling & tax\nInvoice Series\n\nConfigure invoice prefixes and numbering\n\nShow inactive\nInvoices\nNew series\nFAC-\nDefault\nYearly reset\nNext number: 9\nPreview: FAC-2026-9\n\nSerie principal de facturas\n\nCredit Notes\nNew series\nRECT-\nDefault\nYearly reset\nNext number: 2\nPreview: RECT-2026-2\n\nNotas de crédito\n\nNew Invoices series\nPrefix\ne.g. INV, CR. The year will be added automatically.\nDescription\nReset numbering every year\nSet as default\nCancel\nSave",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Cancel",
+        "Save"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "FAC",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Optional series description...",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-1",
+      "url": "https://demo.dentalpin.com/settings/vat-types",
+      "headings": [
+        "VAT Types"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nBilling & tax\nVAT Types\n\nManage VAT types available for treatments\n\nShow inactive\nNew VAT Type\n\nExempt\n\n0%\n\nDefault\nSystem\n\nReduced (10%)\n\n10%\n\nSystem\n\nStandard (21%)\n\n21%\n\nSystem",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New VAT Type",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-1-add",
+      "url": "https://demo.dentalpin.com/settings/vat-types",
+      "headings": [
+        "VAT Types",
+        "New VAT Type"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nBilling & tax\nVAT Types\n\nManage VAT types available for treatments\n\nShow inactive\nNew VAT Type\n\nExempt\n\n0%\n\nDefault\nSystem\n\nReduced (10%)\n\n10%\n\nSystem\n\nStandard (21%)\n\n21%\n\nSystem\nNew VAT Type\nName\nRate\n%\nSet as default\nCancel\nSave",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Cancel",
+        "Save"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "E.g.: Reduced (10%)",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": true
+        }
+      ],
+      "tableHeaders": []
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/setup/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/534d5420-42b6-40ae-b6c5-a1ef4e59aa87.json",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/modules/-/active",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/items",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/notifications/smtp-settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/clinic-hours",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/series",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients/recent",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/stats/dashboard",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/series",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/534d5420-42b6-40ae-b6c5-a1ef4e59aa87.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/vat-types",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/534d5420-42b6-40ae-b6c5-a1ef4e59aa87.json",
+      "status": 200
+    }
+  ],
+  "blocked": [
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    }
+  ]
+}

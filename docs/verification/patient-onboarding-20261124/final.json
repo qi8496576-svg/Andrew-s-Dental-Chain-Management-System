@@ -1,0 +1,30 @@
+{
+  "at": "2026-11-24T15:10:54.648Z",
+  "status": "PASS",
+  "release": "adc-cloud-20261124-1795530699019",
+  "origin": "https://andrewdental.cn",
+  "backend_image": "sha256:859c89aa1de2f2c541f626f0d734d929a3dcd554676fbb7d4a67675eade717ec",
+  "admin_image": "sha256:c11177f067de12d52d867a7c8fb0f298f143d589e21bd080f701d863c4e203a8",
+  "backend_jar_sha256": "6ae4ae93305dfd75b2a59d2841c732e126f13b446294b46b56b60fe1d168566e",
+  "business_dictionary_sha256": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b",
+  "business_schema_changed": false,
+  "technical_schema_changed": false,
+  "database_container_preserved": true,
+  "migrations_run": false,
+  "actual_wechat_new_registration": "PASS",
+  "actual_wechat_booking_and_cancellation": "PASS",
+  "management_readback": "PASS",
+  "original_other_account_binding": "PASS_PRESERVED",
+  "week_and_day_schedule_ui": "PASS",
+  "phone_owner_confirmation": "PASS_UI_AND_APPOINTMENT_ENTRY",
+  "online_payment": "DESIGN_ONLY_NOT_IMPLEMENTED",
+  "production_miniprogram_upload": false,
+  "reference_miniapp_current_version_inspected": false,
+  "evidence": [
+    "device-integration.json",
+    "button-interactions.json",
+    "schedule-browser.json",
+    "owner-device-confirmation.json",
+    "preview.json"
+  ]
+}

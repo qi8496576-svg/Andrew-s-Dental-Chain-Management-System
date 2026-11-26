@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-09",
+  "authorization": "当前用户明确要求修正Implement前文档状态及数据库测试顺序",
+  "approval_baseline": "ADC-PLAN-20261107-01",
+  "changes": [
+    {
+      "path": "specs\\001-system-specification\\plan-supplement-review.md",
+      "before_sha256": "8c5ebcf39f0908924734a5da4f57ebae2367475c6eb011e7bfb90f5f52e6c9ba",
+      "after_sha256": "faedfab11bbdad120a6d75a0c12b064dca5b3fbcec26bd0af092dac0b9d07885"
+    },
+    {
+      "path": "specs\\001-system-specification\\plan.md",
+      "before_sha256": "7e1f5d8b9e93f54103bac41a3e65ef8762e5badd33fe02d295170a67f3a57cb7",
+      "after_sha256": "daba37cb5640e24c314faa31861e60b8c62b4ee91876e9f898f5df838251288b"
+    },
+    {
+      "path": "specs\\001-system-specification\\quickstart.md",
+      "before_sha256": "e9dbbb5eb33aff0a79fe783f64b5a593ee74e39443dc704d5ad38fd08e91ac98",
+      "after_sha256": "543fcfacd1d2bf52e4151a7c2b6ad0d7e72963745402d84ef08777792cd46f19"
+    },
+    {
+      "path": "specs\\001-system-specification\\research.md",
+      "before_sha256": "d24bade38594c80d7df367544d6125dab06aa5d690e4b6f64252259733e31302",
+      "after_sha256": "9849634553e1af20dd712af4a0b344e83d0455eb795084d69fe90551b9224beb"
+    },
+    {
+      "path": "specs\\001-system-specification\\spec.md",
+      "before_sha256": "54c5fe887cf1f95ebd059d3420f8b92dc81bc255536fd9398ce08cb555c7f6c3",
+      "after_sha256": "510bd7cc0d759b9c6786b0673225107cf1fc28dce14338fc4aa921be473e4aa6"
+    },
+    {
+      "path": "specs\\001-system-specification\\task-traceability.md",
+      "before_sha256": "36a4c7dcc58563b5394319135902faa100ecad9633f046439cd811725f79ebbb",
+      "after_sha256": "ba022cd7b10222c9a812e2039b6e8321709b4ed30d40c79323c2de13bbb224f8"
+    },
+    {
+      "path": "specs\\001-system-specification\\tasks.md",
+      "before_sha256": "c278e34303767c9ef8c27adffa53b7196fd652beafd401ba8fb69db9835e9245",
+      "after_sha256": "9e4daa558306441f69d825f22121993e38cc94f8d271e6812793e7018cebbc4c"
+    },
+    {
+      "path": "specs\\001-system-specification\\traceability.md",
+      "before_sha256": "e8cd73dd325271ff1287d248a310b9e275e982f7346269dd5b427eb7102e072f",
+      "after_sha256": "7ded5717164d8ef60c194ec375681af0248529e80309d67ab992232c35ea98de"
+    },
+    {
+      "path": "specs\\001-system-specification\\checklists\\requirements.md",
+      "before_sha256": "b65c76ac9d8bb007f65b849182b36d31f12f00c0a7b2314b490e1f8aecd58b1e",
+      "after_sha256": "1efa7637894cb649a99d0c29f0236d3e0148764d2f29fabdb4e289a2e39a6299"
+    },
+    {
+      "path": "specs\\001-system-specification\\contracts\\api.md",
+      "before_sha256": "d46fbdcc2eac96a6338d1ab6fee4a7d3ca3d0dc0856de43d045d3b3db26e57aa",
+      "after_sha256": "05256ae463833b369b2e328c0a9ae803d346820b64328fa4c9a9548db354fa3f"
+    },
+    {
+      "path": "specs\\001-system-specification\\contracts\\identity.md",
+      "before_sha256": "5cee0ae0c34f48d6fbba32f01a83ecf0b52895467382b2b8cb5b40c15b039fba",
+      "after_sha256": "1f9bdf3a5578e6d08580087b98bd3ea939c7de8d485f5c09019e4546ae3d81d2"
+    },
+    {
+      "path": "specs\\001-system-specification\\tasks-catalog.json",
+      "before_sha256": "6e2a470dae33a19ff60d230ebb209dda586fdc314cf3f2f355f6be1136f60556",
+      "after_sha256": "cb54699a251261b72681bbc719d6d31d39197dde28babe5ced5f2bc7f6dff875"
+    },
+    {
+      "path": "specs\\001-system-specification\\tasks-validation.json",
+      "before_sha256": "cfdc2639e56c71c381efada2826ae771d78010a3b4a53a2e81801ebc6ce4c9e8",
+      "after_sha256": "bb96fff92f0f4a773292157857efd1689d95d7bf60fbef22d0b2e6817af01147"
+    }
+  ],
+  "original_approval_records_preserved": true,
+  "constitution_and_original_design_unchanged": true,
+  "requirement_acceptance_rows_unchanged": true,
+  "task_count": 186,
+  "existing_dependencies_preserved": true,
+  "implement_authorized": false,
+  "scope": "文档修正与静态检查；Analyze复核另在聊天报告，不宣称运行测试通过"
+}

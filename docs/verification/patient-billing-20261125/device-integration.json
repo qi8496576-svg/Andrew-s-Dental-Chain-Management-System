@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-25T09:58:11.381Z",
+  "origin": "https://andrewdental.cn",
+  "wechat_login_mocked": false,
+  "api_mocked": false,
+  "modal_mocked": true,
+  "modal_note": "模拟器原生提示框截图已核对；Tool.native确认未响应，自动化只替换showModal的确认返回值，业务方法、登录、请求和数据均真实。",
+  "real_charge": false,
+  "checks": [
+    "真实微信身份、正式域名API、同一MySQL",
+    "看牙/洗牙入口以及真实医生职称、方向、简介和费用",
+    "真实号源保留后演示缴费建立预约；提示框确认采用自动返回值",
+    "患者取消后管理端预约取消、支付与退款记录一致",
+    "无API或微信登录mock；不扣真实款"
+  ],
+  "screenshots": [
+    {
+      "file": "mini-doctor-and-fee.png",
+      "status": "PASS"
+    },
+    {
+      "file": "mini-pending-bill.png",
+      "status": "BLOCKED",
+      "reason": "App.captureScreenshot: timeout waiting for automator response"
+    },
+    {
+      "file": "mini-paid-bill.png",
+      "status": "PASS"
+    },
+    {
+      "file": "mini-refunded-bill.png",
+      "status": "BLOCKED",
+      "reason": "App.captureScreenshot: timeout waiting for automator response"
+    }
+  ],
+  "expired_probe_bill": "6881231510100214495",
+  "stage": "COMPLETE",
+  "patient_id": "3730721664098619420",
+  "doctor": {
+    "id": "2782263158220307180",
+    "title": "主任医师（演示）",
+    "specialty": "综合口腔检查、牙体牙髓方向（虚构测试资料）",
+    "registration_fee_fen": 2000
+  },
+  "schedule_id": "3714629146842669652",
+  "starts_at": "2026-12-02T01:00:00Z",
+  "bill_id": "7744743869024045683",
+  "appointment_id": "3645134608969199545",
+  "management_paid": "PAID",
+  "management_booking": "SCHEDULED",
+  "management_cancelled": "CANCELLED",
+  "management_refunded": "REFUNDED",
+  "status": "PASS"
+}

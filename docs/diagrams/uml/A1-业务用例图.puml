@@ -1,0 +1,13 @@
+@startuml
+' Authority: docs/originals/word-media/image2.png; SHA256 108df582321b5831c9e86937fdd4e180defba3b884f56fe4cb8eb47584d828c8
+' Authority: final Word; original diagrams retained under docs/originals.
+title 图 A1 业务用例图
+left to right direction
+actor 患者 as patient
+rectangle "Andrew's Dental Chain (ADC)" {
+  usecase "接受牙科诊疗" as care
+  usecase "取得费用结算凭据" as invoice
+}
+patient -- care
+patient -- invoice
+@enduml

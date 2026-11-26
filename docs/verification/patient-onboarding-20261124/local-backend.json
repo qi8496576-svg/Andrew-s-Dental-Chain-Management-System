@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-24T14:31:38.851Z",
+  "project": "adc-local-preview",
+  "frontend_image": "adc/admin:schedule-timetable-20261123",
+  "backend_image": "adc/backend:self-registration-20261124-1795530593011",
+  "url": "https://localhost:19443",
+  "current_sources_built": true,
+  "previous_backend_image": "adc/backend:self-registration-20261124-1795509294802",
+  "database_container_preserved": true,
+  "migrations_run": false
+}

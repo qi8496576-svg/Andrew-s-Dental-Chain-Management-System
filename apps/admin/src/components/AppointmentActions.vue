@@ -1,0 +1,9 @@
+<script setup lang="ts">
+import type {components} from '@adc/contracts'
+import {useAuthenticationStore} from '../stores/authentication'
+defineProps<{appointment:components['schemas']['AppointmentView']}>()
+const auth=useAuthenticationStore()
+</script>
+<template><span class="appointment-actions"><template v-if="appointment.status==='SCHEDULED'"><RouterLink v-if="auth.canAccess('RECEPTION','attendAppointment')" :to="{path:'/appointment-attendance',query:{appointmentId:appointment.appointment_id}}">核实到诊 →</RouterLink><details class="inline-more" v-if="['cancelAppointment','markNoShow','rescheduleAppointment'].some(c=>auth.canAccess('RECEPTION',c))"><summary>更多</summary><RouterLink v-if="auth.canAccess('RECEPTION','cancelAppointment')" :to="{path:'/appointment-cancellation',query:{appointmentId:appointment.appointment_id}}">核实患者取消</RouterLink><RouterLink v-if="auth.canAccess('RECEPTION','markNoShow')" :to="{path:'/appointment-no-show',query:{appointmentId:appointment.appointment_id}}">核实爽约</RouterLink><RouterLink v-if="auth.canAccess('RECEPTION','rescheduleAppointment')" :to="{path:'/appointment-rescheduling',query:{appointmentId:appointment.appointment_id}}">停诊处理</RouterLink></details></template><RouterLink v-else-if="appointment.status==='IN_PROGRESS'&&auth.canAccess('DENTIST','getClinicalContext')" :to="{path:'/clinical-treatment',query:{appointmentId:appointment.appointment_id}}">进入诊疗 →</RouterLink><RouterLink v-else-if="appointment.status==='COMPLETED'&&auth.canAccess('CASHIER','invoiceAppointment')" :to="{path:'/invoicing',query:{appointmentId:appointment.appointment_id}}">核对费用 →</RouterLink><RouterLink v-else-if="appointment.status==='INVOICED'&&auth.canAccess('CASHIER','getInvoice')" :to="{path:'/invoicing',query:{invoiceId:appointment.invoice_id}}">查看凭据 →</RouterLink></span></template>
+
+

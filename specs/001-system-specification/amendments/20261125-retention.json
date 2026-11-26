@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-25",
+  "item": "TD-01",
+  "status": "owner-approved",
+  "source": "负责人本会话明确答复：同意，一期不启用自动删除",
+  "decision": "一期仅做会话失效、停用及撤权，不启用账号、绑定、授权、请求回执等非审计技术资料的自动物理删除",
+  "audit_minimum": "1 year",
+  "backup_recoverable_window": "30 days",
+  "business_history_preserved": true,
+  "production_release_authorized": false,
+  "policy": "ops/runbooks/technical-record-retention.md"
+}

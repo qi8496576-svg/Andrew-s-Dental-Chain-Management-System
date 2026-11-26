@@ -1,0 +1,16 @@
+{
+  "reference": "adc/backend:adc-q03-small-20261125-1795659831235",
+  "id": "sha256:a9135851776476574881e10618cce16953c32828640e878a9a44b700dcff73ea",
+  "jar_sha256": "aa75ae7fd2e6abdf0de23324720e4cea96c2e24e0ca356ada34e9f739f56c30e",
+  "sources": [
+    {
+      "path": "backend/src/main/java/com/adc/application/AppointmentBookingService.java",
+      "sha256": "b5fce9f02f27a13674bc4c99e5e564c9470f0ccb937ab1faedc8e594f242d564"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/AppointmentBookingStore.java",
+      "sha256": "4bb0079f94f837902876475dc7bc90ca900dd207b30a889e9bc1f472136b7187"
+    }
+  ],
+  "created_at": "2026-11-26T02:25:19.979Z"
+}

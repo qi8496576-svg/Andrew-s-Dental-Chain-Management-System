@@ -1,0 +1,62 @@
+{
+  "at": "2026-11-23T14:14:55.782Z",
+  "url": "https://localhost:19443",
+  "read_only_business_checks": true,
+  "roles": [
+    {
+      "role": "HEADQUARTERS",
+      "summary_status": 200,
+      "theme_primary": "#17778b",
+      "routes": [
+        "/",
+        "/quarterly-performance",
+        "/cost-entries",
+        "/analytics",
+        "/settings/treatments",
+        "/clinic-grants"
+      ],
+      "cost_association_status": 200,
+      "resource_search_status": 200,
+      "grant_capabilities_verified": true
+    },
+    {
+      "role": "RECEPTION",
+      "summary_status": 200,
+      "theme_primary": "#17778b",
+      "routes": [
+        "/",
+        "/appointment-booking",
+        "/schedules",
+        "/patients"
+      ],
+      "list_status": 200,
+      "visible_rows": 7
+    },
+    {
+      "role": "DENTIST",
+      "summary_status": 200,
+      "theme_primary": "#17778b",
+      "routes": [
+        "/",
+        "/clinical-treatment"
+      ],
+      "list_status": 200,
+      "visible_rows": 7
+    },
+    {
+      "role": "CASHIER",
+      "summary_status": 200,
+      "theme_primary": "#17778b",
+      "routes": [
+        "/",
+        "/invoicing"
+      ],
+      "list_status": 200,
+      "visible_rows": 7,
+      "role_spoof_rejected": true,
+      "fee_preview": "No completed visit in persistent preview; covered by isolated integration test"
+    }
+  ],
+  "browser_errors": [],
+  "production_deployed": false
+}

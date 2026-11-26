@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.StaffAccountMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.StaffAccountRecord">
+    <constructor>
+      <idArg column="subject_id" javaType="java.lang.String"/>
+      <arg column="username" javaType="java.lang.String"/>
+      <arg column="staff_reference" javaType="java.lang.String"/>
+      <arg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="password_hash" javaType="java.lang.String"/>
+      <arg column="requires_reset" javaType="java.lang.Boolean"/>
+      <arg column="credential_changed_at" javaType="java.time.Instant"/>
+      <arg column="verification_reference" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `subject_id`, `username`, `staff_reference`, `dentist_id`, `password_hash`, `requires_reset`, `credential_changed_at`, `verification_reference` FROM adc_identity.`StaffAccount` WHERE `subject_id` = #{subject_id}
+  </select>
+</mapper>

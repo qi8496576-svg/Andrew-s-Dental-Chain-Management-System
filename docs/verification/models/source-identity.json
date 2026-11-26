@@ -1,0 +1,270 @@
+{
+  "date": "2026-11-25",
+  "word_sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a",
+  "figures": [
+    {
+      "figure": "A1",
+      "word_member": "word/media/image2.png",
+      "official_image": "docs/diagrams/official/A1.png",
+      "sha256": "108df582321b5831c9e86937fdd4e180defba3b884f56fe4cb8eb47584d828c8",
+      "byte_match": true
+    },
+    {
+      "figure": "A2",
+      "word_member": "word/media/image3.png",
+      "official_image": "docs/diagrams/official/A2.png",
+      "sha256": "fd2a210180f5a30680397e32981115cfe66b570c516c60693a692ac07422d139",
+      "byte_match": true
+    },
+    {
+      "figure": "A3",
+      "word_member": "word/media/image4.png",
+      "official_image": "docs/diagrams/official/A3.png",
+      "sha256": "2e6d7298119e8738eea7c50d1baff9753e65fc1c2cf8049d6d714eb3ad17aec2",
+      "byte_match": true
+    },
+    {
+      "figure": "B1",
+      "word_member": "word/media/image5.png",
+      "official_image": "docs/diagrams/official/B1.png",
+      "sha256": "c2a7585ce7e327a6fc79d7dfb7e2ad63d2d0dee842a5af147e3d9f4acbe04c83",
+      "byte_match": true
+    },
+    {
+      "figure": "C1",
+      "word_member": "word/media/image6.png",
+      "official_image": "docs/diagrams/official/C1.png",
+      "sha256": "d95d41bcca53c2288fd49a5ad0f5fba9a790837431371ec3d9afac6aa4c92b17",
+      "byte_match": true
+    },
+    {
+      "figure": "C2",
+      "word_member": "word/media/image7.png",
+      "official_image": "docs/diagrams/official/C2.png",
+      "sha256": "01981da705110247d1d916c032ded29190db46c7f7162e10e5b796d150e1525f",
+      "byte_match": true
+    },
+    {
+      "figure": "C3",
+      "word_member": "word/media/image8.png",
+      "official_image": "docs/diagrams/official/C3.png",
+      "sha256": "7201a58dfae79447f2e10a5b8a7e316a9eb4246a87457d4ce5b92ceb8a4ff92a",
+      "byte_match": true
+    },
+    {
+      "figure": "C4",
+      "word_member": "word/media/image9.png",
+      "official_image": "docs/diagrams/official/C4.png",
+      "sha256": "61701dd497ecc58546cc022a3abf2b6bcc5840586e6f4ba79c6bcd7735e510ff",
+      "byte_match": true
+    },
+    {
+      "figure": "C5",
+      "word_member": "word/media/image10.png",
+      "official_image": "docs/diagrams/official/C5.png",
+      "sha256": "4f39c54f4b1f7f3e58af5753fb6639152780db9169123625354d719022b10255",
+      "byte_match": true
+    },
+    {
+      "figure": "C6",
+      "word_member": "word/media/image11.png",
+      "official_image": "docs/diagrams/official/C6.png",
+      "sha256": "61a2fb1cf92577f9142e874a2b04fca8e7fecf3425bfc08595596dd3250f458d",
+      "byte_match": true
+    },
+    {
+      "figure": "C7",
+      "word_member": "word/media/image12.png",
+      "official_image": "docs/diagrams/official/C7.png",
+      "sha256": "62950c55c324d823c50173c96c0d3355af043b647ab4654ff84513317306d269",
+      "byte_match": true
+    },
+    {
+      "figure": "C8",
+      "word_member": "word/media/image13.png",
+      "official_image": "docs/diagrams/official/C8.png",
+      "sha256": "5cfddd996883180b21472c7a1e5881b5d2d6dd0c49bf4d7aa93e28e7e5c2dca9",
+      "byte_match": true
+    },
+    {
+      "figure": "C9",
+      "word_member": "word/media/image14.png",
+      "official_image": "docs/diagrams/official/C9.png",
+      "sha256": "9177fae34b34506188493e5355cd6291311ef65288acc89118297f3b10ec3579",
+      "byte_match": true
+    },
+    {
+      "figure": "C10",
+      "word_member": "word/media/image15.png",
+      "official_image": "docs/diagrams/official/C10.png",
+      "sha256": "1bd1d5424f87c13369743534dde9cbfac9971eb1d2563c67a60c2d2085583335",
+      "byte_match": true
+    },
+    {
+      "figure": "C11",
+      "word_member": "word/media/image16.png",
+      "official_image": "docs/diagrams/official/C11.png",
+      "sha256": "3dde875906d02159b0de7f6f7d06a2d4aa130b304591033c48aeba4f18ce53ad",
+      "byte_match": true
+    },
+    {
+      "figure": "C13",
+      "word_member": "word/media/image17.png",
+      "official_image": "docs/diagrams/official/C13.png",
+      "sha256": "935479907f4b946556dcb993e0bce42c98416d9c4276218d521f26f5036f74b1",
+      "byte_match": true
+    },
+    {
+      "figure": "C14",
+      "word_member": "word/media/image18.png",
+      "official_image": "docs/diagrams/official/C14.png",
+      "sha256": "37e8b1497bd91523960864030ffe48c364d892e2d366ea6a673c1ad6a418999f",
+      "byte_match": true
+    },
+    {
+      "figure": "C15",
+      "word_member": "word/media/image19.png",
+      "official_image": "docs/diagrams/official/C15.png",
+      "sha256": "978877cd9ba99433d93f68e55cb9206ea178c171d17cfe2c9da041aaa589e43c",
+      "byte_match": true
+    },
+    {
+      "figure": "C16",
+      "word_member": "word/media/image20.png",
+      "official_image": "docs/diagrams/official/C16.png",
+      "sha256": "6c86aa87e7d72e0db48da55ba9c9c4a3ad892805776584c984ac958f99177b9f",
+      "byte_match": true
+    },
+    {
+      "figure": "C12",
+      "word_member": "word/media/image21.png",
+      "official_image": "docs/diagrams/official/C12.png",
+      "sha256": "a03573ce6e0f92bfa377de5037d17a049416b486b5e3fce4d9419992b45391a1",
+      "byte_match": true
+    },
+    {
+      "figure": "D1",
+      "word_member": "word/media/image22.png",
+      "official_image": "docs/diagrams/official/D1.png",
+      "sha256": "7e5c852e0d7202a5faeb9cc830ea1d1d20fd02d8f7d4dc51360e8ceff01553d4",
+      "byte_match": true
+    },
+    {
+      "figure": "D2",
+      "word_member": "word/media/image23.png",
+      "official_image": "docs/diagrams/official/D2.png",
+      "sha256": "c72833a0ee071ee9cd7f3cd8f67c1d2258f73585a944e919a637ee79717ca493",
+      "byte_match": true
+    }
+  ],
+  "frozen_inputs": [
+    {
+      "path": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+      "sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a"
+    },
+    {
+      "path": "docs/diagrams/figure-index.json",
+      "sha256": "313c86d91d37c11abb8756fe090a48ef5841acbb3df895b36db9e690a0c3c610"
+    },
+    {
+      "path": "docs/diagrams/database/schema.json",
+      "sha256": "be4c3b1f7a25ced4c82f1d06e8c3f26d73a0deee4bb15d7c3749d8241cfdc58a"
+    },
+    {
+      "path": "docs/diagrams/database/constraints.md",
+      "sha256": "74ac7b95012162ad8a7e813db220f48818bdf1afa89d24c0cd55f2572c463465"
+    },
+    {
+      "path": "specs/001-system-specification/technical-schema.json",
+      "sha256": "ba45f00b5bb9242526e0b3b08ebeb63890d1a449d1ddf01a4961f1821cb42af9"
+    },
+    {
+      "path": "docs/diagrams/uml/A1-业务用例图.puml",
+      "sha256": "da11e1ef2d7c87b2f75eaf1e52c4c645cdd2f1200a4c0089d838ffad047d1646"
+    },
+    {
+      "path": "docs/diagrams/uml/A2-现状业务序列图.svg",
+      "sha256": "a9f681506645f5a7a6f0f91b583d5008572c54706c1879c3c4bd529f23e14c15"
+    },
+    {
+      "path": "docs/diagrams/uml/A3-改进业务序列图.svg",
+      "sha256": "a49dd3887d4236103f1eb6529915b44a2678f91e1400d88d67115e31035399c9"
+    },
+    {
+      "path": "docs/diagrams/uml/B1-系统用例图.svg",
+      "sha256": "7992742983c7919baccfa1cfb437a7985e43bb3520877b67aec6acb535bb87fd"
+    },
+    {
+      "path": "docs/diagrams/uml/C1-实体类图.puml",
+      "sha256": "51b6c708b4db245d636d75e40fe21a6567f2a3cafb748dc1047677fd7df1947c"
+    },
+    {
+      "path": "docs/diagrams/uml/C2-边界类图.svg",
+      "sha256": "286d8da18a8ebc329fd17265a85110420242cda79205bd7a13d33593d54cecae"
+    },
+    {
+      "path": "docs/diagrams/uml/C3-控制类图.svg",
+      "sha256": "56ef51a1d8af428ccfc1acecf6df4530a8d59252e8356215380fff19991964da"
+    },
+    {
+      "path": "docs/diagrams/uml/C4-UC01分析序列图.svg",
+      "sha256": "4315b9e750362cb902643a36e536c4c3f8abbc953b0db26912b00d8fd628a91c"
+    },
+    {
+      "path": "docs/diagrams/uml/C5-UC02分析序列图.svg",
+      "sha256": "0701239e33fdb95d93c054de458cea395529b21765de5f78c3360c7a3c592064"
+    },
+    {
+      "path": "docs/diagrams/uml/C6-UC03分析序列图.svg",
+      "sha256": "68d5bbc1035b9c1b8eb6d059f771e4ab229b21fd18eb028f546cf25f950f0470"
+    },
+    {
+      "path": "docs/diagrams/uml/C7-UC04分析序列图.svg",
+      "sha256": "171a5c1d93ee73e21d6a827a9f597751f3b0082f7083dbaacb0213183dfbd76b"
+    },
+    {
+      "path": "docs/diagrams/uml/C8-UC05分析序列图.svg",
+      "sha256": "575c0b83d74ffa71d41de34d8a667e4ba6fb5cc69109c69d3190476d4a2f8576"
+    },
+    {
+      "path": "docs/diagrams/uml/C9-UC06分析序列图.svg",
+      "sha256": "541d6078c82eca87f9b509938253cc825b8fc467031fc5ca32c03be812f54d28"
+    },
+    {
+      "path": "docs/diagrams/uml/C10-UC07分析序列图.svg",
+      "sha256": "41844dc58a8ce3b7c63142b94181ad0a02a663885dc560f0a5f816be3ab94a2b"
+    },
+    {
+      "path": "docs/diagrams/uml/C11-UC08分析序列图.svg",
+      "sha256": "ecf67513b79207f0fbac9904eb4cab7fc242ec5ade1bdbc6e10d5e12a449342b"
+    },
+    {
+      "path": "docs/diagrams/uml/C13-UC01-S2分析序列图.svg",
+      "sha256": "15d13b6c085bf6edbf0a166abe21e366c13e01908406b2e94ff1a223d2053718"
+    },
+    {
+      "path": "docs/diagrams/uml/C14-UC01-S3分析序列图.svg",
+      "sha256": "931aa5cc1a6cd8ab28cb855046b9af8c31f6ad8a409fa9497c713284c76399c2"
+    },
+    {
+      "path": "docs/diagrams/uml/C15-UC01-S4分析序列图.svg",
+      "sha256": "66f1d89b5a9ecd9c01b1cb0170ebeda35dbbc7d62510a647de3b684f01dc4907"
+    },
+    {
+      "path": "docs/diagrams/uml/C16-UC01-S5分析序列图.svg",
+      "sha256": "4bfdccadbe341e2e73ee1d4fccab599e47d29db9e46262873c3f796e859c86f8"
+    },
+    {
+      "path": "docs/diagrams/uml/C12-就诊状态机.svg",
+      "sha256": "eefc539aac0794a217b96acf75c842ae2fc11a1e91f36ad95b6eae23595c93de"
+    },
+    {
+      "path": "docs/diagrams/database/D1-database.dbml",
+      "sha256": "e7e91b2ba9050fc80bf49e35b13a13f156558faea6261f085804c0a550d04a9f"
+    },
+    {
+      "path": "docs/diagrams/architecture/D2-系统分层.mmd",
+      "sha256": "ecf1935d58634ca6470251ab500dafce3f029b8cc201ef9d63427f77be7968af"
+    }
+  ]
+}

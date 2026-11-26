@@ -1,0 +1,30 @@
+{
+  "id": "ADC-CONTRACT-20261124-05",
+  "status": "owner-approved",
+  "previous_amendment": "ADC-CONTRACT-20261112-04",
+  "authorization": "负责人确认首次本人登记免人工核验即可预约，并要求相关需求、设计及Spec Kit直接覆盖为当前规则；支付保持后续范围。",
+  "operation_count": 83,
+  "business_schema_changed": false,
+  "files": [
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "before_sha256": "27292a72a7d75f19d2af3b4d85640c7a9fe3c43655ee15b866936f2de30a5bf5",
+      "after_sha256": "ac43a7ed3367a2cb310f3e33355d13fab0c4e831c0f007213448159e1d633b68"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/identity.md",
+      "before_sha256": "1f9bdf3a5578e6d08580087b98bd3ea939c7de8d485f5c09019e4546ae3d81d2",
+      "after_sha256": "6675211f8bc360ca556b7ef592fae70336a419da0cba7179939e3fa791774f0d"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "before_sha256": "6ca783b84cd7cc870aa8482465a3d53348432a68a74095679474de647cad0afc",
+      "after_sha256": "489be1d417dc8bd1a8ef9ad494bfbec0a32c5f395fa8dbe12f9e05a67660975b"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "before_sha256": "05f53cb698012c4f54dc6a2afa187004a15756a57fe68b7d647248b1e8158e6d",
+      "after_sha256": "49d6ebed0e999e8e902b92fbb26a9254df6624d0b101cd790981b1d9a5c3f8e7"
+    }
+  ]
+}

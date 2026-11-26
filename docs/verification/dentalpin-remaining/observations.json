@@ -1,0 +1,1503 @@
+{
+  "date": "2026-11-19T02:17:57.677Z",
+  "observations": [
+    {
+      "name": "home",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good morning, Admin"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood morning, Admin\n\nThursday, November 19, 2026\n\nNew patient\nNew appointment\nNotification [ \"Signed in successfully\" ]\nSigned in successfully",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "admin-menu",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good morning, Admin"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood morning, Admin\n\nThursday, November 19, 2026\n\nNew patient\nNew appointment\n\nAppointments today\n\nIn clinic now\n\nOverdue payments\n\nRecalls\nCall list →\nNotification [ \"Signed in successfully\" ]\nSigned in successfully",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        },
+        {
+          "text": "Overdue payments",
+          "href": "/invoices?filter=overdue"
+        },
+        {
+          "text": "Call list →",
+          "href": "/recalls"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-0",
+      "url": "https://demo.dentalpin.com/settings/billing/preferences",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nBilling & tax",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Billing & tax",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-1",
+      "url": "https://demo.dentalpin.com/settings/billing/budget-expiry",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nBilling & tax",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Billing & tax",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-2",
+      "url": "https://demo.dentalpin.com/settings/billing/budget-reminders",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nBilling & tax",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Billing & tax",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-3",
+      "url": "https://demo.dentalpin.com/settings/billing/budget-public-link",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nBilling & tax",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Billing & tax",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-4",
+      "url": "https://demo.dentalpin.com/settings/billing/documents-letterhead",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nBilling & tax",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Billing & tax",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-5",
+      "url": "https://demo.dentalpin.com/settings/communications/language",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nCommunications",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Communications",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Communications",
+          "href": "/settings/communications"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-6",
+      "url": "https://demo.dentalpin.com/settings/notifications",
+      "headings": [
+        "Notifications",
+        "Channels",
+        "Automatic vs manual notifications",
+        "Email server configuration"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nCommunications\nNotifications\n\nConfigure which notifications are sent automatically and which require manual sending.\n\nTest connection\nChannels\n\nHow the clinic reaches patients: the channel automatic messages use and the Send buttons staff see.\n\nPreferred channel\nEmail\nUsed for automatic messages (new booking, reminder, welcome…).\n\nFall back to the other channel\n\nIf the preferred channel cannot send, try the other available channel instead of skipping the message.\n\nSMS daily limit\nMax outbound SMS per day for the clinic.\n\nShow a Send button for…\n\nWhich Send buttons reception sees on appointments, quotes and invoices.\n\nEmail\nWhatsApp\nSMS\n\nWhatsApp is not available until the clinic's number is connected. Connect WhatsApp (Kapso)\n\nSMS is not available until an SMS provider is configured. Configure\n\nAutomatic vs manual notifications\n\nDefine which notifications are sent automatically when an event occurs and which require the user to send them manually.\n\nNotification type\tEnabled\tAuto send\tOptions\n\n\nAppointment confirmation\n\nConfirmation email when an appointment is scheduled\n\n\t\n\t\n\t-\n\n\nAppointment cancellation\n\nNotification email when an appointment is cancelled\n\n\t\n\t\n\t-\n\n\nAppointment reminder\n\nReminder email before the appointment\n\n\t\n\t\n\t\nh before\n\n\n\nQuote sending\n\nEmail with quote details\n\n\t\n\t\n\t-\n\n\nQuote accepted\n\nConfirmation email when a quote is accepted\n\n\t\n\t\n\t-\n\n\nWelcome\n\nWelcome email for new patients\n\n\t\n\t\n\t-\n\n\nInvoice sending\n\nMessage with the invoice when it is sent to the patient\n\n\t\n\t\n\t-\n\n\nQuote reminder\n\nFollow-up for quotes with no reply (7 and 14 days)\n\n\t\n\t\n\t-\n\n\nRecall reminder\n\nReminder to book the periodic follow-up visit\n\n\t\n\t\n\t-\n\nInformation\n\nAuto send: The notification is sent when the event occurs (e.g., when creating an appointment).\nManual send: A button will appear to send the notification when desired.\nDisabled: The notification will not be sent and the send option will not appear.\nEmail server configuration\nConfigure\nNot configured\n\nConfigure the SMTP server to send emails from your clinic. Each clinic can have its own configuration.",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Communications",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Connect WhatsApp (Kapso)",
+          "href": "/settings/integrations/whatsapp-kapso"
+        },
+        {
+          "text": "Configure",
+          "href": "/settings/integrations/sms-gateway"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Test connection",
+        "Configure"
+      ],
+      "fields": [
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "required": false,
+          "options": []
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        }
+      ],
+      "tableHeaders": [
+        "Notification type",
+        "Enabled",
+        "Auto send",
+        "Options"
+      ]
+    },
+    {
+      "name": "page-7",
+      "url": "https://demo.dentalpin.com/settings/integrations/copilot",
+      "headings": [
+        "Settings",
+        "You don't have access to this section"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nSettings\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nYou don't have access to this section\n\nAsk a clinic administrator to grant you the required permissions.\n\nIntegrations",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Integrations",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        },
+        {
+          "text": "Integrations",
+          "href": "/settings/integrations"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-8",
+      "url": "https://demo.dentalpin.com/settings/account/profile",
+      "headings": [
+        "Profile"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nProfile\n\nYour personal information in this clinic.\n\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Account",
+          "href": "/settings/account"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-9",
+      "url": "https://demo.dentalpin.com/settings/account/language",
+      "headings": [
+        "Language"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nHelp\nLog out\nLanguage\n\nSelect your preferred language\n\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Account",
+          "href": "/settings/account"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/setup/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/534d5420-42b6-40ae-b6c5-a1ef4e59aa87.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/modules/-/active",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/series",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/notifications/smtp-settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/clinic-hours",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/stats/dashboard",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/items",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    }
+  ],
+  "blocked": [
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.AccessGrantMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.AccessGrantRecord">
+    <constructor>
+      <idArg column="grant_id" javaType="java.lang.String"/>
+      <arg column="subject_id" javaType="java.lang.String"/>
+      <arg column="role_code" javaType="java.lang.String"/>
+      <arg column="granted_by" javaType="java.lang.String"/>
+      <arg column="valid_from" javaType="java.time.Instant"/>
+      <arg column="valid_until" javaType="java.time.Instant"/>
+      <arg column="revoked_at" javaType="java.time.Instant"/>
+      <arg column="revoked_by" javaType="java.lang.String"/>
+      <arg column="reason" javaType="java.lang.String"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `grant_id`, `subject_id`, `role_code`, `granted_by`, `valid_from`, `valid_until`, `revoked_at`, `revoked_by`, `reason`, `created_at` FROM adc_identity.`AccessGrant` WHERE `grant_id` = #{grant_id}
+  </select>
+</mapper>

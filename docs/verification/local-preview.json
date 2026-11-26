@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-18T08:42:25.835Z",
+  "purpose": "owned-local-synthetic-preview-only",
+  "url": "https://localhost:19443",
+  "project": "adc-local-preview",
+  "database_persistent": true,
+  "loopback_only": true,
+  "synthetic_data": true,
+  "clinical_data_written_directly": false,
+  "initial_synthetic_clinic_precondition": true,
+  "existing_healthy_services_reused": true,
+  "existing_seed_steps_reused": 24,
+  "credentials_file": "D:\\secrets\\AndrewDental\\LocalPreview\\预览登录资料.txt",
+  "patient_number": "P1713015355829489659",
+  "appointment_id": "8409763366019790977",
+  "real_wechat_verified": false,
+  "production_deployed": false,
+  "ready": true
+}

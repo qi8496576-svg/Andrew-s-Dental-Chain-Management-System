@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-18T10:09:13.150Z",
+  "status": "INTERIM_LOGIC_PASS_BEFORE_FINAL_STYLE_FIX",
+  "environment": "real WeChat developer tools / local HTTPS / real MySQL",
+  "api_mocked": false,
+  "checks": [
+    "Guest home contains no invented clinic or patient data",
+    "Guest booking is gated by identity and binding",
+    "Actual wx.login and real backend catalog loaded",
+    "Existing patient profile, service catalog and clinic selection retained",
+    "Real candidate doctors and slots can be selected; confirmation remains explicit",
+    "Changing booking criteria invalidates the selected slot",
+    "All appointment status filters reflect real records",
+    "Home primary button navigates to booking tab"
+  ],
+  "screenshots": [
+    "binding.png",
+    "booking-slots.png",
+    "booking.png",
+    "home-guest.png",
+    "home.png",
+    "login.png",
+    "mine-guest.png",
+    "mine.png",
+    "profile.png",
+    "records.png"
+  ],
+  "unbound_state": "Covered by isolated UI tests; existing verified binding was preserved",
+  "real_device_verified": false,
+  "final_visual_verified": false,
+  "note": "These screenshots predate the final shared WXSS correction. Do not present them as final visual acceptance."
+}

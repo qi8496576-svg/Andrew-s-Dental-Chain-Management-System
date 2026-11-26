@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.RequestReceiptMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.RequestReceiptRecord">
+    <constructor>
+      <idArg column="subject_id" javaType="java.lang.String"/>
+      <idArg column="operation_id" javaType="java.lang.String"/>
+      <idArg column="request_key" javaType="java.lang.String"/>
+      <arg column="content_hash" javaType="[B"/>
+      <arg column="request_id" javaType="java.lang.String"/>
+      <arg column="result_refs" javaType="java.lang.String"/>
+      <arg column="response_summary" javaType="java.lang.String"/>
+      <arg column="response_status" javaType="java.lang.Short"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+      <arg column="completed_at" javaType="java.time.Instant"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `subject_id`, `operation_id`, `request_key`, `content_hash`, `request_id`, `result_refs`, `response_summary`, `response_status`, `created_at`, `completed_at` FROM adc_identity.`RequestReceipt` WHERE `subject_id` = #{subject_id} AND `operation_id` = #{operation_id} AND `request_key` = #{request_key}
+  </select>
+</mapper>

@@ -1,0 +1,45 @@
+{
+  "at": "2026-11-24T14:41:08.927Z",
+  "origin": "https://andrewdental.cn",
+  "wechat_login_mocked": false,
+  "api_mocked": false,
+  "checks": [
+    "Unregistered WeChat user can browse real schedules without a patient number",
+    "Native WeChat creates new self-declared profile with no patient number or manual approval",
+    "NOT_REVIEWED and patient statement remain distinct from clinical verification",
+    "Native booking and cancellation are reflected by the real frontdesk API",
+    "No binding of the original other-account patient was changed"
+  ],
+  "stage": "COMPLETE",
+  "new_registration_created": true,
+  "patient_id": "3730721664098619420",
+  "patient_number": "P3730721664098619420",
+  "appointment_id": "1618807232491608191",
+  "management_before": "SCHEDULED",
+  "management_after": "CANCELLED",
+  "database": {
+    "allergy_status": "NOT_REVIEWED",
+    "business_tables": 19,
+    "business_columns": 163,
+    "self_declarations": 1,
+    "appointment_events": 2,
+    "appointment_status": "CANCELLED",
+    "new_current_bindings": 1,
+    "original_subject_hash": "86d96b365bb1b399d7b5e997eeeaed56fb7dfb8fecc47208512932a35c59f93d",
+    "original_current_bindings": 1
+  },
+  "original_other_account_binding_preserved": true,
+  "status": "PASS",
+  "diagnostics": [
+    {
+      "stage": "protected-original-record",
+      "error": "App.captureScreenshot: timeout waiting for automator response",
+      "resolution": "Business assertions had passed; personal-center runtime, screenshot and actual button taps verified separately."
+    }
+  ],
+  "business_status": "PASS",
+  "personal_runtime": "PASS",
+  "profile_button": "PASS_ACTUAL_TAP",
+  "profile_subtitle": "PASS_CURRENT_RENDER",
+  "record_shortcut": "PASS_ACTUAL_TAP"
+}

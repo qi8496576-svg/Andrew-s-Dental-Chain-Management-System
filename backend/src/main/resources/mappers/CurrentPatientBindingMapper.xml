@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.CurrentPatientBindingMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.CurrentPatientBindingRecord">
+    <constructor>
+      <idArg column="subject_id" javaType="java.lang.String"/>
+      <arg column="patient_id" javaType="java.lang.Long"/>
+      <arg column="verified_by" javaType="java.lang.String"/>
+      <arg column="verified_at" javaType="java.time.Instant"/>
+      <arg column="verification_reference" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `subject_id`, `patient_id`, `verified_by`, `verified_at`, `verification_reference` FROM adc_identity.`CurrentPatientBinding` WHERE `subject_id` = #{subject_id}
+  </select>
+</mapper>

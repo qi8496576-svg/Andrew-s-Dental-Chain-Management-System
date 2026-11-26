@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-18T09:03:41.865Z",
+  "origin": "https://localhost:19443",
+  "real_mysql": true,
+  "api_mocked": false,
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/auth/csrf",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/auth/staff-sessions",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/auth/csrf",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/auth/staff-sessions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/treatments",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/treatments/4139957967054134788/qualification-requirements",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/schedules?clinic_id=1&limit=100",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/schedules",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/804261213614954395",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/804261213614954395",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/2259490334298577671",
+      "status": 200
+    }
+  ],
+  "fixture": {
+    "treatment_id": "4139957967054134788",
+    "schedule_id": "1141516844367136405",
+    "date": "2026-11-27",
+    "appointment_id": "804261213614954395",
+    "attended_appointment_id": "2259490334298577671"
+  },
+  "patient_flow": "PASS",
+  "stage": "COMPLETE",
+  "real_wechat_login": true,
+  "patient_cancel_visible_to_admin": true,
+  "admin_browser_same_appointment": true,
+  "admin_browser_attendance_visible_to_patient": true,
+  "patient_cancel_after_attendance_rejected": true,
+  "status": "PASS",
+  "database_verification": {
+    "business_tables": 19,
+    "business_columns": 163,
+    "business_foreign_keys": 30,
+    "cancelled_status": "CANCELLED",
+    "attended_status": "IN_PROGRESS",
+    "source": "direct read of adc-local-preview-mysql-1",
+    "checked_at": "2026-11-19T02:03:50.300Z"
+  }
+}

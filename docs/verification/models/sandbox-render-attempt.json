@@ -1,0 +1,167 @@
+{
+  "plantuml": "1.2026.9",
+  "mermaid_cli": "12.2.0",
+  "results": [
+    {
+      "source": "docs/diagrams/uml/A1-业务用例图.puml",
+      "sha256": "da11e1ef2d7c87b2f75eaf1e52c4c645cdd2f1200a4c0089d838ffad047d1646",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/A1-业务用例图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/A2-现状业务序列图.puml",
+      "sha256": "b54e62479b8128e2c58721831a8fdffd34dc7516793bafda45de8f54b1e6e568",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/A2-现状业务序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/A3-改进业务序列图.puml",
+      "sha256": "f830d33285509cca909b5c5a71cf7b8c8d72ce547e9e7e85a67396580e9ed419",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/A3-改进业务序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/B1-系统用例图.puml",
+      "sha256": "9d8840254965973d69b95c039ecbd0f0826e0169003a7f8f40582704cad80358",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/B1-系统用例图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C1-实体类图.puml",
+      "sha256": "51b6c708b4db245d636d75e40fe21a6567f2a3cafb748dc1047677fd7df1947c",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C1-实体类图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C10-UC07分析序列图.puml",
+      "sha256": "1d2f1a92d6b626d138178d7c16cf4c21a5111fb6c18057c1370ba1080f8028b4",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C10-UC07分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C11-UC08分析序列图.puml",
+      "sha256": "a24008b0b798a3f9b230fb6c07696809e9d83aa0572235038fa06f8b80555337",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C11-UC08分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C12-就诊状态机.mmd",
+      "sha256": "723e87134721d2de52811a86259a73cde14cea81225269031ee840c3958d1168",
+      "exit_code": 1,
+      "error": null,
+      "output": "docs/verification/models/rendered/C12-就诊状态机.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C13-UC01-S2分析序列图.puml",
+      "sha256": "65bc3616a45128921a449839fea1602facdd7afaed151f6f064e3b25c9946391",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C13-UC01-S2分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C14-UC01-S3分析序列图.puml",
+      "sha256": "e8bd88dd311ab79bea1dc7d23dc4ddb7bbe46a7022b42eb37b3aa32bee41275e",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C14-UC01-S3分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C15-UC01-S4分析序列图.puml",
+      "sha256": "c258ce22341fcc22ffa4c566e8ad8291af07c283e6ca6e87c247ab5bfcdef6e0",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C15-UC01-S4分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C16-UC01-S5分析序列图.puml",
+      "sha256": "e42e2b4877a4dca9d7281615d88dd3959cfc140721a5cb7c3ffd7c6933073922",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C16-UC01-S5分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C2-边界类图.puml",
+      "sha256": "f74398abf04eb95b7657352e51a1781a56a689d4416b7e34451e8cbd3f0666d3",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C2-边界类图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C3-控制类图.puml",
+      "sha256": "01a19d9eb1dd7a49de6e1e7390535d02a3a258e947698b1cc1048e11d94ca658",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C3-控制类图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C4-UC01分析序列图.puml",
+      "sha256": "5acc8b6a480f0d93a12882a4cc62c353286ff3487a87831f4356938a9a6dec3e",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C4-UC01分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C5-UC02分析序列图.puml",
+      "sha256": "9b33811c58fbd11dd7acd644ea2605b72602c3417709e35147612b8cb934dd7f",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C5-UC02分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C6-UC03分析序列图.puml",
+      "sha256": "fe9ea5325c2138abdc5b76832ff5dbac35e2562559398b1dbeb46a55c61bf266",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C6-UC03分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C7-UC04分析序列图.puml",
+      "sha256": "3b8daf4c3c62dc17dde9f066319cfc7e1caa78069e9300e6aee97929685c20a6",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C7-UC04分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C8-UC05分析序列图.puml",
+      "sha256": "d6173aa7a7bb25f65ce73057d82ea5c04a8f2c26f5406bbe46903303f85b7811",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C8-UC05分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C9-UC06分析序列图.puml",
+      "sha256": "47ea7c46e492e5547e8bbd46f3227134713259c5f22208757b91c0f2d7c34b2b",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C9-UC06分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/architecture/D2-系统分层.mmd",
+      "sha256": "ba0a3f0e686117816e2f65d59814ebbaff8999c65fbc6e31e83e2928f80930b4",
+      "exit_code": 1,
+      "error": null,
+      "output": "docs/verification/models/rendered/D2-系统分层.svg"
+    },
+    {
+      "source": "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+      "sha256": "9d8148936719b2d16f2c7165f803a92467547fcc4237584f3ad9e0d5c9602da7",
+      "exit_code": 1,
+      "error": null,
+      "output": "docs/verification/models/rendered/storage-boundaries.svg"
+    },
+    {
+      "source": "specs/001-system-specification/diagrams/technical-erd.mmd",
+      "sha256": "7d8ea2e40129ccb6871644c0ebcb53a16af5e8b850079009942e4d6bdfa1eddb",
+      "exit_code": 1,
+      "error": null,
+      "output": "docs/verification/models/rendered/technical-erd.svg"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-24T04:24:50.640Z",
+  "release": "adc-cloud-20261124-1795493577789",
+  "backup": {
+    "schemas": [
+      "adc_business",
+      "adc_identity",
+      "adc_audit"
+    ],
+    "sha256": "1ce974566b4b4c29b20577d67d61aed27e2929bcc1376730265fc9440434effe",
+    "independent_off_server_copy": true,
+    "bytes": 7789,
+    "local_directory": "D:\\secrets\\AndrewDental\\CloudIntegration\\Backups\\adc-cloud-20261124-1795493577789",
+    "full_q05_restore_verified": false
+  },
+  "renewal_hook_installed": true,
+  "rollback_script_installed": true,
+  "credentials_saved_privately": true
+}

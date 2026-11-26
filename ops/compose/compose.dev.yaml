@@ -1,0 +1,36 @@
+name: adc-dev
+services:
+  mysql:
+    image: mysql:8.4@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d
+    platform: linux/amd64
+    command:
+      - --lower-case-table-names=0
+      - --default-time-zone=+00:00
+      - --default-storage-engine=InnoDB
+    environment:
+      TZ: UTC
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+    secrets:
+      - mysql_root_password
+    ports:
+      - "127.0.0.1:${ADC_DEV_MYSQL_PORT:-13306}:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - 'MYSQL_PWD="$$(cat /run/secrets/mysql_root_password)" mysql --user=root --batch --skip-column-names --execute="SELECT 1" >/dev/null'
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 40s
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+volumes:
+  mysql_data:
+secrets:
+  mysql_root_password:
+    file: ${ADC_DEV_MYSQL_ROOT_PASSWORD_FILE:?Set an absolute path to a local development-only secret file}

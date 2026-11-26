@@ -1,0 +1,26 @@
+{
+  "id": "ADC-CONTRACT-20261112-04",
+  "status": "owner-approved",
+  "date": "2026-11-12",
+  "owner_reply": "批准这一处嵌套 DTO 修正",
+  "proposal": "docs/verification/decisions/uc01-patient-details-contract-proposal.md",
+  "previous_amendment": "ADC-CONTRACT-20261112-03",
+  "operation_count": 82,
+  "files": [
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "before_sha256": "adb09d901a885d845b9c10732f5cd586f11025643ea0c68bebf302398e115146",
+      "after_sha256": "05f53cb698012c4f54dc6a2afa187004a15756a57fe68b7d647248b1e8158e6d"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "before_sha256": "3d2989367a270385f415a0bef484cb679d7922557687c5e711bebcd6f26c7910",
+      "after_sha256": "27292a72a7d75f19d2af3b4d85640c7a9fe3c43655ee15b866936f2de30a5bf5"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "before_sha256": "a56f4ffcc37882c084c25e35a7c5cfff50f8058e98e73cb8537d041374c0b4b7",
+      "after_sha256": "6ca783b84cd7cc870aa8482465a3d53348432a68a74095679474de647cad0afc"
+    }
+  ]
+}

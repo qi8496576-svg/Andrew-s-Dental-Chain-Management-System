@@ -1,0 +1,589 @@
+{
+  "date": "2026-11-09",
+  "scope": "Tasks 静态生成校验；不是正式 Analyze 或运行测试",
+  "task_count": 186,
+  "unchecked_count": 186,
+  "setup_count": 7,
+  "foundation_count": 43,
+  "story_task_counts": {
+    "US13": 7,
+    "US15": 8,
+    "US16": 7,
+    "US14": 7,
+    "US6": 7,
+    "US1": 7,
+    "US2": 7,
+    "US3": 7,
+    "US4": 7,
+    "US5": 7,
+    "US7": 7,
+    "US8": 7,
+    "US9": 7,
+    "US10": 10,
+    "US11": 12,
+    "US12": 7
+  },
+  "final_count": 15,
+  "parallel_task_count": 37,
+  "parallel_story_test_pairs": [
+    [
+      "T051",
+      "T052"
+    ],
+    [
+      "T058",
+      "T059"
+    ],
+    [
+      "T066",
+      "T067"
+    ],
+    [
+      "T073",
+      "T074"
+    ],
+    [
+      "T080",
+      "T081"
+    ],
+    [
+      "T087",
+      "T088"
+    ],
+    [
+      "T094",
+      "T095"
+    ],
+    [
+      "T101",
+      "T102"
+    ],
+    [
+      "T108",
+      "T109"
+    ],
+    [
+      "T115",
+      "T116"
+    ],
+    [
+      "T122",
+      "T123"
+    ],
+    [
+      "T129",
+      "T130"
+    ],
+    [
+      "T136",
+      "T137"
+    ],
+    [
+      "T143",
+      "T144"
+    ],
+    [
+      "T153",
+      "T154"
+    ],
+    [
+      "T165",
+      "T166"
+    ]
+  ],
+  "acceptance_coverage": {
+    "covered": 83,
+    "total": 83,
+    "missing": []
+  },
+  "operation_coverage": {
+    "covered": 81,
+    "total": 81,
+    "missing": []
+  },
+  "fr_coverage": {
+    "covered": 25,
+    "total": 25
+  },
+  "quality_coverage": {
+    "covered": 9,
+    "total": 9
+  },
+  "business_tables": 19,
+  "business_fields_quoted": 163,
+  "technical_tables": 14,
+  "technical_fields_quoted": 110,
+  "sequential_ids": true,
+  "all_paths_explicit": true,
+  "dependencies_exist_and_precede_tasks": false,
+  "cycles": [],
+  "approved_files_unchanged": [
+    {
+      "path": ".specify/memory/constitution.md",
+      "sha256": "0cade87029fb7802112a1cbdcdb293ea85df03390594a1fbb458142b36ae8376"
+    },
+    {
+      "path": "specs/001-system-specification/plan.md",
+      "sha256": "7e1f5d8b9e93f54103bac41a3e65ef8762e5badd33fe02d295170a67f3a57cb7"
+    },
+    {
+      "path": "specs/001-system-specification/research.md",
+      "sha256": "d24bade38594c80d7df367544d6125dab06aa5d690e4b6f64252259733e31302"
+    },
+    {
+      "path": "specs/001-system-specification/plan-supplement-review.md",
+      "sha256": "8c5ebcf39f0908924734a5da4f57ebae2367475c6eb011e7bfb90f5f52e6c9ba"
+    },
+    {
+      "path": "specs/001-system-specification/spec.md",
+      "sha256": "54c5fe887cf1f95ebd059d3420f8b92dc81bc255536fd9398ce08cb555c7f6c3"
+    },
+    {
+      "path": "specs/001-system-specification/checklists/requirements.md",
+      "sha256": "b65c76ac9d8bb007f65b849182b36d31f12f00c0a7b2314b490e1f8aecd58b1e"
+    },
+    {
+      "path": "specs/001-system-specification/traceability.md",
+      "sha256": "e8cd73dd325271ff1287d248a310b9e275e982f7346269dd5b427eb7102e072f"
+    },
+    {
+      "path": "specs/001-system-specification/quickstart.md",
+      "sha256": "e9dbbb5eb33aff0a79fe783f64b5a593ee74e39443dc704d5ad38fd08e91ac98"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "sha256": "d46fbdcc2eac96a6338d1ab6fee4a7d3ca3d0dc0856de43d045d3b3db26e57aa"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/identity.md",
+      "sha256": "5cee0ae0c34f48d6fbba32f01a83ecf0b52895467382b2b8cb5b40c15b039fba"
+    },
+    {
+      "path": "specs/001-system-specification/technical-data-model.md",
+      "sha256": "afb34eabdb81cf6ccd0072b6f56fa2fec623e9bc353ee5c4fa7be692e40135fd"
+    },
+    {
+      "path": "docs/references/README.md",
+      "sha256": "5f5edb115e9d0dd420f6146b15f3b8cc62bd9cb6566a2e76b9dd6cf5baf86d10"
+    },
+    {
+      "path": "docs/references/conversion-report.md",
+      "sha256": "13d5d2bcac6da72779cd6d60ed0adfbebea0aaffd7bd96994223ddf3efbfd335"
+    },
+    {
+      "path": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+      "sha256": "b7f73501b2e25ea6cd489e8b25a8b9fcf01a65eb17160a69b6bca9a5d71dc564"
+    },
+    {
+      "path": "docs/diagrams/database/schema.json",
+      "sha256": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b"
+    },
+    {
+      "path": "docs/diagrams/database/constraints.md",
+      "sha256": "be6f0c74d2d933096340a5a29f9a153f6288a28757267ada7168fd36699dca4e"
+    },
+    {
+      "path": "docs/diagrams/official/D1.png",
+      "sha256": "4655aca912c6f14846e03d6eb6f493feb5ab2ac8fcd1006ee4bcf47848669fb6"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "sha256": "f2767b4d11e121fa2fd3889f5e545f9e8c8d481ca7533c4d9f4d403cd5b76747"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "sha256": "fbe22f2a63246de15c644aaab533bc0e38574f4967df469b9df12a32f12cc103"
+    },
+    {
+      "path": "specs/001-system-specification/data-model.md",
+      "sha256": "f8bc3fa07974fb084523330a0bda810b0d5575db2330bb9814ceb0f28d0df6d7"
+    },
+    {
+      "path": "specs/001-system-specification/technical-schema.json",
+      "sha256": "2997376f5ba5a2ec5cbe1040ad1b97c1fc2ad9bdfd4883bf96c4e1bdff19bc2f"
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/technical-erd.mmd",
+      "sha256": "7d8ea2e40129ccb6871644c0ebcb53a16af5e8b850079009942e4d6bdfa1eddb"
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+      "sha256": "9d8148936719b2d16f2c7165f803a92467547fcc4237584f3ad9e0d5c9602da7"
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+      "sha256": "edb451e576d03ae128d60ad0c87ddb06c1b649af7f9cd862cc70b9771633d8c1"
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/technical-storage-overview.png",
+      "sha256": "479198fc717585beee98e628de742c1162121e6a1c2d0decdcf40a242e2b1b40"
+    },
+    {
+      "path": "specs/001-system-specification/business-baseline-audit.md",
+      "sha256": "8cb24e08053a21068559486a70fc8050411123de4eb24853465d4586276c3950"
+    },
+    {
+      "path": "specs/001-system-specification/business-baseline-audit.json",
+      "sha256": "941118ce4f319f2b686ee6e5ee541cec6cb552708c627dd32964e1e7c34d3c90"
+    },
+    {
+      "path": "参考资料/5.安德鲁牙科连锁店：数据建模 Andrew’s Dental .pdf",
+      "sha256": "1a2655344337d570d5f77e2c3018d71ca0b7b3b8692eb97b4cdc13c9eba6027f"
+    }
+  ],
+  "formal_analyze_executed": false,
+  "business_code_created": false,
+  "business_tests_executed": false,
+  "real_wechat_or_cloud_connected": false,
+  "extension_hooks_file_exists": false,
+  "dependencies_precede_in_execution_order": true,
+  "task_ids_are_stable_identifiers": true,
+  "execution_order": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006",
+    "T007",
+    "T008",
+    "T009",
+    "T010",
+    "T011",
+    "T012",
+    "T013",
+    "T014",
+    "T015",
+    "T016",
+    "T017",
+    "T018",
+    "T019",
+    "T020",
+    "T021",
+    "T022",
+    "T023",
+    "T024",
+    "T025",
+    "T026",
+    "T027",
+    "T028",
+    "T029",
+    "T030",
+    "T031",
+    "T032",
+    "T033",
+    "T034",
+    "T035",
+    "T036",
+    "T037",
+    "T038",
+    "T039",
+    "T040",
+    "T041",
+    "T042",
+    "T043",
+    "T044",
+    "T045",
+    "T046",
+    "T047",
+    "T048",
+    "T049",
+    "T050",
+    "T051",
+    "T052",
+    "T053",
+    "T054",
+    "T055",
+    "T056",
+    "T057",
+    "T058",
+    "T059",
+    "T060",
+    "T061",
+    "T062",
+    "T063",
+    "T064",
+    "T065",
+    "T066",
+    "T067",
+    "T068",
+    "T069",
+    "T070",
+    "T071",
+    "T072",
+    "T073",
+    "T074",
+    "T075",
+    "T076",
+    "T077",
+    "T078",
+    "T079",
+    "T080",
+    "T081",
+    "T082",
+    "T083",
+    "T084",
+    "T085",
+    "T086",
+    "T087",
+    "T088",
+    "T089",
+    "T090",
+    "T091",
+    "T136",
+    "T137",
+    "T138",
+    "T139",
+    "T140",
+    "T092",
+    "T093",
+    "T094",
+    "T095",
+    "T096",
+    "T097",
+    "T098",
+    "T099",
+    "T100",
+    "T101",
+    "T102",
+    "T103",
+    "T104",
+    "T105",
+    "T106",
+    "T107",
+    "T108",
+    "T109",
+    "T110",
+    "T111",
+    "T112",
+    "T113",
+    "T114",
+    "T115",
+    "T116",
+    "T117",
+    "T118",
+    "T119",
+    "T120",
+    "T121",
+    "T122",
+    "T123",
+    "T124",
+    "T125",
+    "T126",
+    "T127",
+    "T128",
+    "T129",
+    "T130",
+    "T131",
+    "T132",
+    "T133",
+    "T134",
+    "T135",
+    "T141",
+    "T142",
+    "T143",
+    "T144",
+    "T145",
+    "T146",
+    "T147",
+    "T148",
+    "T149",
+    "T150",
+    "T151",
+    "T152",
+    "T153",
+    "T154",
+    "T155",
+    "T156",
+    "T157",
+    "T158",
+    "T159",
+    "T160",
+    "T161",
+    "T162",
+    "T163",
+    "T164",
+    "T165",
+    "T166",
+    "T167",
+    "T168",
+    "T169",
+    "T170",
+    "T171",
+    "T172",
+    "T173",
+    "T174",
+    "T177",
+    "T178",
+    "T175",
+    "T176",
+    "T179",
+    "T180",
+    "T181",
+    "T182",
+    "T183",
+    "T184",
+    "T185",
+    "T186"
+  ],
+  "dependency_remediation": [
+    "I1",
+    "I2"
+  ],
+  "independent_static_validation": true,
+  "markdown_table_errors": [],
+  "broken_local_links": [],
+  "field_quotes_verified_against_sources": true,
+  "all_approval_hashes_rechecked": true,
+  "reschedule_action_contract_verified": true,
+  "post_tasks_hooks": "extensions.yml absent; no hooks to dispatch",
+  "artifacts_sha256": {
+    "tasks.md": "8d77fbfd6d897e05f12c81174a26cbbdbd2cf024e31046188211491f6400e02a",
+    "task-traceability.md": "ba022cd7b10222c9a812e2039b6e8321709b4ed30d40c79323c2de13bbb224f8",
+    "tasks-catalog.json": "52182198f3f48e063ed67e7a0c4b93acfcdafc2825c316d2d0cde1ae41f681bc"
+  },
+  "dependencies_exist_and_precede_tasks_definition": "兼容旧字段：依赖引用全部存在，且在 tasks.md 原始展示顺序中均先于依赖它的任务；不表示 execution_order 的校验结果。",
+  "dependency_field_provenance": "旧生成脚本直接赋值 false；2026-11-09 状态同步时根据当前任务与展示顺序重新实算，结果仍为 false。",
+  "dependency_references_all_exist": true,
+  "missing_dependency_references": [],
+  "execution_order_contains_all_tasks_once": true,
+  "execution_order_dependency_violations": [],
+  "original_display_order_is_topological": false,
+  "original_display_order_dependency_violations": [
+    {
+      "task": "T092",
+      "dependency": "T140"
+    },
+    {
+      "task": "T093",
+      "dependency": "T140"
+    },
+    {
+      "task": "T175",
+      "dependency": "T178"
+    }
+  ],
+  "formal_analyze_executed_definition": "原字段 false 描述本静态校验脚本不执行正式 Analyze；项目已经完成的只读 Analyze 及当前审批状态见 workflow_status，不据此推断 Analyze 尚未执行。",
+  "workflow_status": {
+    "tasks_generated_date": "2026-11-07",
+    "analyze_executed_at_tasks_generation": false,
+    "revised_read_only_analyze_completed_date": "2026-11-09",
+    "analyzed_tasks_sha256": "11d82847c1ad69a17b4789f4b15ecbb693f073932b10bfc7e163653c8b2b33d6",
+    "findings": {
+      "I1": "closed",
+      "I2": "closed"
+    },
+    "current_state": "dependency_amendment_approved_final_implement_review_paused",
+    "implement_authorized": false,
+    "source": "本聊天已完成的只读 Analyze 及项目负责人本次状态同步指令",
+    "latest_approved_dependency_amendment": "ADC-PLAN-20261109-DEP01",
+    "prior_analyze_covers_dependency_amendment": false
+  },
+  "status_sync_validation": {
+    "date": "2026-11-09",
+    "task_lines_unchanged": true,
+    "task_count": 186,
+    "dependency_values_computed_from_current_artifacts": true,
+    "task_catalog_and_traceability_unchanged": true,
+    "protected_file_hashes_verified": 30,
+    "business_tests_executed": false
+  },
+  "approved_files_unchanged_definition": "历史批准时点的指纹清单，保持原记录；后续状态同步见preimplement-sync.json，依赖版本补充批准与前后指纹见plan-dependency-amendment.json。不得将历史清单当作现行可变文档的哈希断言。",
+  "current_document_sha256": {
+    "specs\\001-system-specification\\business-baseline-audit.md": "8cb24e08053a21068559486a70fc8050411123de4eb24853465d4586276c3950",
+    "specs\\001-system-specification\\data-model.md": "f8bc3fa07974fb084523330a0bda810b0d5575db2330bb9814ceb0f28d0df6d7",
+    "specs\\001-system-specification\\plan-approval.md": "68bc6c0b3bf8919b2b93b472bb92e5643ffce8e36ae2adedb4cc1502ab554e5a",
+    "specs\\001-system-specification\\plan-supplement-review.md": "faedfab11bbdad120a6d75a0c12b064dca5b3fbcec26bd0af092dac0b9d07885",
+    "specs\\001-system-specification\\plan.md": "26e4df626c3abcd95152b3ebc47bf8490575d26de2a6ce49b4fcc1cacf023a2d",
+    "specs\\001-system-specification\\quickstart.md": "6c6cf0b49faca243f3459625afba623d1ca2dcf624ad494959a0742f7e2b2654",
+    "specs\\001-system-specification\\research.md": "6e11677d8342aa996478f3e945f97c6968e0563ce2323d21ebdae48e13a7bd53",
+    "specs\\001-system-specification\\spec.md": "510bd7cc0d759b9c6786b0673225107cf1fc28dce14338fc4aa921be473e4aa6",
+    "specs\\001-system-specification\\task-traceability.md": "ba022cd7b10222c9a812e2039b6e8321709b4ed30d40c79323c2de13bbb224f8",
+    "specs\\001-system-specification\\tasks.md": "8d77fbfd6d897e05f12c81174a26cbbdbd2cf024e31046188211491f6400e02a",
+    "specs\\001-system-specification\\technical-data-model.md": "afb34eabdb81cf6ccd0072b6f56fa2fec623e9bc353ee5c4fa7be692e40135fd",
+    "specs\\001-system-specification\\traceability.md": "7ded5717164d8ef60c194ec375681af0248529e80309d67ab992232c35ea98de",
+    "specs\\001-system-specification\\checklists\\requirements.md": "1efa7637894cb649a99d0c29f0236d3e0148764d2f29fabdb4e289a2e39a6299",
+    "specs\\001-system-specification\\contracts\\api.md": "05256ae463833b369b2e328c0a9ae803d346820b64328fa4c9a9548db354fa3f",
+    "specs\\001-system-specification\\contracts\\identity.md": "1f9bdf3a5578e6d08580087b98bd3ea939c7de8d485f5c09019e4546ae3d81d2",
+    "specs\\001-system-specification\\contracts\\operations.md": "fbe22f2a63246de15c644aaab533bc0e38574f4967df469b9df12a32f12cc103",
+    "specs\\001-system-specification\\business-baseline-audit.json": "941118ce4f319f2b686ee6e5ee541cec6cb552708c627dd32964e1e7c34d3c90",
+    "specs\\001-system-specification\\plan-approval.json": "aef646baf84d72fc474e5bd9627d2a33cd685353e0b804dac30fe348fb1ab136",
+    "specs\\001-system-specification\\tasks-catalog.json": "52182198f3f48e063ed67e7a0c4b93acfcdafc2825c316d2d0cde1ae41f681bc",
+    "specs\\001-system-specification\\technical-schema.json": "2997376f5ba5a2ec5cbe1040ad1b97c1fc2ad9bdfd4883bf96c4e1bdff19bc2f",
+    "specs\\001-system-specification\\contracts\\openapi.json": "f2767b4d11e121fa2fd3889f5e545f9e8c8d481ca7533c4d9f4d403cd5b76747",
+    ".specify\\memory\\constitution.md": "0cade87029fb7802112a1cbdcdb293ea85df03390594a1fbb458142b36ae8376",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx": "b7f73501b2e25ea6cd489e8b25a8b9fcf01a65eb17160a69b6bca9a5d71dc564",
+    "docs\\diagrams\\figure-index.json": "63458a4e51ad2929960aff7e7398f811878fd9e0947d70df397eaf1910190771",
+    "docs\\diagrams\\README.md": "05b823bea2c81b421691da88a952500bcfe502b6e802f329a0dd54b8810e5f92",
+    "docs\\diagrams\\word-image-audit.json": "82328ca17920e924a6f1763faffb5b515fb7a516e9f5cbc2e751ff111fbc91e6",
+    "docs\\diagrams\\word-image-audit.md": "aaf9cbf621d9f6983e21b68e9fa1d12ca5ebd8d34fba8de489271a86f3df2062",
+    "docs\\diagrams\\architecture\\D2-系统分层.mmd": "ba0a3f0e686117816e2f65d59814ebbaff8999c65fbc6e31e83e2928f80930b4",
+    "docs\\diagrams\\database\\constraints.md": "be6f0c74d2d933096340a5a29f9a153f6288a28757267ada7168fd36699dca4e",
+    "docs\\diagrams\\database\\D1-database.dbml": "b7c388ef0482326dc094e4c36f0b24a5394902efd04c6e47e1f489c19b049e0a",
+    "docs\\diagrams\\database\\schema.json": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b",
+    "docs\\diagrams\\official\\A1.png": "108df582321b5831c9e86937fdd4e180defba3b884f56fe4cb8eb47584d828c8",
+    "docs\\diagrams\\official\\A2.png": "503c7b8e35e2077eca9b832f0a2e5688c40ee38a212149a9d2ae03fcf927d11c",
+    "docs\\diagrams\\official\\A3.png": "21df1c8552f1c1f07206750c7d8387f1a59ebea953ce7f7fab58c8e5e5f831c5",
+    "docs\\diagrams\\official\\B1.png": "b174aebddd0130628a1a1b1c147511d7d19edd4a7d6a348417fb4ecdedc95402",
+    "docs\\diagrams\\official\\C1.png": "d95d41bcca53c2288fd49a5ad0f5fba9a790837431371ec3d9afac6aa4c92b17",
+    "docs\\diagrams\\official\\C10.png": "83626301b992beb637b1ca8b224413e599b5ddc9419bcb84e0f46da7475df83f",
+    "docs\\diagrams\\official\\C11.png": "d5b0de51bd851b00406e1d29db1f3a6a2001dbeb7ec62b9e46f770037a067b51",
+    "docs\\diagrams\\official\\C12.png": "996ff4d7dc216f2f52755926da10cc7edea2d2f7ae9841a6a40a010ca3776aa2",
+    "docs\\diagrams\\official\\C13.png": "98fdfbb8b4c58164ce167e6ee3936fb3b07da3826eae644673db69425373744c",
+    "docs\\diagrams\\official\\C14.png": "8d8e7edc1a54a2d0e281ff1ff658461d4aaa98553c1b2613371301be68a573a7",
+    "docs\\diagrams\\official\\C15.png": "56db5a60c926a894e970afbd1488c94a07f96b930ffe02eae1bbdbe2e9971758",
+    "docs\\diagrams\\official\\C16.png": "6c5b26b00aed6f586b1bac12f5fbe220990b943d044fb25cec092daf6b35cb0a",
+    "docs\\diagrams\\official\\C2.png": "765e92c2ab1ec498e6e08d9e9762c86711341a3946c05aa72edafceaccf83bab",
+    "docs\\diagrams\\official\\C3.png": "388d553e423e4e44c3caed1f17111eb3c29a8c419c8ed75503d4c02e0767198d",
+    "docs\\diagrams\\official\\C4.png": "7b74762ef925afe07bfef473c48d875e927e8a4cc99c6939ca5b03cd98870fa2",
+    "docs\\diagrams\\official\\C5.png": "934250c4925f4c8750500af7565f39643c54ed373a0ccce56b4c73c8b2ce4130",
+    "docs\\diagrams\\official\\C6.png": "ffb27377023d69b03024244a3f80c6eb5a8634f1aa828e20b7c6cad17e71fca0",
+    "docs\\diagrams\\official\\C7.png": "a9c97c60c6db2cb2dbeac535e8c52e7bba3cc3963267a57d9036cda5bd93716a",
+    "docs\\diagrams\\official\\C8.png": "31cd2670f2b66bfbcb2c29e20e8f857192fbf312d892e04a56523aab650cc351",
+    "docs\\diagrams\\official\\C9.png": "faf493405e2d206f01366b900777d0bb2a592559497740565d71b91f45630754",
+    "docs\\diagrams\\official\\D1.png": "4655aca912c6f14846e03d6eb6f493feb5ab2ac8fcd1006ee4bcf47848669fb6",
+    "docs\\diagrams\\official\\D2.png": "56451c6eae977791767e851c9f54c29b4cb8d0c498c90515310381474863179f",
+    "docs\\diagrams\\uml\\A1-业务用例图.puml": "da11e1ef2d7c87b2f75eaf1e52c4c645cdd2f1200a4c0089d838ffad047d1646",
+    "docs\\diagrams\\uml\\A2-现状业务序列图.puml": "b54e62479b8128e2c58721831a8fdffd34dc7516793bafda45de8f54b1e6e568",
+    "docs\\diagrams\\uml\\A3-改进业务序列图.puml": "f830d33285509cca909b5c5a71cf7b8c8d72ce547e9e7e85a67396580e9ed419",
+    "docs\\diagrams\\uml\\B1-系统用例图.puml": "9d8840254965973d69b95c039ecbd0f0826e0169003a7f8f40582704cad80358",
+    "docs\\diagrams\\uml\\C1-实体类图.puml": "51b6c708b4db245d636d75e40fe21a6567f2a3cafb748dc1047677fd7df1947c",
+    "docs\\diagrams\\uml\\C10-UC07分析序列图.puml": "1d2f1a92d6b626d138178d7c16cf4c21a5111fb6c18057c1370ba1080f8028b4",
+    "docs\\diagrams\\uml\\C11-UC08分析序列图.puml": "a24008b0b798a3f9b230fb6c07696809e9d83aa0572235038fa06f8b80555337",
+    "docs\\diagrams\\uml\\C12-就诊状态机.mmd": "723e87134721d2de52811a86259a73cde14cea81225269031ee840c3958d1168",
+    "docs\\diagrams\\uml\\C13-UC01-S2分析序列图.puml": "65bc3616a45128921a449839fea1602facdd7afaed151f6f064e3b25c9946391",
+    "docs\\diagrams\\uml\\C14-UC01-S3分析序列图.puml": "e8bd88dd311ab79bea1dc7d23dc4ddb7bbe46a7022b42eb37b3aa32bee41275e",
+    "docs\\diagrams\\uml\\C15-UC01-S4分析序列图.puml": "c258ce22341fcc22ffa4c566e8ad8291af07c283e6ca6e87c247ab5bfcdef6e0",
+    "docs\\diagrams\\uml\\C16-UC01-S5分析序列图.puml": "e42e2b4877a4dca9d7281615d88dd3959cfc140721a5cb7c3ffd7c6933073922",
+    "docs\\diagrams\\uml\\C2-边界类图.puml": "f74398abf04eb95b7657352e51a1781a56a689d4416b7e34451e8cbd3f0666d3",
+    "docs\\diagrams\\uml\\C3-控制类图.puml": "01a19d9eb1dd7a49de6e1e7390535d02a3a258e947698b1cc1048e11d94ca658",
+    "docs\\diagrams\\uml\\C4-UC01分析序列图.puml": "5acc8b6a480f0d93a12882a4cc62c353286ff3487a87831f4356938a9a6dec3e",
+    "docs\\diagrams\\uml\\C5-UC02分析序列图.puml": "9b33811c58fbd11dd7acd644ea2605b72602c3417709e35147612b8cb934dd7f",
+    "docs\\diagrams\\uml\\C6-UC03分析序列图.puml": "fe9ea5325c2138abdc5b76832ff5dbac35e2562559398b1dbeb46a55c61bf266",
+    "docs\\diagrams\\uml\\C7-UC04分析序列图.puml": "3b8daf4c3c62dc17dde9f066319cfc7e1caa78069e9300e6aee97929685c20a6",
+    "docs\\diagrams\\uml\\C8-UC05分析序列图.puml": "d6173aa7a7bb25f65ce73057d82ea5c04a8f2c26f5406bbe46903303f85b7811",
+    "docs\\diagrams\\uml\\C9-UC06分析序列图.puml": "47ea7c46e492e5547e8bbd46f3227134713259c5f22208757b91c0f2d7c34b2b",
+    "specs/001-system-specification/plan-dependency-amendment.md": "dc3e71d14677741f8db88e698d5387cccc2169b556f076a324d475c991df3e74"
+  },
+  "database_test_sequence_clarified": [
+    "T008: test authoring only",
+    "T009/T010-T042: migration preparation",
+    "T043: actual migration then schema/privilege tests",
+    "T044-T049: foundation implementation",
+    "T050: foundation acceptance"
+  ],
+  "dependency_version_amendment": {
+    "id": "ADC-PLAN-20261109-DEP01",
+    "date": "2026-11-09",
+    "approved": true,
+    "record": "plan-dependency-amendment.json",
+    "only_task_changed": "T001",
+    "task_dependencies_unchanged": true,
+    "execution_order_unchanged": true,
+    "business_acceptance_unchanged": true,
+    "static_checks_passed": true,
+    "runtime_compatibility_verified": false,
+    "analyze_rerun": false,
+    "implement_authorized": false
+  }
+}

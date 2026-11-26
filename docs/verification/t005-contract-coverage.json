@@ -1,0 +1,3026 @@
+{
+  "openapi": "3.1.1",
+  "source_sha256": "8da409373e97b51089ee6cceb01b1121e5c5d90d4e8987ab2242a39d0747f3da",
+  "operation_count": 91,
+  "component_schemas_compiled": 99,
+  "standard_validation": "PASS",
+  "payload_schema_compilation": "PASS",
+  "business_runtime_verified": false,
+  "documented_error_statuses": {
+    "INVALID_REQUEST": [
+      "400"
+    ],
+    "AUTH_REQUIRED": [
+      "401"
+    ],
+    "SESSION_EXPIRED": [
+      "401"
+    ],
+    "ACCOUNT_DISABLED": [
+      "401"
+    ],
+    "ACCESS_DENIED": [
+      "403",
+      "404"
+    ],
+    "OBJECT_NOT_ACCESSIBLE": [
+      "403",
+      "404"
+    ],
+    "PATIENT_BINDING_REQUIRED": [
+      "403",
+      "404"
+    ],
+    "SLOT_OCCUPIED": [
+      "409"
+    ],
+    "STATE_CONFLICT": [
+      "409"
+    ],
+    "BINDING_CONFLICT": [
+      "409"
+    ],
+    "IDEMPOTENCY_CONTENT_CONFLICT": [
+      "409"
+    ],
+    "PUBLISH_CONFLICT": [
+      "409"
+    ],
+    "PRECONDITION_FAILED": [
+      "412"
+    ],
+    "FIELD_REQUIRED": [
+      "422"
+    ],
+    "QUALIFICATION_INVALID": [
+      "422"
+    ],
+    "ASSIGNMENT_INVALID": [
+      "422"
+    ],
+    "ALLERGY_CONFIRMATION_REQUIRED": [
+      "422"
+    ],
+    "NO_VALID_TREATMENT": [
+      "422"
+    ],
+    "PERFORMANCE_INCOMPLETE": [
+      "422"
+    ],
+    "SELF_DECLARATION_REQUIRED": [
+      "422"
+    ],
+    "AUTH_ATTEMPT_LIMITED": [
+      "429"
+    ],
+    "IDENTITY_UNAVAILABLE": [
+      "503"
+    ],
+    "PERSISTENCE_UNAVAILABLE": [
+      "503"
+    ],
+    "LOCK_RETRY": [
+      "503"
+    ],
+    "COMMIT_OUTCOME_UNKNOWN": [
+      "503"
+    ],
+    "REGISTRATION_PAYMENT_REQUIRED": [
+      "409"
+    ],
+    "FREE_BOOKING_REQUIRED": [
+      "409"
+    ],
+    "DEMO_PAYMENT_DISABLED": [
+      "409"
+    ],
+    "PAID_BILL_REQUIRED": [
+      "409"
+    ],
+    "PAID_BILL_CANNOT_CLOSE": [
+      "409"
+    ],
+    "TREATMENT_BILL_CANNOT_CLOSE": [
+      "409"
+    ],
+    "CANCEL_APPOINTMENT_FIRST": [
+      "409"
+    ],
+    "DEMO_PAYMENT_REQUIRED": [
+      "409"
+    ],
+    "INVALID_AMOUNT": [
+      "422"
+    ]
+  },
+  "operations": [
+    {
+      "operation_id": "initializeWebCsrf",
+      "method": "GET",
+      "path": "/auth/csrf",
+      "requirements": [
+        "SF01"
+      ],
+      "acceptance": [
+        "AC-SF01-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createWechatSession",
+      "method": "POST",
+      "path": "/auth/wechat-sessions",
+      "requirements": [
+        "SF01"
+      ],
+      "acceptance": [
+        "AC-SF01-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createStaffSession",
+      "method": "POST",
+      "path": "/auth/staff-sessions",
+      "requirements": [
+        "SF01"
+      ],
+      "acceptance": [
+        "AC-SF01-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "X-CSRF-Token",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "logout",
+      "method": "DELETE",
+      "path": "/auth/session",
+      "requirements": [
+        "SF01"
+      ],
+      "acceptance": [
+        "AC-SF01-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "204",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getCurrentIdentity",
+      "method": "GET",
+      "path": "/me",
+      "requirements": [
+        "SF01"
+      ],
+      "acceptance": [
+        "AC-SF01-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "requestPatientBinding",
+      "method": "POST",
+      "path": "/me/binding-requests",
+      "requirements": [
+        "SF02"
+      ],
+      "acceptance": [
+        "AC-SF02-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getPatientBinding",
+      "method": "GET",
+      "path": "/me/binding",
+      "requirements": [
+        "SF02"
+      ],
+      "acceptance": [
+        "AC-SF02-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "listBindingRequests",
+      "method": "GET",
+      "path": "/binding-requests",
+      "requirements": [
+        "SF02"
+      ],
+      "acceptance": [
+        "AC-SF02-02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "approvePatientBinding",
+      "method": "POST",
+      "path": "/binding-requests/{requestId}/approve",
+      "requirements": [
+        "SF02"
+      ],
+      "acceptance": [
+        "AC-SF02-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "rebindPatient",
+      "method": "POST",
+      "path": "/patient-bindings/{subjectId}/rebind",
+      "requirements": [
+        "SF02"
+      ],
+      "acceptance": [
+        "AC-SF02-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "revokePatientBinding",
+      "method": "POST",
+      "path": "/patient-bindings/{subjectId}/revoke",
+      "requirements": [
+        "SF02"
+      ],
+      "acceptance": [
+        "AC-SF02-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "204",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listStaffAccounts",
+      "method": "GET",
+      "path": "/identity/staff-accounts",
+      "requirements": [
+        "SF03"
+      ],
+      "acceptance": [
+        "AC-SF03-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createStaffAccount",
+      "method": "POST",
+      "path": "/identity/staff-accounts",
+      "requirements": [
+        "SF03"
+      ],
+      "acceptance": [
+        "AC-SF03-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "activateStaffAccount",
+      "method": "POST",
+      "path": "/identity/staff-accounts/{subjectId}/activate",
+      "requirements": [
+        "SF03"
+      ],
+      "acceptance": [
+        "AC-SF03-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "deactivateStaffAccount",
+      "method": "POST",
+      "path": "/identity/staff-accounts/{subjectId}/deactivate",
+      "requirements": [
+        "SF03"
+      ],
+      "acceptance": [
+        "AC-SF03-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "credentialrecoveryStaffAccount",
+      "method": "POST",
+      "path": "/identity/staff-accounts/{subjectId}/credential-recovery",
+      "requirements": [
+        "SF03"
+      ],
+      "acceptance": [
+        "AC-SF03-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listClinicGrants",
+      "method": "GET",
+      "path": "/identity/grants",
+      "requirements": [
+        "SF04"
+      ],
+      "acceptance": [
+        "AC-SF04-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createClinicGrant",
+      "method": "POST",
+      "path": "/identity/grants",
+      "requirements": [
+        "SF04"
+      ],
+      "acceptance": [
+        "AC-SF04-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "revokeClinicGrant",
+      "method": "POST",
+      "path": "/identity/grants/{grantId}/revoke",
+      "requirements": [
+        "SF04"
+      ],
+      "acceptance": [
+        "AC-SF04-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getRequestResult",
+      "method": "GET",
+      "path": "/requests/{requestKey}",
+      "requirements": [
+        "FR-019"
+      ],
+      "acceptance": [
+        "AC-UC01-S1-06"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "searchAppointmentCandidates",
+      "method": "GET",
+      "path": "/appointment-candidates",
+      "requirements": [
+        "UC01-S1"
+      ],
+      "acceptance": [
+        "AC-UC01-S1-03"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "listAppointments",
+      "method": "GET",
+      "path": "/appointments",
+      "requirements": [
+        "UC01"
+      ],
+      "acceptance": [
+        "AC-G02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createAppointment",
+      "method": "POST",
+      "path": "/appointments",
+      "requirements": [
+        "UC01-S1"
+      ],
+      "acceptance": [
+        "AC-UC01-S1-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getAppointment",
+      "method": "GET",
+      "path": "/appointments/{appointmentId}",
+      "requirements": [
+        "UC01"
+      ],
+      "acceptance": [
+        "AC-G02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "attendAppointment",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/attend",
+      "requirements": [
+        "UC01-S2"
+      ],
+      "acceptance": [
+        "AC-UC01-S2-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "cancelAppointment",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/cancel",
+      "requirements": [
+        "UC01-S3"
+      ],
+      "acceptance": [
+        "AC-UC01-S3-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "markNoShow",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/no-show",
+      "requirements": [
+        "UC01-S4"
+      ],
+      "acceptance": [
+        "AC-UC01-S4-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "rescheduleAppointment",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/reschedule",
+      "requirements": [
+        "UC01-S5"
+      ],
+      "acceptance": [
+        "AC-UC01-S5-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "completeAppointment",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/complete",
+      "requirements": [
+        "UC03"
+      ],
+      "acceptance": [
+        "AC-UC03-03"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "invoiceAppointment",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/invoice",
+      "requirements": [
+        "UC04"
+      ],
+      "acceptance": [
+        "AC-UC04-02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listSchedules",
+      "method": "GET",
+      "path": "/schedules",
+      "requirements": [
+        "UC02"
+      ],
+      "acceptance": [
+        "AC-UC02-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createSchedule",
+      "method": "POST",
+      "path": "/schedules",
+      "requirements": [
+        "UC02"
+      ],
+      "acceptance": [
+        "AC-UC02-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "suspendSchedule",
+      "method": "POST",
+      "path": "/schedules/{scheduleId}/suspend",
+      "requirements": [
+        "UC02"
+      ],
+      "acceptance": [
+        "AC-UC02-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "updateClinicalNotes",
+      "method": "PATCH",
+      "path": "/appointments/{appointmentId}/clinical-notes",
+      "requirements": [
+        "UC03"
+      ],
+      "acceptance": [
+        "AC-UC03-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "recordAppliedTreatment",
+      "method": "POST",
+      "path": "/appointments/{appointmentId}/applied-treatments",
+      "requirements": [
+        "UC03"
+      ],
+      "acceptance": [
+        "AC-UC03-04"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "correctTreatmentPrice",
+      "method": "POST",
+      "path": "/applied-treatments/{appliedTreatmentId}/correct-price",
+      "requirements": [
+        "UC03"
+      ],
+      "acceptance": [
+        "AC-UC03-05"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "getInvoice",
+      "method": "GET",
+      "path": "/invoices/{invoiceId}",
+      "requirements": [
+        "UC04"
+      ],
+      "acceptance": [
+        "AC-UC04-05"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createPatient",
+      "method": "POST",
+      "path": "/patients",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getPatient",
+      "method": "GET",
+      "path": "/patients/{patientId}",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "updatePatient",
+      "method": "PATCH",
+      "path": "/patients/{patientId}",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-04"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "reviewPatientAllergies",
+      "method": "POST",
+      "path": "/patients/{patientId}/allergy-reviews",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listPatientAllergies",
+      "method": "GET",
+      "path": "/patients/{patientId}/allergy-records",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-04"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "addPatientAllergy",
+      "method": "POST",
+      "path": "/patients/{patientId}/allergy-records",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-04"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "correctPatientAllergy",
+      "method": "POST",
+      "path": "/patients/{patientId}/allergy-records/{allergyId}/correct",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-04"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "retractPatientAllergy",
+      "method": "POST",
+      "path": "/patients/{patientId}/allergy-records/{allergyId}/retract",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-04"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listClinic",
+      "method": "GET",
+      "path": "/clinics",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createClinic",
+      "method": "POST",
+      "path": "/clinics",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getClinic",
+      "method": "GET",
+      "path": "/clinics/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "updateClinic",
+      "method": "PATCH",
+      "path": "/clinics/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "listDentist",
+      "method": "GET",
+      "path": "/dentists",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createDentist",
+      "method": "POST",
+      "path": "/dentists",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getDentist",
+      "method": "GET",
+      "path": "/dentists/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "updateDentist",
+      "method": "PATCH",
+      "path": "/dentists/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "listQualification",
+      "method": "GET",
+      "path": "/qualifications",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createQualification",
+      "method": "POST",
+      "path": "/qualifications",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getQualification",
+      "method": "GET",
+      "path": "/qualifications/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "updateQualification",
+      "method": "PATCH",
+      "path": "/qualifications/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "listTreatment",
+      "method": "GET",
+      "path": "/treatments",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createTreatment",
+      "method": "POST",
+      "path": "/treatments",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getTreatment",
+      "method": "GET",
+      "path": "/treatments/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "updateTreatment",
+      "method": "PATCH",
+      "path": "/treatments/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "listAllergy",
+      "method": "GET",
+      "path": "/allergies",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "createAllergy",
+      "method": "POST",
+      "path": "/allergies",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getAllergy",
+      "method": "GET",
+      "path": "/allergies/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "updateAllergy",
+      "method": "PATCH",
+      "path": "/allergies/{resourceId}",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "maintainDentistQualification",
+      "method": "POST",
+      "path": "/dentists/{dentistId}/qualifications",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "maintainDentistAssignment",
+      "method": "POST",
+      "path": "/dentists/{dentistId}/clinic-assignments",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-04"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "setTreatmentRequirements",
+      "method": "PUT",
+      "path": "/treatments/{treatmentId}/qualification-requirements",
+      "requirements": [
+        "UC06"
+      ],
+      "acceptance": [
+        "AC-UC06-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        },
+        {
+          "name": "If-Match",
+          "required": true
+        }
+      ]
+    },
+    {
+      "operation_id": "listCostEntries",
+      "method": "GET",
+      "path": "/cost-entries",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-08"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "recordCostEntry",
+      "method": "POST",
+      "path": "/cost-entries",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-08"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "reverseCostEntry",
+      "method": "POST",
+      "path": "/cost-entries/{costEntryId}/reverse",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-08"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "prepareQuarterPerformance",
+      "method": "POST",
+      "path": "/performance-preparations",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-05"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "calculateQuarterPerformance",
+      "method": "POST",
+      "path": "/performance-calculations",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-01"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listQuarterPerformance",
+      "method": "GET",
+      "path": "/quarterly-performances",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-07"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "getQuarterPerformanceSources",
+      "method": "GET",
+      "path": "/quarterly-performances/{performanceId}/sources",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-09"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "publishQuarterPerformance",
+      "method": "POST",
+      "path": "/quarterly-performances/{performanceId}/publish",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-07"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getAnalysis",
+      "method": "GET",
+      "path": "/analytics/{metric}",
+      "requirements": [
+        "UC08"
+      ],
+      "acceptance": [
+        "AC-UC08-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "searchAuditEvents",
+      "method": "GET",
+      "path": "/audit-events",
+      "requirements": [
+        "Q08"
+      ],
+      "acceptance": [
+        "AC-Q08"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "getClinicalContext",
+      "method": "GET",
+      "path": "/appointments/{appointmentId}/clinical-context",
+      "requirements": [
+        "UC03"
+      ],
+      "acceptance": [
+        "AC-UC03-01"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "getAppliedTreatment",
+      "method": "GET",
+      "path": "/applied-treatments/{appliedTreatmentId}",
+      "requirements": [
+        "UC03"
+      ],
+      "acceptance": [
+        "AC-UC03-05"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "getCostEntry",
+      "method": "GET",
+      "path": "/cost-entries/{costEntryId}",
+      "requirements": [
+        "UC07"
+      ],
+      "acceptance": [
+        "AC-UC07-08"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "lookupPatient",
+      "method": "POST",
+      "path": "/patients/lookup",
+      "requirements": [
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-UC05-01",
+        "AC-UC05-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "registerSelfPatient",
+      "method": "POST",
+      "path": "/me/patient-registration",
+      "requirements": [
+        "SF02",
+        "UC01-S1",
+        "UC05"
+      ],
+      "acceptance": [
+        "AC-SF02-03"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "createBookingHold",
+      "method": "POST",
+      "path": "/booking-holds",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "listPatientBills",
+      "method": "GET",
+      "path": "/patient-bills",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "getPatientBill",
+      "method": "GET",
+      "path": "/patient-bills/{billId}",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "payDemoBill",
+      "method": "POST",
+      "path": "/patient-bills/{billId}/demo-payments",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "closePatientBill",
+      "method": "POST",
+      "path": "/patient-bills/{billId}/close",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "refundPatientBill",
+      "method": "POST",
+      "path": "/patient-bills/{billId}/refunds",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    },
+    {
+      "operation_id": "getRegistrationFee",
+      "method": "GET",
+      "path": "/registration-fees/{clinicId}/{dentistId}",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": false,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": []
+    },
+    {
+      "operation_id": "setRegistrationFee",
+      "method": "PUT",
+      "path": "/registration-fees/{clinicId}/{dentistId}",
+      "requirements": [
+        "FR-026"
+      ],
+      "acceptance": [
+        "AC-PB-01",
+        "AC-PB-02"
+      ],
+      "request_schema_compiled": true,
+      "response_statuses_checked": [
+        "200",
+        "400",
+        "401",
+        "403",
+        "404",
+        "409",
+        "412",
+        "422",
+        "429",
+        "500",
+        "503"
+      ],
+      "headers": [
+        {
+          "name": "Idempotency-Key",
+          "required": true
+        },
+        {
+          "name": "X-CSRF-Token",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

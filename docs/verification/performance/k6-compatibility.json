@@ -1,0 +1,9 @@
+{
+  "version": "1.0.0",
+  "official_zip_sha256": "0bfbab5c6c263b3d2663fe05383707448385649610f2c9487b817343a890c70d",
+  "official_checksum_matches": true,
+  "actual_runtime_cases_passed": 8,
+  "node_cases_passed": 11,
+  "http_requests_in_compatibility_check": 0,
+  "load_acceptance_separate": true
+}

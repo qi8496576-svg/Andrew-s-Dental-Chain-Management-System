@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-24T14:43:24.328Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "checks": [
+    "Real cloud week contains all schedule IDs once",
+    "All week time labels fit one line",
+    "Day view has five readable doctor columns",
+    "Date view, doctor filter, details, suspend entry and create form work",
+    "1024px layout retains readable columns"
+  ],
+  "status": "PASS",
+  "weekly_shifts": 53,
+  "minimum_day_card_width": 206.1875
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.CostEntryMapper">
+  <resultMap id="row" type="com.adc.domain.model.CostEntry">
+    <constructor>
+      <idArg column="cost_entry_id" javaType="java.lang.Long"/>
+      <arg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="clinic_id" javaType="java.lang.Long"/>
+      <arg column="appointment_id" javaType="java.lang.Long"/>
+      <arg column="applied_treatment_id" javaType="java.lang.Long"/>
+      <arg column="cost_type" javaType="java.lang.String"/>
+      <arg column="amount" javaType="java.math.BigDecimal"/>
+      <arg column="incurred_at" javaType="java.time.Instant"/>
+      <arg column="description" javaType="java.lang.String"/>
+      <arg column="source_reference" javaType="java.lang.String"/>
+      <arg column="source_batch" javaType="java.lang.String"/>
+      <arg column="confirmed_at" javaType="java.time.Instant"/>
+      <arg column="confirmed_by" javaType="java.lang.String"/>
+      <arg column="reversal_of_id" javaType="java.lang.Long"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `cost_entry_id`, `dentist_id`, `clinic_id`, `appointment_id`, `applied_treatment_id`, `cost_type`, `amount`, `incurred_at`, `description`, `source_reference`, `source_batch`, `confirmed_at`, `confirmed_by`, `reversal_of_id` FROM adc_business.`CostEntry` WHERE `cost_entry_id` = #{cost_entry_id}
+  </select>
+</mapper>

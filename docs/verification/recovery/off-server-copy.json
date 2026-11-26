@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-26T05:02:19.867Z",
+  "status": "PASS",
+  "full_snapshots": 2,
+  "binary_log_files": 183,
+  "source_uuid": "bc649ac7-e324-11f1-ba31-9a0fdbbcd4ba",
+  "archive_sha256": "6aebadc5794b193933298efa5060d6863faf4d60f1feacd069e3a41c8c6204b7",
+  "private_directory": "D:\\secrets\\AndrewDental\\CloudIntegration\\RecoveryBackups\\2026-11-26T05-02-13-984Z",
+  "last_full_epoch": 1795629602,
+  "last_archive_epoch": 1795669188.3007603,
+  "server_to_independent_windows_host": true,
+  "configuration_encrypted": true,
+  "configuration_roundtrip_verified": true,
+  "configuration_key_stored_separately": true,
+  "backup_auto_deletion_enabled": false,
+  "ongoing_transfer_requires_backup_host_online": true
+}

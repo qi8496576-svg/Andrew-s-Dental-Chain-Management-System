@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: adc-backend
+  datasource:
+    url: ${ADC_DB_URL}
+    username: ${ADC_DB_USERNAME}
+    password: ${ADC_DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connection-init-sql: "SET time_zone = '+00:00'"
+  flyway:
+    enabled: false
+    create-schemas: false
+    clean-disabled: true
+    default-schema: adc_identity
+    schemas: adc_business,adc_identity,adc_audit
+  sql:
+    init:
+      mode: never
+  main:
+    banner-mode: 'off'
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+mybatis:
+  mapper-locations: classpath*:mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: false
+adc:
+  demo-payments:
+    enabled: ${ADC_DEMO_PAYMENTS_ENABLED:false}
+    clinics: ${ADC_DEMO_PAYMENTS_CLINICS:}
+server:
+  forward-headers-strategy: none
+  error:
+    include-message: never
+    include-stacktrace: never
+    include-binding-errors: never
+    include-exception: false

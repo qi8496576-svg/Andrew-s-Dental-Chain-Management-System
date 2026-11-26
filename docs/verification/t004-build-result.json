@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-11-10T23:32:25.7861196+08:00",
+  "task": "T004",
+  "success": true,
+  "node": "v24.22.1",
+  "npm": "11.19.1",
+  "steps": [
+    {
+      "name": "ci",
+      "exit_code": 0,
+      "log": "docs/verification/t004-ci.log"
+    },
+    {
+      "name": "typecheck",
+      "exit_code": 0,
+      "log": "docs/verification/t004-typecheck.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log": "docs/verification/t004-build.log"
+    },
+    {
+      "name": "dependencies",
+      "exit_code": 0,
+      "log": "docs/verification/t004-dependencies.log"
+    }
+  ],
+  "failure": null,
+  "devtools_preview_executed": false,
+  "real_wechat_verified": false,
+  "appid_configured": false
+}

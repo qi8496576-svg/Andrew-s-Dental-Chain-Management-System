@@ -1,0 +1,19 @@
+{
+  "updated": "2026-11-07",
+  "authority": "项目负责人在本聊天中的明确完成确认",
+  "sources": [
+    {
+      "source_id": "IVEY-W44694",
+      "former_issue_id": "C-01",
+      "status": "completed",
+      "path": "参考资料/5.安德鲁牙科连锁店：数据建模 Andrew’s Dental .pdf",
+      "sha256": "1a2655344337d570d5f77e2c3018d71ca0b7b3b8692eb97b4cdc13c9eba6027f",
+      "pages": 3,
+      "identity_checks": [
+        "file exists in project",
+        "first PDF page contains W44694"
+      ],
+      "changes_business_requirements": false
+    }
+  ]
+}

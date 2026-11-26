@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-16T08:19:16.874Z",
+  "results": [
+    {
+      "role": "admin",
+      "route": "/management",
+      "real_login": true,
+      "api_mocked": false,
+      "logout": true,
+      "permission_guard": true,
+      "navigation_style": true,
+      "mobile_login_no_overflow": true
+    },
+    {
+      "role": "frontdesk",
+      "route": "/schedules",
+      "real_login": true,
+      "api_mocked": false,
+      "logout": true,
+      "permission_guard": true,
+      "navigation_style": true,
+      "mobile_login_no_overflow": true
+    },
+    {
+      "role": "dentist",
+      "route": "/clinical-treatment",
+      "real_login": true,
+      "api_mocked": false,
+      "logout": true,
+      "permission_guard": true,
+      "navigation_style": true,
+      "mobile_login_no_overflow": true
+    },
+    {
+      "role": "cashier",
+      "route": "/invoicing",
+      "real_login": true,
+      "api_mocked": false,
+      "logout": true,
+      "permission_guard": true,
+      "navigation_style": true,
+      "mobile_login_no_overflow": true
+    }
+  ]
+}

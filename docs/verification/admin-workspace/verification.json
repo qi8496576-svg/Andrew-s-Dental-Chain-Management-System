@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-19",
+  "scope": "admin-workspace-ui-and-existing-operations",
+  "typecheck": "PASS",
+  "vitest": {
+    "command": "node apps/admin/node_modules/vitest/vitest.mjs run --root apps/admin --maxWorkers 1",
+    "files": 22,
+    "tests_passed": 45,
+    "tests_failed": 0,
+    "after_last_resource_detail_change": {
+      "typecheck": "PASS",
+      "resource_module_tests_passed": 3
+    }
+  },
+  "production_build": "PASS",
+  "deployment_evidence": "../ui-stage1-deployment.json",
+  "real_database_browser_evidence": "results.json",
+  "final_read_only_browser_evidence": "../admin-demo-browser.json",
+  "database_evidence": "../local-patient-admin.json#database_verification",
+  "backend_code_changed": false,
+  "database_schema_changed": false,
+  "patient_code_changed": false,
+  "new_wechat_end_to_end_run_this_batch": false,
+  "full_non_ui_business_regression_repeated": false
+}

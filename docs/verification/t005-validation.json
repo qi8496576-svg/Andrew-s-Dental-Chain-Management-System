@@ -1,0 +1,225 @@
+{
+  "checked_at": "2026-11-10T15:47:01.690477+00:00",
+  "task": "T005",
+  "status": "PASS_TOOLING_AND_SHARED_TYPES",
+  "operations": 81,
+  "schemas": 81,
+  "tests_passed": 6,
+  "consumer_checks_passed": 6,
+  "tasks_count": 186,
+  "completed_tasks": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005"
+  ],
+  "protected_inputs_unchanged": [
+    "specs/001-system-specification/business-baseline-audit.json",
+    "specs/001-system-specification/business-baseline-audit.md",
+    "specs/001-system-specification/data-model.md",
+    "specs/001-system-specification/plan-approval.json",
+    "specs/001-system-specification/plan-approval.md",
+    "specs/001-system-specification/plan-dependency-amendment.json",
+    "specs/001-system-specification/plan-dependency-amendment.md",
+    "specs/001-system-specification/plan-supplement-review.md",
+    "specs/001-system-specification/plan.md",
+    "specs/001-system-specification/preimplement-sync.json",
+    "specs/001-system-specification/quickstart.md",
+    "specs/001-system-specification/research.md",
+    "specs/001-system-specification/spec.md",
+    "specs/001-system-specification/task-traceability.md",
+    "specs/001-system-specification/tasks-catalog.json",
+    "specs/001-system-specification/tasks-validation.json",
+    "specs/001-system-specification/technical-data-model.md",
+    "specs/001-system-specification/technical-schema.json",
+    "specs/001-system-specification/traceability.md",
+    "specs/001-system-specification/checklists/requirements.md",
+    "specs/001-system-specification/contracts/api.md",
+    "specs/001-system-specification/contracts/identity.md",
+    "specs/001-system-specification/contracts/openapi.json",
+    "specs/001-system-specification/contracts/operations.md",
+    "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+    "specs/001-system-specification/diagrams/technical-erd.mmd",
+    "specs/001-system-specification/diagrams/technical-storage-overview.png",
+    "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+    ".specify/memory/constitution.md",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx",
+    "docs/diagrams/database/schema.json"
+  ],
+  "task_change": "Only T005 checkbox; original bytes otherwise preserved",
+  "fingerprints": [
+    {
+      "path": ".dockerignore",
+      "sha256": "f60f18946260dafaefd17c3556349bf548dc184e4dec54b2b83cf4440edfd710"
+    },
+    {
+      "path": "apps/admin/package-lock.json",
+      "sha256": "b164bdf5e914d75773da326cfa44b08d317c3bf4b612915cdc49d229b78593c5"
+    },
+    {
+      "path": "apps/admin/package.json",
+      "sha256": "8c0edd6337568f11f4b1f48e2422df1e56039fdbc6bc3f2a4cdaff75fafbfc3e"
+    },
+    {
+      "path": "apps/admin/src/types/api.ts",
+      "sha256": "e051ad8e4b79778413dd63384ee3b60eb7af81d2b18bd019b892f235eacc55ee"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/types/api.ts",
+      "sha256": "42982978702d09a4ca130f0d33c9fa361af3eeebb82bf588f6d65cc0d2989d95"
+    },
+    {
+      "path": "apps/patient-miniprogram/package-lock.json",
+      "sha256": "965a230a364f3f61f3fe848d606fe5e5509388e63bc41261f0086be7e9311d35"
+    },
+    {
+      "path": "apps/patient-miniprogram/package.json",
+      "sha256": "4d6a2c918b51ec76510386c16d6a54460dd6aec4e14082bea45852dbc41d3e0f"
+    },
+    {
+      "path": "docs/verification/implementation-status.md",
+      "sha256": "3c31653f58aa3cead2ff22289cffb9fe2c28804470131f00cd5bff1c7917fabe"
+    },
+    {
+      "path": "docs/verification/t005-admin-build.log",
+      "sha256": "e5f087a16432f5d6460151b4a7474b70493d117bf1e72e71cad1efb7285c649e"
+    },
+    {
+      "path": "docs/verification/t005-admin-ci.log",
+      "sha256": "93919fc810ba96c3f3eb682a4af84c64f691c996525e4c32e82fd448b3c06555"
+    },
+    {
+      "path": "docs/verification/t005-admin-install.log",
+      "sha256": "d57c57398ceecfb68091364653e401c3d6a0ac41af54d9d015dbae3aa131e988"
+    },
+    {
+      "path": "docs/verification/t005-admin-typecheck.log",
+      "sha256": "746f21176c498e0e7aa312700d9b93b3b491dbc56afcad0600139185d150ddae"
+    },
+    {
+      "path": "docs/verification/t005-build-result.json",
+      "sha256": "f008df0f5f5b627b8816c1aa840960b4fdf59199017af14f5607d6844a114daa"
+    },
+    {
+      "path": "docs/verification/t005-build.log",
+      "sha256": "37f6737bf4ac63bec39e7947b05627167c1345870bb6e5e06f919ef1406f2784"
+    },
+    {
+      "path": "docs/verification/t005-ci.log",
+      "sha256": "a6d4e4cf1007871168acc87e357b3b56ed2a7fc429dd59ab6202954e6fd2b3ff"
+    },
+    {
+      "path": "docs/verification/t005-consumers-result.json",
+      "sha256": "cf39a2e7c47e3333b6e2e0d2b2cf34db2c42e5ed90abbb80ed6a8257648949ef"
+    },
+    {
+      "path": "docs/verification/t005-contract-coverage.json",
+      "sha256": "e4f5570a8b7da489d85ebe6130421ff7f1e769c52f8cbfede4b8cf78fec4cbf3"
+    },
+    {
+      "path": "docs/verification/t005-contracts.md",
+      "sha256": "59d6ea507ae9090a1d5970ddf7a8e7fd24a17b5f4df5393cc824b68cb0d022f8"
+    },
+    {
+      "path": "docs/verification/t005-drift.log",
+      "sha256": "d7c7d98d93c447095616cfc5526e981eb83fd5f30d04e2f9008e28788ff3c9fd"
+    },
+    {
+      "path": "docs/verification/t005-generate.log",
+      "sha256": "7ca150574a6690fbc4d0cead270833df79fd03c5f45ef6f057bca134ad27e2b7"
+    },
+    {
+      "path": "docs/verification/t005-lock.log",
+      "sha256": "7bb43e79052949c4e1073a1c7a10b743394cd891a816b51ce9c0fdf329c3a01a"
+    },
+    {
+      "path": "docs/verification/t005-patient-miniprogram-build.log",
+      "sha256": "3ec57834e57b9c66f8a4f1f7fde30b9f8776e5a259b384e3d1c50c3cb5597425"
+    },
+    {
+      "path": "docs/verification/t005-patient-miniprogram-ci.log",
+      "sha256": "c6b0cb0790e15120d348be91c334b60d864bf6d8e8f3f32649e6fdc78aa33f5f"
+    },
+    {
+      "path": "docs/verification/t005-patient-miniprogram-install.log",
+      "sha256": "b595f0f8b1b0bd18362a0e8514a8178bd288fc249fee58aa966663e525b0a7b0"
+    },
+    {
+      "path": "docs/verification/t005-patient-miniprogram-typecheck.log",
+      "sha256": "250bf76f8faee30f9335b45527aa49b70af63c2d94f786e7c505d2b5fd3564d0"
+    },
+    {
+      "path": "docs/verification/t005-tests.log",
+      "sha256": "5d4668faab3631d2e76fb30e90ff66eedf19f5d3e3ddef75aa6448a27020d78e"
+    },
+    {
+      "path": "docs/verification/t005-typecheck.log",
+      "sha256": "2524a4a0860d6a52fa2a557c3da243271e962f7fc594e2f6cf82ff577bd293b6"
+    },
+    {
+      "path": "docs/verification/t005-validate.log",
+      "sha256": "f97c1f64bea0a3694a21265c0812503231f0ce77523837a88bc3de2510dc8343"
+    },
+    {
+      "path": "packages/contracts/.npmrc",
+      "sha256": "60d44b93ef9759dc1b8b8df67d4fabd8e41af6a9956fefb5128166644c9c7298"
+    },
+    {
+      "path": "packages/contracts/package-lock.json",
+      "sha256": "41ec7c700c09e74624534d6b33854220f06d420639b12a3737b47a4eef76cee8"
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "sha256": "c68098a30e809a645276a3d03df7e151a65c4dae16029df1d33e2d3ff98502bf"
+    },
+    {
+      "path": "packages/contracts/README.md",
+      "sha256": "e659a9ed829e122dc64007673176f230c3098972222e7094bce37a06ce490069"
+    },
+    {
+      "path": "packages/contracts/scripts/contract.mjs",
+      "sha256": "f35ad3175de1be428db2315981d1c572f19585c549eb79d483eb7e7546fa21cb"
+    },
+    {
+      "path": "packages/contracts/scripts/generate.mjs",
+      "sha256": "8636d27eb66360e5961115ecb6b034e23d58af8176fd862a70342cef0eadcc64"
+    },
+    {
+      "path": "packages/contracts/scripts/source.mjs",
+      "sha256": "97aaf984b091fe99ffbcf3fadde2d1a19e89f1aee2ac6bcca8e3be5b859296e9"
+    },
+    {
+      "path": "packages/contracts/scripts/validate.mjs",
+      "sha256": "46cc6a7cd5b7db893e2026985676ea76e26affbc273b99dc1a23b1d25a1d618c"
+    },
+    {
+      "path": "packages/contracts/src/generated.ts",
+      "sha256": "45a4b441e5388534400eab05d0c44c89cdfc3f718a173817121abf26ed0b3565"
+    },
+    {
+      "path": "packages/contracts/tests/contract.test.mjs",
+      "sha256": "6bcd14583eb31f212c1e23e06423c509f4ace49ca631ef54d5e269aba06e6490"
+    },
+    {
+      "path": "packages/contracts/tests/precision.types.ts",
+      "sha256": "bce3ce48b937cd453ea7762230fcf655a4355ed3cf7c2e448c7b8afd54825220"
+    },
+    {
+      "path": "packages/contracts/tsconfig.build.json",
+      "sha256": "7edee4820ffc1750fc2361b849e1a6d55453bcf0b076d732a9f513c6f48cc54e"
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "sha256": "68bfeb81ff77e88fa1ab2728ffc6bddf6b8965eb5a580c4ffc4f3be53343b87b"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "3fe09aad13680edf149c63254b3b8f6b8f33b4c787404057ce14f1a080b2debf"
+    },
+    {
+      "path": "tools/verification/Verify-Contracts.ps1",
+      "sha256": "bf2de79cb84826f23083b14f184e064760f65c333da80d4aba128ecd2d21b2f2"
+    }
+  ]
+}

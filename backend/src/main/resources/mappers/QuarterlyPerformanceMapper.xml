@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.QuarterlyPerformanceMapper">
+  <resultMap id="row" type="com.adc.domain.model.QuarterlyPerformance">
+    <constructor>
+      <idArg column="quarterly_performance_id" javaType="java.lang.Long"/>
+      <arg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="quarter_start" javaType="java.time.LocalDate"/>
+      <arg column="quarter_end" javaType="java.time.LocalDate"/>
+      <arg column="revenue" javaType="java.math.BigDecimal"/>
+      <arg column="medical_supply_cost" javaType="java.math.BigDecimal"/>
+      <arg column="operating_expense" javaType="java.math.BigDecimal"/>
+      <arg column="net_profit" javaType="java.math.BigDecimal"/>
+      <arg column="incentive_rate" javaType="java.math.BigDecimal"/>
+      <arg column="incentive_amount" javaType="java.math.BigDecimal"/>
+      <arg column="calculation_status" javaType="java.lang.String"/>
+      <arg column="calculated_at" javaType="java.time.Instant"/>
+      <arg column="calculation_version" javaType="java.lang.Integer"/>
+      <arg column="source_snapshot" javaType="java.lang.String"/>
+      <arg column="input_hash" javaType="java.lang.String"/>
+      <arg column="published_at" javaType="java.time.Instant"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `quarterly_performance_id`, `dentist_id`, `quarter_start`, `quarter_end`, `revenue`, `medical_supply_cost`, `operating_expense`, `net_profit`, `incentive_rate`, `incentive_amount`, `calculation_status`, `calculated_at`, `calculation_version`, `source_snapshot`, `input_hash`, `published_at` FROM adc_business.`QuarterlyPerformance` WHERE `quarterly_performance_id` = #{quarterly_performance_id}
+  </select>
+</mapper>

@@ -1,0 +1,8 @@
+﻿{
+    "started_at":  "2026-11-10T11:01:32.5642021+08:00",
+    "finished_at":  "2026-11-10T11:03:27.0015817+08:00",
+    "command":  "wsl.exe --install --no-distribution --web-download",
+    "exit_code":  0,
+    "automatic_restart_requested":  false,
+    "docker_runtime_verified":  false
+}

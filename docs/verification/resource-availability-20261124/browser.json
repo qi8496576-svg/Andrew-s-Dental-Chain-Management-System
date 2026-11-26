@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-24T06:34:23.241Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "accounts": [
+    {
+      "username": "cloud-admin",
+      "appointment_navigation": false,
+      "schedule_navigation": false,
+      "scope": "headquarters configuration"
+    },
+    {
+      "username": "cloud-demo",
+      "appointment_navigation": true,
+      "schedule_navigation": true,
+      "scope": "all granted demo roles"
+    }
+  ],
+  "checks": [
+    "Actual cloud pages display 12 recognizable services, 5 doctors, schedules and analysis without numerator/denominator jargon"
+  ],
+  "status": "PASS"
+}

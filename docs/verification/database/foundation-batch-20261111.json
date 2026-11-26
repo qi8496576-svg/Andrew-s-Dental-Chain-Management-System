@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-11",
+  "task_revision": "ADC-TASKS-20261111-03",
+  "completed_tasks": [
+    "T008",
+    "T009",
+    "T010",
+    "T011",
+    "T012"
+  ],
+  "in_progress": "T013",
+  "T014_complete": false,
+  "protected_inputs_unchanged": 28,
+  "test_logs": {
+    "mapping": "mapping-build.log",
+    "permissions": "constraints-green.log",
+    "structure_history_transactions": "verified-foundation-subset.log",
+    "business_constraint_boundaries": "constraint-boundaries-final.log",
+    "migration_container": "migration-container-verified.log",
+    "decimal_time": "shared-values-green.log"
+  },
+  "fingerprints": [
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "9efb87c5274f7d02a063fb5f7841c666da1361309c721e47f966c3c5a06dec80"
+    },
+    {
+      "path": "specs/001-system-specification/tasks-catalog.json",
+      "sha256": "a53a4081e9b16cf2893cec2bc74f0516d41b7380f47dc77aeb9ffe1a4368a23f"
+    },
+    {
+      "path": "backend/src/main/resources/db/migration/V200__add_constraints.sql",
+      "sha256": "865198450d0f68ce0d0158d30d694e6fbeeb1aad0c4a42fac76e9c1da55306c0"
+    },
+    {
+      "path": "docs/verification/database/show-create-tables.sql",
+      "sha256": "23fbaa1abf7456cf304bbb0be5627691ee9f450729f8ea495d689ea5660d7322"
+    },
+    {
+      "path": "docs/verification/database/baseline-comparison.json",
+      "sha256": "8da43d006489ee6c3a7b6a15a3602f133dab691e001eb8e54ec5521fad8538a9"
+    }
+  ]
+}

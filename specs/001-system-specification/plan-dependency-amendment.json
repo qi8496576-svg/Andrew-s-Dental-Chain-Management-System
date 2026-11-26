@@ -1,0 +1,362 @@
+{
+  "amendment_id": "ADC-PLAN-20261109-DEP01",
+  "date": "2026-11-09",
+  "original_approved_baseline": "ADC-PLAN-20261107-01",
+  "approval_source": "用户在兼容性核实及最小修改方案之后明确回复：批准",
+  "approval_scope": "依赖版本及相关文档的最小修改；不授权Implement或重跑Spec Kit阶段",
+  "versions": {
+    "java": "21 LTS",
+    "spring_boot": "4.1.2",
+    "mybatis_starter": "4.1.0",
+    "mybatis_spring": "4.1.0",
+    "mybatis": "3.5.19",
+    "maven": "3.9.16"
+  },
+  "changes": [
+    {
+      "path": "specs\\001-system-specification\\research.md",
+      "before_sha256": "9849634553e1af20dd712af4a0b344e83d0455eb795084d69fe90551b9224beb",
+      "after_sha256": "6e11677d8342aa996478f3e945f97c6968e0563ce2323d21ebdae48e13a7bd53"
+    },
+    {
+      "path": "specs\\001-system-specification\\plan.md",
+      "before_sha256": "daba37cb5640e24c314faa31861e60b8c62b4ee91876e9f898f5df838251288b",
+      "after_sha256": "26e4df626c3abcd95152b3ebc47bf8490575d26de2a6ce49b4fcc1cacf023a2d"
+    },
+    {
+      "path": "specs\\001-system-specification\\quickstart.md",
+      "before_sha256": "543fcfacd1d2bf52e4151a7c2b6ad0d7e72963745402d84ef08777792cd46f19",
+      "after_sha256": "6c6cf0b49faca243f3459625afba623d1ca2dcf624ad494959a0742f7e2b2654"
+    },
+    {
+      "path": "specs\\001-system-specification\\tasks.md",
+      "before_sha256": "9e4daa558306441f69d825f22121993e38cc94f8d271e6812793e7018cebbc4c",
+      "after_sha256": "8d77fbfd6d897e05f12c81174a26cbbdbd2cf024e31046188211491f6400e02a"
+    },
+    {
+      "path": "specs\\001-system-specification\\tasks-catalog.json",
+      "before_sha256": "cb54699a251261b72681bbc719d6d31d39197dde28babe5ced5f2bc7f6dff875",
+      "after_sha256": "52182198f3f48e063ed67e7a0c4b93acfcdafc2825c316d2d0cde1ae41f681bc"
+    },
+    {
+      "path": "specs\\001-system-specification\\tasks-validation.json",
+      "before_sha256": "bb96fff92f0f4a773292157857efd1689d95d7bf60fbef22d0b2e6817af01147",
+      "after_sha256": "f80f464eb10ee2907ef5445e4d6809137b4bb3e5d5d77dccb12ba8496b274572"
+    },
+    {
+      "path": "tmp\\tasks-review\\generate_tasks.py",
+      "before_sha256": "5f7862595cbf4f275e5965ed42bb382012819c77e92baf65af6bbd521f3ed205",
+      "after_sha256": "5a64444966c3471fd1c42695e1a41f582fc0beda8c0f74d5474170028c7b0086"
+    }
+  ],
+  "new_document": {
+    "path": "specs/001-system-specification/plan-dependency-amendment.md",
+    "sha256": "dc3e71d14677741f8db88e698d5387cccc2169b556f076a324d475c991df3e74"
+  },
+  "preserved_files": [
+    {
+      "path": "specs\\001-system-specification\\business-baseline-audit.json",
+      "sha256": "941118ce4f319f2b686ee6e5ee541cec6cb552708c627dd32964e1e7c34d3c90"
+    },
+    {
+      "path": "specs\\001-system-specification\\business-baseline-audit.md",
+      "sha256": "8cb24e08053a21068559486a70fc8050411123de4eb24853465d4586276c3950"
+    },
+    {
+      "path": "specs\\001-system-specification\\data-model.md",
+      "sha256": "f8bc3fa07974fb084523330a0bda810b0d5575db2330bb9814ceb0f28d0df6d7"
+    },
+    {
+      "path": "specs\\001-system-specification\\plan-approval.json",
+      "sha256": "aef646baf84d72fc474e5bd9627d2a33cd685353e0b804dac30fe348fb1ab136"
+    },
+    {
+      "path": "specs\\001-system-specification\\plan-approval.md",
+      "sha256": "68bc6c0b3bf8919b2b93b472bb92e5643ffce8e36ae2adedb4cc1502ab554e5a"
+    },
+    {
+      "path": "specs\\001-system-specification\\plan-supplement-review.md",
+      "sha256": "faedfab11bbdad120a6d75a0c12b064dca5b3fbcec26bd0af092dac0b9d07885"
+    },
+    {
+      "path": "specs\\001-system-specification\\preimplement-sync.json",
+      "sha256": "59e7298a94660362a74f59bcca524987ba700c62ab3ad5dcaa70825c388c13c5"
+    },
+    {
+      "path": "specs\\001-system-specification\\spec.md",
+      "sha256": "510bd7cc0d759b9c6786b0673225107cf1fc28dce14338fc4aa921be473e4aa6"
+    },
+    {
+      "path": "specs\\001-system-specification\\task-traceability.md",
+      "sha256": "ba022cd7b10222c9a812e2039b6e8321709b4ed30d40c79323c2de13bbb224f8"
+    },
+    {
+      "path": "specs\\001-system-specification\\technical-data-model.md",
+      "sha256": "afb34eabdb81cf6ccd0072b6f56fa2fec623e9bc353ee5c4fa7be692e40135fd"
+    },
+    {
+      "path": "specs\\001-system-specification\\technical-schema.json",
+      "sha256": "2997376f5ba5a2ec5cbe1040ad1b97c1fc2ad9bdfd4883bf96c4e1bdff19bc2f"
+    },
+    {
+      "path": "specs\\001-system-specification\\traceability.md",
+      "sha256": "7ded5717164d8ef60c194ec375681af0248529e80309d67ab992232c35ea98de"
+    },
+    {
+      "path": "specs\\001-system-specification\\checklists\\requirements.md",
+      "sha256": "1efa7637894cb649a99d0c29f0236d3e0148764d2f29fabdb4e289a2e39a6299"
+    },
+    {
+      "path": "specs\\001-system-specification\\contracts\\api.md",
+      "sha256": "05256ae463833b369b2e328c0a9ae803d346820b64328fa4c9a9548db354fa3f"
+    },
+    {
+      "path": "specs\\001-system-specification\\contracts\\identity.md",
+      "sha256": "1f9bdf3a5578e6d08580087b98bd3ea939c7de8d485f5c09019e4546ae3d81d2"
+    },
+    {
+      "path": "specs\\001-system-specification\\contracts\\openapi.json",
+      "sha256": "f2767b4d11e121fa2fd3889f5e545f9e8c8d481ca7533c4d9f4d403cd5b76747"
+    },
+    {
+      "path": "specs\\001-system-specification\\contracts\\operations.md",
+      "sha256": "fbe22f2a63246de15c644aaab533bc0e38574f4967df469b9df12a32f12cc103"
+    },
+    {
+      "path": "specs\\001-system-specification\\diagrams\\storage-boundaries.mmd",
+      "sha256": "9d8148936719b2d16f2c7165f803a92467547fcc4237584f3ad9e0d5c9602da7"
+    },
+    {
+      "path": "specs\\001-system-specification\\diagrams\\technical-erd.mmd",
+      "sha256": "7d8ea2e40129ccb6871644c0ebcb53a16af5e8b850079009942e4d6bdfa1eddb"
+    },
+    {
+      "path": "specs\\001-system-specification\\diagrams\\technical-storage-overview.png",
+      "sha256": "479198fc717585beee98e628de742c1162121e6a1c2d0decdcf40a242e2b1b40"
+    },
+    {
+      "path": "specs\\001-system-specification\\diagrams\\technical-storage-overview.svg",
+      "sha256": "edb451e576d03ae128d60ad0c87ddb06c1b649af7f9cd862cc70b9771633d8c1"
+    },
+    {
+      "path": "docs\\diagrams\\figure-index.json",
+      "sha256": "63458a4e51ad2929960aff7e7398f811878fd9e0947d70df397eaf1910190771"
+    },
+    {
+      "path": "docs\\diagrams\\README.md",
+      "sha256": "05b823bea2c81b421691da88a952500bcfe502b6e802f329a0dd54b8810e5f92"
+    },
+    {
+      "path": "docs\\diagrams\\word-image-audit.json",
+      "sha256": "82328ca17920e924a6f1763faffb5b515fb7a516e9f5cbc2e751ff111fbc91e6"
+    },
+    {
+      "path": "docs\\diagrams\\word-image-audit.md",
+      "sha256": "aaf9cbf621d9f6983e21b68e9fa1d12ca5ebd8d34fba8de489271a86f3df2062"
+    },
+    {
+      "path": "docs\\diagrams\\architecture\\D2-系统分层.mmd",
+      "sha256": "ba0a3f0e686117816e2f65d59814ebbaff8999c65fbc6e31e83e2928f80930b4"
+    },
+    {
+      "path": "docs\\diagrams\\database\\constraints.md",
+      "sha256": "be6f0c74d2d933096340a5a29f9a153f6288a28757267ada7168fd36699dca4e"
+    },
+    {
+      "path": "docs\\diagrams\\database\\D1-database.dbml",
+      "sha256": "b7c388ef0482326dc094e4c36f0b24a5394902efd04c6e47e1f489c19b049e0a"
+    },
+    {
+      "path": "docs\\diagrams\\database\\schema.json",
+      "sha256": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b"
+    },
+    {
+      "path": "docs\\diagrams\\official\\A1.png",
+      "sha256": "108df582321b5831c9e86937fdd4e180defba3b884f56fe4cb8eb47584d828c8"
+    },
+    {
+      "path": "docs\\diagrams\\official\\A2.png",
+      "sha256": "503c7b8e35e2077eca9b832f0a2e5688c40ee38a212149a9d2ae03fcf927d11c"
+    },
+    {
+      "path": "docs\\diagrams\\official\\A3.png",
+      "sha256": "21df1c8552f1c1f07206750c7d8387f1a59ebea953ce7f7fab58c8e5e5f831c5"
+    },
+    {
+      "path": "docs\\diagrams\\official\\B1.png",
+      "sha256": "b174aebddd0130628a1a1b1c147511d7d19edd4a7d6a348417fb4ecdedc95402"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C1.png",
+      "sha256": "d95d41bcca53c2288fd49a5ad0f5fba9a790837431371ec3d9afac6aa4c92b17"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C10.png",
+      "sha256": "83626301b992beb637b1ca8b224413e599b5ddc9419bcb84e0f46da7475df83f"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C11.png",
+      "sha256": "d5b0de51bd851b00406e1d29db1f3a6a2001dbeb7ec62b9e46f770037a067b51"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C12.png",
+      "sha256": "996ff4d7dc216f2f52755926da10cc7edea2d2f7ae9841a6a40a010ca3776aa2"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C13.png",
+      "sha256": "98fdfbb8b4c58164ce167e6ee3936fb3b07da3826eae644673db69425373744c"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C14.png",
+      "sha256": "8d8e7edc1a54a2d0e281ff1ff658461d4aaa98553c1b2613371301be68a573a7"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C15.png",
+      "sha256": "56db5a60c926a894e970afbd1488c94a07f96b930ffe02eae1bbdbe2e9971758"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C16.png",
+      "sha256": "6c5b26b00aed6f586b1bac12f5fbe220990b943d044fb25cec092daf6b35cb0a"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C2.png",
+      "sha256": "765e92c2ab1ec498e6e08d9e9762c86711341a3946c05aa72edafceaccf83bab"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C3.png",
+      "sha256": "388d553e423e4e44c3caed1f17111eb3c29a8c419c8ed75503d4c02e0767198d"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C4.png",
+      "sha256": "7b74762ef925afe07bfef473c48d875e927e8a4cc99c6939ca5b03cd98870fa2"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C5.png",
+      "sha256": "934250c4925f4c8750500af7565f39643c54ed373a0ccce56b4c73c8b2ce4130"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C6.png",
+      "sha256": "ffb27377023d69b03024244a3f80c6eb5a8634f1aa828e20b7c6cad17e71fca0"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C7.png",
+      "sha256": "a9c97c60c6db2cb2dbeac535e8c52e7bba3cc3963267a57d9036cda5bd93716a"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C8.png",
+      "sha256": "31cd2670f2b66bfbcb2c29e20e8f857192fbf312d892e04a56523aab650cc351"
+    },
+    {
+      "path": "docs\\diagrams\\official\\C9.png",
+      "sha256": "faf493405e2d206f01366b900777d0bb2a592559497740565d71b91f45630754"
+    },
+    {
+      "path": "docs\\diagrams\\official\\D1.png",
+      "sha256": "4655aca912c6f14846e03d6eb6f493feb5ab2ac8fcd1006ee4bcf47848669fb6"
+    },
+    {
+      "path": "docs\\diagrams\\official\\D2.png",
+      "sha256": "56451c6eae977791767e851c9f54c29b4cb8d0c498c90515310381474863179f"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\A1-业务用例图.puml",
+      "sha256": "da11e1ef2d7c87b2f75eaf1e52c4c645cdd2f1200a4c0089d838ffad047d1646"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\A2-现状业务序列图.puml",
+      "sha256": "b54e62479b8128e2c58721831a8fdffd34dc7516793bafda45de8f54b1e6e568"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\A3-改进业务序列图.puml",
+      "sha256": "f830d33285509cca909b5c5a71cf7b8c8d72ce547e9e7e85a67396580e9ed419"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\B1-系统用例图.puml",
+      "sha256": "9d8840254965973d69b95c039ecbd0f0826e0169003a7f8f40582704cad80358"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C1-实体类图.puml",
+      "sha256": "51b6c708b4db245d636d75e40fe21a6567f2a3cafb748dc1047677fd7df1947c"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C10-UC07分析序列图.puml",
+      "sha256": "1d2f1a92d6b626d138178d7c16cf4c21a5111fb6c18057c1370ba1080f8028b4"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C11-UC08分析序列图.puml",
+      "sha256": "a24008b0b798a3f9b230fb6c07696809e9d83aa0572235038fa06f8b80555337"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C12-就诊状态机.mmd",
+      "sha256": "723e87134721d2de52811a86259a73cde14cea81225269031ee840c3958d1168"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C13-UC01-S2分析序列图.puml",
+      "sha256": "65bc3616a45128921a449839fea1602facdd7afaed151f6f064e3b25c9946391"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C14-UC01-S3分析序列图.puml",
+      "sha256": "e8bd88dd311ab79bea1dc7d23dc4ddb7bbe46a7022b42eb37b3aa32bee41275e"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C15-UC01-S4分析序列图.puml",
+      "sha256": "c258ce22341fcc22ffa4c566e8ad8291af07c283e6ca6e87c247ab5bfcdef6e0"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C16-UC01-S5分析序列图.puml",
+      "sha256": "e42e2b4877a4dca9d7281615d88dd3959cfc140721a5cb7c3ffd7c6933073922"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C2-边界类图.puml",
+      "sha256": "f74398abf04eb95b7657352e51a1781a56a689d4416b7e34451e8cbd3f0666d3"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C3-控制类图.puml",
+      "sha256": "01a19d9eb1dd7a49de6e1e7390535d02a3a258e947698b1cc1048e11d94ca658"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C4-UC01分析序列图.puml",
+      "sha256": "5acc8b6a480f0d93a12882a4cc62c353286ff3487a87831f4356938a9a6dec3e"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C5-UC02分析序列图.puml",
+      "sha256": "9b33811c58fbd11dd7acd644ea2605b72602c3417709e35147612b8cb934dd7f"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C6-UC03分析序列图.puml",
+      "sha256": "fe9ea5325c2138abdc5b76832ff5dbac35e2562559398b1dbeb46a55c61bf266"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C7-UC04分析序列图.puml",
+      "sha256": "3b8daf4c3c62dc17dde9f066319cfc7e1caa78069e9300e6aee97929685c20a6"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C8-UC05分析序列图.puml",
+      "sha256": "d6173aa7a7bb25f65ce73057d82ea5c04a8f2c26f5406bbe46903303f85b7811"
+    },
+    {
+      "path": "docs\\diagrams\\uml\\C9-UC06分析序列图.puml",
+      "sha256": "47ea7c46e492e5547e8bbd46f3227134713259c5f22208757b91c0f2d7c34b2b"
+    },
+    {
+      "path": ".specify\\memory\\constitution.md",
+      "sha256": "0cade87029fb7802112a1cbdcdb293ea85df03390594a1fbb458142b36ae8376"
+    },
+    {
+      "path": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+      "sha256": "b7f73501b2e25ea6cd489e8b25a8b9fcf01a65eb17160a69b6bca9a5d71dc564"
+    }
+  ],
+  "checks": {
+    "tasks": 186,
+    "acceptance_scenarios": 83,
+    "operations": 81,
+    "only_T001_changed": true,
+    "dependencies_unchanged": true,
+    "execution_order_unchanged": true,
+    "original_design_and_prior_approval_records_unchanged": true,
+    "spec_kit_phases_rerun": false,
+    "runtime_tests_executed": false,
+    "implement_authorized": false
+  }
+}

@@ -1,0 +1,143 @@
+name: adc-integration
+x-logging: &logging
+  driver: json-file
+  options: {max-size: 10m, max-file: '3'}
+services:
+  mysql:
+    image: mysql:8.4@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d
+    platform: linux/amd64
+    command: [--lower-case-table-names=0, --default-time-zone=+00:00, --default-storage-engine=InnoDB, --server-id=1, --log-bin=adc-bin, --binlog-format=ROW, --sync-binlog=1, --innodb-flush-log-at-trx-commit=1, --binlog-expire-logs-seconds=2592000, --innodb-buffer-pool-size=128M, --max-connections=24]
+    environment:
+      TZ: UTC
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/mysql_root_password
+      MYSQL_ROOT_HOST: '%'
+    secrets: [mysql_root_password, migration_password, runtime_password]
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/bootstrap.sql:/docker-entrypoint-initdb.d/01-bootstrap.sql:ro
+      - ./mysql/initialize-users.sh:/docker-entrypoint-initdb.d/02-users.sh:ro
+    networks: [database]
+    healthcheck:
+      test: [CMD-SHELL, 'MYSQL_PWD="$$(cat /run/secrets/mysql_root_password)" mysql --host=127.0.0.1 --protocol=TCP --user=root --batch --skip-column-names --execute="SELECT 1" >/dev/null']
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+    mem_limit: 512m
+    restart: unless-stopped
+    logging: *logging
+  migrator:
+    image: ${ADC_BACKEND_IMAGE:?Set a locally built or controlled registry image}
+    build: {context: ../../backend}
+    platform: linux/amd64
+    entrypoint: [java, -Xmx192m, -Dloader.main=com.adc.infrastructure.MigrationMain, -cp, /app/app.jar, org.springframework.boot.loader.launch.PropertiesLauncher]
+    environment:
+      ADC_MIGRATION_URL: jdbc:mysql://mysql:3306/adc_identity?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&preserveInstants=true&allowPublicKeyRetrieval=true&sslMode=DISABLED
+      ADC_MIGRATION_USERNAME: adc_migrator
+      ADC_MIGRATION_PASSWORD_FILE: /run/secrets/migration_password
+    secrets: [migration_password]
+    networks: [database]
+    depends_on: {mysql: {condition: service_healthy}}
+    healthcheck: {disable: true}
+    read_only: true
+    tmpfs: ['/tmp:size=64m,mode=1777']
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 384m
+    restart: 'no'
+    logging: *logging
+  runtime-grants:
+    image: mysql:8.4@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d
+    platform: linux/amd64
+    user: '10001:10001'
+    entrypoint: [/bin/sh, -ec]
+    command: ['MYSQL_PWD="$$(cat /run/secrets/mysql_root_password)" exec mysql --host=mysql --user=root < /ops/runtime-grants.sql']
+    secrets: [mysql_root_password]
+    volumes: [./mysql/runtime-grants.sql:/ops/runtime-grants.sql:ro]
+    networks: [database]
+    depends_on: {migrator: {condition: service_completed_successfully}}
+    read_only: true
+    tmpfs: ['/tmp:size=16m,mode=1777']
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 64m
+    restart: 'no'
+    logging: *logging
+  backend:
+    image: ${ADC_BACKEND_IMAGE:?Set a controlled backend image}
+    build: {context: ../../backend}
+    platform: linux/amd64
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      ADC_DB_URL: jdbc:mysql://mysql:3306/adc_business?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&preserveInstants=true&allowPublicKeyRetrieval=true&sslMode=DISABLED
+      ADC_DB_USERNAME: adc_runtime
+      ADC_WEB_ORIGIN: https://${ADC_DOMAIN:?Set the exact domain, with no scheme or path}${ADC_HTTPS_ORIGIN_PORT_SUFFIX:-}
+      ADC_WECHAT_APP_ID: ${ADC_WECHAT_APP_ID:?Real AppID required for a deployed integration environment}
+      ADC_DEMO_PAYMENTS_ENABLED: ${ADC_DEMO_PAYMENTS_ENABLED:-false}
+      ADC_DEMO_PAYMENTS_CLINICS: ${ADC_DEMO_PAYMENTS_CLINICS:-}
+      JAVA_TOOL_OPTIONS: -XX:MaxRAMPercentage=50 -XX:MaxMetaspaceSize=192m -XX:ReservedCodeCacheSize=64m -Xss512k
+    secrets:
+      - {source: runtime_password, target: spring.datasource.password}
+      - {source: auth_secret, target: adc.auth-secret}
+      - {source: wechat_secret, target: adc.wechat.app-secret}
+    networks:
+      database: {}
+      ingress: {ipv4_address: 172.29.217.20}
+    depends_on: {runtime-grants: {condition: service_completed_successfully}}
+    read_only: true
+    tmpfs: ['/tmp:size=64m,mode=1777']
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 768m
+    stop_grace_period: 30s
+    restart: unless-stopped
+    logging: *logging
+  operator:
+    profiles: [operator]
+    image: ${ADC_BACKEND_IMAGE:?Set a controlled backend image}
+    platform: linux/amd64
+    entrypoint: [java]
+    command: [-version]
+    environment:
+      ADC_DB_URL: jdbc:mysql://mysql:3306/adc_business?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true&preserveInstants=true&allowPublicKeyRetrieval=true&sslMode=DISABLED
+      ADC_DB_USERNAME: adc_runtime
+    secrets:
+      - {source: runtime_password, target: spring.datasource.password}
+    networks: [database]
+    healthcheck: {disable: true}
+    read_only: true
+    tmpfs: ['/tmp:size=32m,mode=1777']
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 384m
+    restart: 'no'
+    logging: *logging
+  admin:
+    image: ${ADC_ADMIN_IMAGE:?Set a controlled frontend image}
+    build: {context: ../../apps/admin}
+    platform: linux/amd64
+    environment: {ADC_DOMAIN: '${ADC_DOMAIN:?Set exact domain}'}
+    secrets: [tls_certificate, tls_private_key]
+    networks: {ingress: {ipv4_address: 172.29.217.10}}
+    ports: ['${ADC_HTTPS_BIND:-127.0.0.1}:${ADC_HTTPS_PORT:-8443}:8443']
+    depends_on: {backend: {condition: service_healthy}}
+    read_only: true
+    tmpfs: ['/tmp:size=32m,mode=1777']
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 96m
+    restart: unless-stopped
+    logging: *logging
+networks:
+  database: {internal: true}
+  ingress: {ipam: {config: [{subnet: 172.29.217.0/24}]}}
+volumes:
+  mysql_data: {}
+secrets:
+  mysql_root_password: {file: '${ADC_MYSQL_ROOT_PASSWORD_FILE:?Absolute root secret path required}'}
+  migration_password: {file: '${ADC_MIGRATION_PASSWORD_FILE:?Absolute migration secret path required}'}
+  runtime_password: {file: '${ADC_BACKEND_SECRETS_DIR:?Absolute backend secrets directory required}/spring.datasource.password'}
+  auth_secret: {file: '${ADC_BACKEND_SECRETS_DIR:?Absolute backend secrets directory required}/adc.auth-secret'}
+  wechat_secret: {file: '${ADC_BACKEND_SECRETS_DIR:?Absolute backend secrets directory required}/adc.wechat.app-secret'}
+  tls_certificate: {file: '${ADC_TLS_CERTIFICATE_FILE:?Absolute PEM certificate chain path required}'}
+  tls_private_key: {file: '${ADC_TLS_PRIVATE_KEY_FILE:?Absolute PEM private key path required}'}

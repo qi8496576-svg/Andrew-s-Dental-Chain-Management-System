@@ -1,0 +1,73 @@
+{
+  "checked_at": "2026-11-10T10:35:56.0170179+08:00",
+  "schannel_sandbox_error": "SEC_E_NO_CREDENTIALS (0x8009030E)",
+  "powershell_outside_sandbox_http": 200,
+  "curl_outside_sandbox_http": 200,
+  "maven_sandbox_exit_code": 0,
+  "approved_dependency_versions_resolved": true,
+  "download_sha512_verified": true,
+  "powershell_syntax_valid": true,
+  "xml_well_formed": true,
+  "application_build_or_startup_tested": false,
+  "T001_complete": false,
+  "unchanged_baseline": [
+    {
+      "path": "specs/001-system-specification/plan-dependency-amendment.md",
+      "sha256": "dc3e71d14677741f8db88e698d5387cccc2169b556f076a324d475c991df3e74",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "8d77fbfd6d897e05f12c81174a26cbbdbd2cf024e31046188211491f6400e02a",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/plan.md",
+      "sha256": "26e4df626c3abcd95152b3ebc47bf8490575d26de2a6ce49b4fcc1cacf023a2d",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/plan-dependency-amendment.json",
+      "sha256": "86fb500c81de4ed0ad430da202806643901bc0d52a2d603b4fd781765c4e4d7b",
+      "unchanged": true
+    }
+  ],
+  "file_fingerprints": [
+    {
+      "path": "docs/verification/maven-central-tls.md",
+      "sha256": "432d564c78f1769e59949628861611afefa9fa2f8e8d0ea87b3a1e6d29d34c9f"
+    },
+    {
+      "path": "tmp/maven-tls-probe/pom.xml",
+      "sha256": "ce6fe634683a5f6bd5d5d51d3d504ffab29ca5211da25fdb671f03d14c5a25d2"
+    },
+    {
+      "path": "tmp/maven-tls-probe/settings.xml",
+      "sha256": "7891f66b769a2b17ff201868697de08c479ee8ebe4825d1fb0f091fafb9f6c95"
+    },
+    {
+      "path": "tmp/maven-tls-probe/Get-ApprovedMaven.ps1",
+      "sha256": "00c5b2cd8f6403c16307968f22c17d5c3d7087772baa833699446dc1482c5376"
+    },
+    {
+      "path": "tmp/maven-tls-probe/Test-MavenResolution.ps1",
+      "sha256": "c7c85f62041a6c636acf9018a5bb1e6465907c6b0a8ccac0309ebc1dae7f816e"
+    },
+    {
+      "path": "docs/verification/maven-central-resolution-result.json",
+      "sha256": "2490514094c115c9911cc1c33476a26b866acb3bf950533ab2b4a96c0133aaac"
+    },
+    {
+      "path": "docs/verification/maven-central-dependency-tree.txt",
+      "sha256": "d888ae240e14ff2452695a5a9d77ca83866a2e6caea41f19f725857d9ec27f53"
+    },
+    {
+      "path": "docs/verification/maven-central-download.json",
+      "sha256": "ef54210b68117d4ba156cde07617dfe5b447991ddfd5539886527f64a619135a"
+    },
+    {
+      "path": "docs/verification/maven-central-resolution.log",
+      "sha256": "7f936429c2dbfa7f99b24ee81afcd65ae280e48261c078d08359a395c4df445b"
+    }
+  ]
+}

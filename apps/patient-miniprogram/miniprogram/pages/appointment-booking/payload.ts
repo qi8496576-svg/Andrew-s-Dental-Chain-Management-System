@@ -1,0 +1,4 @@
+import type {components} from '../../types/api'
+export function bookingPayload(patient:components['schemas']['PatientView'],allergies:components['schemas']['AllergyView'][],slot:components['schemas']['Candidate'],treatments:string[],confirmed:boolean){
+  return {clinic_id:slot.clinic_id,schedule_id:slot.schedule_id,scheduled_at:slot.starts_at,requested_treatment_ids:treatments,allergy_confirmation_reference:patient.allergy_confirmation_reference,patient_details:{full_name:patient.full_name,date_of_birth:patient.date_of_birth,phone:patient.phone,billing_address:patient.billing_address,email:patient.email??null,emergency_contact_name:patient.emergency_contact_name,emergency_contact_phone:patient.emergency_contact_phone},allergy_declaration:{review_status:patient.allergy_review_status,records:allergies.filter(row=>!row.is_retracted).map(row=>({allergy_id:row.allergy_id,severity_note:row.severity_note??null})),confirmed}}
+}

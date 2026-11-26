@@ -1,0 +1,13 @@
+{
+  "profile": "Q03-SMALL-20261125",
+  "date": "2026-11-25T14:21:59.054Z",
+  "status": "FAIL",
+  "target": "new owned local Linux containers only",
+  "cloud_or_preview_modified": false,
+  "full_data_scale": true,
+  "load_generator": "Windows host outside constrained target containers",
+  "not_a_cloud_capacity_claim": true,
+  "resources": [],
+  "error": "Owned benchmark step failed (137); inspect q03-small-run.log",
+  "finished_at": "2026-11-25T14:22:44.513Z"
+}

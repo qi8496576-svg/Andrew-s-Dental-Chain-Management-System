@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-18T07:54:54.420Z",
+  "task": "T050",
+  "kind": "ssh-tunnel-isolated-cloud-integration",
+  "public_website_enabled": false,
+  "formal_domain_verified": false,
+  "production_release": false,
+  "frontend_status": 200,
+  "tls_ca_verified": true,
+  "anonymous_protected_api_status": 401,
+  "empty_wechat_code_status": 400,
+  "loopback_only": true,
+  "passed": true
+}

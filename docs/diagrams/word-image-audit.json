@@ -1,0 +1,252 @@
+{
+  "date": "2026-11-25",
+  "word": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+  "word_sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a",
+  "authority": "负责人确认的当前图面与当前Word嵌图",
+  "png_match_count": 22,
+  "not_matched": [],
+  "figures": [
+    {
+      "id": "A1",
+      "word_image": "docs/originals/word-media/image2.png",
+      "sha256": "108df582321b5831c9e86937fdd4e180defba3b884f56fe4cb8eb47584d828c8",
+      "official_image": "docs/diagrams/official/A1.png",
+      "exact_png_matches": [
+        "图源/A1_业务用例图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/A1-业务用例图.puml"
+    },
+    {
+      "id": "A2",
+      "word_image": "docs/originals/word-media/image3.png",
+      "sha256": "fd2a210180f5a30680397e32981115cfe66b570c516c60693a692ac07422d139",
+      "official_image": "docs/diagrams/official/A2.png",
+      "exact_png_matches": [
+        "图源/A2_现状业务序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/A2-现状业务序列图.svg"
+    },
+    {
+      "id": "A3",
+      "word_image": "docs/originals/word-media/image4.png",
+      "sha256": "2e6d7298119e8738eea7c50d1baff9753e65fc1c2cf8049d6d714eb3ad17aec2",
+      "official_image": "docs/diagrams/official/A3.png",
+      "exact_png_matches": [
+        "图源/A3_改进业务序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/A3-改进业务序列图.svg"
+    },
+    {
+      "id": "B1",
+      "word_image": "docs/originals/word-media/image5.png",
+      "sha256": "c2a7585ce7e327a6fc79d7dfb7e2ad63d2d0dee842a5af147e3d9f4acbe04c83",
+      "official_image": "docs/diagrams/official/B1.png",
+      "exact_png_matches": [
+        "图源/B1_系统用例图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/B1-系统用例图.svg"
+    },
+    {
+      "id": "C1",
+      "word_image": "docs/originals/word-media/image6.png",
+      "sha256": "d95d41bcca53c2288fd49a5ad0f5fba9a790837431371ec3d9afac6aa4c92b17",
+      "official_image": "docs/diagrams/official/C1.png",
+      "exact_png_matches": [
+        "图源/C1_实体类图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C1-实体类图.puml"
+    },
+    {
+      "id": "C2",
+      "word_image": "docs/originals/word-media/image7.png",
+      "sha256": "01981da705110247d1d916c032ded29190db46c7f7162e10e5b796d150e1525f",
+      "official_image": "docs/diagrams/official/C2.png",
+      "exact_png_matches": [
+        "图源/C2_边界类图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C2-边界类图.svg"
+    },
+    {
+      "id": "C3",
+      "word_image": "docs/originals/word-media/image8.png",
+      "sha256": "7201a58dfae79447f2e10a5b8a7e316a9eb4246a87457d4ce5b92ceb8a4ff92a",
+      "official_image": "docs/diagrams/official/C3.png",
+      "exact_png_matches": [
+        "图源/C3_控制类图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C3-控制类图.svg"
+    },
+    {
+      "id": "C4",
+      "word_image": "docs/originals/word-media/image9.png",
+      "sha256": "61701dd497ecc58546cc022a3abf2b6bcc5840586e6f4ba79c6bcd7735e510ff",
+      "official_image": "docs/diagrams/official/C4.png",
+      "exact_png_matches": [
+        "图源/C4_创建预约分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C4-UC01分析序列图.svg"
+    },
+    {
+      "id": "C5",
+      "word_image": "docs/originals/word-media/image10.png",
+      "sha256": "4f39c54f4b1f7f3e58af5753fb6639152780db9169123625354d719022b10255",
+      "official_image": "docs/diagrams/official/C5.png",
+      "exact_png_matches": [
+        "图源/C5_管理出诊排班分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C5-UC02分析序列图.svg"
+    },
+    {
+      "id": "C6",
+      "word_image": "docs/originals/word-media/image11.png",
+      "sha256": "61a2fb1cf92577f9142e874a2b04fca8e7fecf3425bfc08595596dd3250f458d",
+      "official_image": "docs/diagrams/official/C6.png",
+      "exact_png_matches": [
+        "图源/C6_记录治疗分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C6-UC03分析序列图.svg"
+    },
+    {
+      "id": "C7",
+      "word_image": "docs/originals/word-media/image12.png",
+      "sha256": "62950c55c324d823c50173c96c0d3355af043b647ab4654ff84513317306d269",
+      "official_image": "docs/diagrams/official/C7.png",
+      "exact_png_matches": [
+        "图源/C7_结算就诊分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C7-UC04分析序列图.svg"
+    },
+    {
+      "id": "C8",
+      "word_image": "docs/originals/word-media/image13.png",
+      "sha256": "5cfddd996883180b21472c7a1e5881b5d2d6dd0c49bf4d7aa93e28e7e5c2dca9",
+      "official_image": "docs/diagrams/official/C8.png",
+      "exact_png_matches": [
+        "图源/C8_维护患者资料分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C8-UC05分析序列图.svg"
+    },
+    {
+      "id": "C9",
+      "word_image": "docs/originals/word-media/image14.png",
+      "sha256": "9177fae34b34506188493e5355cd6291311ef65288acc89118297f3b10ec3579",
+      "official_image": "docs/diagrams/official/C9.png",
+      "exact_png_matches": [
+        "图源/C9_维护组织资源分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C9-UC06分析序列图.svg"
+    },
+    {
+      "id": "C10",
+      "word_image": "docs/originals/word-media/image15.png",
+      "sha256": "1bd1d5424f87c13369743534dde9cbfac9971eb1d2563c67a60c2d2085583335",
+      "official_image": "docs/diagrams/official/C10.png",
+      "exact_png_matches": [
+        "图源/C10_核算季度绩效分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C10-UC07分析序列图.svg"
+    },
+    {
+      "id": "C11",
+      "word_image": "docs/originals/word-media/image16.png",
+      "sha256": "3dde875906d02159b0de7f6f7d06a2d4aa130b304591033c48aeba4f18ce53ad",
+      "official_image": "docs/diagrams/official/C11.png",
+      "exact_png_matches": [
+        "图源/C11_运营分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C11-UC08分析序列图.svg"
+    },
+    {
+      "id": "C13",
+      "word_image": "docs/originals/word-media/image17.png",
+      "sha256": "935479907f4b946556dcb993e0bce42c98416d9c4276218d521f26f5036f74b1",
+      "official_image": "docs/diagrams/official/C13.png",
+      "exact_png_matches": [
+        "图源/C13_确认到诊分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C13-UC01-S2分析序列图.svg"
+    },
+    {
+      "id": "C14",
+      "word_image": "docs/originals/word-media/image18.png",
+      "sha256": "37e8b1497bd91523960864030ffe48c364d892e2d366ea6a673c1ad6a418999f",
+      "official_image": "docs/diagrams/official/C14.png",
+      "exact_png_matches": [
+        "图源/C14_取消预约分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C14-UC01-S3分析序列图.svg"
+    },
+    {
+      "id": "C15",
+      "word_image": "docs/originals/word-media/image19.png",
+      "sha256": "978877cd9ba99433d93f68e55cb9206ea178c171d17cfe2c9da041aaa589e43c",
+      "official_image": "docs/diagrams/official/C15.png",
+      "exact_png_matches": [
+        "图源/C15_登记爽约分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C15-UC01-S4分析序列图.svg"
+    },
+    {
+      "id": "C16",
+      "word_image": "docs/originals/word-media/image20.png",
+      "sha256": "6c86aa87e7d72e0db48da55ba9c9c4a3ad892805776584c984ac958f99177b9f",
+      "official_image": "docs/diagrams/official/C16.png",
+      "exact_png_matches": [
+        "图源/C16_停诊改约分析序列图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C16-UC01-S5分析序列图.svg"
+    },
+    {
+      "id": "C12",
+      "word_image": "docs/originals/word-media/image21.png",
+      "sha256": "a03573ce6e0f92bfa377de5037d17a049416b486b5e3fce4d9419992b45391a1",
+      "official_image": "docs/diagrams/official/C12.png",
+      "exact_png_matches": [
+        "图源/C12_就诊状态机图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/uml/C12-就诊状态机.svg"
+    },
+    {
+      "id": "D1",
+      "word_image": "docs/originals/word-media/image22.png",
+      "sha256": "7e5c852e0d7202a5faeb9cc830ea1d1d20fd02d8f7d4dc51360e8ceff01553d4",
+      "official_image": "docs/diagrams/official/D1.png",
+      "exact_png_matches": [
+        "图源/D1_数据库ER图.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/database/D1-database.dbml"
+    },
+    {
+      "id": "D2",
+      "word_image": "docs/originals/word-media/image23.png",
+      "sha256": "c72833a0ee071ee9cd7f3cd8f67c1d2258f73585a944e919a637ee79717ca493",
+      "official_image": "docs/diagrams/official/D2.png",
+      "exact_png_matches": [
+        "图源/D2_系统分层与前端入口.png"
+      ],
+      "result": "current Word / official PNG / named PNG byte-identical",
+      "editable_source": "docs/diagrams/architecture/D2-系统分层.mmd"
+    }
+  ]
+}

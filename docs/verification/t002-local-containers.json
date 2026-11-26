@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-10T22:09:55.2690635+08:00",
+  "docker_server_version": "29.9.3",
+  "docker_server_os": "linux",
+  "compose_version": "5.7.0",
+  "data_disks": [
+    "D:\\ADC-Dev\\Docker\\data\\disk\\docker_data.vhdx",
+    "D:\\ADC-Dev\\Docker\\data\\main\\ext4.vhdx"
+  ],
+  "mysql_settings": [
+    "8.4.13",
+    "Linux",
+    "0",
+    "+00:00",
+    "+00:00",
+    "InnoDB"
+  ],
+  "testcontainers_verified": true,
+  "testcontainers_evidence": "t002-build-result.json"
+}

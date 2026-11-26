@@ -1,0 +1,28 @@
+{
+  "primary_color": "#17778b",
+  "original_theme_styles_unchanged": true,
+  "contrast_ratios": [
+    {
+      "foreground": "#566e7b",
+      "background": "#ffffff",
+      "ratio": 5.37
+    },
+    {
+      "foreground": "#566e7b",
+      "background": "#f5f7f8",
+      "ratio": 5.0
+    },
+    {
+      "foreground": "#ffffff",
+      "background": "#17778b",
+      "ratio": 5.19
+    }
+  ],
+  "frontend_unit_tests": 47,
+  "frontend_targeted_recheck": 7,
+  "browser_tests": 16,
+  "backend_original_unit_tests": 23,
+  "backend_security_route_checks": 4,
+  "isolated_mysql_tests": 31,
+  "business_data_written_in_live_verification": false
+}

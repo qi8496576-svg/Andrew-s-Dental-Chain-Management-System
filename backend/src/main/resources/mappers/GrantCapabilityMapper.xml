@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.GrantCapabilityMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.GrantCapabilityRecord">
+    <constructor>
+      <idArg column="grant_id" javaType="java.lang.String"/>
+      <idArg column="capability_code" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `grant_id`, `capability_code` FROM adc_identity.`GrantCapability` WHERE `grant_id` = #{grant_id} AND `capability_code` = #{capability_code}
+  </select>
+</mapper>

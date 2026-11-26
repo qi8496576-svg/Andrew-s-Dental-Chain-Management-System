@@ -1,0 +1,12 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import crypto from 'node:crypto'
+import {spawn} from 'node:child_process'
+import assert from 'node:assert/strict'
+import {accounts,privateRoot,origin,login} from './cloud-api.mjs'
+import {root} from './cloud-ssh.mjs'
+const config=JSON.parse(fs.readFileSync(path.join(root,'docs/verification/resource-availability-20261124/configuration.json'))),actors=[]
+for(let i=0;i<5;i++)actors.push(await login(accounts.frontdesk))
+const tomorrow=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(Date.now()+86400000)),end=new Date(Date.parse(tomorrow+'T00:00:00Z')+86400000).toISOString().slice(0,10),q=new URLSearchParams({clinic_id:'1',start:tomorrow+'T00:00:00+08:00',end:end+'T00:00:00+08:00',treatment_ids:config.treatments[0].id,limit:'20'}),input=path.join(privateRoot,'q03-read-'+crypto.randomUUID()+'.json'),evidence=path.join(root,'docs/verification/performance'),began=new Date().toISOString()
+fs.writeFileSync(input,JSON.stringify({kind:'adc-q03-cloud-read-only',origin,actors,candidate_path:'/appointment-candidates?'+q}))
+try{const log=fs.createWriteStream(path.join(evidence,'q03-cloud-read.log')),result=await new Promise((resolve,reject)=>{const child=spawn(path.join(root,'tmp/toolchains/k6-1.0.0/k6-v1.0.0-windows-amd64/k6.exe'),['run','--out','json='+path.join(evidence,'q03-cloud-read-raw.json'),'tests/performance/q03-cloud-read.js'],{cwd:root,windowsHide:true,env:{...process.env,ADC_Q03_CLOUD_INPUT:input,ADC_Q03_CLOUD_SUMMARY:path.join(evidence,'q03-cloud-read-summary.json')}});child.stdout.pipe(log,{end:false});child.stderr.pipe(log,{end:false});child.on('error',reject);child.on('exit',code=>{log.end();resolve(code)})});assert.equal(result,0,'Actual cloud five-minute read verification');const m=JSON.parse(fs.readFileSync(path.join(evidence,'q03-cloud-read-summary.json'))).metrics.metrics;fs.writeFileSync(path.join(evidence,'q03-cloud-read.json'),JSON.stringify({status:'PASS',started_at:began,finished_at:new Date().toISOString(),origin,vus:5,duration_seconds:300,requests:m.cloud_read_requests.values.count,p95_ms:m.cloud_read_ms.values['p(95)'],unexpected_error_rate:m.cloud_read_errors.values.rate,business_mutation_apis_called:false,independent_load_generator:true,cloud_full_scale_write_capacity_claimed:false},null,2)+'\n');console.log('Actual cloud low-load read verification PASS')}finally{fs.unlinkSync(input)}

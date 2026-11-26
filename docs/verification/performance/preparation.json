@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-18",
+  "phase": "full-synthetic-data-preparation-verified-not-full-Q03",
+  "workload_helper_tests_passed": 8,
+  "helper_evidence": "docs/verification/database/q03-preparation-tests.log",
+  "node_syntax_checked": true,
+  "k6_1_x_runtime_verified": false,
+  "mysql_count_capture_sql_executed": true,
+  "count_capture_scope": "owned fresh isolated MySQL at full approved baseline",
+  "count_capture_evidence": "docs/verification/database/q03-count-capture-local.json",
+  "full_dataset_generator_complete": true,
+  "full_q03_executed": false,
+  "full_q03_passed": null,
+  "approved_thresholds_changed": false,
+  "production_capacity_claimed": false,
+  "real_mysql_full_baseline_verified": true,
+  "full_scale_evidence": "docs/verification/performance/q03-seed-smoke.json",
+  "authenticated_worker_fixture_complete": false,
+  "k6_tool_download_status": "official Docker pull stalled/cancelled; official portable zip TLS timeout",
+  "related_node_tests_passed": 11
+}

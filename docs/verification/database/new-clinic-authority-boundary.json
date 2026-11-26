@@ -1,0 +1,10 @@
+{
+  "kind" : "real_mysql_new_clinic_authority_boundary",
+  "new_scope_rows" : 0,
+  "not_a_q09_pass" : true,
+  "normal_grant_attempt_status" : 403,
+  "date" : "2026-11-14",
+  "existing_management_scope" : [ "1" ],
+  "q09_ready_for_scheduling" : false,
+  "clinic_created_through_existing_service" : "4556745090397974508"
+}

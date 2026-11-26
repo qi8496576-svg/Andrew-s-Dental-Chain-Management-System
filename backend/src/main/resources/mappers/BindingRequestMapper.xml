@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.BindingRequestMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.BindingRequestRecord">
+    <constructor>
+      <idArg column="request_id" javaType="java.lang.String"/>
+      <arg column="applicant_subject_id" javaType="java.lang.String"/>
+      <arg column="patient_number_hint" javaType="java.lang.String"/>
+      <arg column="date_of_birth_hint" javaType="java.time.LocalDate"/>
+      <arg column="service_clinic_id" javaType="java.lang.Long"/>
+      <arg column="candidate_patient_id" javaType="java.lang.Long"/>
+      <arg column="status" javaType="java.lang.String"/>
+      <arg column="submitted_at" javaType="java.time.Instant"/>
+      <arg column="reviewed_by" javaType="java.lang.String"/>
+      <arg column="reviewed_at" javaType="java.time.Instant"/>
+      <arg column="verification_basis" javaType="java.lang.String"/>
+      <arg column="reason" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `request_id`, `applicant_subject_id`, `patient_number_hint`, `date_of_birth_hint`, `service_clinic_id`, `candidate_patient_id`, `status`, `submitted_at`, `reviewed_by`, `reviewed_at`, `verification_basis`, `reason` FROM adc_identity.`BindingRequest` WHERE `request_id` = #{request_id}
+  </select>
+</mapper>

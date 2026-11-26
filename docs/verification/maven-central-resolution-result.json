@@ -1,0 +1,16 @@
+{
+  "started_at": "2026-11-10T10:30:10.0263538+08:00",
+  "finished_at": "2026-11-10T10:34:25.1591037+08:00",
+  "exit_code": 0,
+  "maven": "3.9.16",
+  "java_home": "D:\\jdk-21",
+  "repository": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\tmp\\maven-tls-probe\\repository",
+  "settings": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\tmp\\maven-tls-probe\\settings.xml",
+  "goals": [
+    "dependency:resolve",
+    "dependency:tree"
+  ],
+  "strict_checksums": true,
+  "tls_verification_disabled": false,
+  "application_build_or_startup_tested": false
+}

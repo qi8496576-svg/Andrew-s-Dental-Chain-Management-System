@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-17T15:45:48.340Z",
+  "environment": "local-wechat-developer-tools",
+  "origin": "https://localhost:19443",
+  "real_wechat_login_verified": true,
+  "backend_patient_identity_verified": true,
+  "binding_exists": false,
+  "pages": [
+    {
+      "page": "pages/patients/index",
+      "runtime_loaded": true,
+      "loading_finished": true,
+      "message": "尚无有效本人绑定，请联系诊所核验。",
+      "unbound_patient": true,
+      "screenshot_verified": false
+    },
+    {
+      "page": "pages/patient-bindings/index",
+      "runtime_loaded": true,
+      "loading_finished": true,
+      "message": "",
+      "unbound_patient": true,
+      "screenshot_verified": false
+    },
+    {
+      "page": "pages/appointment-booking/index",
+      "runtime_loaded": true,
+      "loading_finished": true,
+      "message": "无法预约：PATIENT_BINDING_REQUIRED。请先完成本人绑定及诊所过敏核验。",
+      "unbound_patient": true,
+      "screenshot_verified": false
+    },
+    {
+      "page": "pages/appointment-cancellation/index",
+      "runtime_loaded": true,
+      "loading_finished": true,
+      "message": "无法读取本人预约：PATIENT_BINDING_REQUIRED",
+      "unbound_patient": true,
+      "screenshot_verified": false
+    }
+  ],
+  "production_or_real_device_verified": false
+}

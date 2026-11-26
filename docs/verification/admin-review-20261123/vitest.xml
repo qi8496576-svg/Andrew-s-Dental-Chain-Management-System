@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="47" failures="0" errors="0" time="4.3046956">
+    <testsuite name="src/api/authentication.spec.ts" timestamp="2026-11-23T13:04:04.878Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0313809">
+        <testcase classname="src/api/authentication.spec.ts" name="staff authentication client &gt; uses signed CSRF initialization and keeps session credentials in HttpOnly cookies" time="0.0283711">
+        </testcase>
+        <testcase classname="src/api/authentication.spec.ts" name="staff authentication client &gt; does not automatically resend credentials after authentication rejection" time="0.001612">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/api/http.spec.ts" timestamp="2026-11-23T13:04:04.881Z" hostname="LAPTOP-5TVHSQNK" tests="3" failures="0" errors="0" skipped="0" time="0.0321996">
+        <testcase classname="src/api/http.spec.ts" name="command transport &gt; keeps the exact original key, body and If-Match after an unknown outcome" time="0.0284207">
+        </testcase>
+        <testcase classname="src/api/http.spec.ts" name="command transport &gt; reports domain rejection and never retries automatically" time="0.0009836">
+        </testcase>
+        <testcase classname="src/api/http.spec.ts" name="command transport &gt; retains the original command on server commit uncertainty or invalid success body" time="0.0011778">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/api/outcome-recovery.spec.ts" timestamp="2026-11-23T13:04:04.885Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0379318">
+        <testcase classname="src/api/outcome-recovery.spec.ts" name="restores only metadata after refresh and reuses the original key without storing clinical text" time="0.0320183">
+        </testcase>
+        <testcase classname="src/api/outcome-recovery.spec.ts" name="does not expose another employee pending metadata or allow a second command during uncertainty" time="0.0034469">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/api/protected.spec.ts" timestamp="2026-11-23T13:04:04.886Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0327864">
+        <testcase classname="src/api/protected.spec.ts" name="shares the current login CSRF context with business commands and logout" time="0.0305702">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/management-navigation.spec.ts" timestamp="2026-11-23T13:04:04.887Z" hostname="LAPTOP-5TVHSQNK" tests="4" failures="0" errors="0" skipped="0" time="0.0072898">
+        <testcase classname="src/management-navigation.spec.ts" name="management destinations &gt; rejects unknown or ambiguous resource query values" time="0.0016183">
+        </testcase>
+        <testcase classname="src/management-navigation.spec.ts" name="management destinations &gt; offers no management links without existing capabilities" time="0.0006733">
+        </testcase>
+        <testcase classname="src/management-navigation.spec.ts" name="management destinations &gt; reuses actual resource pages and retains separate account/grant permissions" time="0.0009214">
+        </testcase>
+        <testcase classname="src/management-navigation.spec.ts" name="management destinations &gt; keeps every configuration destination separate from daily navigation" time="0.0026876">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/navigation.spec.ts" timestamp="2026-11-23T13:04:04.889Z" hostname="LAPTOP-5TVHSQNK" tests="3" failures="0" errors="0" skipped="0" time="0.0039871">
+        <testcase classname="src/navigation.spec.ts" name="shared navigation &gt; keeps unauthorized modules out of the shared shell" time="0.0019509">
+        </testcase>
+        <testcase classname="src/navigation.spec.ts" name="shared navigation &gt; keeps appointments and schedules as separate reception entries" time="0.0002894">
+        </testcase>
+        <testcase classname="src/navigation.spec.ts" name="shared navigation &gt; supports an explicitly authorized multi-role subject without synthesizing permissions" time="0.0003802">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/router/index.spec.ts" timestamp="2026-11-23T13:04:04.891Z" hostname="LAPTOP-5TVHSQNK" tests="4" failures="0" errors="0" skipped="0" time="0.6522562">
+        <testcase classname="src/router/index.spec.ts" name="route bootstrap &gt; loads the home route and its Vue component" time="0.0178281">
+        </testcase>
+        <testcase classname="src/router/index.spec.ts" name="route bootstrap &gt; redirects an unauthenticated visitor to the personal login page" time="0.003878">
+        </testcase>
+        <testcase classname="src/router/index.spec.ts" name="route bootstrap &gt; uses a not-found page for an unknown nested URL" time="0.0035084">
+        </testcase>
+        <testcase classname="src/router/index.spec.ts" name="route bootstrap &gt; guards every independent resource page with actual resource capabilities" time="0.6248002">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/analytics/index.spec.ts" timestamp="2026-11-23T13:04:04.892Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0320197">
+        <testcase classname="src/views/analytics/index.spec.ts" name="requires explicit analysis capability instead of generic headquarters role" time="0.0194902">
+        </testcase>
+        <testcase classname="src/views/analytics/index.spec.ts" name="allows a scoped analyst without granting sensitive source permissions" time="0.0112563">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/appointment-attendance/index.spec.ts" timestamp="2026-11-23T13:04:04.893Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0183777">
+        <testcase classname="src/views/appointment-attendance/index.spec.ts" name="requires attendance authority separately from booking or cancellation" time="0.0172369">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/appointment-booking/index.spec.ts" timestamp="2026-11-23T13:04:04.893Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0233855">
+        <testcase classname="src/views/appointment-booking/index.spec.ts" name="keeps appointment management separate from schedule authority" time="0.0221917">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/appointment-cancellation/index.spec.ts" timestamp="2026-11-23T13:04:04.895Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0309974">
+        <testcase classname="src/views/appointment-cancellation/index.spec.ts" name="requires cancellation authority separately from attendance" time="0.0289328">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/appointment-no-show/index.spec.ts" timestamp="2026-11-23T13:04:04.895Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0182679">
+        <testcase classname="src/views/appointment-no-show/index.spec.ts" name="requires manual no-show authority separately from cancellation" time="0.0170713">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/appointment-rescheduling/index.spec.ts" timestamp="2026-11-23T13:04:04.897Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0184432">
+        <testcase classname="src/views/appointment-rescheduling/index.spec.ts" name="requires clinic rescheduling authority separately from patient cancellation" time="0.0171618">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/clinic-grants/index.spec.ts" timestamp="2026-11-23T13:04:04.898Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.5939352">
+        <testcase classname="src/views/clinic-grants/index.spec.ts" name="requires the independent headquarters authorization capability" time="0.0175962">
+        </testcase>
+        <testcase classname="src/views/clinic-grants/index.spec.ts" name="loads the grants page for the separately authorized headquarters user" time="0.5744902">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/clinical-treatment/index.spec.ts" timestamp="2026-11-23T13:04:04.899Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0190234">
+        <testcase classname="src/views/clinical-treatment/index.spec.ts" name="does not expose clinical risk context to reception booking authority" time="0.0166545">
+        </testcase>
+        <testcase classname="src/views/clinical-treatment/index.spec.ts" name="keeps the independent price correction capability out of an ordinary dentist route" time="0.0011382">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/invoicing/index.spec.ts" timestamp="2026-11-23T13:04:04.900Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0206119">
+        <testcase classname="src/views/invoicing/index.spec.ts" name="does not infer cashier access from dentist completion authority" time="0.0182392">
+        </testcase>
+        <testcase classname="src/views/invoicing/index.spec.ts" name="headquarters invoice source access is an explicit read capability" time="0.0011723">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/organization-resources/index.spec.ts" timestamp="2026-11-23T13:04:04.901Z" hostname="LAPTOP-5TVHSQNK" tests="3" failures="0" errors="0" skipped="0" time="0.6926588">
+        <testcase classname="src/views/organization-resources/index.spec.ts" name="resource navigation requires an existing headquarters resource capability" time="0.6888414">
+        </testcase>
+        <testcase classname="src/views/organization-resources/index.spec.ts" name="resource forms preserve exact price text and never send response-only fields" time="0.0008237">
+        </testcase>
+        <testcase classname="src/views/organization-resources/index.spec.ts" name="editing treatment requirements retains already linked IDs outside the loaded catalog page" time="0.000792">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/patient-bindings/index.spec.ts" timestamp="2026-11-23T13:04:04.903Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0246118">
+        <testcase classname="src/views/patient-bindings/index.spec.ts" name="keeps binding review restricted to the separately authorized reception operation" time="0.0186861">
+        </testcase>
+        <testcase classname="src/views/patient-bindings/index.spec.ts" name="opens the binding review page for an authorized reviewer" time="0.0038459">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/patients/index.spec.ts" timestamp="2026-11-23T13:04:04.903Z" hostname="LAPTOP-5TVHSQNK" tests="3" failures="0" errors="0" skipped="0" time="0.6117853">
+        <testcase classname="src/views/patients/index.spec.ts" name="patient navigation requires the current reception read capability" time="0.0186906">
+        </testcase>
+        <testcase classname="src/views/patients/index.spec.ts" name="loads patient maintenance only for an authorized reception user" time="0.5692063">
+        </testcase>
+        <testcase classname="src/views/patients/index.spec.ts" name="keeps the server ETag when loading an existing patient for correction" time="0.0222252">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/quarterly-performance/index.spec.ts" timestamp="2026-11-23T13:04:04.904Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0592591">
+        <testcase classname="src/views/quarterly-performance/index.spec.ts" name="keeps quarterly calculation, review publication and source access behind explicit capabilities" time="0.0461298">
+        </testcase>
+        <testcase classname="src/views/quarterly-performance/index.spec.ts" name="does not infer cost verification from generic headquarters resources" time="0.0108589">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/schedules/index.spec.ts" timestamp="2026-11-23T13:04:04.905Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.6875971">
+        <testcase classname="src/views/schedules/index.spec.ts" name="keeps scheduling independent from booking and denies booking-only authority" time="0.0195719">
+        </testcase>
+        <testcase classname="src/views/schedules/index.spec.ts" name="opens the separate schedule page for a schedule reader" time="0.6666398">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/schedules/week.spec.ts" timestamp="2026-11-23T13:04:04.905Z" hostname="LAPTOP-5TVHSQNK" tests="1" failures="0" errors="0" skipped="0" time="0.0136914">
+        <testcase classname="src/views/schedules/week.spec.ts" name="uses a Monday week across month and year boundaries without relying on browser time zone" time="0.010459">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/staff-accounts/index.spec.ts" timestamp="2026-11-23T13:04:04.906Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.6421984">
+        <testcase classname="src/views/staff-accounts/index.spec.ts" name="does not route a logged-in account without account management access to the page" time="0.0230129">
+        </testcase>
+        <testcase classname="src/views/staff-accounts/index.spec.ts" name="loads the account management page only after current access is checked" time="0.6174945">
+        </testcase>
+    </testsuite>
+</testsuites>

@@ -1,0 +1,85 @@
+{
+  "adc_business.Patient": [
+    "patient_number"
+  ],
+  "adc_business.Allergy": [
+    "allergy_name"
+  ],
+  "adc_business.PatientAllergy": [],
+  "adc_business.Clinic": [
+    "clinic_code"
+  ],
+  "adc_business.Dentist": [
+    "employee_number"
+  ],
+  "adc_business.Qualification": [
+    "qualification_name"
+  ],
+  "adc_business.DentistQualification": [],
+  "adc_business.DentistClinicAssignment": [],
+  "adc_business.DentistSchedule": [],
+  "adc_business.Treatment": [
+    "treatment_code"
+  ],
+  "adc_business.TreatmentQualification": [],
+  "adc_business.Appointment": [
+    "rescheduled_from_id"
+  ],
+  "adc_business.AppointmentRequestedTreatment": [],
+  "adc_business.AppliedTreatment": [],
+  "adc_business.Invoice": [
+    "appointment_id",
+    "invoice_number"
+  ],
+  "adc_business.InvoiceItem": [
+    "applied_treatment_id",
+    "invoice_id,line_number"
+  ],
+  "adc_business.CostEntry": [
+    "reversal_of_id",
+    "source_reference"
+  ],
+  "adc_business.QuarterlyPerformance": [
+    "dentist_id,quarter_start,quarter_end,calculation_version"
+  ],
+  "adc_business.AppointmentEvent": [
+    "appointment_id,event_type,request_key"
+  ],
+  "adc_identity.Subject": [],
+  "adc_identity.ExternalIdentity": [
+    "provider,appid,openid",
+    "subject_id"
+  ],
+  "adc_identity.StaffAccount": [
+    "username"
+  ],
+  "adc_identity.Session": [
+    "token_hash"
+  ],
+  "adc_identity.LoginThrottle": [],
+  "adc_identity.BindingRequest": [],
+  "adc_identity.CurrentPatientBinding": [
+    "patient_id"
+  ],
+  "adc_identity.BindingEvent": [],
+  "adc_identity.AccessGrant": [],
+  "adc_identity.GrantClinicScope": [],
+  "adc_identity.GrantCapability": [],
+  "adc_identity.RequestReceipt": [],
+  "adc_identity.flyway_schema_history": [],
+  "adc_audit.AuditEvent": [],
+  "adc_business.RegistrationFeePolicy": [],
+  "adc_business.BookingHold": [
+    "appointment_id"
+  ],
+  "adc_business.PatientBill": [
+    "hold_id",
+    "invoice_id"
+  ],
+  "adc_business.PaymentOrder": [
+    "bill_id"
+  ],
+  "adc_business.RefundOrder": [
+    "payment_id"
+  ]
+}

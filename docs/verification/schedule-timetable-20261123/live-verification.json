@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-23T14:32:03.181Z",
+  "url": "https://localhost:19443/schedules",
+  "read_only_business_check": true,
+  "shift_count": 5,
+  "metrics": {
+    "pageHeight": 1775,
+    "viewportHeight": 900,
+    "internalVerticalScrollbar": false,
+    "theme": "#17778b"
+  },
+  "browser_errors": []
+}

@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-26",
+  "scope": "当前Word、模型、Spec Kit及已批准课程虚构验收一致性核验；不构成正式发布批准",
+  "task_revision": "ADC-TASKS-20261126-02",
+  "task_count": 64,
+  "checked_count": 64,
+  "pending_tasks": [],
+  "dependency_references_exist": true,
+  "execution_order_satisfies_dependencies": true,
+  "fr_covered": 26,
+  "acceptance_covered": 87,
+  "operations_covered": 91,
+  "acceptance_task_mapping_complete": true,
+  "operation_task_mapping_complete": true,
+  "business_tables": 24,
+  "business_fields": 209,
+  "business_foreign_keys": 44,
+  "word_copy_identical": true,
+  "word_sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a",
+  "word_rendered_pages": 62,
+  "contract_validation": "91操作、99组件验证；12项契约测试通过；已批准摘要链校验通过",
+  "fingerprints": [
+    {
+      "path": "specs/001-system-specification/spec.md",
+      "sha256": "a9729f98327565a15227144b9771df128e125bad0d56c27560da6a250d580d3a"
+    },
+    {
+      "path": "specs/001-system-specification/plan.md",
+      "sha256": "21f8fd2817746d3b26301202e7064026aaf64ed85590dbb4f6e6833d759f48fd"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "8ea38d72f3d34b248f2e535bdb420e0d7517fffa0d055fe4e5625c094ed32620"
+    },
+    {
+      "path": "specs/001-system-specification/tasks-catalog.json",
+      "sha256": "b62be74dba75f476a4f77b8863efc824b3552c67de839bd921539144506e0d2e"
+    },
+    {
+      "path": "specs/001-system-specification/task-traceability.md",
+      "sha256": "c3bd40777fcb25e444711aecd57fa790fbe5f94ac9902bb4e392ae169f0ca6a1"
+    }
+  ],
+  "unexecuted_quality_and_release_tasks": [
+    "T052",
+    "T053",
+    "T054",
+    "T055",
+    "T056"
+  ],
+  "runtime_evidence": "docs/verification/release-readiness.md",
+  "backend_test_results": {
+    "surefire-reports": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "failsafe-reports": {
+      "tests": 176,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  }
+}

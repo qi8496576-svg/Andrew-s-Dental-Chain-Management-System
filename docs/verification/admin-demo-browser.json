@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-19T02:11:52.736Z",
+  "username": "admin-demo",
+  "single_login_for_all_modules": true,
+  "teacher_login_count": 1,
+  "api_mocked": false,
+  "clinical_context_loaded": true,
+  "actual_invoice_loaded": true,
+  "ordinary_reception_still_restricted": true,
+  "results": [
+    {
+      "route": "/",
+      "accessible": true
+    },
+    {
+      "route": "/patients",
+      "accessible": true
+    },
+    {
+      "route": "/appointment-booking",
+      "accessible": true
+    },
+    {
+      "route": "/schedules",
+      "accessible": true
+    },
+    {
+      "route": "/patient-bindings",
+      "accessible": true
+    },
+    {
+      "route": "/appointment-attendance",
+      "accessible": true
+    },
+    {
+      "route": "/appointment-cancellation",
+      "accessible": true
+    },
+    {
+      "route": "/appointment-no-show",
+      "accessible": true
+    },
+    {
+      "route": "/appointment-rescheduling",
+      "accessible": true
+    },
+    {
+      "route": "/clinical-treatment",
+      "accessible": true
+    },
+    {
+      "route": "/treatment-price-correction",
+      "accessible": true
+    },
+    {
+      "route": "/invoicing",
+      "accessible": true
+    },
+    {
+      "route": "/invoice-sources",
+      "accessible": true
+    },
+    {
+      "route": "/analytics",
+      "accessible": true
+    },
+    {
+      "route": "/cost-entries",
+      "accessible": true
+    },
+    {
+      "route": "/quarterly-performance",
+      "accessible": true
+    },
+    {
+      "route": "/organization-resources",
+      "accessible": true
+    },
+    {
+      "route": "/staff-accounts",
+      "accessible": true
+    },
+    {
+      "route": "/clinic-grants",
+      "accessible": true
+    },
+    {
+      "route": "/management",
+      "accessible": true
+    },
+    {
+      "management_link": "诊所管理",
+      "resource_kind": "clinics",
+      "actual_category_verified": true,
+      "list_detail_return_verified": true
+    },
+    {
+      "management_link": "医生与执业资质",
+      "resource_kind": "dentists",
+      "actual_category_verified": true,
+      "list_detail_return_verified": true
+    },
+    {
+      "management_link": "治疗项目与价格目录",
+      "resource_kind": "treatments",
+      "actual_category_verified": true,
+      "list_detail_return_verified": true
+    },
+    {
+      "management_link": "专业资质目录",
+      "resource_kind": "qualifications",
+      "actual_category_verified": true,
+      "list_detail_return_verified": true
+    },
+    {
+      "management_link": "过敏与服务基础资料",
+      "resource_kind": "allergies",
+      "actual_category_verified": true,
+      "list_detail_return_verified": true
+    },
+    {
+      "management_link": "员工账号与密码",
+      "route": "/staff-accounts",
+      "accessible": true
+    },
+    {
+      "management_link": "角色、岗位与诊所授权",
+      "route": "/clinic-grants",
+      "accessible": true
+    },
+    {
+      "management_link": "配置总览",
+      "route": "/management",
+      "accessible": true
+    }
+  ]
+}

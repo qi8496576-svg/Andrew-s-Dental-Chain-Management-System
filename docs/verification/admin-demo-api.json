@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-16T08:57:10.294Z",
+  "username": "admin-demo",
+  "origin": "https://localhost:19443",
+  "clinic_scope": [
+    "1"
+  ],
+  "roles": [
+    "CASHIER",
+    "DENTIST",
+    "HEADQUARTERS",
+    "RECEPTION"
+  ],
+  "valid_until": "2026-12-16T08:41:33.437Z",
+  "account_created_through_api": true,
+  "original_grants_unchanged": true,
+  "ordinary_reception_still_denied": 403,
+  "teacher_out_of_scope_denied": 403,
+  "real_mysql": true,
+  "api_mocked": false,
+  "synthetic_only_guard": true,
+  "evidence": [
+    {
+      "method": "GET",
+      "path": "/identity/grants?limit=100",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/identity/grants?limit=100",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/4620720949504981373/clinical-context",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/dentists",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/qualifications",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/treatments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/allergies",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/identity/staff-accounts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/identity/grants?subject_id=ba25a07b-baa9-443e-825c-139f6c407631",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/binding-requests?clinic_id=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/schedules?clinic_id=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments?clinic_id=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/cost-entries?clinic_id=1",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/quarterly-performances",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/invoices/6805988689951723305",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/patients/3605756770635246689",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/applied-treatments/8255510413194100841",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/cancellations?start=2026-11-01T00%3A00%3A00%2B08%3A00&end=2026-11-16T08%3A57%3A09.679Z&cutoff=2026-11-16T08%3A57%3A09.681Z&rule_version=A1a-B13&clinic_id=1",
+      "status": 200
+    }
+  ],
+  "fixture": {
+    "patient_id": "3605756770635246689",
+    "patient_number": "P3605756770635246689",
+    "appointment_id": "4620720949504981373",
+    "applied_treatment_id": "8255510413194100841",
+    "invoice_id": "6805988689951723305"
+  },
+  "credentials_file": "D:\\secrets\\AndrewDental\\LocalPreview\\教师演示登录.txt",
+  "committed_write_receipts_verified": 16,
+  "committed_writes_with_audit": 16
+}

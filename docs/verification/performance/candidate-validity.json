@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-11-25T14:53:40.043Z",
+  "server_uuid": "bc972598-e8de-11f1-9ee3-0a9a00a0370b",
+  "actual_http_calls": true,
+  "nonempty_candidate_pages": 10,
+  "rows": [
+    {
+      "clinic_id": "1",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "2",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "3",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "4",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "5",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "6",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "7",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "8",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "9",
+      "returned_slots": 20
+    },
+    {
+      "clinic_id": "10",
+      "returned_slots": 20
+    }
+  ]
+}

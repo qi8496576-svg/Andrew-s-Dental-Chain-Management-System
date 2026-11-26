@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.DentistMapper">
+  <resultMap id="row" type="com.adc.domain.model.Dentist">
+    <constructor>
+      <idArg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="employee_number" javaType="java.lang.String"/>
+      <arg column="full_name" javaType="java.lang.String"/>
+      <arg column="date_of_birth" javaType="java.time.LocalDate"/>
+      <arg column="home_address" javaType="java.lang.String"/>
+      <arg column="phone" javaType="java.lang.String"/>
+      <arg column="email" javaType="java.lang.String"/>
+      <arg column="hire_date" javaType="java.time.LocalDate"/>
+      <arg column="is_active" javaType="java.lang.Boolean"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+      <arg column="termination_date" javaType="java.time.LocalDate"/>
+      <arg column="professional_title" javaType="java.lang.String"/>
+      <arg column="specialty" javaType="java.lang.String"/>
+      <arg column="introduction" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `dentist_id`, `employee_number`, `full_name`, `date_of_birth`, `home_address`, `phone`, `email`, `hire_date`, `is_active`, `created_at`, `termination_date`, `professional_title`, `specialty`, `introduction` FROM adc_business.`Dentist` WHERE `dentist_id` = #{dentist_id}
+  </select>
+</mapper>

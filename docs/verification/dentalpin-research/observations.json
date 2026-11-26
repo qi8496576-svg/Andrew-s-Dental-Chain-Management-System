@@ -1,0 +1,2396 @@
+{
+  "date": "2026-11-18T11:30:40.581Z",
+  "observations": [
+    {
+      "name": "home",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        " DentalPin "
+      ],
+      "text": "Public demo — do not enter real patient data. The database is reset periodically.\nDentalPin\n\nDental clinic management\n\nEmail\nPassword\nSign in\nDemo credentials\nEmail:\nadmin@demo.clinic\nPassword:\ndemo1234\n\nFor evaluation only — shown because this is a public demo instance.\n\n© 2026 DentalPin\n\nNotification [ \"Signed in successfully\" ]\nSigned in successfully",
+      "links": [],
+      "buttons": [
+        "",
+        "Sign in",
+        "Email:admin@demo.clinic",
+        "Password:demo1234",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "email",
+          "placeholder": "Email",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "password",
+          "name": "password",
+          "placeholder": "Password",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "admin-menu",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good afternoon, Admin"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood afternoon, Admin\n\nWednesday, November 18, 2026\n\nNew patient\nNew appointment\nNotification [ \"Signed in successfully\" ]\nSigned in successfully",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-0",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good afternoon, Admin",
+        "Today",
+        "Overdue payments",
+        "Recent patients",
+        "Week at a glance"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood afternoon, Admin\n\nWednesday, November 18, 2026\n\nNew patient\nNew appointment\n\nAppointments today\n\nIn clinic now\n\nOverdue payments\n\nToday\nOpen schedule\nOverdue payments\nRecalls\nCall list →\nRecent patients\nWeek at a glance\nLast 7 days vs previous 7",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        },
+        {
+          "text": "Overdue payments",
+          "href": "/invoices?filter=overdue"
+        },
+        {
+          "text": "Open schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Call list →",
+          "href": "/recalls"
+        },
+        {
+          "text": "",
+          "href": "/patients"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out"
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-1",
+      "url": "https://demo.dentalpin.com/appointments",
+      "headings": [
+        "Schedule",
+        "Nov 16 - Nov 22, 2026"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nSchedule\nWeek\nDay\nKanban\nNew appointment\nCabinet\nGabinete 1\nGabinete 2\nToday\nNov 16 - Nov 22, 2026",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New appointment",
+        "Gabinete 1",
+        "Gabinete 2",
+        "",
+        "Today",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-1-add",
+      "url": "https://demo.dentalpin.com/appointments",
+      "headings": [
+        "Schedule",
+        "Nov 16 - Nov 22, 2026",
+        "New appointment"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nSchedule\nWeek\nDay\nKanban\nNew appointment\nCabinet\nGabinete 1\nGabinete 2\nProfessional\nMG\nMaría García López\nCL\nCarlos López Martínez\nToday\nNov 16 - Nov 22, 2026\nMon 16\nTue 17\nWed 18\nThu 19\nFri 20\nSat 21\nSun 22\n09:00\n10:00\n11:00\n12:00\n13:00\n14:00\n15:00\n16:00\n17:00\n18:00\n19:00\nMG\nFernández García\nGabinete 2 · Limpieza dental\nCL\nMartínez Jiménez\nGabinete 2\nMG\nRuiz Hernández\nGabinete 2 · Empaste\nMG\nVega Ortiz\nGabinete 2 · Revisión\nMG\nRodríguez Sánchez\nGabinete 1 · Empaste\nNew appointment\nSELECT PATIENT\nWHEN\nDate\nStart time\n\nDuration\n\n15 min\n30 min\n45 min\n60 min\n90 min\n120 min\nCABINET AND PROFESSIONAL\nCabinet\nAssign later\nAssign later\nGabinete 1\nGabinete 2\nProfessional\nCancel\nSave",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "",
+        "15 min",
+        "30 min",
+        "45 min",
+        "60 min",
+        "90 min",
+        "120 min",
+        "Cancel",
+        "Save"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Name or phone",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": "",
+          "placeholder": "",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "time",
+          "name": "",
+          "placeholder": "",
+          "required": true
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "required": false,
+          "options": [
+            "Assign later",
+            "Gabinete 1",
+            "Gabinete 2"
+          ]
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-2",
+      "url": "https://demo.dentalpin.com/patients",
+      "headings": [
+        "Patients"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nPatients\nImport CSV\nNew patient\nStatus · 1\nOnly do-not-contact\nLast visit",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Import CSV",
+          "href": "/patients/import"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New patient",
+        "Status · 1",
+        "Only do-not-contact",
+        "Last visit",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Name or phone",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-2-add",
+      "url": "https://demo.dentalpin.com/patients",
+      "headings": [
+        "Patients",
+        "New patient"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nPatients\nImport CSV\nNew patient\nStatus · 1\nOnly do-not-contact\nLast visit\nJ\nSánchez Muñoz, Javier\n+34 612 345 007\nActive\nMT\nRomero Vega, María Teresa\n+34 612 345 012\nActive\nR\nMartínez Jiménez, Rosa\n+34 612 345 010\nActive\nL\nRodríguez Sánchez, Lucía\n+34 612 345 002\nActive\nA\nHernández Castro, Antonio\n+34 612 345 011\nActive\nF\nGarcía Romero, Francisco\n+34 612 345 009\nActive\nJL\nMuñoz Blanco, José Luis\n+34 612 345 013\nActive\nE\nRuiz Hernández, Elena\n+34 612 345 006\nActive\nP\nFernández García, Pablo\n+34 612 345 001\nActive\nM\nCastro Delgado, Manuel\n+34 612 345 015\nActive\nI\nLópez Navarro, Isabel\n+34 612 345 008\nActive\nC\nDíaz Moreno, Carmen\n+34 612 345 004\nActive\nM\nGonzález Torres, Miguel\n+34 612 345 003\nActive\nD\nMartín López, David\n+34 612 345 005\nActive\nD\nVega Ortiz, Dolores\n+34 612 345 014\nActive\nQ\nWqqqw, Qqq\n—\nActive\n16 of 16\nNotification [ \"Error\", \"Connection error\" ]\nError\nConnection error\nNew patient\nFirst name\nLast name\nPhone\nEmail\nID document\nDate of birth\nNotes\nCancel\nSave",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Import CSV",
+          "href": "/patients/import"
+        },
+        {
+          "text": "J\nSánchez Muñoz, Javier\n+34 612 345 007\nActive",
+          "href": "/patients/d6eebc99-9c0b-4ef8-bb6d-6bb9bd380a46"
+        },
+        {
+          "text": "MT\nRomero Vega, María Teresa\n+34 612 345 012\nActive",
+          "href": "/patients/dbeebc99-9c0b-4ef8-bb6d-6bb9bd380a4b"
+        },
+        {
+          "text": "R\nMartínez Jiménez, Rosa\n+34 612 345 010\nActive",
+          "href": "/patients/d9eebc99-9c0b-4ef8-bb6d-6bb9bd380a49"
+        },
+        {
+          "text": "L\nRodríguez Sánchez, Lucía\n+34 612 345 002\nActive",
+          "href": "/patients/d1eebc99-9c0b-4ef8-bb6d-6bb9bd380a41"
+        },
+        {
+          "text": "A\nHernández Castro, Antonio\n+34 612 345 011\nActive",
+          "href": "/patients/daeebc99-9c0b-4ef8-bb6d-6bb9bd380a4a"
+        },
+        {
+          "text": "F\nGarcía Romero, Francisco\n+34 612 345 009\nActive",
+          "href": "/patients/d8eebc99-9c0b-4ef8-bb6d-6bb9bd380a48"
+        },
+        {
+          "text": "JL\nMuñoz Blanco, José Luis\n+34 612 345 013\nActive",
+          "href": "/patients/dceebc99-9c0b-4ef8-bb6d-6bb9bd380a4c"
+        },
+        {
+          "text": "E\nRuiz Hernández, Elena\n+34 612 345 006\nActive",
+          "href": "/patients/d5eebc99-9c0b-4ef8-bb6d-6bb9bd380a45"
+        },
+        {
+          "text": "P\nFernández García, Pablo\n+34 612 345 001\nActive",
+          "href": "/patients/d0eebc99-9c0b-4ef8-bb6d-6bb9bd380a40"
+        },
+        {
+          "text": "M\nCastro Delgado, Manuel\n+34 612 345 015\nActive",
+          "href": "/patients/deeebc99-9c0b-4ef8-bb6d-6bb9bd380a4e"
+        },
+        {
+          "text": "I\nLópez Navarro, Isabel\n+34 612 345 008\nActive",
+          "href": "/patients/d7eebc99-9c0b-4ef8-bb6d-6bb9bd380a47"
+        },
+        {
+          "text": "C\nDíaz Moreno, Carmen\n+34 612 345 004\nActive",
+          "href": "/patients/d3eebc99-9c0b-4ef8-bb6d-6bb9bd380a43"
+        },
+        {
+          "text": "M\nGonzález Torres, Miguel\n+34 612 345 003\nActive",
+          "href": "/patients/d2eebc99-9c0b-4ef8-bb6d-6bb9bd380a42"
+        },
+        {
+          "text": "D\nMartín López, David\n+34 612 345 005\nActive",
+          "href": "/patients/d4eebc99-9c0b-4ef8-bb6d-6bb9bd380a44"
+        },
+        {
+          "text": "D\nVega Ortiz, Dolores\n+34 612 345 014\nActive",
+          "href": "/patients/ddeebc99-9c0b-4ef8-bb6d-6bb9bd380a4d"
+        },
+        {
+          "text": "Q\nWqqqw, Qqq\n—\nActive",
+          "href": "/patients/ee813dcb-b7dd-4758-beb3-8e435afd63b0"
+        }
+      ],
+      "buttons": [
+        "",
+        "Cancel",
+        "Save"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Name or phone",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "First name",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Last name",
+          "required": true
+        },
+        {
+          "tag": "INPUT",
+          "type": "tel",
+          "name": "",
+          "placeholder": "Phone",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "email",
+          "name": "",
+          "placeholder": "Email",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "12345678A",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "name": "",
+          "placeholder": "Notes",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-3",
+      "url": "https://demo.dentalpin.com/recalls",
+      "headings": [
+        "Call list"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nCall list\nExport CSV\n4\nDue this week\n2\nOverdue\n2\nScheduled this month\n100%\nConversion\nMonth\nNovember 2026\nReason\nAny\nStatus\nPending\nPriority\nAny\nShow overdue\nFrancisco García Romero\nNormal\nHygiene\nPending\nNovember 2026\n📞 +34 612 345 009\n\nRecordatorio de higiene anual.\n\nCall\nPablo Fernández García\nNormal\nHygiene\nPending\nNovember 2026\n📞 +34 612 345 001\n\nRecordatorio de higiene anual.\n\nCall",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Francisco García Romero",
+          "href": "/patients/d8eebc99-9c0b-4ef8-bb6d-6bb9bd380a48"
+        },
+        {
+          "text": "Call",
+          "href": "tel:+34 612 345 009"
+        },
+        {
+          "text": "Pablo Fernández García",
+          "href": "/patients/d0eebc99-9c0b-4ef8-bb6d-6bb9bd380a40"
+        },
+        {
+          "text": "Call",
+          "href": "tel:+34 612 345 001"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Export CSV",
+        "November 2026",
+        "Any",
+        "Pending",
+        "Any",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-4",
+      "url": "https://demo.dentalpin.com/treatment-plans",
+      "headings": [
+        "Treatment Plans"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nTreatment Plans\n\nManage the treatment pipeline.\n\nNew plan\nTo quote\nAwaiting patient\nNo appointment\nNo next appointment\nClosed\nList\nMI\nMiguel González Torres\nPLAN-2026-0001\nPending\nTreatments\n0 / 2\nQuote\ndraft500.00 €\n0 days in status\nNo appointment\nOpen",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New plan",
+        "Miguel González Torres",
+        "Open"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by name or number…",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-4-add",
+      "url": "https://demo.dentalpin.com/treatment-plans",
+      "headings": [
+        "Treatment Plans"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nTreatment Plans\n\nManage the treatment pipeline.\n\nNew plan\nTo quote\nAwaiting patient\nNo appointment\nNo next appointment\nClosed\nList\nMI\nMiguel González Torres\nPLAN-2026-0001\nPending\nTreatments\n0 / 2\nQuote\ndraft500.00 €\n0 days in status\nNo appointment\nOpen",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New plan",
+        "Miguel González Torres",
+        "Open",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by name or number…",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-5",
+      "url": "https://demo.dentalpin.com/budgets",
+      "headings": [
+        "Quotes"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nQuotes\nNew quote\nStatus\nValidity\nProfessional\nDates\nCreated\nPRES-2026-0001\nv1\nDraft\nGonzález Torres, Miguel\n11/18/2026\n€500.00\nPRES-2024-0013\nv1\nAccepted\nMuñoz Blanco, José Luis\n11/18/2026\n€410.00\nPRES-2024-0011\nv1\nCompleted\nHernández Castro, Antonio\n11/18/2026\n€780.00\nPRES-2024-0010\nv1\nAccepted\nMartínez Jiménez, Rosa\n11/18/2026\n€1,089.00\nPRES-2024-0009\nv1\nAccepted\nGarcía Romero, Francisco\n11/18/2026\n€130.00\nPRES-2024-0008\nv1\nRejected\nLópez Navarro, Isabel\n11/18/2026\n€370.00\nPRES-2024-0007\nv1\nAccepted\nSánchez Muñoz, Javier\n11/18/2026\n€810.00\nPRES-2024-0006\nv1\nAccepted\nRuiz Hernández, Elena\n11/18/2026\n€135.00\nPRES-2024-0005\nv1\nAccepted\nMartín López, David\n11/18/2026\n€549.50\nPRES-2024-0004\nv1\nSent\nDíaz Moreno, Carmen\n11/18/2026\n€135.00\nPRES-2024-0003\nv1\nAccepted\nGonzález Torres, Miguel\n11/18/2026\n€210.00\n11 of 11\nNotification [ \"Error\", \"Connection error\" ]\nError\nConnection error",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "PRES-2026-0001\nv1\nDraft\nGonzález Torres, Miguel\n11/18/2026\n€500.00",
+          "href": "/budgets/b5697d74-2ba5-4f84-adcd-ac5583ae2eb7"
+        },
+        {
+          "text": "PRES-2024-0013\nv1\nAccepted\nMuñoz Blanco, José Luis\n11/18/2026\n€410.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b09"
+        },
+        {
+          "text": "PRES-2024-0011\nv1\nCompleted\nHernández Castro, Antonio\n11/18/2026\n€780.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b08"
+        },
+        {
+          "text": "PRES-2024-0010\nv1\nAccepted\nMartínez Jiménez, Rosa\n11/18/2026\n€1,089.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b07"
+        },
+        {
+          "text": "PRES-2024-0009\nv1\nAccepted\nGarcía Romero, Francisco\n11/18/2026\n€130.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b06"
+        },
+        {
+          "text": "PRES-2024-0008\nv1\nRejected\nLópez Navarro, Isabel\n11/18/2026\n€370.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b05"
+        },
+        {
+          "text": "PRES-2024-0007\nv1\nAccepted\nSánchez Muñoz, Javier\n11/18/2026\n€810.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b04"
+        },
+        {
+          "text": "PRES-2024-0006\nv1\nAccepted\nRuiz Hernández, Elena\n11/18/2026\n€135.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b03"
+        },
+        {
+          "text": "PRES-2024-0005\nv1\nAccepted\nMartín López, David\n11/18/2026\n€549.50",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b02"
+        },
+        {
+          "text": "PRES-2024-0004\nv1\nSent\nDíaz Moreno, Carmen\n11/18/2026\n€135.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b01"
+        },
+        {
+          "text": "PRES-2024-0003\nv1\nAccepted\nGonzález Torres, Miguel\n11/18/2026\n€210.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b00"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New quote",
+        "Status",
+        "Validity",
+        "Professional",
+        "Dates",
+        "Created",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by number or patient...",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-5-add",
+      "url": "https://demo.dentalpin.com/budgets",
+      "headings": [
+        "Quotes"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nQuotes\nNew quote\nStatus\nValidity\nProfessional\nDates\nCreated\nPRES-2026-0001\nv1\nDraft\nGonzález Torres, Miguel\n11/18/2026\n€500.00\nPRES-2024-0013\nv1\nAccepted\nMuñoz Blanco, José Luis\n11/18/2026\n€410.00\nPRES-2024-0011\nv1\nCompleted\nHernández Castro, Antonio\n11/18/2026\n€780.00\nPRES-2024-0010\nv1\nAccepted\nMartínez Jiménez, Rosa\n11/18/2026\n€1,089.00\nPRES-2024-0009\nv1\nAccepted\nGarcía Romero, Francisco\n11/18/2026\n€130.00\nPRES-2024-0008\nv1\nRejected\nLópez Navarro, Isabel\n11/18/2026\n€370.00\nPRES-2024-0007\nv1\nAccepted\nSánchez Muñoz, Javier\n11/18/2026\n€810.00\nPRES-2024-0006\nv1\nAccepted\nRuiz Hernández, Elena\n11/18/2026\n€135.00\nPRES-2024-0005\nv1\nAccepted\nMartín López, David\n11/18/2026\n€549.50\nPRES-2024-0004\nv1\nSent\nDíaz Moreno, Carmen\n11/18/2026\n€135.00\nPRES-2024-0003\nv1\nAccepted\nGonzález Torres, Miguel\n11/18/2026\n€210.00\n11 of 11\nNotification [ \"Error\", \"Connection error\" ]\nError\nConnection error",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "PRES-2026-0001\nv1\nDraft\nGonzález Torres, Miguel\n11/18/2026\n€500.00",
+          "href": "/budgets/b5697d74-2ba5-4f84-adcd-ac5583ae2eb7"
+        },
+        {
+          "text": "PRES-2024-0013\nv1\nAccepted\nMuñoz Blanco, José Luis\n11/18/2026\n€410.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b09"
+        },
+        {
+          "text": "PRES-2024-0011\nv1\nCompleted\nHernández Castro, Antonio\n11/18/2026\n€780.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b08"
+        },
+        {
+          "text": "PRES-2024-0010\nv1\nAccepted\nMartínez Jiménez, Rosa\n11/18/2026\n€1,089.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b07"
+        },
+        {
+          "text": "PRES-2024-0009\nv1\nAccepted\nGarcía Romero, Francisco\n11/18/2026\n€130.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b06"
+        },
+        {
+          "text": "PRES-2024-0008\nv1\nRejected\nLópez Navarro, Isabel\n11/18/2026\n€370.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b05"
+        },
+        {
+          "text": "PRES-2024-0007\nv1\nAccepted\nSánchez Muñoz, Javier\n11/18/2026\n€810.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b04"
+        },
+        {
+          "text": "PRES-2024-0006\nv1\nAccepted\nRuiz Hernández, Elena\n11/18/2026\n€135.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b03"
+        },
+        {
+          "text": "PRES-2024-0005\nv1\nAccepted\nMartín López, David\n11/18/2026\n€549.50",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b02"
+        },
+        {
+          "text": "PRES-2024-0004\nv1\nSent\nDíaz Moreno, Carmen\n11/18/2026\n€135.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b01"
+        },
+        {
+          "text": "PRES-2024-0003\nv1\nAccepted\nGonzález Torres, Miguel\n11/18/2026\n€210.00",
+          "href": "/budgets/aa00bc99-9c0b-4ef8-bb6d-6bb9bd380b00"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New quote",
+        "Status",
+        "Validity",
+        "Professional",
+        "Dates",
+        "Created",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by number or patient...",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-6",
+      "url": "https://demo.dentalpin.com/invoices",
+      "headings": [
+        "Invoices"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nInvoices\nNew invoice\nStatus\nOverdue\nDates\nCreated",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New invoice",
+        "Status",
+        "Overdue",
+        "Dates",
+        "Created",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by number or patient...",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-6-add",
+      "url": "https://demo.dentalpin.com/invoices",
+      "headings": [
+        "Invoices"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nInvoices\nNew invoice\nStatus\nOverdue\nDates\nCreated\nFAC-2026-0007\nIssued\nOverdue\nMuñoz Blanco, José Luis\n10/4/2026\n11/3/2026\n€410.00\nBalance: €410.00\nFAC-2026-0006\nPaid\nHernández Castro, Antonio\n11/13/2026\n12/13/2026\n€780.00\nFAC-2026-0005\nPaid\nMartínez Jiménez, Rosa\n11/13/2026\n12/13/2026\n€430.00\nFAC-2026-0004\nPaid\nGarcía Romero, Francisco\n11/13/2026\n12/13/2026\n€120.00\nFAC-2026-0003\nPaid\nSánchez Muñoz, Javier\n11/10/2026\n12/10/2026\n€410.00\nFAC-2026-0002\nPartially paid\nRuiz Hernández, Elena\n11/7/2026\n12/7/2026\n€135.00\nBalance: €67.50\nFAC-2026-0001\nDraft\nGonzález Torres, Miguel\n—\n—\n€90.00\n7 of 7",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "FAC-2026-0007\nIssued\nOverdue\nMuñoz Blanco, José Luis\n10/4/2026\n11/3/2026\n€410.00\nBalance: €410.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f07"
+        },
+        {
+          "text": "FAC-2026-0006\nPaid\nHernández Castro, Antonio\n11/13/2026\n12/13/2026\n€780.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f06"
+        },
+        {
+          "text": "FAC-2026-0005\nPaid\nMartínez Jiménez, Rosa\n11/13/2026\n12/13/2026\n€430.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f05"
+        },
+        {
+          "text": "FAC-2026-0004\nPaid\nGarcía Romero, Francisco\n11/13/2026\n12/13/2026\n€120.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f04"
+        },
+        {
+          "text": "FAC-2026-0003\nPaid\nSánchez Muñoz, Javier\n11/10/2026\n12/10/2026\n€410.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f03"
+        },
+        {
+          "text": "FAC-2026-0002\nPartially paid\nRuiz Hernández, Elena\n11/7/2026\n12/7/2026\n€135.00\nBalance: €67.50",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f02"
+        },
+        {
+          "text": "FAC-2026-0001\nDraft\nGonzález Torres, Miguel\n—\n—\n€90.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f00"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New invoice",
+        "Status",
+        "Overdue",
+        "Dates",
+        "Created",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by number or patient...",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-7",
+      "url": "https://demo.dentalpin.com/payments",
+      "headings": [
+        "Payments"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nPayments\n\nPatient payments, budget anticipos and on-account credit.\n\nNew payment\nMethod\nDates\nPatient\nWith refunds\nUnallocated\nDate\nA\nHernández Castro, Antonio\n11/16/2026\nDirect debit\n· REF-0006\n€780.00 · On account\n€780.00\nR\nMartínez Jiménez, Rosa\n11/16/2026\nCard\n· REF-0005\n€430.00 · On account\n€430.00\nF\nGarcía Romero, Francisco\n11/16/2026\nCard\n· REF-0004\n€72.00 · On account\n€72.00\nF\nGarcía Romero, Francisco\n11/16/2026\nCash\n· REF-0003\n€48.00 · On account\n€48.00\nJ\nSánchez Muñoz, Javier\n11/13/2026\nTransfer\n· REF-0002\n€410.00 · On account\n€410.00\nE\nRuiz Hernández, Elena\n11/10/2026\nCard\n· REF-0001\n€67.50 · On account\n€67.50\n6 of 6",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "New payment",
+        "Method",
+        "Dates",
+        "Patient",
+        "With refunds",
+        "Unallocated",
+        "Date",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Patient or reference",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-7-add",
+      "url": "https://demo.dentalpin.com/payments",
+      "headings": [
+        "Payments",
+        "Record payment"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nPayments\n\nPatient payments, budget anticipos and on-account credit.\n\nNew payment\nMethod\nDates\nPatient\nWith refunds\nUnallocated\nDate\nA\nHernández Castro, Antonio\n11/16/2026\nDirect debit\n· REF-0006\n€780.00 · On account\n€780.00\nR\nMartínez Jiménez, Rosa\n11/16/2026\nCard\n· REF-0005\n€430.00 · On account\n€430.00\nF\nGarcía Romero, Francisco\n11/16/2026\nCard\n· REF-0004\n€72.00 · On account\n€72.00\nF\nGarcía Romero, Francisco\n11/16/2026\nCash\n· REF-0003\n€48.00 · On account\n€48.00\nJ\nSánchez Muñoz, Javier\n11/13/2026\nTransfer\n· REF-0002\n€410.00 · On account\n€410.00\nE\nRuiz Hernández, Elena\n11/10/2026\nCard\n· REF-0001\n€67.50 · On account\n€67.50\n6 of 6\nRecord payment\nPatient\nAMOUNT\n€\nAPPLY TO\nPatient credit (on account)\n\nStays as the patient's on-account credit. It is not applied to any invoice or quote until you assign it.\n\nMETHOD\nCash\nCard\nTransfer\nInsurance\nMore options\nDATE\nToday\nAdvanced options\nCancel\nRecord",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        }
+      ],
+      "buttons": [
+        "",
+        "Cash",
+        "Card",
+        "Transfer",
+        "Insurance",
+        "More options",
+        "Advanced options",
+        "Cancel",
+        "Record"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Patient or reference",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search patient...",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "date",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        }
+      ],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-8",
+      "url": "https://demo.dentalpin.com/reports",
+      "headings": [
+        "Dashboard"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nDashboard\n\nYour clinic at a glance\n\nPeriod · 2026-11-01 → 2026-11-18\nBilling\nQuotes\nSchedule\nPayments\nCASH COLLECTED\nPATIENT CREDIT\nToday\nPRODUCTION\nAVG COLLECTED TICKET\nCOLLECTIONS OVER TIME\nBY PAYMENT METHOD\nPRODUCTION BY DOCTOR\nNEW PATIENTS\nNO-SHOW RATE\nAGING RECEIVABLES\nToday",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Billing",
+          "href": "/reports/billing"
+        },
+        {
+          "text": "Quotes",
+          "href": "/reports/budgets"
+        },
+        {
+          "text": "Schedule",
+          "href": "/reports/scheduling"
+        },
+        {
+          "text": "Payments",
+          "href": "/reports/payments"
+        },
+        {
+          "text": "CASH COLLECTED",
+          "href": "/reports/billing"
+        },
+        {
+          "text": "NEW PATIENTS",
+          "href": "/reports/scheduling"
+        },
+        {
+          "text": "NO-SHOW RATE",
+          "href": "/reports/scheduling"
+        },
+        {
+          "text": "AGING RECEIVABLES\nToday",
+          "href": "/reports/billing"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Period · 2026-11-01 → 2026-11-18"
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-9",
+      "url": "https://demo.dentalpin.com/settings",
+      "headings": [
+        "Settings",
+        "All categories"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nSettings\n\nManage your clinic, team and modules.\n\nSearch settings…\n⌘\nK\nAll categories\n\nCLINICAL SETUP\n\nGeneral\nWorkspace\nPeople\n\nCLINICAL MANAGEMENT\n\nClinical\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nSYSTEM & ADD-ONS\n\nCommunications\nIntegrations\nModules\n\nMY PREFERENCES\n\nAccount",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "General",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account",
+          "href": "/settings/account"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/setup/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/modules/-/active",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/notifications/smtp-settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/series",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients/recent",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/items",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/clinic-hours",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/stats/dashboard",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/series",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/notifications/smtp-settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/items",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/clinic-hours",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/stats/dashboard",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients/recent",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/availability",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/availability",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/clinical_notes/notes/counts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/notifications/settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients/recent",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/availability",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/clinical_notes/notes/counts",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/availability",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/stats/dashboard",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/treatment_plan/treatment-plans/pipeline",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/budget/budgets",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/invoices",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients/recent",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/trends",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/trends",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/by-professional",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/aging-receivables",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/first-visits",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/payments/reports/by-method",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/first-visits",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/funnel",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/funnel",
+      "status": 200
+    }
+  ],
+  "blocked": [
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payments/summary/by-patients"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/payments/summary/by-budgets"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    }
+  ]
+}

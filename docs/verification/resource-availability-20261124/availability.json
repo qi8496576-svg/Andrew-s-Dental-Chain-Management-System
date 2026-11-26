@@ -1,0 +1,1619 @@
+{
+  "checked_at": "2026-11-24T06:27:43.849Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "days": [
+    {
+      "date": "2026-11-25",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 89
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 89
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 89
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 89
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 89
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 35
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 89
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 89
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-11-29",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-11-30",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-04",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-07",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-12",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-13",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-14",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-15",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-16",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-17",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-18",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-19",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-20",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-21",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-12-22",
+      "services": [
+        {
+          "treatment": "口腔检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "超声波洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "树脂补牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "口腔全景影像检查",
+          "available_slots": 90
+        },
+        {
+          "treatment": "喷砂洁牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "根管治疗",
+          "available_slots": 36
+        },
+        {
+          "treatment": "普通拔牙",
+          "available_slots": 90
+        },
+        {
+          "treatment": "牙周基础治疗",
+          "available_slots": 90
+        },
+        {
+          "treatment": "儿童涂氟",
+          "available_slots": 18
+        },
+        {
+          "treatment": "儿童窝沟封闭",
+          "available_slots": 18
+        },
+        {
+          "treatment": "正畸初诊咨询",
+          "available_slots": 18
+        },
+        {
+          "treatment": "种植牙咨询",
+          "available_slots": 18
+        }
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": "6379902929753340971",
+      "name": "口腔检查",
+      "specialty": "general"
+    },
+    {
+      "id": "1441614426268090824",
+      "name": "超声波洁牙",
+      "specialty": "general"
+    },
+    {
+      "id": "3573207129576962026",
+      "name": "树脂补牙",
+      "specialty": "general"
+    },
+    {
+      "id": "7059849140857328987",
+      "name": "口腔全景影像检查",
+      "specialty": "general"
+    },
+    {
+      "id": "7584266789692795796",
+      "name": "喷砂洁牙",
+      "specialty": "general"
+    },
+    {
+      "id": "640306017197565889",
+      "name": "根管治疗",
+      "specialty": "endo"
+    },
+    {
+      "id": "7154871671594740620",
+      "name": "普通拔牙",
+      "specialty": "general"
+    },
+    {
+      "id": "3109136729448951583",
+      "name": "牙周基础治疗",
+      "specialty": "general"
+    },
+    {
+      "id": "9203434577910468242",
+      "name": "儿童涂氟",
+      "specialty": "child"
+    },
+    {
+      "id": "849185593188531842",
+      "name": "儿童窝沟封闭",
+      "specialty": "child"
+    },
+    {
+      "id": "3231252519901609780",
+      "name": "正畸初诊咨询",
+      "specialty": "ortho"
+    },
+    {
+      "id": "729923990115713901",
+      "name": "种植牙咨询",
+      "specialty": "implant"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "3632761046743333100",
+      "name": "林医生",
+      "specialties": [
+        "general",
+        "endo"
+      ]
+    },
+    {
+      "id": "2782263158220307180",
+      "name": "陈医生",
+      "specialties": [
+        "general",
+        "child"
+      ]
+    },
+    {
+      "id": "4561893119521384568",
+      "name": "周医生",
+      "specialties": [
+        "general",
+        "endo"
+      ]
+    },
+    {
+      "id": "6514473136372604394",
+      "name": "李医生",
+      "specialties": [
+        "general",
+        "ortho"
+      ]
+    },
+    {
+      "id": "8039365794905459037",
+      "name": "王医生",
+      "specialties": [
+        "general",
+        "implant"
+      ]
+    }
+  ],
+  "checks": [
+    "Every configured doctor has nonoverlapping real schedules across all 28 future days",
+    "All 12 actual service resources have valid backend candidates on every one of the 28 dates",
+    "A future appointment creates through the existing API and cancels through normal verified reception handling"
+  ],
+  "candidate_queries": 336,
+  "probe": {
+    "date": "2026-12-22",
+    "treatment": "树脂补牙",
+    "appointment_id": "4625035160669816502",
+    "created_via_real_api": true,
+    "final_status": "CANCELLED"
+  },
+  "existing_appointments": [
+    {
+      "id": "109230572463748535",
+      "status": "CANCELLED"
+    },
+    {
+      "id": "8723234837868558596",
+      "status": "IN_PROGRESS"
+    }
+  ],
+  "status": "PASS"
+}

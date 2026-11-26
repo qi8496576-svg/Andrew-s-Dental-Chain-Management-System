@@ -1,0 +1,31 @@
+{
+  "id": "ADC-CHANGE-20261124-SELF",
+  "status": "owner-approved",
+  "source": "负责人本聊天明确要求：我希望的是不需要核验，直接预约就好。支付纳入后续需求变更。",
+  "scope": "首次新建本人档案、直接预约、本人过敏声明与核实区分、排班界面；已有档案保护继续适用，支付暂不实现",
+  "contract_amendment": "ADC-CONTRACT-20261124-05",
+  "business_schema_changed": false,
+  "technical_schema_changed": false,
+  "files": [
+    {
+      "path": ".specify/memory/constitution.md",
+      "original_implementation_baseline_sha256": "0cade87029fb7802112a1cbdcdb293ea85df03390594a1fbb458142b36ae8376",
+      "current_sha256": "b30624465501d4c73029d91ae391e337442549f658b43afe4c275abb029f9fbe"
+    },
+    {
+      "path": "specs/001-system-specification/spec.md",
+      "original_implementation_baseline_sha256": "510bd7cc0d759b9c6786b0673225107cf1fc28dce14338fc4aa921be473e4aa6",
+      "current_sha256": "892ad457ac67f8121a06cfc95859844041f14579b0485f01e38dc5e38cd70ea2"
+    },
+    {
+      "path": "specs/001-system-specification/plan.md",
+      "original_implementation_baseline_sha256": "26e4df626c3abcd95152b3ebc47bf8490575d26de2a6ce49b4fcc1cacf023a2d",
+      "current_sha256": "8a0666d2cddbe6215fd83150bb44fc1a371b07f359010281e36ba02646496b92"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "original_implementation_baseline_sha256": "8d77fbfd6d897e05f12c81174a26cbbdbd2cf024e31046188211491f6400e02a",
+      "current_sha256": "f97dd17ea7ea4d883eb7872e4c9d471745cf51f19a5ce4cd34165e2966ec4e47"
+    }
+  ]
+}

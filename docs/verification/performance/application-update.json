@@ -1,0 +1,225 @@
+{
+  "candidate": {
+    "release": "adc-billing-fix-20261125-1795660119820",
+    "date": "2026-11-26T02:28:49.121Z",
+    "application_only": true,
+    "images": [
+      {
+        "reference": "adc/backend:adc-q03-small-20261125-1795659831235",
+        "id": "sha256:a9135851776476574881e10618cce16953c32828640e878a9a44b700dcff73ea"
+      }
+    ],
+    "archive": {
+      "file": "images.tar.gz",
+      "sha256": "cfea61bd9a501ede956c6a2b19b760b11195ec00e31ea3a17cbab7cafa14f503"
+    },
+    "files": [
+      {
+        "path": "ops/compose/compose.prod.yaml",
+        "sha256": "ffc9427e4897a2c4d82d5df46014f3a8791aeed734b0aee7fa2eac39437e384c"
+      },
+      {
+        "path": "ops/compose/compose.offline.yaml",
+        "sha256": "72d82746e85f9d6788de8251d4d4f58392eae22592f41ed7d7c266e488658cf7"
+      },
+      {
+        "path": "ops/compose/mysql/runtime-grants.sql",
+        "sha256": "e8f40a9c94b2918ba81e6a61f271bfe80568f9de6cf27f3440d7c66361c25000"
+      },
+      {
+        "path": "ops/scripts/apply-billing-app-update.sh",
+        "sha256": "1974e6be7e95391799c62837a1ffc4be914a5e3725e47a71f4ead6d2d56c6959"
+      }
+    ],
+    "backend_jar_sha256": "aa75ae7fd2e6abdf0de23324720e4cea96c2e24e0ca356ada34e9f739f56c30e",
+    "contains_secrets": false,
+    "tested_profile": "Q03-SMALL-20261125"
+  },
+  "performance_tested_image": {
+    "reference": "adc/backend:adc-q03-small-20261125-1795617785974",
+    "id": "sha256:20295e8798948a974159ad822ec228bf293b309f07c9f56e818ef32f714db169",
+    "jar_sha256": "55d5125faf0ef231c6fb3f012c500c64466944f8c322f1eab64382e54f85457e",
+    "sources": [
+      {
+        "path": "backend/src/main/java/com/adc/application/AppointmentBookingService.java",
+        "sha256": "b5fce9f02f27a13674bc4c99e5e564c9470f0ccb937ab1faedc8e594f242d564"
+      },
+      {
+        "path": "backend/src/main/java/com/adc/infrastructure/AppointmentBookingStore.java",
+        "sha256": "4bb0079f94f837902876475dc7bc90ca900dd207b30a889e9bc1f472136b7187"
+      }
+    ],
+    "created_at": "2026-11-25T14:44:35.089Z"
+  },
+  "performance_candidate_sources_unchanged": true,
+  "billing_list_lock_fix_verified_separately": true,
+  "pre": {
+    "date": "2026-11-26T02:28:39.512160+00:00",
+    "kind": "read-only-preflight",
+    "containers": [
+      {
+        "name": "adc-isolated-loopback-backend-1",
+        "image": "5eb67ee9a8d6",
+        "state": "Up 17 hours (healthy)",
+        "ports": "8080/tcp, 9091/tcp"
+      },
+      {
+        "name": "adc-isolated-loopback-admin-1",
+        "image": "e63f27b58149",
+        "state": "Up 17 hours (healthy)",
+        "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
+      },
+      {
+        "name": "adc-isolated-loopback-runtime-grants-1",
+        "image": "72c368d89886",
+        "state": "Exited (0) 7 days ago",
+        "ports": ""
+      },
+      {
+        "name": "adc-isolated-loopback-migrator-1",
+        "image": "626cddda4192",
+        "state": "Exited (0) 7 days ago",
+        "ports": ""
+      },
+      {
+        "name": "adc-isolated-loopback-mysql-1",
+        "image": "72c368d89886",
+        "state": "Up 7 days (healthy)",
+        "ports": "3306/tcp, 33060/tcp"
+      }
+    ],
+    "database": {
+      "business_tables": 24,
+      "business_columns": 209,
+      "business_foreign_keys": 44,
+      "migrations": 34,
+      "clinics": 1,
+      "patients": 3,
+      "staff_accounts": 5,
+      "grants": 9
+    },
+    "migration_fingerprints": [
+      "001\t642235063",
+      "002\t-139131776",
+      "003\t-1507794461",
+      "004\t-1105706124",
+      "005\t833339163",
+      "006\t-1676773693",
+      "007\t219203548",
+      "008\t-1141336440",
+      "009\t-177678172",
+      "010\t1749022404",
+      "011\t-1883091732",
+      "012\t362057578",
+      "013\t147781213",
+      "014\t928771891",
+      "015\t1048718105",
+      "016\t-612761375",
+      "017\t56339238",
+      "018\t-272594464",
+      "019\t-1471002546",
+      "101\t669295185",
+      "102\t-597604732",
+      "103\t-157074337",
+      "104\t-387096523",
+      "105\t-998553369",
+      "106\t-37646824",
+      "107\t1004684014",
+      "108\t-995260415",
+      "109\t-1359300733",
+      "110\t-1236276476",
+      "111\t943948527",
+      "112\t-1198056132",
+      "114\t-22664292",
+      "200\t1048949524",
+      "201\t2133159943"
+    ],
+    "listeners": "LISTEN 0      4096         0.0.0.0:22  0.0.0.0:*\nLISTEN 0      4096      127.0.0.54:53  0.0.0.0:*\nLISTEN 0      4096   127.0.0.53%lo:53  0.0.0.0:*\nLISTEN 0      4096         0.0.0.0:443 0.0.0.0:*\nLISTEN 0      4096            [::]:22     [::]:*",
+    "certificate_files": "/opt/andrew-dental/private/LoopbackTLS/localhost.crt"
+  },
+  "after": {
+    "date": "2026-11-26T02:29:59.213515+00:00",
+    "kind": "read-only-preflight",
+    "containers": [
+      {
+        "name": "adc-isolated-loopback-backend-1",
+        "image": "a91358517764",
+        "state": "Up 16 seconds (healthy)",
+        "ports": "8080/tcp, 9091/tcp"
+      },
+      {
+        "name": "adc-isolated-loopback-admin-1",
+        "image": "e63f27b58149",
+        "state": "Up 17 hours (healthy)",
+        "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
+      },
+      {
+        "name": "adc-isolated-loopback-runtime-grants-1",
+        "image": "72c368d89886",
+        "state": "Exited (0) 7 days ago",
+        "ports": ""
+      },
+      {
+        "name": "adc-isolated-loopback-migrator-1",
+        "image": "626cddda4192",
+        "state": "Exited (0) 7 days ago",
+        "ports": ""
+      },
+      {
+        "name": "adc-isolated-loopback-mysql-1",
+        "image": "72c368d89886",
+        "state": "Up 7 days (healthy)",
+        "ports": "3306/tcp, 33060/tcp"
+      }
+    ],
+    "database": {
+      "business_tables": 24,
+      "business_columns": 209,
+      "business_foreign_keys": 44,
+      "migrations": 34,
+      "clinics": 1,
+      "patients": 3,
+      "staff_accounts": 5,
+      "grants": 9
+    },
+    "migration_fingerprints": [
+      "001\t642235063",
+      "002\t-139131776",
+      "003\t-1507794461",
+      "004\t-1105706124",
+      "005\t833339163",
+      "006\t-1676773693",
+      "007\t219203548",
+      "008\t-1141336440",
+      "009\t-177678172",
+      "010\t1749022404",
+      "011\t-1883091732",
+      "012\t362057578",
+      "013\t147781213",
+      "014\t928771891",
+      "015\t1048718105",
+      "016\t-612761375",
+      "017\t56339238",
+      "018\t-272594464",
+      "019\t-1471002546",
+      "101\t669295185",
+      "102\t-597604732",
+      "103\t-157074337",
+      "104\t-387096523",
+      "105\t-998553369",
+      "106\t-37646824",
+      "107\t1004684014",
+      "108\t-995260415",
+      "109\t-1359300733",
+      "110\t-1236276476",
+      "111\t943948527",
+      "112\t-1198056132",
+      "114\t-22664292",
+      "200\t1048949524",
+      "201\t2133159943"
+    ],
+    "listeners": "LISTEN 0      4096         0.0.0.0:22  0.0.0.0:*\nLISTEN 0      4096      127.0.0.54:53  0.0.0.0:*\nLISTEN 0      4096   127.0.0.53%lo:53  0.0.0.0:*\nLISTEN 0      4096         0.0.0.0:443 0.0.0.0:*\nLISTEN 0      4096            [::]:22     [::]:*",
+    "certificate_files": "/opt/andrew-dental/private/LoopbackTLS/localhost.crt"
+  },
+  "database_counts_and_migrations_unchanged": true
+}

@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-23T15:24:08.240Z",
+  "status": "PASS",
+  "real_wechat_simulator": true,
+  "api_mocked": false,
+  "website_api": "https://localhost:19443",
+  "patient_presentation": "single-day doctor/time-slot list",
+  "admin_presentation": "weekly timetable retained",
+  "selected_date": "2026-11-24",
+  "loaded_candidates": 3,
+  "compared_website_shifts": 1,
+  "business_mutations": false,
+  "checks": [
+    "Real wx.login and server patient session succeeded",
+    "Patient page renders a single-day doctor and time-slot list with start and end times; no timetable",
+    "Choosing a time opens confirmation and requires a fresh explicit confirmation; no booking submitted",
+    "Changing doctor invalidates confirmation; changing date immediately removes old slots and selection",
+    "New daily query displays only the selected date",
+    "All displayed patient candidates match website clinic, doctor, normal shift and exact daily time bounds",
+    "Record filters distinguish completed treatment from generated invoice using website terminology"
+  ],
+  "real_device_verified": false
+}

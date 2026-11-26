@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-24T04:30:51.826Z",
+  "origin": "https://andrewdental.cn",
+  "real_mysql": true,
+  "api_mocked": false,
+  "checks": [
+    {
+      "method": "GET",
+      "path": "/auth/csrf",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/auth/staff-sessions",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/auth/csrf",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/auth/staff-sessions",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/treatments",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "path": "/treatments/3573207129576962026/qualification-requirements",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/schedules?clinic_id=1&limit=100",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/schedules",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/binding-requests?limit=100",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/binding-requests/d30f5ab1-776f-40fe-ad1f-9f30972ae546/approve",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/109230572463748535",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/109230572463748535",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "path": "/appointments/8723234837868558596",
+      "status": 200
+    }
+  ],
+  "fixture": {
+    "treatment_id": "3573207129576962026",
+    "schedule_id": "6985185311346731560",
+    "date": "2026-11-27",
+    "appointment_id": "109230572463748535",
+    "attended_appointment_id": "8723234837868558596"
+  },
+  "patient_flow": "PASS",
+  "real_wechat_login": true,
+  "stage": "COMPLETE",
+  "patient_cancel_visible_to_admin": true,
+  "admin_browser_same_appointment": true,
+  "admin_browser_attendance_visible_to_patient": true,
+  "patient_cancel_after_attendance_rejected": true,
+  "status": "PASS"
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-14T10:31:20.562Z",
+  "project": "adc-smoke-1794652280523",
+  "kind": "owned-real-linux-container-integration",
+  "production_deployed": false,
+  "real_wechat_verified": false,
+  "steps": [
+    "compose_configuration_valid",
+    "linux_images_built",
+    "mysql_migrator_runtime_grants_backend_admin_healthy",
+    "trusted_fixture_certificate_spa_and_denied_anonymous_access",
+    "nonroot_readonly_capabilities_and_private_backend_ports_verified"
+  ],
+  "passed": false,
+  "error": "Docker step failed; see container-smoke.log (exit 1)"
+}

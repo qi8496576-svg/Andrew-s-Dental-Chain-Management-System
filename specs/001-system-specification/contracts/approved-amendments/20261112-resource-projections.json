@@ -1,0 +1,26 @@
+{
+  "id": "ADC-CONTRACT-20261112-03",
+  "status": "owner-approved",
+  "date": "2026-11-12",
+  "owner_reply": "批准这份有限契约修正",
+  "proposal": "docs/verification/decisions/uc06-contract-projection-proposal.md",
+  "previous_amendment": "ADC-CONTRACT-20261112-02",
+  "operation_count": 82,
+  "files": [
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "before_sha256": "d33bd239bea1159b94b79ffef6352942d42c6893601238fd8d9f80490da94928",
+      "after_sha256": "adb09d901a885d845b9c10732f5cd586f11025643ea0c68bebf302398e115146"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "before_sha256": "9797a677e9d5a41b5dcc28f6702f281feb6c149faae46880da4ad2005e0be9ee",
+      "after_sha256": "3d2989367a270385f415a0bef484cb679d7922557687c5e711bebcd6f26c7910"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "before_sha256": "54799f4b290fa3d19b0253a75ec69e257bfa9f88a061cfd8cd58a0e5609cf8eb",
+      "after_sha256": "a56f4ffcc37882c084c25e35a7c5cfff50f8058e98e73cb8537d041374c0b4b7"
+    }
+  ]
+}

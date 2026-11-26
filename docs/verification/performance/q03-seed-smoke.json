@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-25T14:03:08.133Z",
+  "task": "T053",
+  "kind": "real-mysql-synthetic-baseline-only",
+  "preview_or_cloud_modified": false,
+  "full_q03_executed": false,
+  "steps": [
+    "full_approved_scale_generated",
+    "approved_flyway_migrations_applied",
+    "full_seed_committed_with_all_foreign_keys_and_checks",
+    "real_counts_schema_and_inventory_checks_passed"
+  ],
+  "generated": {
+    "counts": {
+      "Clinic": 30,
+      "Dentist": 100,
+      "Qualification": 1,
+      "DentistQualification": 100,
+      "DentistClinicAssignment": 100,
+      "Treatment": 1,
+      "TreatmentQualification": 1,
+      "Patient": 10000,
+      "DentistSchedule": 5100,
+      "Appointment": 100000,
+      "AppointmentRequestedTreatment": 100000,
+      "AppliedTreatment": 200000,
+      "AppointmentEvent": 250000
+    },
+    "workers": 100
+  },
+  "counts": {
+    "kind": "adc-q03-real-mysql-counts",
+    "clinics": 30,
+    "dentists": 100,
+    "patients": 10000,
+    "server_uuid": "f5e422fb-e8d8-11f1-8157-b6519142fa84",
+    "appointments": 100000,
+    "observed_at_utc": "2026-11-25T14:04:06.649360Z",
+    "applied_treatments": 200000
+  },
+  "inventory": {
+    "kind": "adc-q03-inventory-checks",
+    "care_inventory": 50000,
+    "business_tables": 24,
+    "business_columns": 209,
+    "invoice_inventory": 50000,
+    "missing_state_events": 0,
+    "preexisting_invoices": 0,
+    "business_foreign_keys": 44,
+    "ineligible_treatments": 0,
+    "duplicate_occupied_slots": 0
+  },
+  "passed": true,
+  "owned_test_resources_removed": true
+}

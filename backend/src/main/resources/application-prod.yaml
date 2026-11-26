@@ -1,0 +1,24 @@
+spring:
+  config:
+    import: configtree:/run/secrets/
+  datasource:
+    hikari:
+      maximum-pool-size: ${ADC_DB_POOL_SIZE:4}
+      minimum-idle: 1
+      connection-timeout: 3000
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+server:
+  shutdown: graceful
+  forward-headers-strategy: native
+  tomcat:
+    remoteip:
+      # Exact address of the only proxy on the dedicated Compose ingress network.
+      internal-proxies: '172\.29\.217\.10'
+      remote-ip-header: x-forwarded-for
+      protocol-header: x-forwarded-proto
+adc:
+  management:
+    enabled: true
+    address: 0.0.0.0
+    port: 9091

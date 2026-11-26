@@ -1,0 +1,29 @@
+{
+  "tables": 14,
+  "fields": 110,
+  "diagram_fk_edges": 19,
+  "application_references": 12,
+  "differences": [],
+  "scope": "Field names/types/nullability and FK child columns/parent tables; diagram does not encode every physical constraint",
+  "refs": [
+    "AccessGrant.granted_by -> Subject",
+    "AccessGrant.revoked_by -> Subject",
+    "AccessGrant.subject_id -> Subject",
+    "AuditEvent.subject_id -> Subject",
+    "BindingEvent.binding_request_id -> BindingRequest",
+    "BindingEvent.new_subject_id -> Subject",
+    "BindingEvent.old_subject_id -> Subject",
+    "BindingEvent.operator_subject_id -> Subject",
+    "BindingRequest.applicant_subject_id -> Subject",
+    "BindingRequest.reviewed_by -> Subject",
+    "CurrentPatientBinding.subject_id -> Subject",
+    "CurrentPatientBinding.verified_by -> Subject",
+    "ExternalIdentity.subject_id -> Subject",
+    "GrantCapability.grant_id -> AccessGrant",
+    "GrantClinicScope.grant_id -> AccessGrant",
+    "LoginThrottle.subject_id -> Subject",
+    "RequestReceipt.subject_id -> Subject",
+    "Session.subject_id -> Subject",
+    "StaffAccount.subject_id -> Subject"
+  ]
+}

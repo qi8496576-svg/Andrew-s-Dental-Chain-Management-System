@@ -1,0 +1,27 @@
+{
+  "id": "ADC-CONTRACT-20261112-02",
+  "status": "owner-approved",
+  "date": "2026-11-12",
+  "owner_reply": "批准该最小契约补充",
+  "proposal": "docs/verification/decisions/uc05-contract-gap-proposal.md",
+  "previous_amendment": "ADC-CONTRACT-20261111-01",
+  "operation_count": 82,
+  "preserved_original_operation_count": 81,
+  "files": [
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "before_sha256": "52a415106de4ffdacdb1fdb26512de19d4d6c995b1fe205b47eb83852966a505",
+      "after_sha256": "d33bd239bea1159b94b79ffef6352942d42c6893601238fd8d9f80490da94928"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "before_sha256": "05256ae463833b369b2e328c0a9ae803d346820b64328fa4c9a9548db354fa3f",
+      "after_sha256": "9797a677e9d5a41b5dcc28f6702f281feb6c149faae46880da4ad2005e0be9ee"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "before_sha256": "fbe22f2a63246de15c644aaab533bc0e38574f4967df469b9df12a32f12cc103",
+      "after_sha256": "54799f4b290fa3d19b0253a75ec69e257bfa9f88a061cfd8cd58a0e5609cf8eb"
+    }
+  ]
+}

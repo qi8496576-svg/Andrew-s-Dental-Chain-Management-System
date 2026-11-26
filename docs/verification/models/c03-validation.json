@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-25",
+  "status": "complete",
+  "task": "T007",
+  "official_image_matches": 22,
+  "owner_approved_native_svg": 18,
+  "render_passed": 23,
+  "word_pages": 62,
+  "business_schema": {
+    "tables": 24,
+    "fields": 209,
+    "foreign_keys": 44
+  },
+  "technical_schema": {
+    "tables": 14,
+    "fields": 110,
+    "foreign_keys": 19
+  },
+  "differences": [],
+  "obsolete_source_cleanup": "completed; known historical directories and duplicate old aliases absent",
+  "fingerprints": [
+    {
+      "path": "docs/verification/models/c03-validation.md",
+      "sha256": "74c58bd26f074fe0a53426e556321b3d1bc0e0e5007b442b9b94bdb6c812fb97"
+    },
+    {
+      "path": "docs/verification/models/tool-results.json",
+      "sha256": "6534d5708e27ce9d66a4f1e9235275d817cf96dd205886589a56c0b22bf9d759"
+    },
+    {
+      "path": "docs/verification/models/dbml-check.json",
+      "sha256": "08157a7e98918def5df14cf0cad7ab84d9e1228b0e133c54d57dc49ea64225b3"
+    },
+    {
+      "path": "docs/verification/models/technical-check.json",
+      "sha256": "fddae5cc3ae386cfb3a16c1cbc2e5b5bb52dae18cff32aeaa2f9dbf13cd67c9e"
+    },
+    {
+      "path": "docs/verification/models/source-identity.json",
+      "sha256": "a6fb9530411319714f43c1526901f0ca0d46e409fb8caa75320669e63e2726d4"
+    }
+  ]
+}

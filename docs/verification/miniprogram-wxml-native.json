@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-18T09:03:53.531Z",
+  "compiler": "D:/Users/APPdata/微信web开发者工具/resources/app.asar.unpacked/node_modules/wcc-exec/wcc.exe",
+  "original_error_reproduced": true,
+  "original_error": "pages/appointment-booking/index.wxml:1:2146: Bad attr `disabled` with message: unexpected `;` at pos22.\r\n",
+  "fixed_booking_compiled": true,
+  "results": [
+    {
+      "tree": "source",
+      "pages": 6,
+      "exit_code": 0,
+      "output_bytes": 60844
+    },
+    {
+      "tree": "dist",
+      "pages": 6,
+      "exit_code": 0,
+      "output_bytes": 60844
+    }
+  ],
+  "source_dist_identical": true,
+  "disabled_logic_combinations": 32,
+  "simulator_render_verified": false
+}

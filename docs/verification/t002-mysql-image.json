@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-10T10:57:27.0460239+08:00",
+  "repository": "docker.io/library/mysql",
+  "tag": "8.4",
+  "index_digest": "sha256:a81d043930e51745522bd5c430961cf8286f0a23f0a9a2a6e0108f7ea71b0902",
+  "linux_amd64_digest": "sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d",
+  "config_digest": "sha256:0f1a0ccadda3a1734d1db557e203ec58621d56fa248525016e85fe4f631311ec",
+  "version_environment": [
+    "MYSQL_MAJOR=8.4",
+    "MYSQL_VERSION=8.4.13-1.el9"
+  ],
+  "runtime_executed": false
+}

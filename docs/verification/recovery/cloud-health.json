@@ -1,0 +1,2 @@
+{"checked_at": "2026-11-25T14:11:54.858247+00:00", "database_container_and_volume_unchanged": true, "database_container_id": "7b9ea3ce17539f70a0a5013912e3a60b306a928ab16974167653fc711bf53f90", "timers": {"full": "active", "archive": "active", "health": "active"}, "backup_status": {"last_full_epoch": 1795614422.0, "last_archive_epoch": 1795615682.7813334, "source_uuid": "bc649ac7-e324-11f1-ba31-9a0fdbbcd4ba", "full_snapshots": 1, "archived_files": 6, "pruning_enabled": false}, "https_status": {"/": "200", "/api/v1/me": "401"}, "technical_record_auto_deletion_enabled": false}
+

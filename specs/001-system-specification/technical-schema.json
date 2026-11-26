@@ -1,0 +1,1253 @@
+{
+  "date": "2026-11-25",
+  "status": "current-implemented-model",
+  "physical_schemas": [
+    "adc_business",
+    "adc_identity",
+    "adc_audit"
+  ],
+  "business_baseline": {
+    "tables": 24,
+    "fields": 209,
+    "foreign_keys": 44,
+    "modified": false
+  },
+  "technical_tables": [
+    {
+      "schema": "adc_identity",
+      "name": "Subject",
+      "purpose": "长期可信主体；账号停用保留历史，不以患者/牙医主键代替身份",
+      "fields": [
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "服务端随机 UUID"
+        },
+        {
+          "name": "subject_type",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "PATIENT、STAFF、SYSTEM"
+        },
+        {
+          "name": "is_enabled",
+          "type": "BOOLEAN",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "权威启用状态"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "服务端创建时点"
+        },
+        {
+          "name": "disabled_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "停用时点"
+        }
+      ],
+      "primary_key": [
+        "subject_id"
+      ],
+      "unique_keys": [],
+      "constraints": "SYSTEM 仅内部受控作业/初始化上下文，不可通过公开登录接口取得；不是新增业务岗位。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "ExternalIdentity",
+      "purpose": "真实微信身份到内部主体的映射；OpenID 不是患者本人核验结果",
+      "fields": [
+        {
+          "name": "external_identity_id",
+          "type": "BIGINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "技术代理主键"
+        },
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "患者主体"
+        },
+        {
+          "name": "provider",
+          "type": "VARCHAR(32)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "首版固定 WECHAT_MINIPROGRAM"
+        },
+        {
+          "name": "appid",
+          "type": "VARBINARY(64)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "精确匹配服务端配置的 AppID"
+        },
+        {
+          "name": "openid",
+          "type": "VARBINARY(128)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "仅可信代码交换结果；精确字节匹配"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "创建时点"
+        }
+      ],
+      "primary_key": [
+        "external_identity_id"
+      ],
+      "unique_keys": [
+        [
+          "provider",
+          "appid",
+          "openid"
+        ],
+        [
+          "subject_id"
+        ]
+      ],
+      "constraints": "subject_id 单列唯一：首版一个患者主体只接一个真实小程序身份，避免把多个外部账号合并到同一主体绕过 Q1；同一外部账号换设备仍映射同一主体。不按 UnionID 自动合并。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "StaffAccount",
+      "purpose": "独立工作人员账号与密码散列；非牙医员工不写入 Dentist",
+      "fields": [
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "STAFF 主体"
+        },
+        {
+          "name": "username",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "个人登录名，技术库精确比较"
+        },
+        {
+          "name": "staff_reference",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "总部核实的工作人员依据"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Dentist.dentist_id",
+          "description": "仅牙医身份适用；业务服务核实"
+        },
+        {
+          "name": "password_hash",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "成熟 Argon2id 编码含算法参数盐；无散列不能登录"
+        },
+        {
+          "name": "requires_reset",
+          "type": "BOOLEAN",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "待安全设置凭据状态"
+        },
+        {
+          "name": "credential_changed_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "最近设置时点"
+        },
+        {
+          "name": "verification_reference",
+          "type": "VARCHAR(200)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "员工核验来源标识"
+        }
+      ],
+      "primary_key": [
+        "subject_id"
+      ],
+      "unique_keys": [
+        [
+          "username"
+        ]
+      ],
+      "constraints": "username 明确使用大小写敏感的比较规则；初建无凭据时禁止登录，通过已授权 credential-recovery 设置。未规定每位 Dentist 的账号数量，不擅加 dentist_id UNIQUE。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "Session",
+      "purpose": "ADC 自有权威会话；不启用另套框架 JDBC 会话表",
+      "fields": [
+        {
+          "name": "session_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "会话主键"
+        },
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "可信主体"
+        },
+        {
+          "name": "token_hash",
+          "type": "BINARY(32)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "32 随机字节令牌的 SHA-256 摘要"
+        },
+        {
+          "name": "client_type",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "服务端固定 WEB 或 WECHAT"
+        },
+        {
+          "name": "csrf_secret_hash",
+          "type": "BINARY(32)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "WEB 会话必须存在的防伪校验摘要"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "绝对寿命起点"
+        },
+        {
+          "name": "last_activity_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "判过期后再刷新"
+        },
+        {
+          "name": "absolute_expires_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "创建后 8 小时"
+        },
+        {
+          "name": "revoked_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "注销/恢复/受控统一失效时点"
+        },
+        {
+          "name": "revoked_reason",
+          "type": "VARCHAR(128)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "失效原因"
+        }
+      ],
+      "primary_key": [
+        "session_id"
+      ],
+      "unique_keys": [
+        [
+          "token_hash"
+        ]
+      ],
+      "constraints": "空闲达到30分钟或达到8小时绝对寿命拒绝；账号/绑定/授权不得从会话中的历史快照放行。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "LoginThrottle",
+      "purpose": "原子认证失败计数与限制窗口，包含不存在账号的不可枚举处理",
+      "fields": [
+        {
+          "name": "throttle_key",
+          "type": "BINARY(32)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "HMAC(认证域、规范化账号标识或服务端可信匿名来源)；不存明文错误凭据"
+        },
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "账号可识别时关联；未知账号为空"
+        },
+        {
+          "name": "consecutive_failures",
+          "type": "INT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "未限制时连续有效认证失败次数"
+        },
+        {
+          "name": "blocked_until",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "第五次失败起15分钟"
+        },
+        {
+          "name": "last_failure_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "最近实际认证失败"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "计数更新时间"
+        }
+      ],
+      "primary_key": [
+        "throttle_key"
+      ],
+      "unique_keys": [],
+      "constraints": "计数>=0；成功认证清零；限制窗口内不验证/不延长窗口，到期后下一次尝试开启新计数。CSRF/格式拒绝不伪记密码失败。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "BindingRequest",
+      "purpose": "首次本人登记的系统接纳记录，或已有档案的人工核验申请；PENDING不授患者访问权。",
+      "fields": [
+        {
+          "name": "request_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "服务端生成的申请标识"
+        },
+        {
+          "name": "applicant_subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "可信患者申请人"
+        },
+        {
+          "name": "patient_number_hint",
+          "type": "VARCHAR(30)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "已有档案由申请人提供线索；首次登记由服务器生成编号"
+        },
+        {
+          "name": "date_of_birth_hint",
+          "type": "DATE",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "最小核验线索，不是凭此自动绑定"
+        },
+        {
+          "name": "service_clinic_id",
+          "type": "BIGINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Clinic.clinic_id",
+          "description": "申请服务点；不授前台或申请人任何范围"
+        },
+        {
+          "name": "candidate_patient_id",
+          "type": "BIGINT",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Patient.patient_id",
+          "description": "首次登记为系统新建Patient；已有档案由授权前台核实"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "PENDING待核实；APPROVED为首次登记自动接纳或人工核验批准，按method区分"
+        },
+        {
+          "name": "submitted_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "提交时点"
+        },
+        {
+          "name": "reviewed_by",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "实际办理主体；首次为可信登记患者，既有档案为授权核验前台"
+        },
+        {
+          "name": "reviewed_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "处理时点"
+        },
+        {
+          "name": "verification_basis",
+          "type": "JSON",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "method区分SELF_DECLARED与人工核验；本人声明及person_confirmed=false、allergy_reviewed=false由服务器保存"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "核验原因；不存身份证件影像"
+        }
+      ],
+      "primary_key": [
+        "request_id"
+      ],
+      "unique_keys": [],
+      "constraints": "客户端不得自报reviewed_by或verification_basis。首次登记仅新建档案、原子建立双向唯一当前关联并保留本人声明；已有档案仅授权前台核验批准。失败不写成功事实，幂等、审计及回滚遵循既有协议。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "CurrentPatientBinding",
+      "purpose": "仅当前有效本人关系；解绑删除当前映射，证据另存",
+      "fields": [
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "一主体至多一档案的 PK"
+        },
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Patient.patient_id",
+          "description": "一档案至多一主体的 UNIQUE"
+        },
+        {
+          "name": "verified_by",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "实际登记主体或人工核验前台；历史字段名不表示SELF_DECLARED已经人工核实"
+        },
+        {
+          "name": "verified_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "当前关系生效时点"
+        },
+        {
+          "name": "verification_reference",
+          "type": "VARCHAR(200)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_identity.BindingRequest.request_id",
+          "description": "已批准申请；同事务建立批准事实"
+        }
+      ],
+      "primary_key": [
+        "subject_id"
+      ],
+      "unique_keys": [
+        [
+          "patient_id"
+        ]
+      ],
+      "constraints": "双向至多一个有效绑定；新旧主体固定顺序锁、Patient 稳定行锁和 UNIQUE 冲突处理，禁止覆盖绑定。不物理删除 Patient 或 Subject。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "BindingEvent",
+      "purpose": "追加的绑定/重绑/解绑证据历史",
+      "fields": [
+        {
+          "name": "event_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "历史事件"
+        },
+        {
+          "name": "action",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "BIND、REBIND、UNBIND"
+        },
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Patient.patient_id",
+          "description": "被核验的业务患者"
+        },
+        {
+          "name": "old_subject_id",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "原主体"
+        },
+        {
+          "name": "new_subject_id",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "新主体"
+        },
+        {
+          "name": "operator_subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "可信前台"
+        },
+        {
+          "name": "binding_request_id",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.BindingRequest.request_id",
+          "application_reference": null,
+          "description": "绑定/重绑必有；解绑可空"
+        },
+        {
+          "name": "occurred_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "可信时点"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "本人登记或人工核验办理原因"
+        },
+        {
+          "name": "verification_basis",
+          "type": "JSON",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "method区分SELF_DECLARED与人工核验；保留实际本人声明或核验证据"
+        },
+        {
+          "name": "request_key",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_identity.RequestReceipt.request_key",
+          "description": "按主体与操作共同定位，不是单列 FK"
+        }
+      ],
+      "primary_key": [
+        "event_id"
+      ],
+      "unique_keys": [],
+      "constraints": "BIND 只有新主体；REBIND 新旧均有且不同；UNBIND 只有旧主体。只追加。不是 AppointmentEvent 的替代。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "AccessGrant",
+      "purpose": "工作人员岗位、有效期及撤销事实；能力和范围用实际子表",
+      "fields": [
+        {
+          "name": "grant_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "授权主键"
+        },
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "被授权 STAFF"
+        },
+        {
+          "name": "role_code",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "RECEPTION、DENTIST、CASHIER、HEADQUARTERS"
+        },
+        {
+          "name": "granted_by",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "有权授予者"
+        },
+        {
+          "name": "valid_from",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "包含起点"
+        },
+        {
+          "name": "valid_until",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "不含终点；为空不表示免于撤权"
+        },
+        {
+          "name": "revoked_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "撤销事实"
+        },
+        {
+          "name": "revoked_by",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "撤销者"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR(255)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "授权依据"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "可信创建时点"
+        }
+      ],
+      "primary_key": [
+        "grant_id"
+      ],
+      "unique_keys": [],
+      "constraints": "结束晚于开始；revoked_at/revoked_by 同时存在或同时为空。无“诊所管理员”新角色；按原岗位和能力授予。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "GrantClinicScope",
+      "purpose": "授权实际诊所范围；非空清单不以 NULL 或 * 代表隐式全库",
+      "fields": [
+        {
+          "name": "grant_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.AccessGrant.grant_id",
+          "application_reference": null,
+          "description": "授权记录"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Clinic.clinic_id",
+          "description": "应用验证真实诊所及可授范围"
+        }
+      ],
+      "primary_key": [
+        "grant_id",
+        "clinic_id"
+      ],
+      "unique_keys": [],
+      "constraints": "逐项验证；无范围不能访问诊所业务。总部全链范围通过当前明确授予诊所集合表达；新增诊所不自动扩大旧授权。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "GrantCapability",
+      "purpose": "授权实际操作能力集合",
+      "fields": [
+        {
+          "name": "grant_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.AccessGrant.grant_id",
+          "application_reference": null,
+          "description": "授权记录"
+        },
+        {
+          "name": "capability_code",
+          "type": "VARCHAR(80)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "服务端版本化能力注册表中的操作码"
+        }
+      ],
+      "primary_key": [
+        "grant_id",
+        "capability_code"
+      ],
+      "unique_keys": [],
+      "constraints": "注册表属于代码配置，不增设动态角色/菜单管理业务；未知能力拒绝。角色相容性和操作者可授范围由应用验证。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "RequestReceipt",
+      "purpose": "受保护写命令的技术防重和结果引用；原控制组件的实际表",
+      "fields": [
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "可信主体"
+        },
+        {
+          "name": "operation_id",
+          "type": "VARCHAR(80)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "固定接口操作码"
+        },
+        {
+          "name": "request_key",
+          "type": "VARCHAR(64)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "调用方幂等键，不能作为身份"
+        },
+        {
+          "name": "content_hash",
+          "type": "BINARY(32)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "规范请求摘要，包含 If-Match"
+        },
+        {
+          "name": "request_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "服务端相关标识"
+        },
+        {
+          "name": "result_refs",
+          "type": "JSON",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.*",
+          "description": "受控类型化对象引用；也可指身份技术对象"
+        },
+        {
+          "name": "response_summary",
+          "type": "JSON",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "最小结果；禁止凭据、令牌、完整临床内容"
+        },
+        {
+          "name": "response_status",
+          "type": "SMALLINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "原成功响应状态"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "请求建立时点"
+        },
+        {
+          "name": "completed_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "成功提交时点"
+        }
+      ],
+      "primary_key": [
+        "subject_id",
+        "operation_id",
+        "request_key"
+      ],
+      "unique_keys": [],
+      "constraints": "只持久化成功回执，与事实/事件/审计同事务；不预先独立提交 PENDING。先当前授权，再回执重放，再首次执行 If-Match/状态检查。同键不同内容拒绝。"
+    },
+    {
+      "schema": "adc_identity",
+      "name": "flyway_schema_history",
+      "purpose": "工具实际迁移历史表；原元数据组件落点",
+      "fields": [
+        {
+          "name": "installed_rank",
+          "type": "INT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "工具序号 PK"
+        },
+        {
+          "name": "version",
+          "type": "VARCHAR(50)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "迁移版本"
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(200)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "迁移描述"
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR(20)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "迁移类型"
+        },
+        {
+          "name": "script",
+          "type": "VARCHAR(1000)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "脚本标识"
+        },
+        {
+          "name": "checksum",
+          "type": "INT",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "工具校验值"
+        },
+        {
+          "name": "installed_by",
+          "type": "VARCHAR(100)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "迁移账号"
+        },
+        {
+          "name": "installed_on",
+          "type": "TIMESTAMP",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "工具默认 CURRENT_TIMESTAMP"
+        },
+        {
+          "name": "execution_time",
+          "type": "INT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "工具执行时间"
+        },
+        {
+          "name": "success",
+          "type": "BOOLEAN",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "工具结果"
+        }
+      ],
+      "primary_key": [
+        "installed_rank"
+      ],
+      "unique_keys": [],
+      "constraints": "结构按 Flyway MySQL 官方实现核实；版本随已选 Boot BOM 锁定后以该版本工具输出再次核对，不手写/更改历史表。success 普通索引不是唯一键。运行账号无写入权限。"
+    },
+    {
+      "schema": "adc_audit",
+      "name": "AuditEvent",
+      "purpose": "可信追加审计，独立权限及至少一年保留边界",
+      "fields": [
+        {
+          "name": "audit_id",
+          "type": "BIGINT",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "技术代理主键"
+        },
+        {
+          "name": "subject_id",
+          "type": "CHAR(36)",
+          "nullable": true,
+          "foreign_key": "FK:adc_identity.Subject.subject_id",
+          "application_reference": null,
+          "description": "可识别主体；匿名认证失败为空"
+        },
+        {
+          "name": "actor_kind",
+          "type": "VARCHAR(16)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "SUBJECT、ANONYMOUS、SYSTEM"
+        },
+        {
+          "name": "action",
+          "type": "VARCHAR(80)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "动作码"
+        },
+        {
+          "name": "object_kind",
+          "type": "VARCHAR(48)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "业务或身份对象类型"
+        },
+        {
+          "name": "object_id",
+          "type": "VARCHAR(100)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.*",
+          "description": "按 object_kind 解析的对象引用；可指技术对象"
+        },
+        {
+          "name": "clinic_scope",
+          "type": "JSON",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_business.Clinic.clinic_id",
+          "description": "可信诊所范围数组；不由客户自报"
+        },
+        {
+          "name": "occurred_at",
+          "type": "TIMESTAMP(6)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "可信发生时间"
+        },
+        {
+          "name": "request_id",
+          "type": "CHAR(36)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": "APP:adc_identity.RequestReceipt.request_id",
+          "description": "请求相关；拒绝/读取审计可能没有成功回执"
+        },
+        {
+          "name": "result",
+          "type": "VARCHAR(24)",
+          "nullable": false,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "成功、拒绝或失败分类"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR(255)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "必要原因，不能复制秘密"
+        },
+        {
+          "name": "change_summary",
+          "type": "JSON",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "最小脱敏变更差异"
+        },
+        {
+          "name": "verification_reference",
+          "type": "VARCHAR(200)",
+          "nullable": true,
+          "foreign_key": null,
+          "application_reference": null,
+          "description": "必要人工依据"
+        }
+      ],
+      "primary_key": [
+        "audit_id"
+      ],
+      "unique_keys": [],
+      "constraints": "仅审计授权总部读取；运行账号只按需 INSERT/SELECT，不能 UPDATE/DELETE。敏感读先持久化审计；规定成功写与事实同事务；失败审计在业务回滚后独立短事务。"
+    }
+  ],
+  "technical_foreign_keys": [
+    {
+      "from": "adc_identity.ExternalIdentity.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.StaffAccount.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.Session.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.LoginThrottle.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.BindingRequest.applicant_subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.BindingRequest.reviewed_by",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.CurrentPatientBinding.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.CurrentPatientBinding.verified_by",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.BindingEvent.old_subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.BindingEvent.new_subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.BindingEvent.operator_subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.BindingEvent.binding_request_id",
+      "to": "adc_identity.BindingRequest.request_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.AccessGrant.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.AccessGrant.granted_by",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.AccessGrant.revoked_by",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.GrantClinicScope.grant_id",
+      "to": "adc_identity.AccessGrant.grant_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.GrantCapability.grant_id",
+      "to": "adc_identity.AccessGrant.grant_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.RequestReceipt.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_audit.AuditEvent.subject_id",
+      "to": "adc_identity.Subject.subject_id",
+      "nullable": true
+    }
+  ],
+  "application_references": [
+    {
+      "from": "adc_identity.StaffAccount.dentist_id",
+      "to": "adc_business.Dentist.dentist_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.BindingRequest.service_clinic_id",
+      "to": "adc_business.Clinic.clinic_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.BindingRequest.candidate_patient_id",
+      "to": "adc_business.Patient.patient_id",
+      "nullable": true
+    },
+    {
+      "from": "adc_identity.CurrentPatientBinding.patient_id",
+      "to": "adc_business.Patient.patient_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.CurrentPatientBinding.verification_reference",
+      "to": "adc_identity.BindingRequest.request_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.BindingEvent.patient_id",
+      "to": "adc_business.Patient.patient_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.BindingEvent.request_key",
+      "to": "adc_identity.RequestReceipt.request_key",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.GrantClinicScope.clinic_id",
+      "to": "adc_business.Clinic.clinic_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_identity.RequestReceipt.result_refs",
+      "to": "adc_business.*",
+      "nullable": false
+    },
+    {
+      "from": "adc_audit.AuditEvent.object_id",
+      "to": "adc_business.*",
+      "nullable": true
+    },
+    {
+      "from": "adc_audit.AuditEvent.clinic_scope",
+      "to": "adc_business.Clinic.clinic_id",
+      "nullable": false
+    },
+    {
+      "from": "adc_audit.AuditEvent.request_id",
+      "to": "adc_identity.RequestReceipt.request_id",
+      "nullable": false
+    }
+  ],
+  "retired_physical_schema_names": {
+    "adc_control": "adc_identity.RequestReceipt",
+    "adc_meta": "adc_identity.flyway_schema_history"
+  }
+}

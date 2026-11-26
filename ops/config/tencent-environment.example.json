@@ -1,0 +1,5 @@
+{
+  "ssh_user": "ubuntu",
+  "public_ip": "YOUR_SERVER_IP",
+  "private_key_location_only": "/absolute/private/path/to/your-ssh-key"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.TreatmentQualificationMapper">
+  <resultMap id="row" type="com.adc.domain.model.TreatmentQualification">
+    <constructor>
+      <idArg column="treatment_id" javaType="java.lang.Long"/>
+      <idArg column="qualification_id" javaType="java.lang.Long"/>
+      <arg column="is_mandatory" javaType="java.lang.Boolean"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `treatment_id`, `qualification_id`, `is_mandatory` FROM adc_business.`TreatmentQualification` WHERE `treatment_id` = #{treatment_id} AND `qualification_id` = #{qualification_id}
+  </select>
+</mapper>

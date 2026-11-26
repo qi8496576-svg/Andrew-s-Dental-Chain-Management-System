@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-17T15:25:55.449Z",
+  "target": "https://localhost:19443",
+  "tls_ca_verified": true,
+  "wechat_endpoint_reachable": true,
+  "empty_code_rejected": 400,
+  "frontend_backend_appid_match": true,
+  "official_provider_prod_profile": true,
+  "secret_file_mounted": true,
+  "real_wechat_login_verified": false
+}

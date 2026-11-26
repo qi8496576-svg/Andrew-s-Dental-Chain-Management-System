@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-19T02:03:37.596Z",
+  "origin": "https://localhost:19443",
+  "real_mysql": true,
+  "api_mocked": false,
+  "checks": [
+    "Daily navigation and system configuration have no shared destinations",
+    "Gear opens, toggles closed, supports Escape and closes on outside click",
+    "Five independent resource pages support direct navigation, breadcrumbs and refresh",
+    "Qualification creates through the real form and persists after reload",
+    "Treatment creation and mandatory qualification use stored relationships",
+    "Doctor creation, certificate verification and clinic assignment persist",
+    "A newly created unreferenced catalog item can be disabled and filtered",
+    "Staff account and verified password management perform real writes",
+    "Per-user role grant is real and unauthorized account API returns 403",
+    "All existing daily routes remain accessible to the legitimately granted admin",
+    "Ordinary reception remains restricted by both routing and server authorization"
+  ],
+  "fixtures": {
+    "staff_subject": "530d131c-690d-4535-9e70-e06fe456f10e",
+    "staff_username": "ui-check-1795053827765",
+    "qualification": "本机管理验收资质 1795053827765",
+    "treatment": "本机管理验收项目 1795053827765",
+    "dentist": "本机验收牙医 1795053827765"
+  },
+  "status": "PASS",
+  "restricted_account_api_status": 403,
+  "list_only_reception_page_passed": true,
+  "revoked_session_next_request_status": 403
+}

@@ -1,0 +1,28 @@
+flowchart LR
+  subgraph B["adc_business：原业务 ERD，19表 / 163字段 / 30FK"]
+    P["Patient"]
+    D["Dentist"]
+    C["Clinic"]
+    O["预约 / 治疗 / 结算 / 绩效等原表"]
+  end
+  subgraph I["adc_identity：13张技术表"]
+    S["Subject"]
+    E["ExternalIdentity / StaffAccount / Session / LoginThrottle"]
+    BR["BindingRequest / CurrentPatientBinding / BindingEvent"]
+    G["AccessGrant / GrantClinicScope / GrantCapability"]
+    R["RequestReceipt"]
+    H["flyway_schema_history"]
+  end
+  subgraph A["adc_audit：1张技术表"]
+    AU["AuditEvent"]
+  end
+  S -->|"内部数据库 FK，完整清单见技术 ERD"| E
+  S -->|"内部数据库 FK"| BR
+  S -->|"内部数据库 FK"| G
+  S -->|"内部数据库 FK"| R
+  S -->|"技术库间数据库 FK"| AU
+  BR -.->|"应用验证患者存在、本人、服务依据"| P
+  E -.->|"员工为牙医时由应用核实"| D
+  G -.->|"应用验证诊所及可授范围"| C
+  R -.->|"应用验证类型化结果引用"| O
+  AU -.->|"应用验证对象/范围；不追加业务 FK"| O

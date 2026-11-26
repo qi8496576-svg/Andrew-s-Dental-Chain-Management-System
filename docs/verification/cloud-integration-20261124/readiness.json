@@ -1,0 +1,97 @@
+{
+  "checked_at": "2026-11-24T05:32:59.029Z",
+  "origin": "https://andrewdental.cn",
+  "production_release": false,
+  "api_mocked": false,
+  "checks": [
+    "Public DNS, trusted official TLS, Vue history fallback and anonymous protected API denial"
+  ],
+  "browser_roles": [
+    {
+      "role": "demo",
+      "routes": [
+        "/",
+        "/settings/clinics",
+        "/settings/dentists",
+        "/settings/treatments",
+        "/staff-accounts",
+        "/clinic-grants",
+        "/appointment-booking",
+        "/schedules",
+        "/patient-bindings",
+        "/clinical-treatment",
+        "/invoicing",
+        "/analytics",
+        "/cost-entries",
+        "/quarterly-performance"
+      ],
+      "passed": true
+    },
+    {
+      "role": "frontdesk",
+      "routes": [
+        "/",
+        "/appointment-booking",
+        "/schedules"
+      ],
+      "passed": true
+    },
+    {
+      "role": "dentist",
+      "routes": [
+        "/",
+        "/clinical-treatment"
+      ],
+      "passed": true
+    },
+    {
+      "role": "cashier",
+      "routes": [
+        "/",
+        "/invoicing"
+      ],
+      "passed": true
+    }
+  ],
+  "dns_ipv4": [
+    "43.139.92.113"
+  ],
+  "certificate": {
+    "subject": {
+      "CN": "andrewdental.cn"
+    },
+    "issuer": {
+      "C": "US",
+      "O": "Let's Encrypt",
+      "CN": "YR2"
+    },
+    "valid_to": "Feb 22 03:18:32 2027 GMT",
+    "fingerprint256": "72:15:51:94:6F:23:E2:2C:1A:08:E5:41:01:6C:74:4C:F2:6E:B9:9F:19:96:B0:C0:FC:42:85:FC:9B:0D:0D:71"
+  },
+  "analytics_client_clock_5min_ahead_passed": true,
+  "browser_errors": [],
+  "database": {
+    "business_tables": 19,
+    "business_columns": 163,
+    "business_foreign_keys": 30,
+    "migrations": 33,
+    "clinics": 1,
+    "patients": 1,
+    "staff_accounts": 5,
+    "grants": 9,
+    "migrations_unchanged": true,
+    "container_id": "7b9ea3ce17539f70a0a5013912e3a60b306a928ab16974167653fc711bf53f90",
+    "independent_backup_evidence": "runtime-finalization.json"
+  },
+  "miniprogram": {
+    "formal_origin": "https://andrewdental.cn",
+    "public_and_private_url_check": true,
+    "native_compile_passed": true,
+    "server_domain_configured_by_owner": true
+  },
+  "frontend_secret_boundary": {
+    "checked_files": 90,
+    "appsecret_present": false
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-25",
+  "purpose": "owner-approved-cloud-synthetic-integration-only-20261124",
+  "origin": "https://andrewdental.cn",
+  "real_mysql": true,
+  "api_mocked": false,
+  "clinical_data_written_directly": false,
+  "initial_synthetic_clinic_precondition": true,
+  "accounts_created": [
+    "admin",
+    "frontdesk",
+    "dentist",
+    "cashier",
+    "demo"
+  ],
+  "patient_number": "P1247749985161519253",
+  "schedule_id": "7216096507400694998",
+  "real_wechat_verified": false
+}

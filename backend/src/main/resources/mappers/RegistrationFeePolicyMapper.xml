@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.RegistrationFeePolicyMapper">
+  <resultMap id="row" type="com.adc.domain.model.RegistrationFeePolicy">
+    <constructor>
+      <idArg column="clinic_id" javaType="java.lang.Long"/>
+      <idArg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="amount_fen" javaType="java.lang.Long"/>
+      <arg column="updated_at" javaType="java.time.LocalDateTime"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">SELECT `clinic_id`,`dentist_id`,`amount_fen`,`updated_at` FROM adc_business.`RegistrationFeePolicy` WHERE `clinic_id` = #{clinic_id} AND `dentist_id` = #{dentist_id}</select>
+</mapper>

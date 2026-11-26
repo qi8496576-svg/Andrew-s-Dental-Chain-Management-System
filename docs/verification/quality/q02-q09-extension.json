@@ -1,0 +1,11 @@
+{
+  "real_wechat_verified" : false,
+  "date" : "2026-11-14",
+  "elapsed_from_clinic_ready_to_booked_ms" : 491,
+  "kind" : "real_mysql_authorized_new_clinic_extension",
+  "appointment" : "9199858600919559394",
+  "schema_or_business_code_changed" : false,
+  "schedule" : "2003606983596382834",
+  "clinic" : "6046699192628974061",
+  "original_scope_still" : [ 1 ]
+}

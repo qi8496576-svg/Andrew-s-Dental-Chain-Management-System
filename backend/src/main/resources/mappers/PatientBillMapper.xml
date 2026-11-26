@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.PatientBillMapper">
+  <resultMap id="row" type="com.adc.domain.model.PatientBill">
+    <constructor>
+      <idArg column="bill_id" javaType="java.lang.Long"/>
+      <arg column="patient_id" javaType="java.lang.Long"/>
+      <arg column="clinic_id" javaType="java.lang.Long"/>
+      <arg column="kind" javaType="java.lang.String"/>
+      <arg column="hold_id" javaType="java.lang.Long"/>
+      <arg column="appointment_id" javaType="java.lang.Long"/>
+      <arg column="invoice_id" javaType="java.lang.Long"/>
+      <arg column="amount_fen" javaType="java.lang.Long"/>
+      <arg column="status" javaType="java.lang.String"/>
+      <arg column="created_at" javaType="java.time.LocalDateTime"/>
+      <arg column="updated_at" javaType="java.time.LocalDateTime"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">SELECT `bill_id`,`patient_id`,`clinic_id`,`kind`,`hold_id`,`appointment_id`,`invoice_id`,`amount_fen`,`status`,`created_at`,`updated_at` FROM adc_business.`PatientBill` WHERE `bill_id` = #{bill_id}</select>
+</mapper>

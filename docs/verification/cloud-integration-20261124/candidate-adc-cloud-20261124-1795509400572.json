@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-24T08:38:51.437Z",
+  "release": "adc-cloud-20261124-1795509400572",
+  "status": "verified-isolated-candidate-not-production-approval",
+  "task_baseline": "ADC-TASKS-20261111-03",
+  "images": [
+    {
+      "reference": "adc/backend:self-registration-20261124-1795509294802",
+      "id": "sha256:9c969eb8fbc0f36a690912af18f6cabb64b71c38e6e37c75030bb4afbb4b9fba",
+      "os": "linux",
+      "architecture": "amd64"
+    },
+    {
+      "reference": "adc/admin:adc-cloud-20261124-1795509400572",
+      "id": "sha256:f9c65e89a605ec3b510fe1075afe83073ab94d18e9d443fc86f6bc5e3b29d259",
+      "os": "linux",
+      "architecture": "amd64"
+    },
+    {
+      "reference": "mysql@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d",
+      "id": "sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d",
+      "os": "linux",
+      "architecture": "amd64"
+    }
+  ],
+  "archive": {
+    "file": "images.tar.gz",
+    "sha256": "900aeb8d7433ba52eba61890e17d116bb0bacbca8e82a9d7efaeb840b901a35d",
+    "bytes": 159143157,
+    "includes": "backend and admin only; exact approved MySQL already present on target"
+  },
+  "backend_jar_sha256": "f86649f632b12d3dc145c7c32ebada264816a762fd33946b8555de2ea405b239",
+  "business_dictionary_sha256": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b",
+  "files": [
+    {
+      "path": "ops/compose/compose.prod.yaml",
+      "sha256": "f3fee677e2e05cbed169eb114f4d28efd3ec42a07565a56d50fe765be9daabb2"
+    },
+    {
+      "path": "ops/compose/compose.offline.yaml",
+      "sha256": "72d82746e85f9d6788de8251d4d4f58392eae22592f41ed7d7c266e488658cf7"
+    },
+    {
+      "path": "ops/compose/mysql/bootstrap.sql",
+      "sha256": "5075a365570b66495990f2adad6ab5049bd28f981b61bc85f1929b886b94a704"
+    },
+    {
+      "path": "ops/compose/mysql/initialize-users.sh",
+      "sha256": "d9e6a75793c9024b784fb19245f3371cb1ff09ab6eeec652a97e438174ece7f5"
+    },
+    {
+      "path": "ops/compose/mysql/runtime-grants.sql",
+      "sha256": "e8f40a9c94b2918ba81e6a61f271bfe80568f9de6cf27f3440d7c66361c25000"
+    },
+    {
+      "path": "ops/scripts/verify-candidate.py",
+      "sha256": "2f9d84f2a84d3e27fb3f969579482967307c2ad45d35f8dcde7f03d11ac628d1"
+    }
+  ],
+  "contains_secrets": false,
+  "production_deployed": false,
+  "real_wechat_verified": false,
+  "previous_cloud_candidate": "adc-20261114-1794653395719",
+  "backend_verification": "docs/verification/admin-review-20261123/backend-verification.log",
+  "local_directory": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\tmp\\deployment\\adc-cloud-20261124-1795509400572"
+}

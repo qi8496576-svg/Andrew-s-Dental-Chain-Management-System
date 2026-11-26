@@ -1,0 +1,10 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="7.873538">
+<testsuite name="schedule-timetable.spec.ts" timestamp="2026-11-23T14:27:34.595Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.712" errors="0">
+<testcase name="week timetable places real durations and concurrent doctors on a page that scrolls down" classname="schedule-timetable.spec.ts" time="1.618">
+</testcase>
+<testcase name="narrow layout scrolls the timetable horizontally without widening the page" classname="schedule-timetable.spec.ts" time="1.057">
+</testcase>
+<testcase name="doctor filters and empty weeks keep their actual range" classname="schedule-timetable.spec.ts" time="1.037">
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-26T04:49:24.117Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "pages": [
+    {
+      "route": "/appointment-booking",
+      "title": "预约管理 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/schedules",
+      "title": "出诊排班 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/patients",
+      "title": "患者资料 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/clinical-treatment",
+      "title": "医生工作台 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/invoicing",
+      "title": "结算就诊 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/patient-bills",
+      "title": "费用与缴费 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/quarterly-performance",
+      "title": "季度个人绩效 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/analytics",
+      "title": "运营分析 · 安德鲁牙科连锁管理系统"
+    },
+    {
+      "route": "/management",
+      "title": "系统管理与基础配置 · 安德鲁牙科连锁管理系统"
+    }
+  ],
+  "errors": [],
+  "service_errors": [],
+  "status": "PASS"
+}

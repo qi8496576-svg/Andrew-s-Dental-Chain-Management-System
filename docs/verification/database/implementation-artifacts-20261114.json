@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-14",
+  "purpose": "implementation evidence only; not an approval or Analyze",
+  "completed_tasks": 49,
+  "protected_inputs_match": 28,
+  "files": [
+    {
+      "path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\backend\\target\\adc-backend-0.1.0-SNAPSHOT.jar",
+      "sha256": "2c5f5356bd4cab41647f9532c1bc5d500e6f5c3bb07b0588cfc438bce4df529c"
+    },
+    {
+      "path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\backend\\src\\main\\java\\com\\adc\\identity\\bootstrap\\NewClinicManagement.java",
+      "sha256": "8764e787973ea8fa84b0b2e2cb7621baf9d0172355394e3362ce15ad81fb305a"
+    },
+    {
+      "path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\ops\\compose\\compose.prod.yaml",
+      "sha256": "f3fee677e2e05cbed169eb114f4d28efd3ec42a07565a56d50fe765be9daabb2"
+    },
+    {
+      "path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\ops\\compose\\compose.offline.yaml",
+      "sha256": "72d82746e85f9d6788de8251d4d4f58392eae22592f41ed7d7c266e488658cf7"
+    },
+    {
+      "path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\ops\\runbooks\\deployment.md",
+      "sha256": "ff20032acd258e1c9b6a5d1a933e7b12ce96e272fb582492983ecfb04defc410"
+    }
+  ]
+}

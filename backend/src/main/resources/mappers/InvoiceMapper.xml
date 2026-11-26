@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.InvoiceMapper">
+  <resultMap id="row" type="com.adc.domain.model.Invoice">
+    <constructor>
+      <idArg column="invoice_id" javaType="java.lang.Long"/>
+      <arg column="invoice_number" javaType="java.lang.String"/>
+      <arg column="appointment_id" javaType="java.lang.Long"/>
+      <arg column="issued_at" javaType="java.time.Instant"/>
+      <arg column="total_amount" javaType="java.math.BigDecimal"/>
+      <arg column="invoice_status" javaType="java.lang.String"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `invoice_id`, `invoice_number`, `appointment_id`, `issued_at`, `total_amount`, `invoice_status`, `created_at` FROM adc_business.`Invoice` WHERE `invoice_id` = #{invoice_id}
+  </select>
+</mapper>

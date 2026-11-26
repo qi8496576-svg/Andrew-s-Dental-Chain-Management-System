@@ -1,0 +1,307 @@
+[
+  {
+    "id": "A1",
+    "title": "表 A1  ADC 信息系统的愿景",
+    "block": 51
+  },
+  {
+    "id": "A1a",
+    "title": "表 A1a  业务指标的用途与度量口径",
+    "block": 54
+  },
+  {
+    "id": "A2",
+    "title": "表 A2  改进业务序列图的改进点与业务结果",
+    "block": 72
+  },
+  {
+    "id": "B0",
+    "title": "表 B0  需求来源与适用范围",
+    "block": 81
+  },
+  {
+    "id": "B1",
+    "title": "表 B1  系统执行者与目标",
+    "block": 86
+  },
+  {
+    "id": "B2",
+    "title": "表 B2  系统用例实现优先级",
+    "block": 95
+  },
+  {
+    "id": "B3",
+    "title": "表 B3  UC01 预约就诊用例规约",
+    "block": 100
+  },
+  {
+    "id": "B4",
+    "title": "表 B4  UC01 的补充约束",
+    "block": 116
+  },
+  {
+    "id": "B4a",
+    "title": "表 B4a UC01-S2 确认到诊场景规约",
+    "block": 120
+  },
+  {
+    "id": "B4b",
+    "title": "表 B4b UC01-S3 取消预约场景规约",
+    "block": 130
+  },
+  {
+    "id": "B4c",
+    "title": "表 B4c UC01-S4 登记爽约场景规约",
+    "block": 140
+  },
+  {
+    "id": "B4d",
+    "title": "表 B4d UC01-S5 停诊改约场景规约",
+    "block": 150
+  },
+  {
+    "id": "B5",
+    "title": "表 B5  UC03 记录治疗用例规约",
+    "block": 161
+  },
+  {
+    "id": "B6",
+    "title": "表 B6  UC03 的补充约束",
+    "block": 175
+  },
+  {
+    "id": "B7",
+    "title": "表 B7  UC04 结算就诊用例规约",
+    "block": 179
+  },
+  {
+    "id": "B8",
+    "title": "表 B8  UC04 的补充约束",
+    "block": 190
+  },
+  {
+    "id": "B9",
+    "title": "表 B9  UC07 核算季度绩效用例规约",
+    "block": 193
+  },
+  {
+    "id": "B10",
+    "title": "表 B10  UC07 的补充约束",
+    "block": 206
+  },
+  {
+    "id": "B11",
+    "title": "表 B11 其他用例的核心条件摘要",
+    "block": 209
+  },
+  {
+    "id": "B11a",
+    "title": "表 B11a UC02 管理出诊排班用例规约",
+    "block": 215
+  },
+  {
+    "id": "B11b",
+    "title": "表 B11b UC05 维护患者资料用例规约",
+    "block": 225
+  },
+  {
+    "id": "B11c",
+    "title": "表 B11c UC06 维护组织资源用例规约",
+    "block": 236
+  },
+  {
+    "id": "B11d",
+    "title": "表 B11d UC08 运营分析用例规约",
+    "block": 247
+  },
+  {
+    "id": "B12",
+    "title": "表 B12  质量需求的度量表述",
+    "block": 259
+  },
+  {
+    "id": "B12a",
+    "title": "表 B12a 角色与主要操作范围",
+    "block": 264
+  },
+  {
+    "id": "B12b",
+    "title": "表 B12b 身份与授权支撑功能",
+    "block": 267
+  },
+  {
+    "id": "B13",
+    "title": "表 B13  关键业务规则",
+    "block": 277
+  },
+  {
+    "id": "C1",
+    "title": "表 C1  分析类及其主要责任",
+    "block": 292
+  },
+  {
+    "id": "C2",
+    "title": "表 C2  就诊状态的业务含义与不变式",
+    "block": 355
+  },
+  {
+    "id": "C3",
+    "title": "表 C3 需求与分析设计追踪",
+    "block": 359
+  },
+  {
+    "id": "D1",
+    "title": "表 D1  分析类与数据表的对应",
+    "block": 367
+  },
+  {
+    "id": "D2",
+    "title": "表 D2  关系模式总览",
+    "block": 382
+  },
+  {
+    "id": "D3",
+    "title": "表 D3  Patient（患者）表结构",
+    "block": 386
+  },
+  {
+    "id": "D4",
+    "title": "表 D4  Allergy（过敏症）表结构",
+    "block": 389
+  },
+  {
+    "id": "D5",
+    "title": "表 D5  PatientAllergy（患者过敏症）表结构",
+    "block": 392
+  },
+  {
+    "id": "D6",
+    "title": "表 D6  Clinic（诊所）表结构",
+    "block": 395
+  },
+  {
+    "id": "D7",
+    "title": "表 D7  Dentist（牙医）表结构",
+    "block": 398
+  },
+  {
+    "id": "D8",
+    "title": "表 D8  Qualification（专业资质）表结构",
+    "block": 401
+  },
+  {
+    "id": "D9",
+    "title": "表 D9  DentistQualification（牙医专业资质）表结构",
+    "block": 404
+  },
+  {
+    "id": "D10",
+    "title": "表 D10  DentistClinicAssignment（牙医诊所委派）表结构",
+    "block": 407
+  },
+  {
+    "id": "D11",
+    "title": "表 D11  DentistSchedule（出诊排班）表结构",
+    "block": 410
+  },
+  {
+    "id": "D12",
+    "title": "表 D12  Treatment（治疗项目）表结构",
+    "block": 413
+  },
+  {
+    "id": "D13",
+    "title": "表 D13  TreatmentQualification（治疗所需资质）表结构",
+    "block": 416
+  },
+  {
+    "id": "D14",
+    "title": "表 D14  Appointment（就诊）表结构",
+    "block": 419
+  },
+  {
+    "id": "D15",
+    "title": "表 D15  AppointmentRequestedTreatment（就诊期望治疗）表结构",
+    "block": 422
+  },
+  {
+    "id": "D16",
+    "title": "表 D16  AppliedTreatment（施用治疗）表结构",
+    "block": 425
+  },
+  {
+    "id": "D17",
+    "title": "表 D17  Invoice（结算单）表结构",
+    "block": 428
+  },
+  {
+    "id": "D18",
+    "title": "表 D18  InvoiceItem（结算单明细）表结构",
+    "block": 431
+  },
+  {
+    "id": "D19",
+    "title": "表 D19  CostEntry（成本凭证）表结构",
+    "block": 434
+  },
+  {
+    "id": "D20",
+    "title": "表 D20  QuarterlyPerformance（季度绩效）表结构",
+    "block": 437
+  },
+  {
+    "id": "D21",
+    "title": "表 D21  AppointmentEvent（就诊事件）表结构",
+    "block": 440
+  },
+  {
+    "id": "D22",
+    "title": "表 D22  完整性约束与派生规则",
+    "block": 451
+  },
+  {
+    "id": "D23",
+    "title": "表 D23  就诊状态的存储约束",
+    "block": 454
+  },
+  {
+    "id": "D24",
+    "title": "表 D24  主要关系",
+    "block": 458
+  },
+  {
+    "id": "D25",
+    "title": "表 D25 主要业务接口的处理契约",
+    "block": 496
+  },
+  {
+    "id": "D26",
+    "title": "表 D26 身份组件与业务系统的接口边界",
+    "block": 501
+  },
+  {
+    "id": "D27",
+    "title": "表 D27  RegistrationFeePolicy（挂号费策略）表结构",
+    "block": 513
+  },
+  {
+    "id": "D28",
+    "title": "表 D28  BookingHold（预约号源保留）表结构",
+    "block": 515
+  },
+  {
+    "id": "D29",
+    "title": "表 D29  PatientBill（患者账单）表结构",
+    "block": 517
+  },
+  {
+    "id": "D30",
+    "title": "表 D30  PaymentOrder（支付订单）表结构",
+    "block": 519
+  },
+  {
+    "id": "D31",
+    "title": "表 D31  RefundOrder（退款订单）表结构",
+    "block": 521
+  }
+]

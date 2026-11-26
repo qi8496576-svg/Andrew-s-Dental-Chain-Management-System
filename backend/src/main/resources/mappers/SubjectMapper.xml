@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.SubjectMapper">
+  <resultMap id="row" type="com.adc.infrastructure.technical.SubjectRecord">
+    <constructor>
+      <idArg column="subject_id" javaType="java.lang.String"/>
+      <arg column="subject_type" javaType="java.lang.String"/>
+      <arg column="is_enabled" javaType="java.lang.Boolean"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+      <arg column="disabled_at" javaType="java.time.Instant"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `subject_id`, `subject_type`, `is_enabled`, `created_at`, `disabled_at` FROM adc_identity.`Subject` WHERE `subject_id` = #{subject_id}
+  </select>
+</mapper>

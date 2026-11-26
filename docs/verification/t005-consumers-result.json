@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "steps": [
+    {
+      "project": "admin",
+      "exit_code": 0,
+      "step": "ci"
+    },
+    {
+      "project": "admin",
+      "exit_code": 0,
+      "step": "typecheck"
+    },
+    {
+      "project": "admin",
+      "exit_code": 0,
+      "step": "build"
+    },
+    {
+      "project": "patient-miniprogram",
+      "exit_code": 0,
+      "step": "ci"
+    },
+    {
+      "project": "patient-miniprogram",
+      "exit_code": 0,
+      "step": "typecheck"
+    },
+    {
+      "project": "patient-miniprogram",
+      "exit_code": 0,
+      "step": "build"
+    }
+  ],
+  "checked_at": "2026-11-10T23:44:38.1688356+08:00"
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.AllergyMapper">
+  <resultMap id="row" type="com.adc.domain.model.Allergy">
+    <constructor>
+      <idArg column="allergy_id" javaType="java.lang.Long"/>
+      <arg column="allergy_name" javaType="java.lang.String"/>
+      <arg column="description" javaType="java.lang.String"/>
+      <arg column="is_active" javaType="java.lang.Boolean"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `allergy_id`, `allergy_name`, `description`, `is_active` FROM adc_business.`Allergy` WHERE `allergy_id` = #{allergy_id}
+  </select>
+</mapper>

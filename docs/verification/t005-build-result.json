@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-11-10T23:45:48.9361946+08:00",
+  "task": "T005",
+  "toolchain_passed": true,
+  "steps": [
+    {
+      "name": "ci",
+      "exit_code": 0,
+      "log": "docs/verification/t005-ci.log"
+    },
+    {
+      "name": "validate",
+      "exit_code": 0,
+      "log": "docs/verification/t005-validate.log"
+    },
+    {
+      "name": "drift",
+      "exit_code": 0,
+      "log": "docs/verification/t005-drift.log"
+    },
+    {
+      "name": "tests",
+      "exit_code": 0,
+      "log": "docs/verification/t005-tests.log"
+    },
+    {
+      "name": "typecheck",
+      "exit_code": 0,
+      "log": "docs/verification/t005-typecheck.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log": "docs/verification/t005-build.log"
+    }
+  ],
+  "failure": null,
+  "consumer_validation_record": "t005-consumers-result.json"
+}

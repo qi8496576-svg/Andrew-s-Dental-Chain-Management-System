@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/appointment-booking/index",
+    "pages/appointment-cancellation/index",
+    "pages/personal/index",
+    "pages/authentication/index",
+    "pages/patients/index",
+    "pages/patient-bindings/index",
+    "pages/patient-bills/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "安德鲁牙科",
+    "navigationBarBackgroundColor": "#f5f7f8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f7f8"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#83949d",
+    "selectedColor": "#17778b",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/home-active.png"
+      },
+      {
+        "pagePath": "pages/appointment-booking/index",
+        "text": "预约",
+        "iconPath": "assets/calendar.png",
+        "selectedIconPath": "assets/calendar-active.png"
+      },
+      {
+        "pagePath": "pages/appointment-cancellation/index",
+        "text": "记录",
+        "iconPath": "assets/records.png",
+        "selectedIconPath": "assets/records-active.png"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "text": "我的",
+        "iconPath": "assets/user.png",
+        "selectedIconPath": "assets/user-active.png"
+      }
+    ]
+  }
+}

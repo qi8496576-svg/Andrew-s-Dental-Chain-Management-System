@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-24T05:41:13.193Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "strict_https": true,
+  "checks": [
+    "Original real WeChat session could access the synthetic profile before rebind",
+    "Different genuinely authenticated WeChat subject submitted the same synthetic patient request",
+    "Authorized rebind approved the new request and atomically removed the old mapping",
+    "The original still-authenticated session now receives 403 for both profile and appointments"
+  ],
+  "second_wechat_account_rebind": "PASS",
+  "real_device": "OWNER_CONFIRMED_BASIC_ACCESS_BEFORE_REBIND",
+  "same_account_pending_requests": 50,
+  "new_account_device_readback": "PASS_OWNER_CONFIRMED",
+  "current_fixture_binding": "second real WeChat account; old account remains logged in but unbound",
+  "binding_request_id": "00bc92e4-62dd-4452-9eab-93dba9050f0c",
+  "status": "PASS",
+  "owner_confirmation": "第二个微信已能看到本人档案和原预约记录"
+}

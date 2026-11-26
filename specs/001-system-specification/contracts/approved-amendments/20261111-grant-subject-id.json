@@ -1,0 +1,17 @@
+{
+  "id": "ADC-CONTRACT-20261111-01",
+  "status": "owner-approved",
+  "date": "2026-11-11",
+  "owner_reply": "批准这一处类型修正",
+  "path": "specs/001-system-specification/contracts/openapi.json",
+  "json_pointer": "/paths/~1identity~1grants/get/parameters/2/schema",
+  "before_schema": {
+    "$ref": "#/components/schemas/Id"
+  },
+  "after_schema": {
+    "type": "string"
+  },
+  "before_sha256": "f2767b4d11e121fa2fd3889f5e545f9e8c8d481ca7533c4d9f4d403cd5b76747",
+  "after_sha256": "52a415106de4ffdacdb1fdb26512de19d4d6c995b1fe205b47eb83852966a505",
+  "scope": "Only GET /identity/grants subject_id query schema; preserve routes, names, business rules, database and original approval records."
+}

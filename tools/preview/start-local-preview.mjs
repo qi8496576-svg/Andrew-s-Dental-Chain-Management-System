@@ -1,0 +1,79 @@
+import fs from 'node:fs'
+import path from 'node:path'
+import crypto from 'node:crypto'
+import https from 'node:https'
+import {spawn} from 'node:child_process'
+import assert from 'node:assert/strict'
+
+// Explicit developer preview fixture. Never imported into or started by production code.
+const root=path.resolve(import.meta.dirname,'../..'),privateRoot='D:/secrets/AndrewDental/LocalPreview',project='adc-local-preview',port=19443,origin=`https://localhost:${port}`
+assert.ok(fs.existsSync(path.join(privateRoot,'backend/adc.auth-secret')),'Run Prepare-DeploymentSecrets.ps1 for LocalPreview first')
+const journalFile=path.join(privateRoot,'preview-state.json'),existing=fs.existsSync(journalFile),state=existing?JSON.parse(fs.readFileSync(journalFile,'utf8')):{purpose:'owned-local-synthetic-preview-only',project,items:{},requests:{}}
+assert.equal(state.purpose,'owned-local-synthetic-preview-only');assert.equal(state.project,project)
+const save=()=>{fs.writeFileSync(journalFile+'.tmp',JSON.stringify(state,null,2)+'\n');fs.renameSync(journalFile+'.tmp',journalFile)}
+const existingSeedSteps=Object.keys(state.items).length
+const candidate=JSON.parse(fs.readFileSync(path.join(root,'docs/verification/database/deployment-candidate.json'),'utf8'))
+const docker='D:/ADC-Dev/Docker/app/resources/bin/docker.exe',env={...process.env,TEMP:path.join(root,'tmp/build-temp'),TMP:path.join(root,'tmp/build-temp'),DOCKER_HOST:'npipe:////./pipe/dockerDesktopLinuxEngine',DOCKER_CONFIG:path.join(root,'tmp/docker-config'),ADC_BACKEND_IMAGE:candidate.images[0].id,ADC_ADMIN_IMAGE:candidate.images[1].id,ADC_BACKEND_SECRETS_DIR:path.join(privateRoot,'backend'),ADC_MYSQL_ROOT_PASSWORD_FILE:path.join(privateRoot,'mysql-root'),ADC_MIGRATION_PASSWORD_FILE:path.join(privateRoot,'migration'),ADC_TLS_CERTIFICATE_FILE:path.join(privateRoot,'tls/localhost.crt'),ADC_TLS_PRIVATE_KEY_FILE:path.join(privateRoot,'tls/localhost.key'),ADC_DOMAIN:'localhost',ADC_HTTPS_BIND:'127.0.0.1',ADC_HTTPS_PORT:String(port),ADC_HTTPS_ORIGIN_PORT_SUFFIX:':'+port,ADC_WECHAT_APP_ID:fs.readFileSync(path.join(privateRoot,'wechat-appid'),'utf8').trim()}
+const localUiFile=path.join(root,'ops/config/local-preview-ui.json')
+if(fs.existsSync(localUiFile)){const ui=JSON.parse(fs.readFileSync(localUiFile,'utf8'));assert.equal(ui.project,project);assert.equal(ui.url,origin);assert.match(ui.frontend_image,/^adc\/admin:[a-zA-Z0-9._-]+$/);env.ADC_ADMIN_IMAGE=ui.frontend_image;if(ui.backend_image){assert.match(ui.backend_image,/^adc\/backend:[a-zA-Z0-9._-]+$/);env.ADC_BACKEND_IMAGE=ui.backend_image}}
+fs.mkdirSync(path.join(privateRoot,'tls'),{recursive:true});
+const compose=['compose','--project-name',project,'-f',path.join(root,'ops/compose/compose.prod.yaml')],log=fs.createWriteStream(path.join(root,'docs/verification/local-preview-start.log'),{flags:'a'})
+async function run(args,{allowFailure=false}={}){return new Promise((resolve,reject)=>{const p=spawn(docker,args,{cwd:root,env,windowsHide:true});let out='';p.stdout.on('data',b=>{out+=b;log.write(b)});p.stderr.on('data',b=>{out+=b;log.write(b)});p.on('error',reject);p.on('exit',code=>code===0||allowFailure?resolve({code,out}):reject(new Error('Local preview Docker step failed (exit '+code+'); see local-preview-start.log')))})}
+async function step(name,work){if(Object.hasOwn(state.items,name))return state.items[name];const value=await work();state.items[name]=value;save();return value}
+const generated=()=>crypto.randomBytes(18).toString('base64url')
+let credentials
+const credentialsFile=path.join(privateRoot,'preview-accounts.json')
+if(fs.existsSync(credentialsFile))credentials=JSON.parse(fs.readFileSync(credentialsFile,'utf8'));else{credentials=Object.fromEntries(['admin','frontdesk','dentist','cashier'].map(role=>[role,{username:'preview-'+role,password:generated()}]));fs.writeFileSync(credentialsFile,JSON.stringify(credentials,null,2)+'\n')}
+try{
+  const volume=await run(['volume','inspect',project+'_mysql_data'],{allowFailure:true});if(volume.code===0&&!existing)throw new Error('Existing preview volume has no owned journal; do not overwrite or initialize it')
+  save()
+  if(!fs.existsSync(env.ADC_TLS_PRIVATE_KEY_FILE)){
+    await run(['run','--rm','--entrypoint','openssl','--mount',`type=bind,source=${path.join(privateRoot,'tls')},target=/fixture`,'eclipse-temurin@sha256:dff6eb46527bd293a3c06bbbe9e64e8c9f91f01905b5abbdad31761c03059d2c','req','-x509','-newkey','rsa:2048','-nodes','-keyout','/fixture/localhost.key','-out','/fixture/localhost.crt','-days','365','-subj','/CN=localhost','-addext','subjectAltName=DNS:localhost'])
+    await run(['run','--rm','--entrypoint','chmod','--mount',`type=bind,source=${path.join(privateRoot,'tls')},target=/fixture`,'eclipse-temurin@sha256:dff6eb46527bd293a3c06bbbe9e64e8c9f91f01905b5abbdad31761c03059d2c','0444','/fixture/localhost.key'])
+  }
+  const status=(await run([...compose,'ps','--format','json'])).out.trim(),services=status?(status.startsWith('[')?JSON.parse(status):status.split('\n').filter(Boolean).map(line=>JSON.parse(line))):[]
+  const alreadyHealthy=['mysql','backend','admin'].every(name=>services.some(service=>service.Service===name&&service.State==='running'&&service.Health==='healthy'))
+  if(!alreadyHealthy)await run([...compose,'up','-d','--no-build','--pull','never','--wait','--wait-timeout','240'])
+  const request=(method,url,body,headers={})=>new Promise((resolve,reject)=>{const bytes=body===undefined?undefined:JSON.stringify(body),req=https.request({hostname:'localhost',port,path:'/api/v1'+url,method,ca:fs.readFileSync(env.ADC_TLS_CERTIFICATE_FILE),headers:{...(bytes?{'Content-Type':'application/json','Content-Length':Buffer.byteLength(bytes)}:{}),...headers}},res=>{let text='';res.setEncoding('utf8');res.on('data',b=>text+=b);res.on('end',()=>resolve({status:res.statusCode,headers:res.headers,text,json:()=>JSON.parse(text)}))});req.setTimeout(15000,()=>req.destroy(new Error('Preview API timeout')));req.on('error',reject);req.end(bytes)})
+  await step('initialClinic',async()=>{await run([...compose,'exec','-T','mysql','sh','-ec',`MYSQL_PWD="$(cat /run/secrets/mysql_root_password)" exec mysql --user=root --execute="INSERT INTO adc_business.Clinic VALUES (1,'LOCAL-PREVIEW-C1','本地预览虚构诊所，请勿录入真实患者',NULL,'000',NULL,NULL,true,UTC_TIMESTAMP())"`]);return '1'})
+  const bootstrap=path.join(privateRoot,'preview-headquarters.json'),passwordFile=path.join(privateRoot,'preview-admin-password')
+  fs.writeFileSync(passwordFile,credentials.admin.password)
+  fs.writeFileSync(bootstrap,JSON.stringify({username:credentials.admin.username,staff_reference:'LOCAL_PREVIEW_SYNTHETIC_STAFF',operator_reference:'LOCAL_PREVIEW_SYNTHETIC_OPERATOR_ONLY_NOT_REAL_OWNER_RECORD',clinic_ids:['1'],capabilities:['account.manage','authorization.manage','resource.read','resource.write','analysis.read','cost.verify','performance.calculate','performance.publish','sensitive.drilldown','audit.read'],valid_until:null}))
+  await step('headquarters',async()=>{await run([...compose,'run','--rm','--no-deps','--entrypoint','java','-v',`${passwordFile}:/run/local-preview/preview-admin-password:ro`,'-v',`${bootstrap}:/run/local-preview/preview-headquarters.json:ro`,'-e','ADC_BOOTSTRAP_DB_PASSWORD_FILE=/run/secrets/spring.datasource.password','-e','ADC_BOOTSTRAP_PASSWORD_FILE=/run/local-preview/preview-admin-password','-e','ADC_BOOTSTRAP_INPUT_FILE=/run/local-preview/preview-headquarters.json','operator','-Xmx192m','-Dloader.main=com.adc.identity.bootstrap.HeadquartersBootstrap','-cp','/app/app.jar','org.springframework.boot.loader.launch.PropertiesLauncher']);return true})
+  async function login(account){let response=await request('GET','/auth/csrf');assert.equal(response.status,200);const csrf=response.json().csrf_token,preauth=response.headers['set-cookie'].map(c=>c.split(';')[0]).join('; ');response=await request('POST','/auth/staff-sessions',account,{Origin:origin,Cookie:preauth,'X-CSRF-Token':csrf});assert.equal(response.status,200);const identity=response.json();return {cookie:response.headers['set-cookie'].find(c=>c.startsWith('adc_session=')).split(';')[0],csrf:identity.csrf_token,subject:identity.subject_id}}
+  const admin=await login(credentials.admin)
+  async function api(actor,name,url,data,method='POST'){
+    if(!state.requests[name]){state.requests[name]={key:crypto.randomUUID(),url,data,method};save()}
+    const command=state.requests[name];assert.equal(command.url,url);assert.equal(command.method,method)
+    const response=await request(method,url,command.data,{Origin:origin,Cookie:actor.cookie,'X-CSRF-Token':actor.csrf,'Idempotency-Key':command.key});if(response.status!==200)throw new Error('Preview setup '+name+' rejected ('+response.status+', '+response.json().code+'); original key retained');return response.json()
+  }
+  await step('headquartersExtra',()=>api(admin,'headquartersExtra','/identity/grants',{subject_id:admin.subject,role:'HEADQUARTERS',clinic_ids:['1'],capabilities:['correctTreatmentPrice','getInvoice'],valid_from:new Date().toISOString(),valid_until:null}))
+  const dentist=await step('dentist',()=>api(admin,'dentist','/dentists',{employee_number:'PREVIEW-D1',full_name:'林医生（虚构预览）',date_of_birth:'1980-01-02',phone:'000',hire_date:'2020-01-01',is_active:true}))
+  await step('assignment',()=>api(admin,'assignment',`/dentists/${dentist.dentist_id}/clinic-assignments`,{clinic_id:'1',start_date:'2020-01-01',end_date:null,is_active:true}))
+  const qualification=await step('qualification',()=>api(admin,'qualification','/qualifications',{qualification_name:'牙科基础资质（虚构预览）',is_active:true}))
+  await step('certificate',()=>api(admin,'certificate',`/dentists/${dentist.dentist_id}/qualifications`,{qualification_id:qualification.qualification_id,certificate_number:'LOCAL-PREVIEW-CERT',granted_date:'2020-01-01',expiry_date:null,verification_status:'VERIFIED',verification_reference:'LOCAL_PREVIEW_SYNTHETIC_CERTIFICATE_NOT_REAL_QUALIFICATION'}))
+  const treatment=await step('treatment',()=>api(admin,'treatment','/treatments',{treatment_code:'PREVIEW-CHECK',treatment_name:'常规检查（虚构预览）',default_unit_price:'150.00',is_active:true}))
+  await step('requirements',()=>api(admin,'requirements',`/treatments/${treatment.treatment_id}/qualification-requirements`,{requirements:[{qualification_id:qualification.qualification_id,is_mandatory:true}]},'PUT'))
+  await step('allergy',()=>api(admin,'allergy','/allergies',{allergy_name:'乳胶（虚构预览目录）',is_active:true}))
+  const capabilities={frontdesk:['searchAppointmentCandidates','listAppointments','createAppointment','getAppointment','attendAppointment','cancelAppointment','markNoShow','rescheduleAppointment','listSchedules','createSchedule','suspendSchedule','createPatient','getPatient','updatePatient','reviewPatientAllergies','addPatientAllergy','listPatientAllergies','correctPatientAllergy','retractPatientAllergy','listBindingRequests','approvePatientBinding','rebindPatient','revokePatientBinding'],dentist:['listAppointments','getAppointment','completeAppointment','updateClinicalNotes','recordAppliedTreatment','getClinicalContext','getAppliedTreatment'],cashier:['listAppointments','getAppointment','invoiceAppointment','getInvoice']}
+  for(const role of ['frontdesk','dentist','cashier']){
+    const account=await step(role+'Account',()=>api(admin,role+'Account','/identity/staff-accounts',{username:credentials[role].username,staff_reference:'LOCAL_PREVIEW_SYNTHETIC_'+role.toUpperCase(),dentist_id:role==='dentist'?dentist.dentist_id:null}))
+    await step(role+'Credential',()=>api(admin,role+'Credential',`/identity/staff-accounts/${account.subject_id}/credential-recovery`,{verification_reference:'LOCAL_PREVIEW_SYNTHETIC_IDENTIFICATION',reason:'仅本机合成演示账号，不是真实员工核验',replacement_password:credentials[role].password}))
+    await step(role+'Grant',()=>api(admin,role+'Grant','/identity/grants',{subject_id:account.subject_id,role:{frontdesk:'RECEPTION',dentist:'DENTIST',cashier:'CASHIER'}[role],clinic_ids:['1'],capabilities:capabilities[role],valid_from:new Date().toISOString(),valid_until:null}))
+  }
+  const reception=await login(credentials.frontdesk)
+  const basis={clinic_id:'1',person_confirmed:true,service_basis:'LOCAL_PREVIEW_SYNTHETIC_PATIENT_ONLY_NOT_REAL_PERSON'}
+  const patient=await step('patient',()=>api(reception,'patient','/patients',{full_name:'预览患者（虚构）',date_of_birth:'1990-01-02',phone:'000',billing_address:'仅本机演示，请勿录入真实隐私',emergency_contact_name:'虚构联系人',emergency_contact_phone:'000',verification_basis:basis}))
+  const proof=await step('patientVerification',()=>api(reception,'patientVerification','/patients/lookup',{patient_number:patient.patient_number,date_of_birth:patient.date_of_birth,verification_basis:basis}))
+  const reviewed=await step('allergyReview',()=>api(reception,'allergyReview',`/patients/${patient.patient_id}/allergy-reviews`,{allergy_review_status:'NO_KNOWN',verification_reference:proof.verification_reference,reason:'合成患者预览数据：无已知过敏'}))
+  await step('booking',async()=>{
+    const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()).map(p=>[p.type,p.value]));let date=`${parts.year}-${parts.month}-${parts.day}`,minutes=Math.ceil((Number(parts.hour)*60+Number(parts.minute)+3)/20)*20
+    if(minutes+60>=1440){date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Shanghai',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date(Date.now()+86400000));minutes=540}
+    const time=m=>`${String(Math.floor(m/60)).padStart(2,'0')}:${String(m%60).padStart(2,'0')}:00`,schedule=await step('schedule',()=>api(reception,'schedule','/schedules',{dentist_id:dentist.dentist_id,clinic_id:'1',schedule_date:date,start_time:time(minutes),end_time:time(minutes+60),slot_minutes:20,note:'仅本机虚构预览出诊班次'}))
+    const scheduled=`${schedule.schedule_date}T${schedule.start_time}+08:00`,details={full_name:patient.full_name,date_of_birth:patient.date_of_birth,phone:patient.phone,billing_address:patient.billing_address,email:patient.email??null,emergency_contact_name:patient.emergency_contact_name,emergency_contact_phone:patient.emergency_contact_phone}
+    return api(reception,'booking','/appointments',{clinic_id:'1',schedule_id:schedule.schedule_id,scheduled_at:scheduled,requested_treatment_ids:[treatment.treatment_id],patient_id:patient.patient_id,patient_verification_reference:proof.verification_reference,patient_details:details,allergy_confirmation_reference:reviewed.allergy_confirmation_reference,allergy_declaration:{review_status:'NO_KNOWN',records:[],confirmed:true}})
+  })
+  for(const role of ['dentist','cashier']){const actor=await login(credentials[role]),response=await request('GET','/me',undefined,{Cookie:actor.cookie});assert.equal(response.status,200)}
+  const lines=['仅本机预览：全部为合成账号/患者/资质，请勿录入真实隐私。',origin,'首次浏览器需确认 localhost 的本地自签名证书。','',...Object.entries(credentials).flatMap(([role,account])=>[`${role}: ${account.username}`,`口令: ${account.password}`,'']),'真实微信登录/绑定与正式HTTPS仍待ICP及合法域名联调。'];fs.writeFileSync(path.join(privateRoot,'预览登录资料.txt'),lines.join('\r\n'))
+  const result={date:new Date().toISOString(),purpose:state.purpose,url:origin,project,database_persistent:true,loopback_only:true,synthetic_data:true,clinical_data_written_directly:false,initial_synthetic_clinic_precondition:true,existing_healthy_services_reused:alreadyHealthy,existing_seed_steps_reused:existingSeedSteps,credentials_file:path.join(privateRoot,'预览登录资料.txt'),patient_number:patient.patient_number,appointment_id:state.items.booking.appointment_id,real_wechat_verified:false,production_deployed:false,ready:true};fs.writeFileSync(path.join(root,'docs/verification/local-preview.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result))
+}catch(error){console.error(error.message);process.exitCode=1}finally{log.end()}

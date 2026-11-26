@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.AppointmentRequestedTreatmentMapper">
+  <resultMap id="row" type="com.adc.domain.model.AppointmentRequestedTreatment">
+    <constructor>
+      <idArg column="appointment_id" javaType="java.lang.Long"/>
+      <idArg column="treatment_id" javaType="java.lang.Long"/>
+      <arg column="request_note" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `appointment_id`, `treatment_id`, `request_note` FROM adc_business.`AppointmentRequestedTreatment` WHERE `appointment_id` = #{appointment_id} AND `treatment_id` = #{treatment_id}
+  </select>
+</mapper>

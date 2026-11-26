@@ -1,0 +1,457 @@
+{
+  "real_security_and_controllers" : true,
+  "transport" : "in-process MockMvc; no mocked business services or database",
+  "permission_cases" : [ {
+    "actor" : "authenticated staff without grants",
+    "operation" : "requestPatientBinding",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getPatientBinding",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listBindingRequests",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "approvePatientBinding",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "rebindPatient",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "revokePatientBinding",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createStaffAccount",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listStaffAccounts",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "activateStaffAccount",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "deactivateStaffAccount",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "credentialrecoveryStaffAccount",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createClinicGrant",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listClinicGrants",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "revokeClinicGrant",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getRequestResult",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "searchAppointmentCandidates",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listAppointments",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "attendAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "cancelAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "markNoShow",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "rescheduleAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "completeAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "invoiceAppointment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listSchedules",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createSchedule",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "suspendSchedule",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updateClinicalNotes",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "recordAppliedTreatment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "correctTreatmentPrice",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getInvoice",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createPatient",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getPatient",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updatePatient",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "reviewPatientAllergies",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "addPatientAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listPatientAllergies",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "correctPatientAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "retractPatientAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listClinic",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createClinic",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getClinic",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updateClinic",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listDentist",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createDentist",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getDentist",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updateDentist",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listQualification",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createQualification",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getQualification",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updateQualification",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listTreatment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createTreatment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getTreatment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updateTreatment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "updateAllergy",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "maintainDentistQualification",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "maintainDentistAssignment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "setTreatmentRequirements",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "recordCostEntry",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listCostEntries",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "reverseCostEntry",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "prepareQuarterPerformance",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "calculateQuarterPerformance",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listQuarterPerformance",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getQuarterPerformanceSources",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "publishQuarterPerformance",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getAnalysis",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "searchAuditEvents",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getClinicalContext",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getAppliedTreatment",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getCostEntry",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "lookupPatient",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "registerSelfPatient",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "createBookingHold",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "listPatientBills",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getPatientBill",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "payDemoBill",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "closePatientBill",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "refundPatientBill",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "getRegistrationFee",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "actor" : "authenticated staff without grants",
+    "operation" : "setRegistrationFee",
+    "forged_role_header_ignored" : true,
+    "status" : 403
+  }, {
+    "operation" : "createStaffSession",
+    "actor" : "owned real authentication flow; controlled provider boundary only",
+    "status" : 200
+  }, {
+    "operation" : "getCurrentIdentity",
+    "actor" : "owned real authentication flow; controlled provider boundary only",
+    "status" : 200
+  }, {
+    "operation" : "createWechatSession",
+    "actor" : "owned real authentication flow; controlled provider boundary only",
+    "status" : 200
+  }, {
+    "operation" : "logout",
+    "actor" : "owned real authentication flow; controlled provider boundary only",
+    "status" : 204
+  }, {
+    "operation" : "initializeWebCsrf",
+    "actor" : "owned real authentication flow; controlled provider boundary only",
+    "status" : 200
+  } ],
+  "real_mysql" : true,
+  "operations_declared" : 91
+}

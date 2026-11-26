@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-17T15:49:28.043Z",
+  "changed_files": [
+    {
+      "file": "apps/patient-miniprogram/miniprogram/pages/patients/index.wxml",
+      "sha256": "e2e3ab4688d6136ac12f83183b82dc967fadd54cb04a1ea5e46e73d90df48abf"
+    },
+    {
+      "file": "apps/patient-miniprogram/miniprogram/pages/patient-bindings/index.wxml",
+      "sha256": "ead0725b2510b6fe4f7ba675f6ce234859bc3662ca77b924567d2413f947dc70"
+    },
+    {
+      "file": "apps/patient-miniprogram/miniprogram/pages/appointment-cancellation/index.wxml",
+      "sha256": "af8872cebfd59170f100964ec703430fb05fbb39baed6fbab6ca1470aad0c5e6"
+    },
+    {
+      "file": "apps/patient-miniprogram/scripts/build.mjs",
+      "sha256": "cc2426e55ea2ab5d83c997f4b4da8b4159154daeffcb82e304758da288ac0f2c"
+    }
+  ],
+  "regression_reproduced_before_fix": true,
+  "native_conditional_render_scenarios_passed": 6,
+  "login_unit_tests_passed": 6,
+  "local_verify_and_build_passed": true,
+  "business_contract_or_database_changed": false
+}

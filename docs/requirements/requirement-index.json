@@ -1,0 +1,398 @@
+[
+  {
+    "id": "UC01",
+    "name": "预约就诊",
+    "figures": [
+      "B1",
+      "C4",
+      "C13",
+      "C14",
+      "C15",
+      "C16",
+      "C12"
+    ],
+    "tables": [
+      "Patient",
+      "Allergy",
+      "PatientAllergy",
+      "Clinic",
+      "Dentist",
+      "DentistSchedule",
+      "TreatmentQualification",
+      "Appointment",
+      "AppointmentRequestedTreatment",
+      "AppointmentEvent",
+      "RegistrationFeePolicy",
+      "BookingHold",
+      "PatientBill",
+      "PaymentOrder",
+      "RefundOrder"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [
+      "DentistQualification",
+      "TreatmentQualification",
+      "DentistClinicAssignment",
+      "Treatment"
+    ],
+    "all_related_tables": [
+      "Patient",
+      "Allergy",
+      "PatientAllergy",
+      "Clinic",
+      "Dentist",
+      "DentistSchedule",
+      "TreatmentQualification",
+      "Appointment",
+      "AppointmentRequestedTreatment",
+      "AppointmentEvent",
+      "DentistQualification",
+      "DentistClinicAssignment",
+      "Treatment",
+      "RegistrationFeePolicy",
+      "BookingHold",
+      "PatientBill",
+      "PaymentOrder",
+      "RefundOrder"
+    ]
+  },
+  {
+    "id": "UC02",
+    "name": "管理出诊排班",
+    "figures": [
+      "B1",
+      "C5"
+    ],
+    "tables": [
+      "DentistClinicAssignment",
+      "DentistSchedule"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [
+      "Appointment",
+      "AppointmentEvent"
+    ],
+    "all_related_tables": [
+      "DentistClinicAssignment",
+      "DentistSchedule",
+      "Appointment",
+      "AppointmentEvent"
+    ]
+  },
+  {
+    "id": "UC03",
+    "name": "记录治疗",
+    "figures": [
+      "B1",
+      "C6",
+      "C12"
+    ],
+    "tables": [
+      "Treatment",
+      "Appointment",
+      "AppliedTreatment",
+      "AppointmentEvent"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [
+      "Dentist",
+      "DentistQualification",
+      "DentistClinicAssignment",
+      "Qualification",
+      "Invoice"
+    ],
+    "all_related_tables": [
+      "Treatment",
+      "Appointment",
+      "AppliedTreatment",
+      "AppointmentEvent",
+      "Dentist",
+      "DentistQualification",
+      "DentistClinicAssignment",
+      "Qualification",
+      "Invoice"
+    ]
+  },
+  {
+    "id": "UC04",
+    "name": "结算就诊",
+    "figures": [
+      "B1",
+      "C7",
+      "C12"
+    ],
+    "tables": [
+      "Invoice",
+      "InvoiceItem",
+      "AppointmentEvent",
+      "PatientBill",
+      "PaymentOrder",
+      "RefundOrder"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [
+      "Appointment",
+      "AppointmentEvent",
+      "AppliedTreatment",
+      "Treatment"
+    ],
+    "all_related_tables": [
+      "Invoice",
+      "InvoiceItem",
+      "AppointmentEvent",
+      "Appointment",
+      "AppliedTreatment",
+      "Treatment",
+      "PatientBill",
+      "PaymentOrder",
+      "RefundOrder"
+    ]
+  },
+  {
+    "id": "UC05",
+    "name": "维护患者资料",
+    "figures": [
+      "B1",
+      "C8"
+    ],
+    "tables": [
+      "Patient",
+      "Allergy",
+      "PatientAllergy"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [],
+    "all_related_tables": [
+      "Patient",
+      "Allergy",
+      "PatientAllergy"
+    ]
+  },
+  {
+    "id": "UC06",
+    "name": "维护组织资源",
+    "figures": [
+      "B1",
+      "C9"
+    ],
+    "tables": [
+      "Clinic",
+      "Dentist",
+      "Qualification",
+      "DentistQualification",
+      "DentistClinicAssignment",
+      "TreatmentQualification",
+      "RegistrationFeePolicy"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [],
+    "all_related_tables": [
+      "Clinic",
+      "Dentist",
+      "Qualification",
+      "DentistQualification",
+      "DentistClinicAssignment",
+      "TreatmentQualification",
+      "RegistrationFeePolicy"
+    ]
+  },
+  {
+    "id": "UC07",
+    "name": "核算季度绩效",
+    "figures": [
+      "B1",
+      "C10"
+    ],
+    "tables": [
+      "CostEntry",
+      "QuarterlyPerformance"
+    ],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [
+      "Invoice",
+      "InvoiceItem",
+      "AppliedTreatment",
+      "Dentist",
+      "DentistSchedule",
+      "DentistClinicAssignment",
+      "Clinic"
+    ],
+    "all_related_tables": [
+      "CostEntry",
+      "QuarterlyPerformance",
+      "Invoice",
+      "InvoiceItem",
+      "AppliedTreatment",
+      "Dentist",
+      "DentistSchedule",
+      "DentistClinicAssignment",
+      "Clinic"
+    ]
+  },
+  {
+    "id": "UC08",
+    "name": "运营分析",
+    "figures": [
+      "B1",
+      "C11"
+    ],
+    "tables": [],
+    "basis": "Word表D1直接映射；补充读取表见read_tables",
+    "read_tables": [
+      "Appointment",
+      "AppliedTreatment",
+      "Treatment",
+      "DentistSchedule",
+      "DentistQualification",
+      "Qualification",
+      "DentistClinicAssignment",
+      "Dentist",
+      "QuarterlyPerformance",
+      "Clinic"
+    ],
+    "all_related_tables": [
+      "Appointment",
+      "AppliedTreatment",
+      "Treatment",
+      "DentistSchedule",
+      "DentistQualification",
+      "Qualification",
+      "DentistClinicAssignment",
+      "Dentist",
+      "QuarterlyPerformance",
+      "Clinic"
+    ]
+  },
+  {
+    "id": "SF01",
+    "name": "SF01 登录与退出",
+    "figures": [
+      "D2"
+    ],
+    "tables": [],
+    "read_tables": [],
+    "basis": "Word表B12b、D26；身份组件独立存储，未新增业务表"
+  },
+  {
+    "id": "SF02",
+    "name": "SF02 登记与关联本人档案",
+    "figures": [
+      "C4",
+      "C8",
+      "D2"
+    ],
+    "tables": [
+      "Patient"
+    ],
+    "read_tables": [
+      "Patient"
+    ],
+    "basis": "Word表B12b、D26；首次本人登记创建新Patient并自动关联，已有档案安全核实关联，存储结构保持既有定义"
+  },
+  {
+    "id": "SF03",
+    "name": "SF03 管理员工账号",
+    "figures": [
+      "D2"
+    ],
+    "tables": [],
+    "read_tables": [
+      "Dentist"
+    ],
+    "basis": "Word表B12b、D26；身份组件独立存储，未新增业务表"
+  },
+  {
+    "id": "SF04",
+    "name": "SF04 分配诊所权限",
+    "figures": [
+      "D2"
+    ],
+    "tables": [],
+    "read_tables": [
+      "Clinic"
+    ],
+    "basis": "Word表B12b、D26；身份组件独立存储，未新增业务表"
+  },
+  {
+    "id": "Q01",
+    "name": "Q01 易用性",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q02",
+    "name": "Q02 扩展性",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q03",
+    "name": "Q03 性能",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q04",
+    "name": "Q04 一致性",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q05",
+    "name": "Q05 备份恢复",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q06",
+    "name": "Q06 身份会话",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q07",
+    "name": "Q07 权限与敏感资料",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q08",
+    "name": "Q08 审计",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "Q09",
+    "name": "Q09 可维护性",
+    "figures": [],
+    "tables": [],
+    "basis": "Word表B12；统一适用用例的质量目标，不是新增业务表"
+  },
+  {
+    "id": "R1",
+    "name": "季度核算规则版本",
+    "figures": [
+      "C10",
+      "D1"
+    ],
+    "tables": [
+      "QuarterlyPerformance",
+      "CostEntry",
+      "Invoice",
+      "InvoiceItem",
+      "AppliedTreatment",
+      "Dentist",
+      "DentistSchedule",
+      "DentistClinicAssignment"
+    ],
+    "basis": "表B13、D22及D章（十五）原文"
+  }
+]

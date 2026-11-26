@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "started_at": "2026-11-26T02:31:02.594Z",
+  "finished_at": "2026-11-26T02:36:03.897Z",
+  "origin": "https://andrewdental.cn",
+  "vus": 5,
+  "duration_seconds": 300,
+  "requests": 750,
+  "p95_ms": 257.309055,
+  "unexpected_error_rate": 0,
+  "business_mutation_apis_called": false,
+  "independent_load_generator": true,
+  "cloud_full_scale_write_capacity_claimed": false
+}

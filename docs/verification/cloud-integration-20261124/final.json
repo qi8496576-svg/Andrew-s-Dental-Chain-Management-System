@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-11-24T06:01:19.268Z",
+  "T050": "PASS",
+  "T051": "PASS",
+  "url": "https://andrewdental.cn",
+  "release": "adc-cloud-20261124-1795497743389",
+  "public_https": {
+    "status": 200,
+    "tls_authorized": true
+  },
+  "scope": "owner-approved synthetic cloud integration, not production release",
+  "domain_icp": "owner confirmed passed",
+  "miniprogram_icp": "owner handles; no filing submission performed",
+  "frontend_tests": {
+    "typecheck": "PASS",
+    "unit_passed": 51,
+    "production_build": "PASS",
+    "clock_skew_browser_minutes": 5
+  },
+  "patient_tests": {
+    "unit_passed": 30,
+    "native_pages_compiled": 7,
+    "binding_ui_runtime": "PASS"
+  },
+  "real_provider_and_two_wechat_accounts_verified": true,
+  "real_device_readback": "PASS_OWNER_CONFIRMED",
+  "current_synthetic_patient_binding": "second WeChat account",
+  "business_schema": {
+    "tables": 19,
+    "columns": 163,
+    "foreign_keys": 30,
+    "migrations": 33,
+    "migration_fingerprints_unchanged": true
+  },
+  "evidence": [
+    "readiness.json",
+    "patient-admin.json",
+    "identity-edges.json",
+    "rebind.json",
+    "binding-ui.json"
+  ],
+  "remaining_tasks": [
+    "T052",
+    "T053",
+    "T054",
+    "T055",
+    "T056"
+  ],
+  "production_release": false,
+  "extension_hooks": "not registered"
+}

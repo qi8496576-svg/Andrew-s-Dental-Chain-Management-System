@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-11T09:58:23.034972+08:00",
+  "task": "T006",
+  "status": "PASS",
+  "backend_tests": 6,
+  "frontend_fixture_tests": 3,
+  "failures": 0,
+  "skipped": 0,
+  "production_jar_excludes_fixtures": true,
+  "protected_inputs_unchanged": [
+    "specs/001-system-specification/business-baseline-audit.json",
+    "specs/001-system-specification/business-baseline-audit.md",
+    "specs/001-system-specification/data-model.md",
+    "specs/001-system-specification/plan-approval.json",
+    "specs/001-system-specification/plan-approval.md",
+    "specs/001-system-specification/plan-dependency-amendment.json",
+    "specs/001-system-specification/plan-dependency-amendment.md",
+    "specs/001-system-specification/plan-supplement-review.md",
+    "specs/001-system-specification/plan.md",
+    "specs/001-system-specification/preimplement-sync.json",
+    "specs/001-system-specification/quickstart.md",
+    "specs/001-system-specification/research.md",
+    "specs/001-system-specification/spec.md",
+    "specs/001-system-specification/task-traceability.md",
+    "specs/001-system-specification/tasks-catalog.json",
+    "specs/001-system-specification/tasks-validation.json",
+    "specs/001-system-specification/technical-data-model.md",
+    "specs/001-system-specification/technical-schema.json",
+    "specs/001-system-specification/traceability.md",
+    "specs/001-system-specification/checklists/requirements.md",
+    "specs/001-system-specification/contracts/api.md",
+    "specs/001-system-specification/contracts/identity.md",
+    "specs/001-system-specification/contracts/openapi.json",
+    "specs/001-system-specification/contracts/operations.md",
+    "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+    "specs/001-system-specification/diagrams/technical-erd.mmd",
+    "specs/001-system-specification/diagrams/technical-storage-overview.png",
+    "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+    ".specify/memory/constitution.md",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx",
+    "docs/diagrams/database/schema.json"
+  ],
+  "completed_tasks": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006"
+  ],
+  "tasks_count": 186,
+  "fingerprints": [
+    {
+      "path": "backend/src/test/java/com/adc/support/MySqlFixture.java",
+      "sha256": "f86ec529f325dc30670fd3a97b345e42279fb7d47eb9cdf5bae6496d230320d8"
+    },
+    {
+      "path": "backend/src/test/java/com/adc/support/MySqlFixtureIT.java",
+      "sha256": "ebd87dc3a90e3b92b1870cd25934ba34b6e1e269a8dfe884d7f7408164017bf1"
+    },
+    {
+      "path": "backend/src/test/resources/fixtures/adc-fictional.json",
+      "sha256": "3f0931fc8a9322d80c277b1a0995527e6b8540930c0c52518a5809e7642fbcef"
+    },
+    {
+      "path": "docs/verification/archive/t006-success/TEST-com.adc.BuildSmokeTest.xml",
+      "sha256": "d3fd7cf3cac6ff96c8d5e45501e2e37a8c79a31e5517866fb3ac9806b8ab37ea"
+    },
+    {
+      "path": "docs/verification/archive/t006-success/TEST-com.adc.infrastructure.MySqlEnvironmentIT.xml",
+      "sha256": "b222651a29b23a24aaaec4a6bf3483582d977ec18caea0a31048f82e655a4f91"
+    },
+    {
+      "path": "docs/verification/archive/t006-success/TEST-com.adc.support.MySqlFixtureIT.xml",
+      "sha256": "e618af8131365c3c9d965c571827fa89207aedad9fe3eab30149a4341774d067"
+    },
+    {
+      "path": "docs/verification/implementation-status.md",
+      "sha256": "17b6bebcde3910f91c5cf0515937dd9d68af3f63600634dd1e54089a43aa1fa0"
+    },
+    {
+      "path": "docs/verification/README.md",
+      "sha256": "a0e519953cd13caf92c6788ac58646b4ee02cb12d87abc7d90d1b4899af6db9c"
+    },
+    {
+      "path": "docs/verification/t006-build-result.json",
+      "sha256": "7ac0833116655552538c73bd13e4f85730f8a93224d72cceac45bcf3ced06cb1"
+    },
+    {
+      "path": "docs/verification/t006-build.log",
+      "sha256": "03ec4145f3ab859a8bbe088139b64f468019fe3c905ea751537da14603dfdf0d"
+    },
+    {
+      "path": "docs/verification/t006-fixtures.md",
+      "sha256": "ac949828ff41fdb01139a0253c3c1a44235c0b499d04870d39d7d70197c11bac"
+    },
+    {
+      "path": "docs/verification/t006-frontend-ci.log",
+      "sha256": "9d2032ed89a718a734309e677c2c03319db74c07333bdbcf77ed937a0643c36b"
+    },
+    {
+      "path": "docs/verification/t006-frontend-tests.xml",
+      "sha256": "ce0ff984a4d97d8df7a8876aa0c7e906ad0b2245dbc23deae7e652692c93b820"
+    },
+    {
+      "path": "docs/verification/t006-frontend-typecheck.log",
+      "sha256": "0158d38db8797a40f9623baee07cf4b000f7522e8a15e161d448e872070afed5"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "5cb21020afe7483b3c2af48502686ec194c1a2a8ef22f5d4ed3e32024620506c"
+    },
+    {
+      "path": "tests/e2e/.npmrc",
+      "sha256": "60d44b93ef9759dc1b8b8df67d4fabd8e41af6a9956fefb5128166644c9c7298"
+    },
+    {
+      "path": "tests/e2e/fixtures.test.ts",
+      "sha256": "04b27207caa1901aec585f0be3034bc6368a269ddade8532d35ec3819e60c3d1"
+    },
+    {
+      "path": "tests/e2e/fixtures.ts",
+      "sha256": "4559ba9b7fe3e56d8f297407b14ec6f22c1b446c349500e745511e8a02962508"
+    },
+    {
+      "path": "tests/e2e/package-lock.json",
+      "sha256": "ba4884403809fb7c1011b73c52a066ff61cb6adf3e5dbc95744a9610f7fbddba"
+    },
+    {
+      "path": "tests/e2e/package.json",
+      "sha256": "a508bbfc4d406e1522e9a96786d346ef9a4d477cecee7a16e0390577d8fe1f59"
+    },
+    {
+      "path": "tests/e2e/tsconfig.json",
+      "sha256": "13c5d58c8edd2986c74f20e3e6b0ecd7b26cb03063002633086b0e19a1f31d1f"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+name: adc-migrate
+services:
+  migrate:
+    image: eclipse-temurin:21.0.9_10-jre-jammy@sha256:5cbbc80ec3f79faeba17a0551a77b260040da7a9e3b398dac0e681e84a4d8032
+    platform: linux/amd64
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    tmpfs: [/tmp:size=64m,mode=1777]
+    restart: "no"
+    environment:
+      ADC_MIGRATION_URL: ${ADC_MIGRATION_URL:?Supply isolated or approved target JDBC URL}
+      ADC_MIGRATION_USERNAME: adc_migrator
+      ADC_MIGRATION_PASSWORD_FILE: /run/secrets/migration_password
+    secrets: [migration_password]
+    volumes:
+      - ../../backend/target/adc-backend-0.1.0-SNAPSHOT.jar:/app/backend.jar:ro
+    entrypoint: [java, -Dloader.main=com.adc.infrastructure.MigrationMain, -cp, /app/backend.jar, org.springframework.boot.loader.launch.PropertiesLauncher]
+    networks: [database]
+secrets:
+  migration_password:
+    file: ${ADC_MIGRATION_PASSWORD_FILE:?Supply secret file outside source control}
+networks:
+  database:
+    external: true
+    name: ${ADC_DATABASE_NETWORK:?Supply the target database Docker network}

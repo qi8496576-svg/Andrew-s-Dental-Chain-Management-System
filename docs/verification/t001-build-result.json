@@ -1,0 +1,25 @@
+{
+  "started_at": "2026-11-10T10:53:00.1946707+08:00",
+  "finished_at": "2026-11-10T10:54:39.8352807+08:00",
+  "exit_code": 0,
+  "commands": [
+    "--batch-mode",
+    "--no-transfer-progress",
+    "--strict-checksums",
+    "--settings",
+    "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\backend\\.mvn\\settings.xml",
+    "--global-settings",
+    "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\backend\\.mvn\\settings.xml",
+    "-Dmaven.repo.local=D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\tmp\\maven-tls-probe\\repository",
+    "-Dstyle.color=never",
+    "clean",
+    "verify",
+    "org.apache.maven.plugins:maven-help-plugin:3.5.1:effective-pom",
+    "-Doutput=D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\docs\\verification\\t001-effective-pom.xml",
+    "org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree",
+    "-DoutputFile=D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\docs\\verification\\t001-dependency-tree.txt"
+  ],
+  "real_database_tested": false,
+  "container_runtime_tested": false,
+  "production_ready": false
+}

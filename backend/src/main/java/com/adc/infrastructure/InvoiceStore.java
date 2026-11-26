@@ -1,0 +1,26 @@
+package com.adc.infrastructure;
+import com.adc.domain.shared.DomainFailure;
+import java.math.BigDecimal;
+import java.time.*;
+import java.util.*;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class InvoiceStore {
+    private final JdbcTemplate db;private final Clock clock;
+    public InvoiceStore(JdbcTemplate db,Clock clock){this.db=db;this.clock=clock;}
+    public record Line(long applied,long appointment,Long dentist,String name,BigDecimal units,BigDecimal price,BigDecimal subtotal) { }
+    public Map<String,Object> preview(long appointment){
+        var result=db.queryForObject("SELECT p.full_name,p.patient_number,c.clinic_code clinic_name FROM adc_business.Appointment a JOIN adc_business.Patient p ON p.patient_id=a.patient_id JOIN adc_business.Clinic c ON c.clinic_id=a.clinic_id WHERE a.appointment_id=?",(r,n)->{var row=new LinkedHashMap<String,Object>();row.put("appointment_id",Long.toString(appointment));row.put("patient_name",r.getString(1));row.put("patient_number",r.getString(2));row.put("clinic_name",r.getString(3));return row;},appointment);
+        var lines=lines(appointment);com.adc.domain.invoicing.InvoiceRules.completed("COMPLETED",!lines.isEmpty());for(var line:lines)com.adc.domain.invoicing.InvoiceRules.line(line.units.toPlainString(),line.price.toPlainString(),line.subtotal.toPlainString());
+        result.put("items",lines.stream().map(line->Map.of("treatment_name",line.name,"standard_units",line.units.toPlainString(),"unit_price",line.price.toPlainString(),"subtotal",line.subtotal.toPlainString())).toList());result.put("total_amount",com.adc.domain.invoicing.InvoiceRules.sum(lines.stream().map(Line::subtotal).toList()).toPlainString());return result;
+    }
+    public Long existing(long appointment){var rows=db.query("SELECT invoice_id FROM adc_business.Invoice WHERE appointment_id=?",(r,n)->r.getLong(1),appointment);return rows.isEmpty()?null:rows.getFirst();}
+    public long appointment(long id){var rows=db.query("SELECT appointment_id FROM adc_business.Invoice WHERE invoice_id=?",(r,n)->r.getLong(1),id);if(rows.isEmpty())throw new DomainFailure(404,"OBJECT_NOT_ACCESSIBLE");return rows.getFirst();}
+    public List<Line> lines(long appointment){return db.query("SELECT a.applied_treatment_id,a.appointment_id,a.dentist_id,t.treatment_name,a.standard_units,a.unit_price,a.subtotal FROM adc_business.AppliedTreatment a LEFT JOIN adc_business.Treatment t ON t.treatment_id=a.treatment_id WHERE a.appointment_id=? ORDER BY a.performed_at,a.applied_treatment_id",(r,n)->new Line(r.getLong(1),r.getLong(2),r.getObject(3,Long.class),r.getString(4),r.getBigDecimal(5),r.getBigDecimal(6),r.getBigDecimal(7)),appointment);}
+    public boolean used(long id){return db.queryForObject("SELECT COUNT(*) FROM adc_business.InvoiceItem WHERE applied_treatment_id=?",Integer.class,id)>0;}
+    public long create(long appointment,List<Line> lines,BigDecimal total,String actor,String key){long invoice=Crypto.id();var now=LocalDateTime.ofInstant(clock.instant(),ZoneOffset.UTC);db.update("INSERT INTO adc_business.Invoice VALUES (?,?,?,?,?,'ISSUED',?)",invoice,"INV-"+invoice,appointment,now,total,now);int number=1;for(var line:lines)db.update("INSERT INTO adc_business.InvoiceItem VALUES (?,?,?,?,?,?,?,?)",Crypto.id(),invoice,line.applied,number++,line.name,line.units,line.price,line.subtotal);if(db.update("UPDATE adc_business.Appointment SET status='INVOICED',updated_at=? WHERE appointment_id=? AND status='COMPLETED'",now,appointment)!=1)throw new DomainFailure(409,"APPOINTMENT_STATE_CONFLICT");db.update("INSERT INTO adc_business.AppointmentEvent VALUES (?,?,'INVOICE','COMPLETED','INVOICED',?,'CASHIER',?,NULL,?,NULL)",Crypto.id(),appointment,now,actor,key);return invoice;}
+    public void ensureBill(long invoice){new PatientBillingStore(db,clock).treatmentBill(invoice);}
+    public Map<String,Object> view(long invoice){var rows=db.query("SELECT invoice_id,invoice_number,appointment_id,issued_at,total_amount FROM adc_business.Invoice WHERE invoice_id=?",(r,n)->{var row=new LinkedHashMap<String,Object>();row.put("invoice_id",r.getString(1));row.put("invoice_number",r.getString(2));row.put("appointment_id",r.getString(3));row.put("issued_at",r.getObject(4,LocalDateTime.class).toInstant(ZoneOffset.UTC).toString());row.put("total_amount",r.getBigDecimal(5).toPlainString());return row;},invoice);if(rows.isEmpty())throw new DomainFailure(404,"OBJECT_NOT_ACCESSIBLE");var row=rows.getFirst();if(db.queryForObject("SELECT COUNT(*) FROM adc_business.InvoiceItem i JOIN adc_business.AppliedTreatment a ON a.applied_treatment_id=i.applied_treatment_id WHERE i.invoice_id=? AND a.appointment_id<>?",Integer.class,invoice,Long.parseLong((String)row.get("appointment_id")))>0)throw new DomainFailure(422,"INVALID_INVOICE_SOURCE");row.put("items",db.query("SELECT line_number,applied_treatment_id,treatment_name,standard_units,unit_price,subtotal FROM adc_business.InvoiceItem WHERE invoice_id=? ORDER BY line_number",(r,n)->Map.<String,Object>of("line_number",r.getInt(1),"applied_treatment_id",r.getString(2),"treatment_name",r.getString(3),"standard_units",r.getBigDecimal(4).toPlainString(),"unit_price",r.getBigDecimal(5).toPlainString(),"subtotal",r.getBigDecimal(6).toPlainString()),invoice));return row;}
+}

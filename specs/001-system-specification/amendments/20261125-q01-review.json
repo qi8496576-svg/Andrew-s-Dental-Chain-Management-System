@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-25",
+  "status": "superseded",
+  "patient_testers": 3,
+  "patient_trials_each": 2,
+  "manager_reviewers": 1,
+  "manager_cases": 19,
+  "manager_frontdesk_booking_trials": 2,
+  "manager_dentist_treatment_trials": 2,
+  "briefing_minutes": 30,
+  "booking_operations_max": 4,
+  "treatment_operations_max": 3,
+  "actual_role_and_clinic_permissions_preserved": true,
+  "patient_results": "NOT_RUN",
+  "manager_results": "NOT_RUN",
+  "source": "患者由负责人安排，管理者验收全部业务工人功能",
+  "superseded_by": "20261126-q01-automation.json"
+}

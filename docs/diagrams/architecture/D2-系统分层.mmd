@@ -1,0 +1,8 @@
+flowchart TB
+  patient["患者端 · 微信小程序<br/>首次登记 · 预约 · 本人记录"] --> api
+  staff["工作人员 · Web 管理端<br/>日常业务 · 系统配置"] --> api
+  api["统一业务 API 与身份授权<br/>首次登记自动关联；已有档案安全核实<br/>校验本人范围、岗位及诊所权限"]
+  api --> application["应用层<br/>编排预约、治疗、结算及核算用例；划定事务"]
+  application --> domain["领域层<br/>执行资质、状态、计价及分摊规则"]
+  domain --> mapper["数据访问层<br/>装载及保存对象、关联、事件与快照"]
+  mapper --> infra["关系数据库 · 审计基础设施"]

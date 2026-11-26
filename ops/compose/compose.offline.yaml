@@ -1,0 +1,8 @@
+# Distribution-only override: docker load retained this EXACT approved immutable image ID
+# while losing the mysql@ registry name. No alternate MySQL image or version is accepted.
+# Use together with compose.prod.yaml and --pull never after verify-candidate.py succeeds.
+services:
+  mysql:
+    image: sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d
+  runtime-grants:
+    image: sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d

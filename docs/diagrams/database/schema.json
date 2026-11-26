@@ -1,0 +1,1866 @@
+[
+  {
+    "caption": "D3",
+    "name": "Patient",
+    "label": "患者",
+    "word_block": 387,
+    "fields": [
+      {
+        "name": "patient_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "patient_number",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "date_of_birth",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "billing_address",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(254)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "emergency_contact_name",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "emergency_contact_phone",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "allergy_review_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D4",
+    "name": "Allergy",
+    "label": "过敏症",
+    "word_block": 390,
+    "fields": [
+      {
+        "name": "allergy_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "allergy_name",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "description",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D5",
+    "name": "PatientAllergy",
+    "label": "患者过敏症",
+    "word_block": 393,
+    "fields": [
+      {
+        "name": "patient_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Patient.patient_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "allergy_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Allergy.allergy_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "noted_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "severity_note",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "clinical_note",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "is_retracted",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "audit_history",
+        "type": "JSON",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D6",
+    "name": "Clinic",
+    "label": "诊所",
+    "word_block": 396,
+    "fields": [
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "clinic_code",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "postal_address",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "manager_name",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(254)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "office_area_sqm",
+        "type": "DECIMAL(8,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D7",
+    "name": "Dentist",
+    "label": "牙医",
+    "word_block": 399,
+    "fields": [
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "employee_number",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "full_name",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "date_of_birth",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "home_address",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(254)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "hire_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "termination_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "professional_title",
+        "type": "VARCHAR(40)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "specialty",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "introduction",
+        "type": "VARCHAR(1000)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D8",
+    "name": "Qualification",
+    "label": "专业资质",
+    "word_block": 402,
+    "fields": [
+      {
+        "name": "qualification_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "qualification_name",
+        "type": "VARCHAR(120)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "description",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D9",
+    "name": "DentistQualification",
+    "label": "牙医专业资质",
+    "word_block": 405,
+    "fields": [
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "qualification_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Qualification.qualification_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "certificate_number",
+        "type": "VARCHAR(60)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "granted_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "expiry_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "verification_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D10",
+    "name": "DentistClinicAssignment",
+    "label": "牙医诊所委派",
+    "word_block": 408,
+    "fields": [
+      {
+        "name": "assignment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "start_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "end_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "availability_note",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D11",
+    "name": "DentistSchedule",
+    "label": "出诊排班",
+    "word_block": 412,
+    "fields": [
+      {
+        "name": "schedule_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "UNIQUE(条件组合)"
+      },
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "schedule_date",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(条件组合)"
+      },
+      {
+        "name": "start_time",
+        "type": "TIME",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(条件组合)"
+      },
+      {
+        "name": "end_time",
+        "type": "TIME",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "slot_minutes",
+        "type": "SMALLINT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "schedule_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "note",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D12",
+    "name": "Treatment",
+    "label": "治疗项目",
+    "word_block": 414,
+    "fields": [
+      {
+        "name": "treatment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "treatment_code",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "treatment_name",
+        "type": "VARCHAR(120)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "description",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "default_unit_price",
+        "type": "DECIMAL(12,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D13",
+    "name": "TreatmentQualification",
+    "label": "治疗所需资质",
+    "word_block": 417,
+    "fields": [
+      {
+        "name": "treatment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Treatment.treatment_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "qualification_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Qualification.qualification_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "is_mandatory",
+        "type": "BOOLEAN",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D14",
+    "name": "Appointment",
+    "label": "就诊",
+    "word_block": 420,
+    "fields": [
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "patient_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Patient.patient_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "schedule_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "DentistSchedule.schedule_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "scheduled_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "problems_or_special_needs",
+        "type": "TEXT",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "completed_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "attended_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "cancelled_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "cancellation_reason",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "cancellation_kind",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "rescheduled_from_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": true,
+        "unique": "UNIQUE"
+      }
+    ]
+  },
+  {
+    "caption": "D15",
+    "name": "AppointmentRequestedTreatment",
+    "label": "就诊期望治疗",
+    "word_block": 423,
+    "fields": [
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Appointment.appointment_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "treatment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Treatment.treatment_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "request_note",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D16",
+    "name": "AppliedTreatment",
+    "label": "施用治疗",
+    "word_block": 426,
+    "fields": [
+      {
+        "name": "applied_treatment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "treatment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Treatment.treatment_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "standard_units",
+        "type": "DECIMAL(10,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "unit_price",
+        "type": "DECIMAL(12,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "subtotal",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "performed_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D17",
+    "name": "Invoice",
+    "label": "结算单",
+    "word_block": 429,
+    "fields": [
+      {
+        "name": "invoice_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "invoice_number",
+        "type": "VARCHAR(40)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "issued_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "total_amount",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "invoice_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D18",
+    "name": "InvoiceItem",
+    "label": "结算单明细",
+    "word_block": 432,
+    "fields": [
+      {
+        "name": "invoice_item_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "invoice_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Invoice.invoice_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "applied_treatment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "AppliedTreatment.applied_treatment_id",
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "line_number",
+        "type": "INT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "treatment_name",
+        "type": "VARCHAR(120)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "standard_units",
+        "type": "DECIMAL(10,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "unit_price",
+        "type": "DECIMAL(12,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "subtotal",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D19",
+    "name": "CostEntry",
+    "label": "成本凭证",
+    "word_block": 435,
+    "fields": [
+      {
+        "name": "cost_entry_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "applied_treatment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "AppliedTreatment.applied_treatment_id",
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "cost_type",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "amount",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "incurred_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "description",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "source_reference",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "source_batch",
+        "type": "VARCHAR(60)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "confirmed_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "confirmed_by",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "reversal_of_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "CostEntry.cost_entry_id",
+        "nullable": true,
+        "unique": "UNIQUE"
+      }
+    ]
+  },
+  {
+    "caption": "D20",
+    "name": "QuarterlyPerformance",
+    "label": "季度绩效",
+    "word_block": 438,
+    "fields": [
+      {
+        "name": "quarterly_performance_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "quarter_start",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "quarter_end",
+        "type": "DATE",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "revenue",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "medical_supply_cost",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "operating_expense",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "net_profit",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "incentive_rate",
+        "type": "DECIMAL(5,4)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "incentive_amount",
+        "type": "DECIMAL(14,2)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "calculation_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "calculated_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "calculation_version",
+        "type": "INT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "source_snapshot",
+        "type": "JSON",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "input_hash",
+        "type": "CHAR(64)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "published_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D21",
+    "name": "AppointmentEvent",
+    "label": "就诊事件",
+    "word_block": 441,
+    "fields": [
+      {
+        "name": "appointment_event_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "event_type",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "from_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "to_status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "occurred_at",
+        "type": "TIMESTAMP",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "actor_role",
+        "type": "VARCHAR(30)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "actor_reference",
+        "type": "VARCHAR(100)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "reason",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "request_key",
+        "type": "VARCHAR(64)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "UNIQUE(组合)"
+      },
+      {
+        "name": "details",
+        "type": "JSON",
+        "pk": false,
+        "fk": null,
+        "nullable": true,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D27",
+    "name": "RegistrationFeePolicy",
+    "label": "挂号费策略",
+    "word_block": 514,
+    "fields": [
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "amount_fen",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D28",
+    "name": "BookingHold",
+    "label": "预约号源保留",
+    "word_block": 516,
+    "fields": [
+      {
+        "name": "hold_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "patient_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Patient.patient_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "dentist_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Dentist.dentist_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "schedule_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "DentistSchedule.schedule_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "scheduled_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "slot_minutes",
+        "type": "SMALLINT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "requested_treatment_ids",
+        "type": "JSON",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "confirmation_digest",
+        "type": "BINARY(32)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "expires_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": true,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D29",
+    "name": "PatientBill",
+    "label": "患者账单",
+    "word_block": 518,
+    "fields": [
+      {
+        "name": "bill_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "patient_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Patient.patient_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "clinic_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Clinic.clinic_id",
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "kind",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "hold_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "BookingHold.hold_id",
+        "nullable": true,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "appointment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Appointment.appointment_id",
+        "nullable": true,
+        "unique": "-"
+      },
+      {
+        "name": "invoice_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "Invoice.invoice_id",
+        "nullable": true,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "amount_fen",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "updated_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D30",
+    "name": "PaymentOrder",
+    "label": "支付订单",
+    "word_block": 520,
+    "fields": [
+      {
+        "name": "payment_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "bill_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "PatientBill.bill_id",
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "amount_fen",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "mode",
+        "type": "VARCHAR(10)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "paid_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  },
+  {
+    "caption": "D31",
+    "name": "RefundOrder",
+    "label": "退款订单",
+    "word_block": 522,
+    "fields": [
+      {
+        "name": "refund_id",
+        "type": "BIGINT",
+        "pk": true,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "payment_id",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": "PaymentOrder.payment_id",
+        "nullable": false,
+        "unique": "UNIQUE"
+      },
+      {
+        "name": "amount_fen",
+        "type": "BIGINT",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "reason",
+        "type": "VARCHAR(255)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "actor_subject_id",
+        "type": "VARCHAR(36)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "status",
+        "type": "VARCHAR(20)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      },
+      {
+        "name": "created_at",
+        "type": "DATETIME(6)",
+        "pk": false,
+        "fk": null,
+        "nullable": false,
+        "unique": "-"
+      }
+    ]
+  }
+]

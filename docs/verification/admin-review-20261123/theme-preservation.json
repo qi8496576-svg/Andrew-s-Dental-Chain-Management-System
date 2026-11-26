@@ -1,0 +1,12 @@
+[
+  {
+    "file": "apps/admin/src/style.css",
+    "unchanged": true,
+    "sha256": "76d04d2d5aa77f6d061cf4338e560aab3fb0d23e9305785079e9bacf7e47cfc5"
+  },
+  {
+    "file": "apps/admin/src/workspace.css",
+    "unchanged": true,
+    "sha256": "2e737c519f3929a9c61a2ddc5260eabab64a5db746d520dd125033b0f40ab3e0"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-25T09:44:58.292Z",
+  "origin": "https://andrewdental.cn",
+  "clinic_id": "1",
+  "clinic_code": "CLOUD-TEST-C1",
+  "synthetic_profiles_only": true,
+  "real_charge": false,
+  "doctors": [
+    {
+      "dentist_id": "2782263158220307180",
+      "professional_title": "主任医师（演示）",
+      "specialty": "综合口腔检查、牙体牙髓方向（虚构测试资料）",
+      "registration_fee_fen": 2000
+    },
+    {
+      "dentist_id": "3632761046743333100",
+      "professional_title": "副主任医师（演示）",
+      "specialty": "牙周维护、洁牙方向（虚构测试资料）",
+      "registration_fee_fen": 1500
+    },
+    {
+      "dentist_id": "4561893119521384568",
+      "professional_title": "主治医师（演示）",
+      "specialty": "儿童口腔与预防方向（虚构测试资料）",
+      "registration_fee_fen": 1000
+    },
+    {
+      "dentist_id": "6514473136372604394",
+      "professional_title": "口腔医师（演示）",
+      "specialty": "口腔常见问题检查方向（虚构测试资料）",
+      "registration_fee_fen": 0
+    },
+    {
+      "dentist_id": "8039365794905459037",
+      "professional_title": "口腔医师（演示）",
+      "specialty": "口腔修复咨询方向（虚构测试资料）",
+      "registration_fee_fen": 0
+    }
+  ],
+  "administrator_can_read_bills": true,
+  "bill_count": 0,
+  "billing_capabilities": []
+}

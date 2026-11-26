@@ -1,0 +1,14 @@
+[
+  {
+    "Path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\docs\\verification\\t002-environment-status.md",
+    "Hash": "691583BA53EECE3D42D3D1A17F145E9FB656B02557B94BD5795DC231E11B51DE"
+  },
+  {
+    "Path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\ops\\scripts\\Install-DockerDesktop.ps1",
+    "Hash": "42604B8C20D918663996E26B79C85D960192545F6678E20DFDD73E6DCD8C8284"
+  },
+  {
+    "Path": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\tools\\verification\\Verify-LocalContainers.ps1",
+    "Hash": "EB2A5B0E686BD0F91FBBDB7FDFEE011CDAB17EFAAFB5055D12D67BB3B38502AA"
+  }
+]

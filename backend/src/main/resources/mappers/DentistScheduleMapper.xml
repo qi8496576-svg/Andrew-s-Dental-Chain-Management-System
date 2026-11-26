@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.DentistScheduleMapper">
+  <resultMap id="row" type="com.adc.domain.model.DentistSchedule">
+    <constructor>
+      <idArg column="schedule_id" javaType="java.lang.Long"/>
+      <arg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="clinic_id" javaType="java.lang.Long"/>
+      <arg column="schedule_date" javaType="java.time.LocalDate"/>
+      <arg column="start_time" javaType="java.time.LocalTime"/>
+      <arg column="end_time" javaType="java.time.LocalTime"/>
+      <arg column="slot_minutes" javaType="java.lang.Short"/>
+      <arg column="schedule_status" javaType="java.lang.String"/>
+      <arg column="note" javaType="java.lang.String"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `schedule_id`, `dentist_id`, `clinic_id`, `schedule_date`, `start_time`, `end_time`, `slot_minutes`, `schedule_status`, `note`, `created_at` FROM adc_business.`DentistSchedule` WHERE `schedule_id` = #{schedule_id}
+  </select>
+</mapper>

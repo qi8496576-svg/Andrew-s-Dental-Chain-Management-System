@@ -1,0 +1,254 @@
+{
+  "fixture_only": true,
+  "fixture_version": "T006-1",
+  "clock": "2026-01-15T04:00:00Z",
+  "clinics": [
+    {
+      "clinic_id": "1",
+      "clinic_code": "TEST-C01"
+    },
+    {
+      "clinic_id": "2",
+      "clinic_code": "TEST-C02"
+    }
+  ],
+  "patients": [
+    {
+      "patient_id": "1",
+      "patient_number": "TEST-P001",
+      "full_name": "虚构患者1",
+      "date_of_birth": "1990-01-01",
+      "phone": "TEST-PHONE-1",
+      "billing_address": "虚构地址，仅限测试",
+      "emergency_contact_name": "虚构联系人",
+      "emergency_contact_phone": "TEST-EMERGENCY-1",
+      "allergy_review_status": "NOT_REVIEWED"
+    },
+    {
+      "patient_id": "2",
+      "patient_number": "TEST-P002",
+      "full_name": "虚构患者2",
+      "date_of_birth": "1990-01-01",
+      "phone": "TEST-PHONE-2",
+      "billing_address": "虚构地址，仅限测试",
+      "emergency_contact_name": "虚构联系人",
+      "emergency_contact_phone": "TEST-EMERGENCY-2",
+      "allergy_review_status": "NO_KNOWN"
+    },
+    {
+      "patient_id": "3",
+      "patient_number": "TEST-P003",
+      "full_name": "虚构患者3",
+      "date_of_birth": "1990-01-01",
+      "phone": "TEST-PHONE-3",
+      "billing_address": "虚构地址，仅限测试",
+      "emergency_contact_name": "虚构联系人",
+      "emergency_contact_phone": "TEST-EMERGENCY-3",
+      "allergy_review_status": "RECORDED"
+    }
+  ],
+  "staff": [
+    {
+      "subject_id": "00000000-0000-4000-8000-000000000001",
+      "subject_type": "STAFF",
+      "role_code": "RECEPTION",
+      "clinic_ids": [
+        "1"
+      ],
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2027-01-01T00:00:00Z",
+      "capabilities": []
+    },
+    {
+      "subject_id": "00000000-0000-4000-8000-000000000002",
+      "subject_type": "STAFF",
+      "role_code": "DENTIST",
+      "clinic_ids": [
+        "1"
+      ],
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2027-01-01T00:00:00Z",
+      "capabilities": [],
+      "dentist_id": "1"
+    },
+    {
+      "subject_id": "00000000-0000-4000-8000-000000000003",
+      "subject_type": "STAFF",
+      "role_code": "CASHIER",
+      "clinic_ids": [
+        "1"
+      ],
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2027-01-01T00:00:00Z",
+      "capabilities": []
+    },
+    {
+      "subject_id": "00000000-0000-4000-8000-000000000004",
+      "subject_type": "STAFF",
+      "role_code": "HEADQUARTERS",
+      "clinic_ids": [
+        "1"
+      ],
+      "valid_from": "2026-01-01T00:00:00Z",
+      "valid_until": "2027-01-01T00:00:00Z",
+      "capabilities": []
+    }
+  ],
+  "appointment_cases": [
+    {
+      "name": "SCHEDULED",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "101",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "SCHEDULED",
+        "cancellation_kind": null
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "IN_PROGRESS",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "102",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "IN_PROGRESS",
+        "cancellation_kind": null,
+        "attended_at": "2026-01-15T01:00:00Z"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "COMPLETED",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "103",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "COMPLETED",
+        "cancellation_kind": null,
+        "attended_at": "2026-01-15T01:00:00Z",
+        "completed_at": "2026-01-15T01:25:00Z"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "INVOICED",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "104",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "INVOICED",
+        "cancellation_kind": null,
+        "attended_at": "2026-01-15T01:00:00Z",
+        "completed_at": "2026-01-15T01:25:00Z",
+        "invoice_id": "1"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "PATIENT_CANCEL",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "105",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "CANCELLED",
+        "cancellation_kind": "PATIENT_CANCEL"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "NO_SHOW",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "106",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "CANCELLED",
+        "cancellation_kind": "NO_SHOW"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "CLINIC_RESCHEDULE",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "107",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "CANCELLED",
+        "cancellation_kind": "CLINIC_RESCHEDULE"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    },
+    {
+      "name": "CLINIC_CANCEL",
+      "independent_scenario": true,
+      "appointment": {
+        "appointment_id": "108",
+        "patient_id": "2",
+        "clinic_id": "1",
+        "dentist_id": "1",
+        "schedule_id": "1",
+        "scheduled_at": "2026-01-15T01:00:00Z",
+        "status": "CANCELLED",
+        "cancellation_kind": "CLINIC_CANCEL"
+      },
+      "required_setup": "Isolated scenario: establish schedule, qualifications, patient review, and lifecycle through test setup before business assertions."
+    }
+  ],
+  "patient_subjects": [
+    {
+      "subject_id": "00000000-0000-4000-9000-000000000001",
+      "subject_type": "PATIENT",
+      "verified_patient_id": "1"
+    }
+  ],
+  "schedule_cases": [
+    {
+      "schedule_id": "1",
+      "dentist_id": "1",
+      "clinic_id": "1",
+      "schedule_date": "2026-01-15",
+      "start_time": "09:00:00",
+      "end_time": "10:00:00",
+      "slot_minutes": 30,
+      "schedule_status": "NORMAL"
+    },
+    {
+      "schedule_id": "1",
+      "dentist_id": "1",
+      "clinic_id": "1",
+      "schedule_date": "2026-01-15",
+      "start_time": "09:00:00",
+      "end_time": "10:00:00",
+      "slot_minutes": 30,
+      "schedule_status": "SUSPENDED"
+    }
+  ]
+}

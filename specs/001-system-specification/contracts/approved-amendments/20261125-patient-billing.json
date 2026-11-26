@@ -1,0 +1,30 @@
+{
+  "id": "ADC-CONTRACT-20261125-06",
+  "status": "owner-approved",
+  "previous_amendment": "ADC-CONTRACT-20261124-05",
+  "authorization": "负责人批准最小数据库、医生资料和精简登记调整，选择演示支付闭环；ERD正式图替换须先单独预览确认。",
+  "operation_count": 91,
+  "business_schema_changed": true,
+  "files": [
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "before_sha256": "ac43a7ed3367a2cb310f3e33355d13fab0c4e831c0f007213448159e1d633b68",
+      "after_sha256": "5aa346049ed1e83c1c0e88fe619ad0799c21c38007576210e93fc36eb25c194c"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/identity.md",
+      "before_sha256": "6675211f8bc360ca556b7ef592fae70336a419da0cba7179939e3fa791774f0d",
+      "after_sha256": "de9419e977100de41ab788f5c898cfcb655b30887080e03e83e724f518ca55c2"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "before_sha256": "489be1d417dc8bd1a8ef9ad494bfbec0a32c5f395fa8dbe12f9e05a67660975b",
+      "after_sha256": "da73f875393315d52e3106f5a9c716ff847f82091e39eff6c469299a6df3ad97"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "before_sha256": "49d6ebed0e999e8e902b92fbb26a9254df6624d0b101cd790981b1d9a5c3f8e7",
+      "after_sha256": "8da409373e97b51089ee6cceb01b1121e5c5d90d4e8987ab2242a39d0747f3da"
+    }
+  ]
+}

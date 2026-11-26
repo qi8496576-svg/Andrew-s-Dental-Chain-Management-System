@@ -1,0 +1,52 @@
+{
+  "release": "adc-billing-20261125-1795596673067",
+  "date": "2026-11-25T08:54:55.234Z",
+  "scope": "owner-approved synthetic integration; demo payment only; no real charge",
+  "images": [
+    {
+      "reference": "adc/backend:adc-billing-20261125-1795596673067",
+      "id": "sha256:1826da9f73b327fa414eb4d78e6ca21e900afd74fe0f430e91e9d009400e561c",
+      "os": "linux",
+      "architecture": "amd64"
+    },
+    {
+      "reference": "adc/admin:adc-billing-20261125-1795596673067",
+      "id": "sha256:e63f27b5814976645d50fd1a8ff1cb86066597472d92642438b4909b9b757e19",
+      "os": "linux",
+      "architecture": "amd64"
+    }
+  ],
+  "archive": {
+    "file": "images.tar.gz",
+    "sha256": "7528e46d8c2a9b3063cbd72709ba0612e6fd68d4e5730d27cc891d909ac6d39a",
+    "bytes": 159186145
+  },
+  "backend_jar_sha256": "2c9b6cfce8f94bb2c9108cbc5b2ab7fdffe59ebcbe7d25de3b70b58b69047bec",
+  "business_dictionary_sha256": "3cbf63b56af40f27284f5fc2f29a54f952e680fb79984425ff9a0830529e2cd2",
+  "files": [
+    {
+      "path": "ops/compose/compose.prod.yaml",
+      "sha256": "ffc9427e4897a2c4d82d5df46014f3a8791aeed734b0aee7fa2eac39437e384c"
+    },
+    {
+      "path": "ops/compose/compose.offline.yaml",
+      "sha256": "72d82746e85f9d6788de8251d4d4f58392eae22592f41ed7d7c266e488658cf7"
+    },
+    {
+      "path": "ops/compose/mysql/runtime-grants.sql",
+      "sha256": "e8f40a9c94b2918ba81e6a61f271bfe80568f9de6cf27f3440d7c66361c25000"
+    },
+    {
+      "path": "ops/scripts/apply-billing-integration.sh",
+      "sha256": "83861029551cdea46aa1fffc81be21a1de86ac1ed10e52ca2bf5103396a491c1"
+    }
+  ],
+  "local_directory": "D:\\安德鲁牙科连锁管理系统——需求分析与设计文档\\tmp\\deployment\\adc-billing-20261125-1795596673067",
+  "expected_database": {
+    "tables": 24,
+    "columns": 209,
+    "foreign_keys": 44,
+    "migrations": 34
+  },
+  "contains_secrets": false
+}

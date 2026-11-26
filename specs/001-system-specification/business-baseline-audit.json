@@ -1,0 +1,1861 @@
+{
+  "date": "2026-11-25",
+  "status": "current-word-dictionary-dbml-verified",
+  "source": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+  "source_sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a",
+  "business_tables": 24,
+  "business_fields": 209,
+  "business_foreign_keys": 44,
+  "single_primary_keys": 19,
+  "composite_primary_keys": 5,
+  "differences": [],
+  "tables": [
+    {
+      "source": "D3",
+      "name": "Patient",
+      "fields": [
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "patient_number",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "full_name",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "billing_address",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(254)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "emergency_contact_name",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "emergency_contact_phone",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "allergy_review_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D4",
+      "name": "Allergy",
+      "fields": [
+        {
+          "name": "allergy_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "allergy_name",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D5",
+      "name": "PatientAllergy",
+      "fields": [
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Patient.patient_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "allergy_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Allergy.allergy_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "noted_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "severity_note",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "clinical_note",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "is_retracted",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "audit_history",
+          "type": "JSON",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D6",
+      "name": "Clinic",
+      "fields": [
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "clinic_code",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "postal_address",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "manager_name",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(254)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "office_area_sqm",
+          "type": "DECIMAL(8,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D7",
+      "name": "Dentist",
+      "fields": [
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "employee_number",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "full_name",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "date_of_birth",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "home_address",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(254)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "hire_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "termination_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "professional_title",
+          "type": "VARCHAR(40)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "specialty",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "introduction",
+          "type": "VARCHAR(1000)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D8",
+      "name": "Qualification",
+      "fields": [
+        {
+          "name": "qualification_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "qualification_name",
+          "type": "VARCHAR(120)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D9",
+      "name": "DentistQualification",
+      "fields": [
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "qualification_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Qualification.qualification_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "certificate_number",
+          "type": "VARCHAR(60)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "granted_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "expiry_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "verification_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D10",
+      "name": "DentistClinicAssignment",
+      "fields": [
+        {
+          "name": "assignment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "start_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "end_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "availability_note",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D11",
+      "name": "DentistSchedule",
+      "fields": [
+        {
+          "name": "schedule_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "UNIQUE(条件组合)"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "schedule_date",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(条件组合)"
+        },
+        {
+          "name": "start_time",
+          "type": "TIME",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(条件组合)"
+        },
+        {
+          "name": "end_time",
+          "type": "TIME",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "slot_minutes",
+          "type": "SMALLINT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "schedule_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "note",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D12",
+      "name": "Treatment",
+      "fields": [
+        {
+          "name": "treatment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "treatment_code",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "treatment_name",
+          "type": "VARCHAR(120)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "default_unit_price",
+          "type": "DECIMAL(12,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D13",
+      "name": "TreatmentQualification",
+      "fields": [
+        {
+          "name": "treatment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Treatment.treatment_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "qualification_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Qualification.qualification_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "is_mandatory",
+          "type": "BOOLEAN",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D14",
+      "name": "Appointment",
+      "fields": [
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Patient.patient_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "schedule_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "DentistSchedule.schedule_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "scheduled_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "problems_or_special_needs",
+          "type": "TEXT",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "completed_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "attended_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "cancelled_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "cancellation_reason",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "cancellation_kind",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "rescheduled_from_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": true,
+          "unique": "UNIQUE"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D15",
+      "name": "AppointmentRequestedTreatment",
+      "fields": [
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Appointment.appointment_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "treatment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Treatment.treatment_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "request_note",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D16",
+      "name": "AppliedTreatment",
+      "fields": [
+        {
+          "name": "applied_treatment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "treatment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Treatment.treatment_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "standard_units",
+          "type": "DECIMAL(10,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "unit_price",
+          "type": "DECIMAL(12,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "subtotal",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "performed_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D17",
+      "name": "Invoice",
+      "fields": [
+        {
+          "name": "invoice_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "invoice_number",
+          "type": "VARCHAR(40)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "issued_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "total_amount",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "invoice_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D18",
+      "name": "InvoiceItem",
+      "fields": [
+        {
+          "name": "invoice_item_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "invoice_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Invoice.invoice_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "applied_treatment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "AppliedTreatment.applied_treatment_id",
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "line_number",
+          "type": "INT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "treatment_name",
+          "type": "VARCHAR(120)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "standard_units",
+          "type": "DECIMAL(10,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "unit_price",
+          "type": "DECIMAL(12,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "subtotal",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D19",
+      "name": "CostEntry",
+      "fields": [
+        {
+          "name": "cost_entry_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "applied_treatment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "AppliedTreatment.applied_treatment_id",
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "cost_type",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "amount",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "incurred_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "description",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "source_reference",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "source_batch",
+          "type": "VARCHAR(60)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "confirmed_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "confirmed_by",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "reversal_of_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "CostEntry.cost_entry_id",
+          "nullable": true,
+          "unique": "UNIQUE"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D20",
+      "name": "QuarterlyPerformance",
+      "fields": [
+        {
+          "name": "quarterly_performance_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "quarter_start",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "quarter_end",
+          "type": "DATE",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "revenue",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "medical_supply_cost",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "operating_expense",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "net_profit",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "incentive_rate",
+          "type": "DECIMAL(5,4)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "incentive_amount",
+          "type": "DECIMAL(14,2)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "calculation_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "calculated_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "calculation_version",
+          "type": "INT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "source_snapshot",
+          "type": "JSON",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "input_hash",
+          "type": "CHAR(64)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "published_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D21",
+      "name": "AppointmentEvent",
+      "fields": [
+        {
+          "name": "appointment_event_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "event_type",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "from_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "to_status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "occurred_at",
+          "type": "TIMESTAMP",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "actor_role",
+          "type": "VARCHAR(30)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "actor_reference",
+          "type": "VARCHAR(100)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "request_key",
+          "type": "VARCHAR(64)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "UNIQUE(组合)"
+        },
+        {
+          "name": "details",
+          "type": "JSON",
+          "pk": false,
+          "fk": null,
+          "nullable": true,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D27",
+      "name": "RegistrationFeePolicy",
+      "fields": [
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "amount_fen",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D28",
+      "name": "BookingHold",
+      "fields": [
+        {
+          "name": "hold_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Patient.patient_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "dentist_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Dentist.dentist_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "schedule_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "DentistSchedule.schedule_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "scheduled_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "slot_minutes",
+          "type": "SMALLINT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "requested_treatment_ids",
+          "type": "JSON",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "confirmation_digest",
+          "type": "BINARY(32)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "expires_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": true,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D29",
+      "name": "PatientBill",
+      "fields": [
+        {
+          "name": "bill_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "patient_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Patient.patient_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "clinic_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Clinic.clinic_id",
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "kind",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "hold_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "BookingHold.hold_id",
+          "nullable": true,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "appointment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Appointment.appointment_id",
+          "nullable": true,
+          "unique": "-"
+        },
+        {
+          "name": "invoice_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "Invoice.invoice_id",
+          "nullable": true,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "amount_fen",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "updated_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D30",
+      "name": "PaymentOrder",
+      "fields": [
+        {
+          "name": "payment_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "bill_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "PatientBill.bill_id",
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "amount_fen",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "mode",
+          "type": "VARCHAR(10)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "paid_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    },
+    {
+      "source": "D31",
+      "name": "RefundOrder",
+      "fields": [
+        {
+          "name": "refund_id",
+          "type": "BIGINT",
+          "pk": true,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "payment_id",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": "PaymentOrder.payment_id",
+          "nullable": false,
+          "unique": "UNIQUE"
+        },
+        {
+          "name": "amount_fen",
+          "type": "BIGINT",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "reason",
+          "type": "VARCHAR(255)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "actor_subject_id",
+          "type": "VARCHAR(36)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        },
+        {
+          "name": "created_at",
+          "type": "DATETIME(6)",
+          "pk": false,
+          "fk": null,
+          "nullable": false,
+          "unique": "-"
+        }
+      ],
+      "word_dictionary_match": true
+    }
+  ],
+  "physical_database_evidence": [
+    "backend/target/failsafe-reports/TEST-com.adc.infrastructure.SchemaBaselineIT.xml",
+    "docs/verification/patient-billing-20261125/application-update.json"
+  ],
+  "document_check": "tools/diagrams/verify.py",
+  "migration": "V201__patient_booking_and_demo_billing.sql",
+  "original_migration_checksums_preserved": true
+}

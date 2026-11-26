@@ -1,0 +1,135 @@
+{
+  "adc_business.Patient": [
+    "allergy_review_status",
+    "NOT_REVIEWED",
+    "NO_KNOWN",
+    "RECORDED"
+  ],
+  "adc_business.Dentist": [
+    "termination_date",
+    "hire_date"
+  ],
+  "adc_business.DentistQualification": [
+    "expiry_date",
+    "granted_date"
+  ],
+  "adc_business.DentistSchedule": [
+    "schedule_status",
+    "NORMAL",
+    "SUSPENDED",
+    "end_time",
+    "start_time",
+    "slot_minutes"
+  ],
+  "adc_business.Appointment": [
+    "status",
+    "SCHEDULED",
+    "CANCELLED",
+    "IN_PROGRESS",
+    "COMPLETED",
+    "INVOICED",
+    "cancelled_at",
+    "attended_at",
+    "completed_at",
+    "cancellation_reason",
+    "cancellation_kind",
+    "PATIENT_CANCEL",
+    "NO_SHOW",
+    "CLINIC_RESCHEDULE",
+    "CLINIC_CANCEL"
+  ],
+  "adc_business.AppliedTreatment": [
+    "standard_units",
+    "unit_price",
+    "subtotal",
+    "round"
+  ],
+  "adc_business.InvoiceItem": [
+    "standard_units",
+    "unit_price",
+    "subtotal",
+    "round",
+    "line_number"
+  ],
+  "adc_business.CostEntry": [
+    "cost_type",
+    "MEDICAL_SUPPLY",
+    "OPERATING",
+    "amount",
+    "reversal_of_id"
+  ],
+  "adc_business.QuarterlyPerformance": [
+    "calculation_version",
+    "quarter_start",
+    "quarter_end",
+    "calculation_status",
+    "DRAFT",
+    "INCOMPLETE",
+    "CALCULATED",
+    "PUBLISHED",
+    "SUPERSEDED",
+    "incentive_rate",
+    "0.1000",
+    "incentive_amount",
+    "net_profit",
+    "revenue",
+    "medical_supply_cost",
+    "operating_expense"
+  ],
+  "adc_business.AppointmentEvent": [
+    "event_type",
+    "BOOK",
+    "ATTEND",
+    "CANCEL",
+    "COMPLETE",
+    "INVOICE",
+    "from_status",
+    "to_status"
+  ],
+  "adc_identity.LoginThrottle": [
+    "consecutive_failures"
+  ],
+  "adc_identity.BindingRequest": [
+    "status",
+    "PENDING",
+    "APPROVED",
+    "reviewed_by",
+    "reviewed_at"
+  ],
+  "adc_identity.BindingEvent": [
+    "action",
+    "BIND",
+    "REBIND",
+    "UNBIND",
+    "old_subject_id",
+    "new_subject_id"
+  ],
+  "adc_identity.AccessGrant": [
+    "valid_from",
+    "valid_until",
+    "revoked_at",
+    "revoked_by"
+  ],
+  "adc_business.RegistrationFeePolicy": [
+    "amount_fen"
+  ],
+  "adc_business.BookingHold": [
+    "status",
+    "expires_at",
+    "slot_minutes"
+  ],
+  "adc_business.PatientBill": [
+    "status",
+    "amount_fen",
+    "kind"
+  ],
+  "adc_business.PaymentOrder": [
+    "mode",
+    "amount_fen",
+    "status"
+  ],
+  "adc_business.RefundOrder": [
+    "status",
+    "amount_fen"
+  ]
+}

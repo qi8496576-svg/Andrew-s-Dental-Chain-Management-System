@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-23T14:11:49.353Z",
+  "project": "adc-local-preview",
+  "frontend_image": "adc/admin:design-review-20261123",
+  "backend_image": "adc/backend:design-review-20261123",
+  "url": "https://localhost:19443",
+  "theme_primary": "#17778b",
+  "current_sources_built": true,
+  "database_container_preserved": true,
+  "migrations_run": false,
+  "production_deployed": false,
+  "rollback_command": "node tools/preview/refresh-design-review.mjs --rollback"
+}

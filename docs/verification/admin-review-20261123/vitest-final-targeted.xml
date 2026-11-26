@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="7" failures="0" errors="0" time="1.8645035">
+    <testsuite name="src/api/outcome-recovery.spec.ts" timestamp="2026-11-23T14:06:03.844Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.0217726">
+        <testcase classname="src/api/outcome-recovery.spec.ts" name="restores only metadata after refresh and reuses the original key without storing clinical text" time="0.0188073">
+        </testcase>
+        <testcase classname="src/api/outcome-recovery.spec.ts" name="does not expose another employee pending metadata or allow a second command during uncertainty" time="0.0016285">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/clinic-grants/index.spec.ts" timestamp="2026-11-23T14:06:03.847Z" hostname="LAPTOP-5TVHSQNK" tests="2" failures="0" errors="0" skipped="0" time="0.8324805">
+        <testcase classname="src/views/clinic-grants/index.spec.ts" name="requires the independent headquarters authorization capability" time="0.0369016">
+        </testcase>
+        <testcase classname="src/views/clinic-grants/index.spec.ts" name="loads the grants page for the separately authorized headquarters user" time="0.7920615">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/views/organization-resources/index.spec.ts" timestamp="2026-11-23T14:06:03.848Z" hostname="LAPTOP-5TVHSQNK" tests="3" failures="0" errors="0" skipped="0" time="1.0102504">
+        <testcase classname="src/views/organization-resources/index.spec.ts" name="resource navigation requires an existing headquarters resource capability" time="1.0053817">
+        </testcase>
+        <testcase classname="src/views/organization-resources/index.spec.ts" name="resource forms preserve exact price text and never send response-only fields" time="0.0009023">
+        </testcase>
+        <testcase classname="src/views/organization-resources/index.spec.ts" name="editing treatment requirements retains already linked IDs outside the loaded catalog page" time="0.0008455">
+        </testcase>
+    </testsuite>
+</testsuites>

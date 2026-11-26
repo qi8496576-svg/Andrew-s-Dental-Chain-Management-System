@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.DentistQualificationMapper">
+  <resultMap id="row" type="com.adc.domain.model.DentistQualification">
+    <constructor>
+      <idArg column="dentist_id" javaType="java.lang.Long"/>
+      <idArg column="qualification_id" javaType="java.lang.Long"/>
+      <arg column="certificate_number" javaType="java.lang.String"/>
+      <arg column="granted_date" javaType="java.time.LocalDate"/>
+      <arg column="expiry_date" javaType="java.time.LocalDate"/>
+      <arg column="verification_status" javaType="java.lang.String"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `dentist_id`, `qualification_id`, `certificate_number`, `granted_date`, `expiry_date`, `verification_status` FROM adc_business.`DentistQualification` WHERE `dentist_id` = #{dentist_id} AND `qualification_id` = #{qualification_id}
+  </select>
+</mapper>

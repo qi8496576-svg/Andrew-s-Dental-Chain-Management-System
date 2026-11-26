@@ -1,0 +1,5 @@
+import {expect,it} from 'vitest'
+import {createMemoryHistory} from 'vue-router'
+import {createAppRouter} from '../../router'
+it('keeps quarterly calculation, review publication and source access behind explicit capabilities',async()=>{for(const capability of ['performance.calculate','performance.publish','cost.verify','analysis.read']){const router=createAppRouter(createMemoryHistory(),{ensure:async()=>true,canAccess:(role,cap)=>role==='HEADQUARTERS' && cap===capability});await router.push('/quarterly-performance');expect(router.currentRoute.value.name).toBe('quarterly-performance')}})
+it('does not infer cost verification from generic headquarters resources',async()=>{const router=createAppRouter(createMemoryHistory(),{ensure:async()=>true,canAccess:(role,cap)=>role==='HEADQUARTERS' && cap==='resource.read'});await router.push('/cost-entries');expect(router.currentRoute.value.name).toBe('home');await router.push('/quarterly-performance');expect(router.currentRoute.value.name).toBe('home')})

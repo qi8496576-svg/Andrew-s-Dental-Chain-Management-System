@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-25",
+  "scope": "当前文档及保留的外部参考文件",
+  "word_sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a",
+  "word_copy_matches": true,
+  "business_tables": 24,
+  "business_fields": 209,
+  "business_foreign_keys": 44
+}

@@ -1,0 +1,4 @@
+{
+  "desc": "当前工程骨架不开放搜索索引",
+  "rules": [{ "action": "disallow", "page": "*" }]
+}

@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-14T10:50:23.415Z",
+  "release": "adc-20261114-1794653395719",
+  "status": "verified-isolated-candidate-not-production-approval",
+  "task_baseline": "ADC-TASKS-20261111-03",
+  "smoke_evidence": "docs/verification/database/container-smoke.json",
+  "real_wechat_verified": false,
+  "production_deployed": false,
+  "images": [
+    {
+      "reference": "adc/backend:local-20261114",
+      "id": "sha256:626cddda4192fabcbb626f8a1680747bb618389cec0f86d647118de131a1f0af",
+      "repo_digests": [
+        "adc/backend@sha256:626cddda4192fabcbb626f8a1680747bb618389cec0f86d647118de131a1f0af"
+      ],
+      "os": "linux",
+      "architecture": "amd64"
+    },
+    {
+      "reference": "adc/admin:local-20261114",
+      "id": "sha256:4e1890cdf1dae62c374de08f927ff9ca38cbd3c6aa137816a7f78df6fc1910cd",
+      "repo_digests": [
+        "adc/admin@sha256:4e1890cdf1dae62c374de08f927ff9ca38cbd3c6aa137816a7f78df6fc1910cd"
+      ],
+      "os": "linux",
+      "architecture": "amd64"
+    },
+    {
+      "reference": "mysql@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d",
+      "id": "sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d",
+      "repo_digests": [
+        "mysql@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d"
+      ],
+      "os": "linux",
+      "architecture": "amd64"
+    }
+  ],
+  "archive": {
+    "file": "images.tar.gz",
+    "sha256": "0090a9def88c3cedd7c2bdf16ed1f17ed21e76332737cff8e471ab9f42cca30c",
+    "bytes": 395532614
+  },
+  "backend_jar_sha256": "2c5f5356bd4cab41647f9532c1bc5d500e6f5c3bb07b0588cfc438bce4df529c",
+  "business_dictionary_sha256": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b",
+  "files": [
+    {
+      "path": "ops/compose/compose.prod.yaml",
+      "sha256": "f3fee677e2e05cbed169eb114f4d28efd3ec42a07565a56d50fe765be9daabb2"
+    },
+    {
+      "path": "ops/compose/mysql/bootstrap.sql",
+      "sha256": "5075a365570b66495990f2adad6ab5049bd28f981b61bc85f1929b886b94a704"
+    },
+    {
+      "path": "ops/compose/mysql/runtime-grants.sql",
+      "sha256": "e8f40a9c94b2918ba81e6a61f271bfe80568f9de6cf27f3440d7c66361c25000"
+    },
+    {
+      "path": "ops/compose/mysql/initialize-users.sh",
+      "sha256": "d9e6a75793c9024b784fb19245f3371cb1ff09ab6eeec652a97e438174ece7f5"
+    },
+    {
+      "path": "ops/runbooks/isolated-deployment.md",
+      "sha256": "4123494323825515c213172f42483ec1c3747964747d4683c2795660ef29fe71"
+    },
+    {
+      "path": "ops/runbooks/new-clinic-management.md",
+      "sha256": "4a677f6623356946540462862cb1d6493cf16179e12fc224f47d9e86f8b971db"
+    },
+    {
+      "path": "ops/scripts/verify-candidate.py",
+      "sha256": "5efdd8a351f63c306e9a619d732aa913532982a223b19e36872bc136fececdfe"
+    }
+  ],
+  "contains_secrets": false
+}

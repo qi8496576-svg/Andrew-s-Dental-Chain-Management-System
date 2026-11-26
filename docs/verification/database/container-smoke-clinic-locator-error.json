@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-14T10:41:33.239Z",
+  "project": "adc-smoke-1794652893177",
+  "kind": "owned-real-linux-container-integration",
+  "production_deployed": false,
+  "real_wechat_verified": false,
+  "steps": [
+    "compose_configuration_valid",
+    "linux_images_built",
+    "mysql_migrator_runtime_grants_backend_admin_healthy",
+    "trusted_fixture_certificate_spa_and_denied_anonymous_access",
+    "nonroot_readonly_capabilities_and_private_backend_ports_verified",
+    "packaged_operator_commands_real_https_login_uc06_and_idempotent_first_management_verified"
+  ],
+  "passed": false,
+  "error": "Real container browser extension failed (exit 1)"
+}

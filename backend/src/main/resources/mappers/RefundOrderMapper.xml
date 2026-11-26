@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.RefundOrderMapper">
+  <resultMap id="row" type="com.adc.domain.model.RefundOrder">
+    <constructor>
+      <idArg column="refund_id" javaType="java.lang.Long"/>
+      <arg column="payment_id" javaType="java.lang.Long"/>
+      <arg column="amount_fen" javaType="java.lang.Long"/>
+      <arg column="reason" javaType="java.lang.String"/>
+      <arg column="actor_subject_id" javaType="java.lang.String"/>
+      <arg column="status" javaType="java.lang.String"/>
+      <arg column="created_at" javaType="java.time.LocalDateTime"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">SELECT `refund_id`,`payment_id`,`amount_fen`,`reason`,`actor_subject_id`,`status`,`created_at` FROM adc_business.`RefundOrder` WHERE `refund_id` = #{refund_id}</select>
+</mapper>

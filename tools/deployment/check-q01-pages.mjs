@@ -1,0 +1,8 @@
+import fs from 'node:fs'
+import assert from 'node:assert/strict'
+import {chromium} from '../../apps/admin/node_modules/playwright/index.mjs'
+import {accounts,origin} from './cloud-api.mjs'
+const report={date:new Date().toISOString(),origin,api_mocked:false,pages:[],errors:[],service_errors:[]},browser=await chromium.launch({channel:'msedge',headless:true})
+try{const page=await browser.newPage();page.on('pageerror',e=>report.errors.push(e.message));page.on('response',r=>{if(r.url().includes('/api/v1/')&&r.status()>=500)report.service_errors.push({path:new URL(r.url()).pathname,status:r.status()})});await page.goto(origin+'/authentication');await page.getByLabel('个人账号').fill(accounts.demo.username);await page.getByLabel('密码',{exact:true}).fill(accounts.demo.password);await page.getByRole('button',{name:'登录管理后台'}).click();await page.waitForURL(origin+'/');
+ for(const route of ['/appointment-booking','/schedules','/patients','/clinical-treatment','/invoicing','/patient-bills','/quarterly-performance','/analytics','/management']){await page.goto(origin+route,{waitUntil:'networkidle'});assert.equal(new URL(page.url()).pathname,route);assert.ok((await page.locator('main').innerText()).trim().length>20);report.pages.push({route,title:await page.title()})}assert.deepEqual(report.errors,[]);assert.deepEqual(report.service_errors,[]);report.status='PASS'
+}catch(e){report.status='FAIL';report.error=e.message;process.exitCode=1}finally{await browser.close();fs.writeFileSync('docs/verification/quality/q01-cloud-pages.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report))}

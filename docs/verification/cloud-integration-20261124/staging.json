@@ -1,0 +1,8 @@
+{
+  "date": "2026-11-24T15:10:54.651Z",
+  "release": "adc-cloud-20261124-1795530699019",
+  "archive_sha256": "8010d9a2c05d6bb5753558059bf7c61ace4d1402e9119209d164d6134ce8f637",
+  "verified": true,
+  "verification": "Exact uploaded archive resumed after SSH interruption; candidate files and image fingerprints verified by cloud-stage-candidate.sh",
+  "services_changed": false
+}

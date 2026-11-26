@@ -1,0 +1,138 @@
+{
+  "checked_at": "2026-11-10T02:56:30.290689+00:00",
+  "approved_inputs_preserved": [
+    "specs/001-system-specification/business-baseline-audit.json",
+    "specs/001-system-specification/business-baseline-audit.md",
+    "specs/001-system-specification/data-model.md",
+    "specs/001-system-specification/plan-approval.json",
+    "specs/001-system-specification/plan-approval.md",
+    "specs/001-system-specification/plan-dependency-amendment.json",
+    "specs/001-system-specification/plan-dependency-amendment.md",
+    "specs/001-system-specification/plan-supplement-review.md",
+    "specs/001-system-specification/plan.md",
+    "specs/001-system-specification/preimplement-sync.json",
+    "specs/001-system-specification/quickstart.md",
+    "specs/001-system-specification/research.md",
+    "specs/001-system-specification/spec.md",
+    "specs/001-system-specification/task-traceability.md",
+    "specs/001-system-specification/tasks-catalog.json",
+    "specs/001-system-specification/tasks-validation.json",
+    "specs/001-system-specification/technical-data-model.md",
+    "specs/001-system-specification/technical-schema.json",
+    "specs/001-system-specification/traceability.md",
+    "specs/001-system-specification/checklists/requirements.md",
+    "specs/001-system-specification/contracts/api.md",
+    "specs/001-system-specification/contracts/identity.md",
+    "specs/001-system-specification/contracts/openapi.json",
+    "specs/001-system-specification/contracts/operations.md",
+    "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+    "specs/001-system-specification/diagrams/technical-erd.mmd",
+    "specs/001-system-specification/diagrams/technical-storage-overview.png",
+    "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+    ".specify/memory/constitution.md",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx",
+    "docs/diagrams/database/schema.json"
+  ],
+  "task_count": 186,
+  "completed_tasks": [
+    "T001"
+  ],
+  "task_definitions_unchanged": true,
+  "dependency_references_exist": true,
+  "execution_order_is_topological": true,
+  "completed_tasks_have_completed_dependencies": true,
+  "test_count": 3,
+  "test_failures": 0,
+  "test_errors": 0,
+  "test_skipped": 0,
+  "versions": {
+    "org.springframework.boot:spring-boot": "4.1.2",
+    "org.springframework:spring-core": "7.0.10",
+    "org.springframework.security:spring-security-core": "7.1.2",
+    "org.mybatis.spring.boot:mybatis-spring-boot-starter": "4.1.0",
+    "org.mybatis:mybatis-spring": "4.1.0",
+    "org.mybatis:mybatis": "3.5.19",
+    "com.mysql:mysql-connector-j": "9.7.0",
+    "org.flywaydb:flyway-core": "12.4.0",
+    "org.flywaydb:flyway-mysql": "12.4.0",
+    "org.junit.jupiter:junit-jupiter": "6.0.3",
+    "org.testcontainers:testcontainers": "2.0.5"
+  },
+  "test_mapper_not_in_production_jar": true,
+  "real_database_tested": false,
+  "container_runtime_tested": false,
+  "fingerprints": [
+    {
+      "path": "backend/mvnw",
+      "sha256": "cae96cef89ebea3531221f4ae17c23cf8edf67d00eae8306d4186ae1bbed4d02"
+    },
+    {
+      "path": "backend/mvnw.cmd",
+      "sha256": "46eedb8419bd14fe70d5bb2916d7b6f51806e51b39d5b76a42610384ca929c1c"
+    },
+    {
+      "path": "backend/pom.xml",
+      "sha256": "d3656ada289ca86354288ae2f97f2b8ca21b2d1d260cbc95005402b53532da3f"
+    },
+    {
+      "path": "backend/.mvn/settings.xml",
+      "sha256": "c36f9890c2053604d1c03fc582aed653420723167afa88e4c11d8b3dd9f24be3"
+    },
+    {
+      "path": "backend/.mvn/wrapper/maven-wrapper.properties",
+      "sha256": "51b221ede4e074d19bb44d6d485bb7b298e77874572a09697aba0a9e234e0745"
+    },
+    {
+      "path": "backend/src/main/resources/application.yaml",
+      "sha256": "a98eb0a51b29abcfe448bf9d82ff4dc61a96d1411db641ce02e469dfc0e72368"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/AdcApplication.java",
+      "sha256": "c7ce9be6895227dccc2003b195d95a2045b81468558e3718be967dda491c9754"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/identity/BootstrapSecurityConfiguration.java",
+      "sha256": "b696a0aa51a134468e967db75102039a918422f72d4fbdd03e37b0e897d9c6ac"
+    },
+    {
+      "path": "backend/src/test/java/com/adc/BuildSmokeTest.java",
+      "sha256": "d321584246990867eff1f4d6e183eef69b06e6575ebaf8beada89009d7597590"
+    },
+    {
+      "path": "backend/src/test/java/com/adc/support/BuildProbeMapper.java",
+      "sha256": "d46c368871446b1b8e0885c9d325e5e0b3c27c2c8aa6d095ca007e4608a1b8ab"
+    },
+    {
+      "path": "backend/src/test/resources/build-probe/BuildProbeMapper.xml",
+      "sha256": "002b202d495432f962852141cddbe3d641649d8299bbd2b8dd359dc28a6988b0"
+    },
+    {
+      "path": "backend/target/adc-backend-0.1.0-SNAPSHOT.jar",
+      "sha256": "2b216b4f5db7a7ec9139df48f6aeb0f837efb399a7d08559c1650ef7f817cb93"
+    },
+    {
+      "path": "backend/target/surefire-reports/TEST-com.adc.BuildSmokeTest.xml",
+      "sha256": "65aa74e24475dbd08a35070774712a0a557d6d834cb62ccb5498dbaf0b933249"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "c11b295e3686256c710b233b9b9ce4faeea249a98ba30258e1b391192011ad78"
+    },
+    {
+      "path": "docs/verification/t001-build-result.json",
+      "sha256": "314fee41e0d86ca09975418b4aae0d149b2b4c3238c7cfc45e7e618ca339b009"
+    },
+    {
+      "path": "docs/verification/t001-effective-pom.xml",
+      "sha256": "7456f1350ec48868bafb405a760ac5c3661f5b503406c95005f1c8e6ad538124"
+    },
+    {
+      "path": "docs/verification/t001-dependency-tree.txt",
+      "sha256": "1f8638295431ab674e59d389bcf9968ca24564c391b00ebc418ede5dcda0c7ca"
+    },
+    {
+      "path": "docs/verification/t001-runtime-image.json",
+      "sha256": "9cca9421a15a03e107871c570f9d77fbb44240ac529d967dc3fb6c44ae80328c"
+    }
+  ]
+}

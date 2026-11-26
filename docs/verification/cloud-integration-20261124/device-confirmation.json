@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-24",
+  "source": "owner response to actual development-preview QR",
+  "reported_result": "能进入，登录、本人档案和预约记录均正常",
+  "development_preview_generated": true,
+  "formal_origin": "https://andrewdental.cn",
+  "domain_checks_enabled": true,
+  "real_device_login_profile_records": "PASS_OWNER_CONFIRMED",
+  "new_booking_cancel_on_phone": "NOT_REPORTED",
+  "second_wechat_account_rebind": "PASS",
+  "miniprogram_icp_submission": "OWNER_HANDLES_NOT_PERFORMED_BY_AGENT",
+  "production_release": false,
+  "second_account_profile_and_original_records": "PASS_OWNER_CONFIRMED",
+  "second_account_confirmation": "第二个微信已能看到本人档案和原预约记录"
+}

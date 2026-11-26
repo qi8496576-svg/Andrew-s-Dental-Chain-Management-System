@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-18",
+  "scope": "Patient UI/UX redesign only",
+  "status": "IMPLEMENTED_WITH_FINAL_AUTOMATION_LIMITATION",
+  "pages": 7,
+  "native_tab_routes": 4,
+  "typescript": "PASS",
+  "native_wxml_and_wxss_source_and_dist": "PASS",
+  "unit_tests": {
+    "passed": 22,
+    "failed": 0,
+    "log": "unit.log"
+  },
+  "runtime": {
+    "interim_automated_logic_checks": 8,
+    "interim_report": "runtime.json",
+    "final_user_confirmation": "新版首页及其他页都可以看到，登陆成功",
+    "final_automated_screenshots": "NOT_COMPLETED: official auto command stalled fetching AppID permissions; earlier attempts had snapshot timeouts",
+    "full_booking_cancellation_admin_attendance_rerun_after_redesign": "NOT_RUN: automation connection unavailable",
+    "prior_business_evidence": "../local-patient-admin.json (previous local integration, not a new final UI run)"
+  },
+  "api_limitations": [
+    "No patient-authorized dentist biography/photo/specialty API",
+    "No patient-facing clinic address or treatment price/details projection",
+    "Full clinical records not exposed by existing patient API"
+  ],
+  "backend_changed": false,
+  "business_schema_changed": false,
+  "admin_changed": false,
+  "real_device_verified": false,
+  "files": [
+    {
+      "path": "apps/patient-miniprogram/miniprogram/app.json",
+      "sha256": "1e4398eef5f4b4f061fd060cf09fa3444e1ae02d3d0621dca9dad488f837a523"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/app.wxss",
+      "sha256": "bc26b35006fb97e2aee3bc7df55a0134d4f71ebbe871462f1c8f0d18b257da4f"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/appointment-booking/index.ts",
+      "sha256": "7f619bd294c22b4d1ad6ce41349d099952e3264f5838af473bfa023f5ad45781"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/personal/index.ts",
+      "sha256": "513127575a4041cb1479c4692a31bc5c529fadd41ff8a379910faba9cfab4136"
+    },
+    {
+      "path": "apps/patient-miniprogram/miniprogram/pages/appointment-cancellation/index.ts",
+      "sha256": "15839208a8b8b843b18a494b5f3568122ce427b0e7a4ebaf5a46df38195dffcb"
+    }
+  ]
+}

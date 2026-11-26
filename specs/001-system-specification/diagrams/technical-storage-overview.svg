@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1180" viewBox="0 0 1900 1180">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10" fill="none" stroke="#365f88" stroke-width="1.5"/></marker></defs>
+<rect width="1900" height="1180" fill="#f5f7fa"/>
+<text x="52" y="64" font-family="Microsoft YaHei, sans-serif" font-size="36" fill="#19324b">Andrew’s Dental Chain｜业务 ERD 与独立技术存储</text>
+<text x="52" y="107" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#506780">Plan 补充设计 · 2026-11-07 · 单 MySQL8.4 / InnoDB 实例，同一事务连接及恢复位点</text>
+<rect x="45" y="150" width="410" height="865" rx="14" fill="#fff" stroke="#c6d3e1" stroke-width="2"/>
+<rect x="540" y="150" width="830" height="865" rx="14" fill="#fff" stroke="#c6d3e1" stroke-width="2"/>
+<rect x="1455" y="150" width="400" height="865" rx="14" fill="#fff" stroke="#c6d3e1" stroke-width="2"/>
+<text x="70" y="202" font-family="Microsoft YaHei, sans-serif" font-size="28" fill="#19324b">adc_business</text>
+<text x="70" y="241" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">19 表 / 163 字段 / 30 FK</text>
+<text x="70" y="283" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#506780">原 Word 与 D1 业务 ERD</text>
+<rect x="70" y="322" width="360" height="150" rx="14" fill="#f2f6fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="91" y="363" font-family="Microsoft YaHei, sans-serif" font-size="24" fill="#19324b">Patient</text>
+<text x="91" y="401" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">患者主档与原过敏核实链</text>
+<text x="91" y="438" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">不增加登录/绑定/权限字段</text>
+<rect x="70" y="505" width="360" height="135" rx="14" fill="#f2f6fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="91" y="546" font-family="Microsoft YaHei, sans-serif" font-size="24" fill="#19324b">Dentist / Clinic</text>
+<text x="91" y="588" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">任职、执业、排班与目录</text>
+<rect x="70" y="674" width="360" height="200" rx="14" fill="#f2f6fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="91" y="714" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">预约 → 治疗 → 费用结算</text>
+<text x="91" y="763" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">成本 → 季度绩效 / R1</text>
+<text x="91" y="810" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">原关系与 source_snapshot</text>
+<text x="91" y="847" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">INVOICED 不表示已付款</text>
+<text x="70" y="955" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#506780">原图、字段、业务键保持原样</text>
+<text x="565" y="202" font-family="Microsoft YaHei, sans-serif" font-size="28" fill="#19324b">adc_identity｜13 张技术表</text>
+<text x="565" y="241" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#506780">身份与授权 / 请求控制 / 工具历史</text>
+<rect x="760" y="279" width="390" height="90" rx="14" fill="#eaf1fb" stroke="#c6d3e1" stroke-width="2"/>
+<text x="790" y="321" font-family="Microsoft YaHei, sans-serif" font-size="24" fill="#19324b">Subject</text>
+<text x="790" y="352" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#19324b">长期可信主体，非 Patient ID</text>
+<path d="M955,369 L955,403" fill="none" stroke="#365f88" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1000" y="391" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#19324b">技术 FK</text>
+<rect x="565" y="406" width="360" height="230" rx="14" fill="#f6f8fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="585" y="443" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">平台 / 员工 / 会话</text>
+<text x="585" y="488" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">ExternalIdentity</text>
+<text x="585" y="525" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">StaffAccount</text>
+<text x="585" y="562" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">Session</text>
+<text x="585" y="599" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">LoginThrottle</text>
+<rect x="955" y="406" width="390" height="230" rx="14" fill="#f6f8fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="975" y="443" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">人工核验 / 本人绑定</text>
+<text x="975" y="495" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">BindingRequest</text>
+<text x="975" y="541" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">CurrentPatientBinding</text>
+<text x="975" y="587" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">BindingEvent</text>
+<rect x="565" y="668" width="360" height="200" rx="14" fill="#f6f8fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="585" y="707" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">岗位 / 能力 / 诊所范围</text>
+<text x="585" y="754" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">AccessGrant</text>
+<text x="585" y="793" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">GrantClinicScope</text>
+<text x="585" y="832" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">GrantCapability</text>
+<rect x="955" y="668" width="390" height="200" rx="14" fill="#f6f8fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="975" y="707" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">控制 / 元数据</text>
+<text x="975" y="761" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">RequestReceipt</text>
+<text x="975" y="812" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">flyway_schema_history</text>
+<text x="565" y="940" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">adc_control → RequestReceipt（并入本库）</text>
+<text x="565" y="976" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">adc_meta → Flyway 历史（并入本库）</text>
+<text x="1480" y="198" font-family="Microsoft YaHei, sans-serif" font-size="24" fill="#19324b">adc_audit｜1 张技术表</text>
+<rect x="1480" y="291" width="350" height="210" rx="14" fill="#f2f6fc" stroke="#c6d3e1" stroke-width="2"/>
+<text x="1500" y="339" font-family="Microsoft YaHei, sans-serif" font-size="28" fill="#19324b">AuditEvent</text>
+<text x="1500" y="386" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">追加写 / 专门授权读取</text>
+<text x="1500" y="428" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">至少保留 1 年</text>
+<text x="1500" y="467" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">运行账号不能修改/删除</text>
+<path d="M1150,324 L1410,324 L1410,538 L1655,538 L1655,501" fill="none" stroke="#365f88" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1480" y="577" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">subject_id → Subject</text>
+<text x="1480" y="613" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">跨技术库数据库 FK</text>
+<text x="1480" y="763" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">规定成功写：事实、事件、</text>
+<text x="1480" y="798" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">回执与审计同一事务提交</text>
+<text x="1480" y="862" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#506780">不能以日志代替可信审计</text>
+<path d="M970,636 L970,652 L495,652 L495,390 L430,390" fill="none" stroke="#365f88" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+<text x="475" y="365" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#19324b">APP</text>
+<path d="M565,790 L492,790 L492,610 L430,610" fill="none" stroke="#365f88" stroke-width="3" stroke-dasharray="8 8" marker-end="url(#arrow)"/>
+<text x="465" y="707" font-family="Microsoft YaHei, sans-serif" font-size="18" fill="#19324b">APP</text>
+<text x="54" y="1072" font-family="Microsoft YaHei, sans-serif" font-size="22" fill="#19324b">实线：技术 FK 分组示意；虚线：应用核验 Patient / Dentist / Clinic / 业务对象，不增加业务 FK。</text>
+<text x="54" y="1112" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#19324b">完整技术 ERD 另含 14 表 / 110 字段 / 19 技术 FK；精确键与 12 项应用引用见 technical-data-model.md/json。</text>
+<text x="54" y="1150" font-family="Microsoft YaHei, sans-serif" font-size="20" fill="#506780">本图为补充技术边界概览；尚未建库或执行真实微信联调，原 D1 未改动。</text>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "status": "owner-authorized",
+  "date": "2026-11-25",
+  "decision_source": "负责人明确允许调整验收标准、不立即升级2核2GB云服务器，并要求推进完整交付",
+  "profile": "Q03-SMALL-20261125",
+  "conditions": "30诊所、100牙医、1万患者、10万预约、20万治疗。隔离Linux容器合计CPU上限2核、内存上限2GB，独立负载进程；10并发持续20分钟，每用户约2秒一次请求，候选检索/治疗保存/结算占60%/20%/20%。另在现有2核2GB云端执行5并发5分钟只读验证。",
+  "acceptance": "隔离测试不少于5000次实际成功请求，各类P95≤3秒，非预期错误率<1%，配比误差≤0.5个百分点；云端不少于600次只读请求，P95≤3秒且错误率<1%。保存原始样本、资源和落库核对，不推断100并发或云端大规模写入容量。",
+  "business_model_database_and_api_changed": false,
+  "production_release_authorized": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@adc/contracts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "types": "./dist/generated.d.ts",
+  "engines": { "node": ">=24.12.0 <25", "npm": ">=11 <12" },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "generate": "node scripts/generate.mjs --write",
+    "check:drift": "node scripts/generate.mjs",
+    "test": "node --test tests/contract.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc -p tsconfig.build.json",
+    "verify": "npm run validate && npm run check:drift && npm test && npm run typecheck && npm run build"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "13.1.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "openapi-typescript": "7.13.0",
+    "typescript": "5.9.3"
+  }
+}

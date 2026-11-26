@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.adc.infrastructure.persistence.AppointmentMapper">
+  <resultMap id="row" type="com.adc.domain.model.Appointment">
+    <constructor>
+      <idArg column="appointment_id" javaType="java.lang.Long"/>
+      <arg column="patient_id" javaType="java.lang.Long"/>
+      <arg column="clinic_id" javaType="java.lang.Long"/>
+      <arg column="dentist_id" javaType="java.lang.Long"/>
+      <arg column="schedule_id" javaType="java.lang.Long"/>
+      <arg column="scheduled_at" javaType="java.time.Instant"/>
+      <arg column="status" javaType="java.lang.String"/>
+      <arg column="problems_or_special_needs" javaType="java.lang.String"/>
+      <arg column="completed_at" javaType="java.time.Instant"/>
+      <arg column="created_at" javaType="java.time.Instant"/>
+      <arg column="updated_at" javaType="java.time.Instant"/>
+      <arg column="attended_at" javaType="java.time.Instant"/>
+      <arg column="cancelled_at" javaType="java.time.Instant"/>
+      <arg column="cancellation_reason" javaType="java.lang.String"/>
+      <arg column="cancellation_kind" javaType="java.lang.String"/>
+      <arg column="rescheduled_from_id" javaType="java.lang.Long"/>
+    </constructor>
+  </resultMap>
+  <select id="findById" resultMap="row">
+    SELECT `appointment_id`, `patient_id`, `clinic_id`, `dentist_id`, `schedule_id`, `scheduled_at`, `status`, `problems_or_special_needs`, `completed_at`, `created_at`, `updated_at`, `attended_at`, `cancelled_at`, `cancellation_reason`, `cancellation_kind`, `rescheduled_from_id` FROM adc_business.`Appointment` WHERE `appointment_id` = #{appointment_id}
+  </select>
+</mapper>

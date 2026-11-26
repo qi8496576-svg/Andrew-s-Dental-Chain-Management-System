@@ -1,0 +1,265 @@
+{
+  "source_backup": "tmp/admin-review-20261123/before.zip",
+  "theme_primary": "#17778b",
+  "changed_source_files": 45,
+  "files": [
+    {
+      "path": "apps/admin/src/App.vue",
+      "kind": "modified",
+      "before_sha256": "49c88da09309c47a3247293bbb866e896a2b0c2ef68a11a6c184ae800d3a8ce9",
+      "after_sha256": "da68f2e103ab4bae2c206da4068b9d3c2c21bdc71f29fdb5821dad50d0af7199"
+    },
+    {
+      "path": "apps/admin/src/main.ts",
+      "kind": "modified",
+      "before_sha256": "dc8156b0410efced400597efb1b77622a7b23802fa48090194edea327068fdde",
+      "after_sha256": "9241f7403a624b51819b553bb0a2c55f78be5ddd2705fe4a42cc86235f1b9ffe"
+    },
+    {
+      "path": "apps/admin/src/navigation.ts",
+      "kind": "modified",
+      "before_sha256": "e02613fc01bff819b6f6a21a694dce773d86905d2ea4a3127552de4c74884227",
+      "after_sha256": "6cc2cc0c993a2b4eada2678912e8c099317f8d7de1be8801e1f88451e4261723"
+    },
+    {
+      "path": "apps/admin/src/api/http.ts",
+      "kind": "modified",
+      "before_sha256": "964d6459dcd0ceb574af75bd8cf04ec1d3a31e826d5ae22f90f73124adbdd003",
+      "after_sha256": "723b29dd52f3e6670f59c8863a6044577946f3bdda92651216fc1e91271cc49a"
+    },
+    {
+      "path": "apps/admin/src/components/AppointmentActions.vue",
+      "kind": "modified",
+      "before_sha256": "b74ede720bfb032adb3b8b8729355414eb9ab84f8fd34c8dc08f21e478fff84a",
+      "after_sha256": "52c18d904e13686b8bc5c2f093376f36aea1af85bfd24f26fcb30d9b7570a755"
+    },
+    {
+      "path": "apps/admin/src/components/AppointmentReviewQueue.vue",
+      "kind": "modified",
+      "before_sha256": "66c38c5571a454079032fd26d6fa9a0dc56aaf5f7a616986e3e78270774ef98e",
+      "after_sha256": "6920a8e8dcdfa64baf99b22f0f076bdc5cf8d793bb8a4ce679bb639f21dec3d2"
+    },
+    {
+      "path": "apps/admin/src/stores/authentication.ts",
+      "kind": "modified",
+      "before_sha256": "4c9dbd46982fefb74874e33b46aa1f071c2f2967548bf2eaaecfb0f67f443d77",
+      "after_sha256": "de3d50a828c66ae47d566d0ee69d9e2ef2d94005dfa1e39ff657b66716856d50"
+    },
+    {
+      "path": "apps/admin/src/stores/shell.ts",
+      "kind": "modified",
+      "before_sha256": "f2684e0c84b41e893bd01229e2dd0efa7002759bd75c8391b7f498f842bcb1d7",
+      "after_sha256": "f16d303363afccb7b9d4781d5a24ddf7c88b9752bd03c14dcaed8a45abc84a8b"
+    },
+    {
+      "path": "apps/admin/src/views/HomeView.vue",
+      "kind": "modified",
+      "before_sha256": "56851b24374a8985a6579a03d3a4958db7aba1a7a28944a2a371ff9fa506f6a4",
+      "after_sha256": "ef453d2f812cdb510bf78b31e7b95bccfb91c61437a5ee38a62448de3fd31e24"
+    },
+    {
+      "path": "apps/admin/src/views/analytics/index.vue",
+      "kind": "modified",
+      "before_sha256": "480e47301abf445e41e2bed0f7ee8359f5de467853ffc17de63bb016d6576a8b",
+      "after_sha256": "d8c479564fceab21176070cb144dc3994eedd8f662c0a6b5bb4d50bf3ab5e3c7"
+    },
+    {
+      "path": "apps/admin/src/views/appointment-booking/index.vue",
+      "kind": "modified",
+      "before_sha256": "98253014387e54f1788197063c882a17e421e50ec531324930a6d08c2ef01f1d",
+      "after_sha256": "e37894d8ce4616de3ccc8531a42aa79779995f8a8a70fe0d24a130625d033417"
+    },
+    {
+      "path": "apps/admin/src/views/appointment-rescheduling/index.vue",
+      "kind": "modified",
+      "before_sha256": "fca55cac051e47cb9d335db1ad8a9e100a72ea7d66f88f0e073777ffc077d258",
+      "after_sha256": "1ad8908eceeb9bd5f3d00bcf99fa4dc379a5cee044ae9fb022f5f1c38da4e7dd"
+    },
+    {
+      "path": "apps/admin/src/views/clinic-grants/index.vue",
+      "kind": "modified",
+      "before_sha256": "22338138698ef431c397f75b5d28bf1680d5ea8c41fbe6475c3cf86cf6f3f8b2",
+      "after_sha256": "d5bea0572fb35e3ea4245bf6c96d81be78c619714d8c6b01c7fe47eabc93caf1"
+    },
+    {
+      "path": "apps/admin/src/views/clinical-treatment/index.vue",
+      "kind": "modified",
+      "before_sha256": "587ceac4aadf7c5afb43538586cb9282aa0f2ea642988946502bcf14841cfc5c",
+      "after_sha256": "7b8e0dad06d0d7b364270faba1b1fd01ff65e422a9c70a7ce19aa5e6a24a9a07"
+    },
+    {
+      "path": "apps/admin/src/views/clinical-treatment/price-correction.vue",
+      "kind": "modified",
+      "before_sha256": "11573be1552d1fc6d331bbb1fed925856bb6869d63ae3057a239d3aa66fa3e47",
+      "after_sha256": "ed39f9b7f4bb647e8442c5be6b4045d14d1f2015a3290a211f74479538ee793f"
+    },
+    {
+      "path": "apps/admin/src/views/invoicing/index.vue",
+      "kind": "modified",
+      "before_sha256": "18fef144db78e6bf0873bb8bb679211422e4437a9cdb8725a59d468865a53cf8",
+      "after_sha256": "4407a7a5bb6971935023b767b564de89a7999f26c8b9b1c97619e0c2cc859209"
+    },
+    {
+      "path": "apps/admin/src/views/organization-resources/index.vue",
+      "kind": "modified",
+      "before_sha256": "5b4877535592dcce57f7b3f91acfb4e6872c54fece6c9b190f2e26205414c0a1",
+      "after_sha256": "4ebd05320495b1b3cc0df2242f27a11ad8284d7dba32a5f5724e90855c530edf"
+    },
+    {
+      "path": "apps/admin/src/views/patient-bindings/index.vue",
+      "kind": "modified",
+      "before_sha256": "81df0cf93836ba19a81f9dd206e476af097c23f2aec6eaaa61f107ba88d3e50e",
+      "after_sha256": "0cc47a8584979aeccc815bbfa02c6d2ba33e3248153d77712232be8bd92a6a9e"
+    },
+    {
+      "path": "apps/admin/src/views/patients/index.vue",
+      "kind": "modified",
+      "before_sha256": "0b98af804be5be26f8a80987352b2a5eca391e10d3c90204be92876c7ba5d101",
+      "after_sha256": "222176927567d78fa024b3bce790aee632ded535bfec9a1e0f96231fd8283393"
+    },
+    {
+      "path": "apps/admin/src/views/quarterly-performance/costs.vue",
+      "kind": "modified",
+      "before_sha256": "9887e5829802ba45a5f61aba8e0f97eebf65201cdfacc043beaaee779a260f00",
+      "after_sha256": "c04056e1700d8fa31b7376f196622f7beea9e82efdf1fbd1d97ab9d647c5cdf7"
+    },
+    {
+      "path": "apps/admin/src/views/quarterly-performance/index.vue",
+      "kind": "modified",
+      "before_sha256": "c74026d1d7fa119e23df5e5846fc371f8b47361b8d0212b0af03fadd508a6267",
+      "after_sha256": "c9b55fb3ddf88f801567f905455d37573e4098d2387aa412dccd6de05f73e390"
+    },
+    {
+      "path": "apps/admin/src/views/schedules/index.vue",
+      "kind": "modified",
+      "before_sha256": "a109599179ba29c6465230c399f7cad422323dcaa0520dd181a155fcd93c518f",
+      "after_sha256": "1ea523afe3f4e35018989c33dc9a4b47875b776b4bc988f48f197ae7ae908387"
+    },
+    {
+      "path": "apps/admin/src/views/staff-accounts/index.vue",
+      "kind": "modified",
+      "before_sha256": "4e5f331f6a12e69da26e3d242019f2e27e6c38969c1bfd8c8dea1f74d9081f8a",
+      "after_sha256": "8e9cefbf498c5c11770860d1b10e3413bef1481f6b071d5dcd6428a22a4db77c"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/application/InvoiceService.java",
+      "kind": "modified",
+      "before_sha256": "0c300d49d9a91382e2a4da9647a3a6188da7c1df54873a31ebab2f759d70e78a",
+      "after_sha256": "a994afa9924de08f580507b1949800a21043669ef7c516d651733f62fa8f1572"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/application/ResourceMaintenanceService.java",
+      "kind": "modified",
+      "before_sha256": "f78a936696398a74e6e75d889690f1ae87435cdbabf2fdf6c35085e6c768a97a",
+      "after_sha256": "97ab49c613ccf260a0bf9dc588a6c9f2f0da6120a86e5c0be9d8c57682236ffa"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/identity/BootstrapSecurityConfiguration.java",
+      "kind": "modified",
+      "before_sha256": "e6e3ddc6777964becec4e96633da932da7bbb423f499c87140f145067453299e",
+      "after_sha256": "87f81ab6c94d1cbe5de24ad20152d96d29132c88c8807085b3d6a6df53f3be6c"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/AppointmentBookingStore.java",
+      "kind": "modified",
+      "before_sha256": "f4e044c18b7067a9de829e0525f31391e81b14990995158cdb91f5bdb3c1aef8",
+      "after_sha256": "9537d5a3aa3a92155e36021bbcb6f6e261f655ecb3f65a06bd7e63762986fd8a"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/ClinicGrantStore.java",
+      "kind": "modified",
+      "before_sha256": "cc95a45d4743e5628756b06706fca3c70a3ee5357fed256a550eaf27abd9c339",
+      "after_sha256": "d1f2c0a213604f50d4ac3a2b7b9e5062025c7641e0a7a524a036b0f633322501"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/InvoiceStore.java",
+      "kind": "modified",
+      "before_sha256": "f942b11ec83b794c727b8daa4630b9e06b27b927f460834825cd33205014584a",
+      "after_sha256": "2791409ee062d84340d86dded6672720fb068d8fe4d97c56fd2081d069754f52"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/OrganizationResourceStore.java",
+      "kind": "modified",
+      "before_sha256": "f4208e7acc8e2e42f44197a3a2ac3271c6f7b4816fdd26b344017f00832f19fb",
+      "after_sha256": "58bf0485d1c6f2a789a85cfe5769dce88370907125b6b6a6def2c7564e20b24a"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/QuarterlyPerformanceStore.java",
+      "kind": "modified",
+      "before_sha256": "9ce46c48865531e13d80ce146a47cd02529ed8d129204a0e8bb5e33217f64cf5",
+      "after_sha256": "54fdd39a5235d72159a5f16bc1fd483f759011ad6bb01f59ca676075b298c276"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/interfaces/InvoiceController.java",
+      "kind": "modified",
+      "before_sha256": "57106b6a5b502d23f3fb5f6dfed6b1e5c995ca340a459db6582b36b672b15a5d",
+      "after_sha256": "7b7b0b25e99f4c246a45f6fb93bf609a66f6b016a77db1ed4101dc07eeab0503"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/interfaces/ResourceMaintenanceController.java",
+      "kind": "modified",
+      "before_sha256": "4dbcae0144910909629b9def05e868a93b2aeb6fa5d95d84b832b4562a9e480c",
+      "after_sha256": "ce382d0a7dcbc74f0b23dad654f45c44323905e29101aa555805c615af957249"
+    },
+    {
+      "path": "apps/admin/src/review.css",
+      "kind": "added",
+      "after_sha256": "f477f5f3986c6623221c129e4f9577141f168edbf365c235affc46f109f85d9a"
+    },
+    {
+      "path": "apps/admin/src/api/business-messages.ts",
+      "kind": "added",
+      "after_sha256": "7690df7d222f8a16bf014f3df63fb2983f848ff8fcf10d5042b65bcc05c360c4"
+    },
+    {
+      "path": "apps/admin/src/api/outcome-recovery.spec.ts",
+      "kind": "added",
+      "after_sha256": "a3c0c2356f0e19cb98117175f64c17024910a070af92c9aefd9cb8a3bee1fb54"
+    },
+    {
+      "path": "apps/admin/src/api/outcome-recovery.ts",
+      "kind": "added",
+      "after_sha256": "15d5d54864ffdd404023d13eb0c1dd0692bca40fa3fbbdc42097043f469330f3"
+    },
+    {
+      "path": "apps/admin/src/api/workspace-types.ts",
+      "kind": "added",
+      "after_sha256": "c86afb14e32199bfe2779a7ea7aa37d1de0dc277b3f7858b8a9f56770ea2e7d5"
+    },
+    {
+      "path": "apps/admin/src/components/FrozenSources.vue",
+      "kind": "added",
+      "after_sha256": "2f9357cd4bcbc97074234bc8a9c9c55b73354fd23c3cd073d425504aece4362f"
+    },
+    {
+      "path": "apps/admin/src/components/ResultRecovery.vue",
+      "kind": "added",
+      "after_sha256": "51f6b8630152d9719aa529bb0e1d3eca9512e336385d5714bd29886c47d7a01b"
+    },
+    {
+      "path": "apps/admin/src/components/WorkspacePanel.vue",
+      "kind": "added",
+      "after_sha256": "3cce8316165621185d294906d1226bfc2a214781dec97a1c913035d557539520"
+    },
+    {
+      "path": "apps/admin/src/composables/useUnsaved.ts",
+      "kind": "added",
+      "after_sha256": "6dbec6054c30bcd3769f0708d6f294fded3399675ae1eeadc400dcc565999e04"
+    },
+    {
+      "path": "apps/admin/src/stores/view-scope.ts",
+      "kind": "added",
+      "after_sha256": "d1eb47390fe0f177e64928bc04c621823abbb5505916b2a27bd4f532e26aa48e"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/application/WorkspaceReadService.java",
+      "kind": "added",
+      "after_sha256": "164e7c1deb511221aae6ab59af036ac711cd874e50458a67ce468587b3afb82d"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/interfaces/WorkspaceReadController.java",
+      "kind": "added",
+      "after_sha256": "b75ded818a513bcc72a5f9e0e7b27b9df6b73a205df3194dc9bee4c9b05aa885"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "plantuml": "1.2026.9",
+  "mermaid_cli": "12.2.0",
+  "results": [
+    {
+      "source": "docs/diagrams/uml/A1-业务用例图.puml",
+      "sha256": "da11e1ef2d7c87b2f75eaf1e52c4c645cdd2f1200a4c0089d838ffad047d1646",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/A1-业务用例图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/A2-现状业务序列图.svg",
+      "sha256": "a9f681506645f5a7a6f0f91b583d5008572c54706c1879c3c4bd529f23e14c15",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/A2-现状业务序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/A3-改进业务序列图.svg",
+      "sha256": "a49dd3887d4236103f1eb6529915b44a2678f91e1400d88d67115e31035399c9",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/A3-改进业务序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/B1-系统用例图.svg",
+      "sha256": "7992742983c7919baccfa1cfb437a7985e43bb3520877b67aec6acb535bb87fd",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/B1-系统用例图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C1-实体类图.puml",
+      "sha256": "51b6c708b4db245d636d75e40fe21a6567f2a3cafb748dc1047677fd7df1947c",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/C1-实体类图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C2-边界类图.svg",
+      "sha256": "286d8da18a8ebc329fd17265a85110420242cda79205bd7a13d33593d54cecae",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C2-边界类图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C3-控制类图.svg",
+      "sha256": "56ef51a1d8af428ccfc1acecf6df4530a8d59252e8356215380fff19991964da",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C3-控制类图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C4-UC01分析序列图.svg",
+      "sha256": "4315b9e750362cb902643a36e536c4c3f8abbc953b0db26912b00d8fd628a91c",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C4-UC01分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C5-UC02分析序列图.svg",
+      "sha256": "0701239e33fdb95d93c054de458cea395529b21765de5f78c3360c7a3c592064",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C5-UC02分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C6-UC03分析序列图.svg",
+      "sha256": "68d5bbc1035b9c1b8eb6d059f771e4ab229b21fd18eb028f546cf25f950f0470",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C6-UC03分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C7-UC04分析序列图.svg",
+      "sha256": "171a5c1d93ee73e21d6a827a9f597751f3b0082f7083dbaacb0213183dfbd76b",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C7-UC04分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C8-UC05分析序列图.svg",
+      "sha256": "575c0b83d74ffa71d41de34d8a667e4ba6fb5cc69109c69d3190476d4a2f8576",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C8-UC05分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C9-UC06分析序列图.svg",
+      "sha256": "541d6078c82eca87f9b509938253cc825b8fc467031fc5ca32c03be812f54d28",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C9-UC06分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C10-UC07分析序列图.svg",
+      "sha256": "41844dc58a8ce3b7c63142b94181ad0a02a663885dc560f0a5f816be3ab94a2b",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C10-UC07分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C11-UC08分析序列图.svg",
+      "sha256": "ecf67513b79207f0fbac9904eb4cab7fc242ec5ade1bdbc6e10d5e12a449342b",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C11-UC08分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C13-UC01-S2分析序列图.svg",
+      "sha256": "15d13b6c085bf6edbf0a166abe21e366c13e01908406b2e94ff1a223d2053718",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C13-UC01-S2分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C14-UC01-S3分析序列图.svg",
+      "sha256": "931aa5cc1a6cd8ab28cb855046b9af8c31f6ad8a409fa9497c713284c76399c2",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C14-UC01-S3分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C15-UC01-S4分析序列图.svg",
+      "sha256": "66f1d89b5a9ecd9c01b1cb0170ebeda35dbbc7d62510a647de3b684f01dc4907",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C15-UC01-S4分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C16-UC01-S5分析序列图.svg",
+      "sha256": "4bfdccadbe341e2e73ee1d4fccab599e47d29db9e46262873c3f796e859c86f8",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C16-UC01-S5分析序列图.svg"
+    },
+    {
+      "source": "docs/diagrams/uml/C12-就诊状态机.svg",
+      "sha256": "eefc539aac0794a217b96acf75c842ae2fc11a1e91f36ad95b6eae23595c93de",
+      "exit_code": 0,
+      "error": null,
+      "renderer": "owner-approved native SVG; XML and raster checked by tools/diagrams/verify.py",
+      "output": "docs/verification/models/rendered/C12-就诊状态机.svg"
+    },
+    {
+      "source": "docs/diagrams/architecture/D2-系统分层.mmd",
+      "sha256": "ecf1935d58634ca6470251ab500dafce3f029b8cc201ef9d63427f77be7968af",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/D2-系统分层.svg"
+    },
+    {
+      "source": "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+      "sha256": "9d8148936719b2d16f2c7165f803a92467547fcc4237584f3ad9e0d5c9602da7",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/storage-boundaries.svg"
+    },
+    {
+      "source": "specs/001-system-specification/diagrams/technical-erd.mmd",
+      "sha256": "7d8ea2e40129ccb6871644c0ebcb53a16af5e8b850079009942e4d6bdfa1eddb",
+      "exit_code": 0,
+      "error": null,
+      "output": "docs/verification/models/rendered/technical-erd.svg"
+    }
+  ]
+}

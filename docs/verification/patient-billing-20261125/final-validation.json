@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-26",
+  "formal_erd_owner_approved": true,
+  "formal_word_pages": 62,
+  "formal_figures": 22,
+  "word_and_all_copies_match": true,
+  "business_schema": {
+    "tables": 24,
+    "fields": 209,
+    "foreign_keys": 44
+  },
+  "tasks": {
+    "total": 64,
+    "complete": 64,
+    "pending": []
+  },
+  "backend": {
+    "surefire-reports": {
+      "tests": 24,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "failsafe-reports": {
+      "tests": 176,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_cleanup": "approved ERD drafts and obsolete one-time drawing generators deleted",
+  "limitations": [
+    "真实微信商户支付未接入；本轮仅演示，不扣真实款",
+    "手机手动演示支付确认尚未验收；开发工具showModal确认采用自动返回值，其余业务调用真实",
+    "服务器外备份接收机须保持开机、联网及登录；正式发布前确认持续在线接收位置"
+  ]
+}

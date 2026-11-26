@@ -1,0 +1,3 @@
+import {defineConfig,devices} from '@playwright/test'
+if(!process.env.ADC_AUTH_BASE_URL||!process.env.ADC_EXTENSION_CLINIC||!process.env.ADC_TEST_PASSWORD)throw new Error('Owned container fixture required')
+export default defineConfig({testDir:'./tests/e2e',testMatch:'resource-extension.spec.ts',workers:1,retries:0,forbidOnly:true,timeout:60000,reporter:[['list'],['junit',{outputFile:'test-results/container-extension.xml'}]],outputDir:'test-results/container-extension',use:{baseURL:process.env.ADC_AUTH_BASE_URL,ignoreHTTPSErrors:true,trace:'retain-on-failure',screenshot:'only-on-failure'},projects:[{name:'real-container-mysql',use:{...devices['Desktop Chrome'],channel:process.env.ADC_BROWSER_CHANNEL??'msedge'}}]})

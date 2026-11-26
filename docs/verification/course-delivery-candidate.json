@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-26",
+  "scope": "approved course fictional demonstration and automated acceptance",
+  "tasks_complete": 64,
+  "production_release_authorized": false,
+  "deployed_release": "adc-billing-fix-20261125-1795660119820",
+  "deployed_backend_image": "sha256:a9135851776476574881e10618cce16953c32828640e878a9a44b700dcff73ea",
+  "final_word_and_pdf_pages": 62,
+  "documentation_pdf_pending_final_export": false,
+  "fingerprints": [
+    {
+      "path": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+      "sha256": "42b8ef936732dd24ce757bc97e747549c53ffbdaf383fbe7b9b0965d511d003a"
+    },
+    {
+      "path": "信管2402班刘阳1602240217.pdf",
+      "sha256": "7ce9606909bac6b3fa7659c0606d99791dd5002dd2dcaedaa9dce9299974563c"
+    },
+    {
+      "path": "specs/001-system-specification/spec.md",
+      "sha256": "a9729f98327565a15227144b9771df128e125bad0d56c27560da6a250d580d3a"
+    },
+    {
+      "path": "specs/001-system-specification/plan.md",
+      "sha256": "21f8fd2817746d3b26301202e7064026aaf64ed85590dbb4f6e6833d759f48fd"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "8ea38d72f3d34b248f2e535bdb420e0d7517fffa0d055fe4e5625c094ed32620"
+    },
+    {
+      "path": ".specify/memory/constitution.md",
+      "sha256": "85db074e9108842bbed23d58a86f2d7fa6174892147940a321db0b356292167b"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "sha256": "8da409373e97b51089ee6cceb01b1121e5c5d90d4e8987ab2242a39d0747f3da"
+    },
+    {
+      "path": "docs/diagrams/database/schema.json",
+      "sha256": "be4c3b1f7a25ced4c82f1d06e8c3f26d73a0deee4bb15d7c3749d8241cfdc58a"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/application/AppointmentBookingService.java",
+      "sha256": "b5fce9f02f27a13674bc4c99e5e564c9470f0ccb937ab1faedc8e594f242d564"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/infrastructure/AppointmentBookingStore.java",
+      "sha256": "4bb0079f94f837902876475dc7bc90ca900dd207b30a889e9bc1f472136b7187"
+    },
+    {
+      "path": "backend/src/main/java/com/adc/application/PatientBillingService.java",
+      "sha256": "222928668802f61005c330cc60ea7ef8b3a3178e69bbb4b921062323da46b212"
+    },
+    {
+      "path": "backend/src/test/java/com/adc/infrastructure/CourseQuarterAcceptanceIT.java",
+      "sha256": "48fc94c840bd92dce33b8352a903cde54440e4f97d43ede819044ff284ca8870"
+    }
+  ]
+}

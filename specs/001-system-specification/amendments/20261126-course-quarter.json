@@ -1,0 +1,7 @@
+{
+  "date": "2026-11-26",
+  "status": "owner-authorized",
+  "scope": "本系统采用受控虚构完整自然季度演练验收，不将演练结果表述为真实营业结果。初始历史资料为明确标记的虚构夹具，核算、独立复核发布和分析通过真实后端与数据库执行；模拟业务时钟与实际执行耗时分开说明。资料齐备后核算及复核发布不超过1个工作日，统一资料覆盖率及有效治疗七项要素可追溯率均为100%；工作日历及缺项按表A1a处理。",
+  "pdf_export_policy": "Wait until Word content is stable; export once at the end",
+  "schema_or_production_clock_changed": false
+}

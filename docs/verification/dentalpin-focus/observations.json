@@ -1,0 +1,1280 @@
+{
+  "date": "2026-11-18T11:39:37.436Z",
+  "observations": [
+    {
+      "name": "home",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good afternoon, Admin",
+        "Today",
+        "Unconfirmed for tomorrow",
+        "Overdue payments",
+        "Recent patients"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood afternoon, Admin\n\nWednesday, November 18, 2026\n\nNew patient\nNew appointment\n\nAppointments today\n\nIn clinic now\n\nOverdue payments\n\nToday\nOpen schedule\nUnconfirmed for tomorrow\nOverdue payments\nRecalls\nCall list →\nRecent patients",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        },
+        {
+          "text": "Overdue payments",
+          "href": "/invoices?filter=overdue"
+        },
+        {
+          "text": "Open schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Call list →",
+          "href": "/recalls"
+        },
+        {
+          "text": "",
+          "href": "/patients"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out"
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "admin-menu",
+      "url": "https://demo.dentalpin.com/",
+      "headings": [
+        "Good afternoon, Admin",
+        "Today",
+        "Unconfirmed for tomorrow",
+        "All tomorrow's appointments confirmed",
+        "Overdue payments",
+        "Recent patients",
+        "Week at a glance"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nGood afternoon, Admin\n\nWednesday, November 18, 2026\n\nNew patient\nNew appointment\n\nAppointments today\n\n3\n\n1\nupcoming\n1\ncancelled\n\nIn clinic now\n\n0\n\nNo one in clinic\n\nOverdue payments\n\n1\n\n€410.00\n\nToday\nOpen schedule\n08\n09\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n12:38 PM\n09:00 AM\nJavier\n01:30 PM\nElena\n10:30 AM\nRosa\nUnconfirmed for tomorrow\nAll tomorrow's appointments confirmed\nOverdue payments\nView all\nFAC-2026-0007\nMuñoz Blanco, José Luis\n15 days overdue\n€410.00\nRecalls\nCall list →\n4\nDue this week\n2\nOverdue\n2\nScheduled this month\n100%\nConversion\nRecent patients\nJS\nJavier Sánchez Muñoz\n+34 612 345 007\n9 hours ago\nMR\nMaría Teresa Romero Vega\n+34 612 345 012\n9 hours ago\nRM\nRosa Martínez Jiménez\n+34 612 345 010\n9 hours ago\nLR\nLucía Rodríguez Sánchez\n+34 612 345 002\n9 hours ago\nAH\nAntonio Hernández Castro\n+34 612 345 011\n9 hours ago\nFG\nFrancisco García Romero\n+34 612 345 009\n9 hours ago\nWeek at a glance\nLast 7 days vs previous 7\n\nAppointments\n\n10\n\n0%\n\nCompleted\n\n6 (86%)\n\n-40%\n\nInvoiced\n\n€1,330.00\n\n+144%",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "New patient",
+          "href": "/patients?new=1"
+        },
+        {
+          "text": "New appointment",
+          "href": "/appointments?new=1"
+        },
+        {
+          "text": "Overdue payments\n\n1\n\n€410.00",
+          "href": "/invoices?filter=overdue"
+        },
+        {
+          "text": "Open schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "View all",
+          "href": "/invoices?filter=overdue"
+        },
+        {
+          "text": "FAC-2026-0007\nMuñoz Blanco, José Luis\n15 days overdue\n€410.00",
+          "href": "/invoices/fb00bc99-9c0b-4ef8-bb6d-6bb9bd380f07"
+        },
+        {
+          "text": "Call list →",
+          "href": "/recalls"
+        },
+        {
+          "text": "",
+          "href": "/patients"
+        },
+        {
+          "text": "JS\nJavier Sánchez Muñoz\n+34 612 345 007\n9 hours ago",
+          "href": "/patients/d6eebc99-9c0b-4ef8-bb6d-6bb9bd380a46"
+        },
+        {
+          "text": "MR\nMaría Teresa Romero Vega\n+34 612 345 012\n9 hours ago",
+          "href": "/patients/dbeebc99-9c0b-4ef8-bb6d-6bb9bd380a4b"
+        },
+        {
+          "text": "RM\nRosa Martínez Jiménez\n+34 612 345 010\n9 hours ago",
+          "href": "/patients/d9eebc99-9c0b-4ef8-bb6d-6bb9bd380a49"
+        },
+        {
+          "text": "LR\nLucía Rodríguez Sánchez\n+34 612 345 002\n9 hours ago",
+          "href": "/patients/d1eebc99-9c0b-4ef8-bb6d-6bb9bd380a41"
+        },
+        {
+          "text": "AH\nAntonio Hernández Castro\n+34 612 345 011\n9 hours ago",
+          "href": "/patients/daeebc99-9c0b-4ef8-bb6d-6bb9bd380a4a"
+        },
+        {
+          "text": "FG\nFrancisco García Romero\n+34 612 345 009\n9 hours ago",
+          "href": "/patients/d8eebc99-9c0b-4ef8-bb6d-6bb9bd380a48"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "09:00 AMJavier",
+        "01:30 PMElena",
+        "10:30 AMRosa",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-0",
+      "url": "https://demo.dentalpin.com/settings/people/users",
+      "headings": [
+        "Clinic Users"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nClinic Users\n\nAccounts with access to this clinic and their roles.\n\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " People",
+          "href": "/settings/people"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K "
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-1",
+      "url": "https://demo.dentalpin.com/settings/workspace/professional-schedules",
+      "headings": [
+        "Professional schedules"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nProfessional schedules\n\nSet individual schedules for each professional and manage vacations or other unavailable periods.\n\nSearch settings…\n⌘\nK\n\nCLINICAL SETUP\n\nGeneral\n\nClinic profile, branding and timezone.\n\nWorkspace\n\nCabinets, opening hours and availability.\n\nPeople\n\nUsers, roles and invitations.\n\nCLINICAL MANAGEMENT\n\nClinical\n\nCatalog, treatment defaults and templates.\n\nFINANCIAL CONFIGURATION\n\nBilling & tax\n\nInvoice series, VAT and tax compliance.\n\nSYSTEM & ADD-ONS\n\nCommunications\n\nNotifications, SMTP and templates.\n\nIntegrations\n\nExternal services and providers.\n\nModules\n\nInstall, upgrade and uninstall modules.\n\nMY PREFERENCES\n\nAccount\n\nYour profile, password and language.\n\nSelect a professional\nSelect a professional",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": " Workspace",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "General\n\nClinic profile, branding and timezone.",
+          "href": "/settings/general"
+        },
+        {
+          "text": "Workspace\n\nCabinets, opening hours and availability.",
+          "href": "/settings/workspace"
+        },
+        {
+          "text": "People\n\nUsers, roles and invitations.",
+          "href": "/settings/people"
+        },
+        {
+          "text": "Clinical\n\nCatalog, treatment defaults and templates.",
+          "href": "/settings/clinical"
+        },
+        {
+          "text": "Billing & tax\n\nInvoice series, VAT and tax compliance.",
+          "href": "/settings/billing"
+        },
+        {
+          "text": "Communications\n\nNotifications, SMTP and templates.",
+          "href": "/settings/communications"
+        },
+        {
+          "text": "Integrations\n\nExternal services and providers.",
+          "href": "/settings/integrations"
+        },
+        {
+          "text": "Modules\n\nInstall, upgrade and uninstall modules.",
+          "href": "/settings/modules"
+        },
+        {
+          "text": "Account\n\nYour profile, password and language.",
+          "href": "/settings/account"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Search settings…⌘K ",
+        ""
+      ],
+      "fields": [],
+      "tableHeaders": []
+    },
+    {
+      "name": "page-2",
+      "url": "https://demo.dentalpin.com/settings/catalog",
+      "headings": [
+        "Treatment Catalog",
+        "Treatments"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nClinical\nTreatment Catalog\n\nManage treatments, pricing, and tax configuration\n\nCategories\nNew Treatment\nSelect category...\nTreatments\n129\nExpand all\nCollapse all\nDiagnostic\n10\nCode\tName\tPrice\tVAT Type\tDuration\t\nDX-2ND-OPINION\tSecond opinionSystem\t€50.00\tExempt\t30 min\t\n\nDX-CBCT\tCBCT (3D Scan)System\t€120.00\tExempt\t20 min\t\n\nDX-PHOTO\tIntraoral PhotosSystem\t€30.00\tExempt\t15 min\t\n\nDX-REVIEW\tFollow-upSystem\t€20.00\tExempt\t20 min\t\n\nDX-RXPA\tPeriapical X-RaySystem\t€15.00\tExempt\t10 min\t\n\nDX-RXPAN\tPanoramic X-RaySystem\t€45.00\tExempt\t10 min\t\n\nDX-STUDY\tOrthodontic StudySystem\t€90.00\tExempt\t45 min\t\n\nDX-TELE\tLateral cephalogramSystem\t€45.00\tExempt\t15 min\t\n\nDX-URGENT\tEmergency visitSystem\t€60.00\tExempt\t30 min\t\n\nDX-VISIT\tFirst VisitSystem\t€30.00\tExempt\t30 min\t\nPreventive\n7\nCode\tName\tPrice\tVAT Type\tDuration\t\nPREV-CHECKUP\tCheckupSystem\t€30.00\tExempt\t20 min\t\n\nPREV-CLEAN\tDental CleaningSystem\t€60.00\tExempt\t45 min\t\n\nPREV-CLEAN-CURETTAGE\tScaling with curettageSystem\t€110.00\tExempt\t60 min\t\n\nPREV-CLEAN-PED\tPediatric prophylaxisSystem\t€40.00\tExempt\t30 min\t\n\nPREV-FLUOR\tFluoride ApplicationSystem\t€25.00\tExempt\t15 min\t\n\nPREV-HYGIENE-EDU\tOral Hygiene InstructionSystem\t€20.00\tExempt\t20 min\t\n\nPREV-SEAL\tPit and Fissure SealantSystem\t€30.00\tExempt\t15 min\t\nRestorative\n15\nCode\tName\tPrice\tVAT Type\tDuration\t\nREST-AMAL\tAmalgam fillingSystem\t€55.00\tExempt\t45 min\t\n\nREST-BRIDGE-MARY\tMaryland bridgeSystem\t€350.00\tExempt\t90 min\t\n\nREST-BRIDGE-MC\tMetal-ceramic bridgeSystem\t€400.00\tExempt\t120 min\t\n\nREST-BRIDGE-ZIR\tZirconia bridgeSystem\t€500.00\tExempt\t120 min\t\n\nREST-COMP\tComposite fillingSystem\t€60.00\tExempt\t45 min\t\n\nREST-CROWN-DISI\tLithium disilicate crownSystem\t€650.00\tExempt\t90 min\t\n\nREST-CROWN-IMPL-MC\tMetal-ceramic crown on implantSystem\t€600.00\tExempt\t90 min\t\n\nREST-CROWN-IMPL-PROV\tProvisional crown on implantSystem\t€180.00\tExempt\t45 min\t\n\nREST-CROWN-IMPL-ZIR\tZirconia crown on implantSystem\t€750.00\tExempt\t90 min\t\n\nREST-CROWN-MC\tMetal-ceramic crownSystem\t€400.00\tExempt\t90 min\t\n\nREST-CROWN-METAL\tMetal crownSystem\t€350.00\tExempt\t90 min\t\n\nREST-CROWN-POST-ENDO\tCrown over endodontically treated toothSystem\t€450.00\tExempt\t90 min\t\n\nREST-CROWN-PROV\tProvisional crownSystem\t€150.00\tExempt\t45 min\t\n\nREST-CROWN-RECEMENT\tCrown recementationSystem\t€60.00\tExempt\t20 min\t\n\nREST-CROWN-ZIR\tZirconia crownSystem\t€550.00\tExempt\t90 min\t\nEndodontics\n10\nCode\tName\tPrice\tVAT Type\tDuration\t\nENDO-APICOFORM\tApexificationSystem\t€280.00\tExempt\t75 min\t\n\nENDO-BI\tTwo-root endodonticsSystem\t€280.00\tExempt\t75 min\t\n\nENDO-MED-REFRESH\tIntracanal medication refreshSystem\t€60.00\tExempt\t30 min\t\n\nENDO-MULTI\tMolar endodonticsSystem\t€380.00\tExempt\t90 min\t\n\nENDO-PED\tEndodontics on primary toothSystem\t€140.00\tExempt\t45 min\t\n\nENDO-POST-FIBER\tFiber postSystem\t€120.00\tExempt\t45 min\t\n\nENDO-POST-METAL\tCast postSystem\t€180.00\tExempt\t60 min\t\n\nENDO-RETREAT\tEndodontic retreatmentSystem\t€380.00\tExempt\t90 min\t\n\nENDO-UNI\tSingle-root endodonticsSystem\t€180.00\tExempt\t60 min\t\n\nENDO-URGENT\tEmergency pulp chamber openingSystem\t€80.00\tExempt\t30 min\t\nPeriodontics\n12\nCode\tName\tPrice\tVAT Type\tDuration\t\nPERIO-BONE\tGuided bone regenerationSystem\t€550.00\tExempt\t90 min\t\n\nPERIO-CURET-SEXT\tCurettage per sextantSystem\t€90.00\tExempt\t45 min\t\n\nPERIO-GINGIV\tGingivectomySystem\t€180.00\tExempt\t45 min\t\n\nPERIO-GRAFT\tGingival graftSystem\t€380.00\tExempt\t75 min\t\n\nPERIO-MAINT\tPeriodontal maintenanceSystem\t€90.00\tExempt\t45 min\t\n\nPERIO-RAR\tRoot scaling and planing (per quadrant)System\t€180.00\tExempt\t60 min\t\n\nPERIO-SCAL\tSimple scalingSystem\t€60.00\tExempt\t30 min\t\n\nPERIO-SPLINT-RAR\tPost-SRP retention splintSystem\t€150.00\tExempt\t45 min\t\n\nPERIO-STUDY\tPeriodontal probing studySystem\t€70.00\tExempt\t45 min\t\n\nPERIO-SURG\tPeriodontal surgerySystem\t€450.00\tExempt\t90 min\t\n\nPERIO-SURG-REGEN\tRegenerative periodontal surgerySystem\t€580.00\tExempt\t90 min\t\n\nPERIO-SURG-RESECT\tResective periodontal surgerySystem\t€480.00\tExempt\t90 min\t\nSurgery\n21\nCode\tName\tPrice\tVAT Type\tDuration\t\nSURG-APEC\tApicoectomySystem\t€320.00\tExempt\t75 min\t\n\nSURG-BIOPSY\tBiopsySystem\t€220.00\tExempt\t45 min\t\n\nSURG-BONE-GRAFT\tBone graftSystem\t€450.00\tExempt\t75 min\t\n\nSURG-BONE-HORIZ\tHorizontal bone augmentationSystem\t€650.00\tExempt\t90 min\t\n\nSURG-BONE-REGUL\tBone reshapingSystem\t€220.00\tExempt\t60 min\t\n\nSURG-BONE-VERT\tVertical bone augmentationSystem\t€750.00\tExempt\t90 min\t\n\nSURG-CONN-GRAFT\tConnective tissue graftSystem\t€420.00\tExempt\t75 min\t\n\nSURG-CROWN-LENGTH\tCrown lengtheningSystem\t€380.00\tExempt\t75 min\t\n\nSURG-CYST\tCyst removalSystem\t€550.00\tExempt\t90 min\t\n\nSURG-EXT-3MOLAR\tWisdom tooth extractionSystem\t€200.00\tExempt\t60 min\t\n\nSURG-EXT-COMPLEX\tComplex extractionSystem\t€140.00\tExempt\t45 min\t\n\nSURG-EXT-INCLUIDO\tImpacted tooth extractionSystem\t€250.00\tExempt\t60 min\t\n\nSURG-EXT-OST\tSurgical extraction with osteotomySystem\t€280.00\tExempt\t75 min\t\n\nSURG-EXT-SIMPLE\tSimple extractionSystem\t€80.00\tExempt\t30 min\t\n\nSURG-FREN\tFrenectomySystem\t€180.00\tExempt\t30 min\t\n\nSURG-IMP-TI\tTitanium implantSystem\t€1,100.00\tExempt\t90 min\t\n\nSURG-IMP-ZIR\tZirconia implantSystem\t€1,500.00\tExempt\t90 min\t\n\nSURG-PERIIMP\tPeri-implantitis treatmentSystem\t€420.00\tExempt\t75 min\t\n\nSURG-PRP\tPlatelet-rich plasmaSystem\t€180.00\tExempt\t30 min\t\n\nSURG-SINUS\tSinus liftSystem\t€800.00\tExempt\t90 min\t\n\nSURG-SINUS-CLOSED\tClosed sinus lift (atraumatic)System\t€500.00\tExempt\t60 min\t\nCosmetic\n7\nCode\tName\tPrice\tVAT Type\tDuration\t\nEST-BLAN-AMB\tAt-home whiteningSystem\t€250.00\tStandard (21%)\t30 min\t\n\nEST-BLAN-CLIN\tIn-office whiteningSystem\t€400.00\tStandard (21%)\t90 min\t\n\nEST-BLAN-COMBO\tCombined whiteningSystem\t€550.00\tStandard (21%)\t120 min\t\n\nEST-COMP-AESTH\tAesthetic composite reconstructionSystem\t€220.00\tStandard (21%)\t60 min\t\n\nEST-MICROAB\tMicroabrasionSystem\t€120.00\tStandard (21%)\t45 min\t\n\nEST-PIG-REMOVE\tPigmentation removalSystem\t€90.00\tStandard (21%)\t30 min\t\n\nEST-REMIN\tAesthetic remineralizationSystem\t€90.00\tStandard (21%)\t30 min\t\nProsthetics\n9\nCode\tName\tPrice\tVAT Type\tDuration\t\nPROT-FULL-INF\tFull lower dentureSystem\t€900.00\tExempt\t90 min\t\n\nPROT-FULL-SUP\tFull upper dentureSystem\t€900.00\tExempt\t90 min\t\n\nPROT-OCC-ADJ\tOcclusal adjustmentSystem\t€60.00\tExempt\t30 min\t\n\nPROT-OVERDENT\tImplant-supported overdentureSystem\t€1,800.00\tExempt\t120 min\t\n\nPROT-PART-ACR\tPartial acrylic dentureSystem\t€450.00\tExempt\t75 min\t\n\nPROT-PART-METAL\tPartial metal dentureSystem\t€750.00\tExempt\t90 min\t\n\nPROT-PROV-REMOV\tProvisional removable dentureSystem\t€350.00\tExempt\t60 min\t\n\nPROT-REBASE\tDenture relineSystem\t€120.00\tExempt\t45 min\t\n\nPROT-REPAIR\tDenture repairSystem\t€80.00\tExempt\t30 min\t\nPediatric\n9\nCode\tName\tPrice\tVAT Type\tDuration\t\nPED-CROWN-SS\tStainless steel crownSystem\t€180.00\tExempt\t45 min\t\n\nPED-EXT-TEMP\tPrimary tooth extractionSystem\t€55.00\tExempt\t30 min\t\n\nPED-FILL-TEMP\tPrimary tooth fillingSystem\t€45.00\tExempt\t30 min\t\n\nPED-FLUOR\tPediatric fluorideSystem\t€25.00\tExempt\t15 min\t\n\nPED-PULPECTOMY\tPediatric pulpectomySystem\t€160.00\tExempt\t60 min\t\n\nPED-PULPOTOMY\tPulpotomySystem\t€150.00\tExempt\t45 min\t\n\nPED-SEAL\tPediatric sealantSystem\t€25.00\tExempt\t15 min\t\n\nPED-SPACE\tSimple space maintainerSystem\t€150.00\tExempt\t45 min\t\n\nPED-SPACE-COMPOUND\tCompound space maintainerSystem\t€220.00\tExempt\t60 min\t",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Clinical",
+          "href": "/settings/clinical"
+        }
+      ],
+      "buttons": [
+        "Clinical",
+        "Financials",
+        "Practice",
+        "",
+        "",
+        "Help",
+        "",
+        "",
+        "Log out",
+        "Categories",
+        "New Treatment",
+        "Expand all",
+        "Collapse all",
+        "Diagnostic10",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Preventive7",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Restorative15",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Endodontics10",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Periodontics12",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Surgery21",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Cosmetic7",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Prosthetics9",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "Pediatric9",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by code or name...",
+          "required": false
+        }
+      ],
+      "tableHeaders": [
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        ""
+      ]
+    },
+    {
+      "name": "page-2-add",
+      "url": "https://demo.dentalpin.com/settings/catalog",
+      "headings": [
+        "Treatment Catalog",
+        "Treatments",
+        "Untitled"
+      ],
+      "text": "DentalPin\nHome\nSchedule\nCLINICAL\nPatients\nRecalls\nTreatment Plans\nFINANCIALS\nQuotes\nInvoices\nPayments\nPRACTICE\nReports\nA\n\nAdmin Demo\n\nadmin@demo.clinic\n\nPublic demo — do not enter real patient data. The database is reset periodically.\nClínica Dental Demo\nHelp\nLog out\nClinical\nTreatment Catalog\n\nManage treatments, pricing, and tax configuration\n\nCategories\nNew Treatment\nSelect category...\nTreatments\n129\nExpand all\nCollapse all\nDiagnostic\n10\nCode\tName\tPrice\tVAT Type\tDuration\t\nDX-2ND-OPINION\tSecond opinionSystem\t€50.00\tExempt\t30 min\t\n\nDX-CBCT\tCBCT (3D Scan)System\t€120.00\tExempt\t20 min\t\n\nDX-PHOTO\tIntraoral PhotosSystem\t€30.00\tExempt\t15 min\t\n\nDX-REVIEW\tFollow-upSystem\t€20.00\tExempt\t20 min\t\n\nDX-RXPA\tPeriapical X-RaySystem\t€15.00\tExempt\t10 min\t\n\nDX-RXPAN\tPanoramic X-RaySystem\t€45.00\tExempt\t10 min\t\n\nDX-STUDY\tOrthodontic StudySystem\t€90.00\tExempt\t45 min\t\n\nDX-TELE\tLateral cephalogramSystem\t€45.00\tExempt\t15 min\t\n\nDX-URGENT\tEmergency visitSystem\t€60.00\tExempt\t30 min\t\n\nDX-VISIT\tFirst VisitSystem\t€30.00\tExempt\t30 min\t\nPreventive\n7\nCode\tName\tPrice\tVAT Type\tDuration\t\nPREV-CHECKUP\tCheckupSystem\t€30.00\tExempt\t20 min\t\n\nPREV-CLEAN\tDental CleaningSystem\t€60.00\tExempt\t45 min\t\n\nPREV-CLEAN-CURETTAGE\tScaling with curettageSystem\t€110.00\tExempt\t60 min\t\n\nPREV-CLEAN-PED\tPediatric prophylaxisSystem\t€40.00\tExempt\t30 min\t\n\nPREV-FLUOR\tFluoride ApplicationSystem\t€25.00\tExempt\t15 min\t\n\nPREV-HYGIENE-EDU\tOral Hygiene InstructionSystem\t€20.00\tExempt\t20 min\t\n\nPREV-SEAL\tPit and Fissure SealantSystem\t€30.00\tExempt\t15 min\t\nRestorative\n15\nCode\tName\tPrice\tVAT Type\tDuration\t\nREST-AMAL\tAmalgam fillingSystem\t€55.00\tExempt\t45 min\t\n\nREST-BRIDGE-MARY\tMaryland bridgeSystem\t€350.00\tExempt\t90 min\t\n\nREST-BRIDGE-MC\tMetal-ceramic bridgeSystem\t€400.00\tExempt\t120 min\t\n\nREST-BRIDGE-ZIR\tZirconia bridgeSystem\t€500.00\tExempt\t120 min\t\n\nREST-COMP\tComposite fillingSystem\t€60.00\tExempt\t45 min\t\n\nREST-CROWN-DISI\tLithium disilicate crownSystem\t€650.00\tExempt\t90 min\t\n\nREST-CROWN-IMPL-MC\tMetal-ceramic crown on implantSystem\t€600.00\tExempt\t90 min\t\n\nREST-CROWN-IMPL-PROV\tProvisional crown on implantSystem\t€180.00\tExempt\t45 min\t\n\nREST-CROWN-IMPL-ZIR\tZirconia crown on implantSystem\t€750.00\tExempt\t90 min\t\n\nREST-CROWN-MC\tMetal-ceramic crownSystem\t€400.00\tExempt\t90 min\t\n\nREST-CROWN-METAL\tMetal crownSystem\t€350.00\tExempt\t90 min\t\n\nREST-CROWN-POST-ENDO\tCrown over endodontically treated toothSystem\t€450.00\tExempt\t90 min\t\n\nREST-CROWN-PROV\tProvisional crownSystem\t€150.00\tExempt\t45 min\t\n\nREST-CROWN-RECEMENT\tCrown recementationSystem\t€60.00\tExempt\t20 min\t\n\nREST-CROWN-ZIR\tZirconia crownSystem\t€550.00\tExempt\t90 min\t\nEndodontics\n10\nCode\tName\tPrice\tVAT Type\tDuration\t\nENDO-APICOFORM\tApexificationSystem\t€280.00\tExempt\t75 min\t\n\nENDO-BI\tTwo-root endodonticsSystem\t€280.00\tExempt\t75 min\t\n\nENDO-MED-REFRESH\tIntracanal medication refreshSystem\t€60.00\tExempt\t30 min\t\n\nENDO-MULTI\tMolar endodonticsSystem\t€380.00\tExempt\t90 min\t\n\nENDO-PED\tEndodontics on primary toothSystem\t€140.00\tExempt\t45 min\t\n\nENDO-POST-FIBER\tFiber postSystem\t€120.00\tExempt\t45 min\t\n\nENDO-POST-METAL\tCast postSystem\t€180.00\tExempt\t60 min\t\n\nENDO-RETREAT\tEndodontic retreatmentSystem\t€380.00\tExempt\t90 min\t\n\nENDO-UNI\tSingle-root endodonticsSystem\t€180.00\tExempt\t60 min\t\n\nENDO-URGENT\tEmergency pulp chamber openingSystem\t€80.00\tExempt\t30 min\t\nPeriodontics\n12\nCode\tName\tPrice\tVAT Type\tDuration\t\nPERIO-BONE\tGuided bone regenerationSystem\t€550.00\tExempt\t90 min\t\n\nPERIO-CURET-SEXT\tCurettage per sextantSystem\t€90.00\tExempt\t45 min\t\n\nPERIO-GINGIV\tGingivectomySystem\t€180.00\tExempt\t45 min\t\n\nPERIO-GRAFT\tGingival graftSystem\t€380.00\tExempt\t75 min\t\n\nPERIO-MAINT\tPeriodontal maintenanceSystem\t€90.00\tExempt\t45 min\t\n\nPERIO-RAR\tRoot scaling and planing (per quadrant)System\t€180.00\tExempt\t60 min\t\n\nPERIO-SCAL\tSimple scalingSystem\t€60.00\tExempt\t30 min\t\n\nPERIO-SPLINT-RAR\tPost-SRP retention splintSystem\t€150.00\tExempt\t45 min\t\n\nPERIO-STUDY\tPeriodontal probing studySystem\t€70.00\tExempt\t45 min\t\n\nPERIO-SURG\tPeriodontal surgerySystem\t€450.00\tExempt\t90 min\t\n\nPERIO-SURG-REGEN\tRegenerative periodontal surgerySystem\t€580.00\tExempt\t90 min\t\n\nPERIO-SURG-RESECT\tResective periodontal surgerySystem\t€480.00\tExempt\t90 min\t\nSurgery\n21\nCode\tName\tPrice\tVAT Type\tDuration\t\nSURG-APEC\tApicoectomySystem\t€320.00\tExempt\t75 min\t\n\nSURG-BIOPSY\tBiopsySystem\t€220.00\tExempt\t45 min\t\n\nSURG-BONE-GRAFT\tBone graftSystem\t€450.00\tExempt\t75 min\t\n\nSURG-BONE-HORIZ\tHorizontal bone augmentationSystem\t€650.00\tExempt\t90 min\t\n\nSURG-BONE-REGUL\tBone reshapingSystem\t€220.00\tExempt\t60 min\t\n\nSURG-BONE-VERT\tVertical bone augmentationSystem\t€750.00\tExempt\t90 min\t\n\nSURG-CONN-GRAFT\tConnective tissue graftSystem\t€420.00\tExempt\t75 min\t\n\nSURG-CROWN-LENGTH\tCrown lengtheningSystem\t€380.00\tExempt\t75 min\t\n\nSURG-CYST\tCyst removalSystem\t€550.00\tExempt\t90 min\t\n\nSURG-EXT-3MOLAR\tWisdom tooth extractionSystem\t€200.00\tExempt\t60 min\t\n\nSURG-EXT-COMPLEX\tComplex extractionSystem\t€140.00\tExempt\t45 min\t\n\nSURG-EXT-INCLUIDO\tImpacted tooth extractionSystem\t€250.00\tExempt\t60 min\t\n\nSURG-EXT-OST\tSurgical extraction with osteotomySystem\t€280.00\tExempt\t75 min\t\n\nSURG-EXT-SIMPLE\tSimple extractionSystem\t€80.00\tExempt\t30 min\t\n\nSURG-FREN\tFrenectomySystem\t€180.00\tExempt\t30 min\t\n\nSURG-IMP-TI\tTitanium implantSystem\t€1,100.00\tExempt\t90 min\t\n\nSURG-IMP-ZIR\tZirconia implantSystem\t€1,500.00\tExempt\t90 min\t\n\nSURG-PERIIMP\tPeri-implantitis treatmentSystem\t€420.00\tExempt\t75 min\t\n\nSURG-PRP\tPlatelet-rich plasmaSystem\t€180.00\tExempt\t30 min\t\n\nSURG-SINUS\tSinus liftSystem\t€800.00\tExempt\t90 min\t\n\nSURG-SINUS-CLOSED\tClosed sinus lift (atraumatic)System\t€500.00\tExempt\t60 min\t\nCosmetic\n7\nCode\tName\tPrice\tVAT Type\tDuration\t\nEST-BLAN-AMB\tAt-home whiteningSystem\t€250.00\tStandard (21%)\t30 min\t\n\nEST-BLAN-CLIN\tIn-office whiteningSystem\t€400.00\tStandard (21%)\t90 min\t\n\nEST-BLAN-COMBO\tCombined whiteningSystem\t€550.00\tStandard (21%)\t120 min\t\n\nEST-COMP-AESTH\tAesthetic composite reconstructionSystem\t€220.00\tStandard (21%)\t60 min\t\n\nEST-MICROAB\tMicroabrasionSystem\t€120.00\tStandard (21%)\t45 min\t\n\nEST-PIG-REMOVE\tPigmentation removalSystem\t€90.00\tStandard (21%)\t30 min\t\n\nEST-REMIN\tAesthetic remineralizationSystem\t€90.00\tStandard (21%)\t30 min\t\nProsthetics\n9\nCode\tName\tPrice\tVAT Type\tDuration\t\nPROT-FULL-INF\tFull lower dentureSystem\t€900.00\tExempt\t90 min\t\n\nPROT-FULL-SUP\tFull upper dentureSystem\t€900.00\tExempt\t90 min\t\n\nPROT-OCC-ADJ\tOcclusal adjustmentSystem\t€60.00\tExempt\t30 min\t\n\nPROT-OVERDENT\tImplant-supported overdentureSystem\t€1,800.00\tExempt\t120 min\t\n\nPROT-PART-ACR\tPartial acrylic dentureSystem\t€450.00\tExempt\t75 min\t\n\nPROT-PART-METAL\tPartial metal dentureSystem\t€750.00\tExempt\t90 min\t\n\nPROT-PROV-REMOV\tProvisional removable dentureSystem\t€350.00\tExempt\t60 min\t\n\nPROT-REBASE\tDenture relineSystem\t€120.00\tExempt\t45 min\t\n\nPROT-REPAIR\tDenture repairSystem\t€80.00\tExempt\t30 min\t\nPediatric\n9\nCode\tName\tPrice\tVAT Type\tDuration\t\nPED-CROWN-SS\tStainless steel crownSystem\t€180.00\tExempt\t45 min\t\n\nPED-EXT-TEMP\tPrimary tooth extractionSystem\t€55.00\tExempt\t30 min\t\n\nPED-FILL-TEMP\tPrimary tooth fillingSystem\t€45.00\tExempt\t30 min\t\n\nPED-FLUOR\tPediatric fluorideSystem\t€25.00\tExempt\t15 min\t\n\nPED-PULPECTOMY\tPediatric pulpectomySystem\t€160.00\tExempt\t60 min\t\n\nPED-PULPOTOMY\tPulpotomySystem\t€150.00\tExempt\t45 min\t\n\nPED-SEAL\tPediatric sealantSystem\t€25.00\tExempt\t15 min\t\n\nPED-SPACE\tSimple space maintainerSystem\t€150.00\tExempt\t45 min\t\n\nPED-SPACE-COMPOUND\tCompound space maintainerSystem\t€220.00\tExempt\t60 min\t\nNEW TREATMENT\nUntitled\n—\n€0.00\n30 min\nGeneral\nPricing\nScheduling\nClinical\nCode\nCategory\nSelect category...\nDiagnostic\nPreventive\nRestorative\nEndodontics\nPeriodontics\nSurgery\nOrthodontics\nCosmetic\nProsthetics\nPediatric\nName\nMaterial notes\nActive\n\nAvailable for budgets and plans\n\nCancel\nSave",
+      "links": [
+        {
+          "text": "DentalPin",
+          "href": "/"
+        },
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "Schedule",
+          "href": "/appointments"
+        },
+        {
+          "text": "Patients",
+          "href": "/patients"
+        },
+        {
+          "text": "Recalls",
+          "href": "/recalls"
+        },
+        {
+          "text": "Treatment Plans",
+          "href": "/treatment-plans"
+        },
+        {
+          "text": "Quotes",
+          "href": "/budgets"
+        },
+        {
+          "text": "Invoices",
+          "href": "/invoices"
+        },
+        {
+          "text": "Payments",
+          "href": "/payments"
+        },
+        {
+          "text": "Reports",
+          "href": "/reports"
+        },
+        {
+          "text": "",
+          "href": "/settings"
+        },
+        {
+          "text": "Clinical",
+          "href": "/settings/clinical"
+        }
+      ],
+      "buttons": [
+        "",
+        " General ",
+        " Pricing ",
+        " Scheduling ",
+        " Clinical ",
+        "Cancel",
+        "Save"
+      ],
+      "fields": [
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "Search by code or name...",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "TX-001",
+          "required": true
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "required": false,
+          "options": [
+            "",
+            "Diagnostic",
+            "Preventive",
+            "Restorative",
+            "Endodontics",
+            "Periodontics",
+            "Surgery",
+            "Orthodontics",
+            "Cosmetic",
+            "Prosthetics",
+            "Pediatric"
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "text",
+          "name": "",
+          "placeholder": "",
+          "required": true
+        },
+        {
+          "tag": "TEXTAREA",
+          "type": "textarea",
+          "name": "",
+          "placeholder": "Required materials or supplies...",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "required": false,
+          "options": [
+            "",
+            "Exempt (0%)",
+            "Reduced (10%) (10%)",
+            "Standard (21%) (21%)"
+          ]
+        },
+        {
+          "tag": "INPUT",
+          "type": "number",
+          "name": "",
+          "placeholder": "",
+          "required": false
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "required": false,
+          "options": [
+            "",
+            "No association",
+            "caries",
+            "incipient_caries",
+            "pigmentation",
+            "filling_composite",
+            "filling_amalgam",
+            "filling_temporary",
+            "sealant",
+            "veneer",
+            "inlay",
+            "filling",
+            "pulpitis",
+            "fracture",
+            "missing",
+            "periapical_small",
+            "periapical_medium",
+            "periapical_large",
+            "rotated",
+            "displaced",
+            "unerupted",
+            "overlay",
+            "crown",
+            "crown_on_implant",
+            "provisional_crown_on_implant",
+            "pontic",
+            "bridge_abutment",
+            "extraction",
+            "implant",
+            "apicoectomy",
+            "root_canal_full",
+            "root_canal_two_thirds",
+            "root_canal_half",
+            "post",
+            "root_canal_overfill",
+            "bracket",
+            "tube",
+            "band",
+            "attachment",
+            "retainer",
+            "root_canal",
+            "bridge_pontic"
+          ]
+        },
+        {
+          "tag": "SELECT",
+          "type": "select-one",
+          "name": "",
+          "required": false,
+          "options": [
+            "",
+            "Diagnostic",
+            "Restorative",
+            "Surgery",
+            "Endodontics",
+            "Orthodontics"
+          ]
+        }
+      ],
+      "tableHeaders": [
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        "",
+        "Code",
+        "Name",
+        "Price",
+        "VAT Type",
+        "Duration",
+        ""
+      ]
+    }
+  ],
+  "network": [
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/setup/status",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/login",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/me",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/modules/-/active",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/clinics",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/billing/series",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/schedules/clinic-hours",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/notifications/smtp-settings",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/items",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/overdue",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/agenda/appointments",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/patients/recent",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/recalls/stats/dashboard",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/scheduling/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/reports/billing/summary",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/users",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/auth/professionals",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/vat-types",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/categories",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api-demo.dentalpin.com",
+      "path": "/api/v1/catalog/items",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/_nuxt/builds/meta/74e794a0-6500-4efc-a3ea-fc8a85aecda4.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "demo.dentalpin.com",
+      "path": "/api/_nuxt_icon/lucide.json",
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "host": "api.iconify.design",
+      "path": "/lucide.json",
+      "status": 200
+    }
+  ],
+  "blocked": [
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    },
+    {
+      "method": "POST",
+      "path": "/cdn-cgi/rum"
+    }
+  ]
+}

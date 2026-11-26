@@ -1,0 +1,13 @@
+{
+  "profile": "Q03-SMALL-20261125",
+  "date": "2026-11-25T14:25:14.894Z",
+  "status": "FAIL",
+  "target": "new owned local Linux containers only",
+  "cloud_or_preview_modified": false,
+  "full_data_scale": true,
+  "load_generator": "Windows host outside constrained target containers",
+  "not_a_cloud_capacity_claim": true,
+  "resources": [],
+  "error": "Application HTTPS ready",
+  "finished_at": "2026-11-25T14:29:18.257Z"
+}

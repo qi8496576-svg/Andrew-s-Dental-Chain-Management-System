@@ -1,0 +1,102 @@
+{
+  "checked_at": "2026-11-10T14:16:44.115473+00:00",
+  "task": "T002",
+  "status": "PASS",
+  "unit_tests": 3,
+  "mysql_integration_tests": 1,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "tasks_count": 186,
+  "completed_tasks": [
+    "T001",
+    "T002"
+  ],
+  "protected_inputs_unchanged": [
+    "specs/001-system-specification/business-baseline-audit.json",
+    "specs/001-system-specification/business-baseline-audit.md",
+    "specs/001-system-specification/data-model.md",
+    "specs/001-system-specification/plan-approval.json",
+    "specs/001-system-specification/plan-approval.md",
+    "specs/001-system-specification/plan-dependency-amendment.json",
+    "specs/001-system-specification/plan-dependency-amendment.md",
+    "specs/001-system-specification/plan-supplement-review.md",
+    "specs/001-system-specification/plan.md",
+    "specs/001-system-specification/preimplement-sync.json",
+    "specs/001-system-specification/quickstart.md",
+    "specs/001-system-specification/research.md",
+    "specs/001-system-specification/spec.md",
+    "specs/001-system-specification/task-traceability.md",
+    "specs/001-system-specification/tasks-catalog.json",
+    "specs/001-system-specification/tasks-validation.json",
+    "specs/001-system-specification/technical-data-model.md",
+    "specs/001-system-specification/technical-schema.json",
+    "specs/001-system-specification/traceability.md",
+    "specs/001-system-specification/checklists/requirements.md",
+    "specs/001-system-specification/contracts/api.md",
+    "specs/001-system-specification/contracts/identity.md",
+    "specs/001-system-specification/contracts/openapi.json",
+    "specs/001-system-specification/contracts/operations.md",
+    "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+    "specs/001-system-specification/diagrams/technical-erd.mmd",
+    "specs/001-system-specification/diagrams/technical-storage-overview.png",
+    "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+    ".specify/memory/constitution.md",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx",
+    "docs/diagrams/database/schema.json"
+  ],
+  "fingerprints": [
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "23d9b71d6dc5c1155ee4d4eb46e42f55bdb2b1c5e0b3456217a2dcf10f850f0f"
+    },
+    {
+      "path": "docs/verification/t002-environment-status.md",
+      "sha256": "d7f07aba8528070e6a5265c4b50874dd1f1d806d6bf6f432a51bb1f035520c24"
+    },
+    {
+      "path": "docs/verification/t002-local-containers.json",
+      "sha256": "909d4081d04a818b73b3b78d70c4524c4ec4f92134aa7b2a3e247fad728e7ed1"
+    },
+    {
+      "path": "docs/verification/t002-build-result.json",
+      "sha256": "4af2e1862eed45b9e4ac60e8cdbb66e55ee2a2fc80a0fb741c3e57ebe02e044d"
+    },
+    {
+      "path": "docs/verification/t002-build.log",
+      "sha256": "3582c0124a07f1adc61e8235bee35a999e26720194a1d1f63bb8f0002b23aed4"
+    },
+    {
+      "path": "docs/verification/t002-effective-pom.xml",
+      "sha256": "7456f1350ec48868bafb405a760ac5c3661f5b503406c95005f1c8e6ad538124"
+    },
+    {
+      "path": "docs/verification/t002-dependency-tree.txt",
+      "sha256": "1f8638295431ab674e59d389bcf9968ca24564c391b00ebc418ede5dcda0c7ca"
+    },
+    {
+      "path": "ops/compose/compose.dev.yaml",
+      "sha256": "882c59be177ae0a355d1b4acfb6d832afd19a35e1589ffe0e1155137821c63c3"
+    },
+    {
+      "path": "tools/verification/Verify-LocalContainers.ps1",
+      "sha256": "63dc156aedd0771a45d0889912d3dd0a76eaa2dbdb078cc6bc5f895f577f6662"
+    },
+    {
+      "path": "tools/verification/Verify-BackendBuild.ps1",
+      "sha256": "38d6d9bd7e44786dc9adaffc128040b341cb1ca1cf38779a60a53253235f1f1f"
+    },
+    {
+      "path": "backend/src/test/java/com/adc/infrastructure/MySqlEnvironmentIT.java",
+      "sha256": "8e0fb5e1f1f034704aada96e5faf7bd851a888c7fdd7ce2673f87a508e76e76e"
+    },
+    {
+      "path": "docs/verification/archive/t002-success/TEST-com.adc.BuildSmokeTest.xml",
+      "sha256": "d42f643de653574ee3acda28fa7d827eecfaf5573ab05a544eaffb32f884bede"
+    },
+    {
+      "path": "docs/verification/archive/t002-success/TEST-com.adc.infrastructure.MySqlEnvironmentIT.xml",
+      "sha256": "8e8dc16d227cf78c0c4a0dcaca98272290cbc3ee51efe835133412d8117f17e0"
+    }
+  ]
+}

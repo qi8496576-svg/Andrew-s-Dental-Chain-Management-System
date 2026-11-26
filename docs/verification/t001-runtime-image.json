@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-11-10T10:43:05.9307438+08:00",
+  "repository": "docker.io/library/eclipse-temurin",
+  "tag": "21.0.9_10-jre-jammy",
+  "index_digest": "sha256:cc11c035bb25cc709d7b1e3f43cbff15d69e06e2dba23eec431b64627d27e705",
+  "linux_amd64_digest": "sha256:5cbbc80ec3f79faeba17a0551a77b260040da7a9e3b398dac0e681e84a4d8032",
+  "runtime_executed": false,
+  "source": "Docker Registry v2 manifest HEAD/GET; explicit UTF-8 decoding of OCI response"
+}

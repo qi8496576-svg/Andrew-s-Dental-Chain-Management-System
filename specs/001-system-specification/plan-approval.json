@@ -1,0 +1,179 @@
+{
+  "baseline_id": "ADC-PLAN-20261107-01",
+  "approval_date": "2026-11-07",
+  "approver": "项目负责人（当前用户）",
+  "source": "本聊天中负责人明确批准与有限状态修正指令",
+  "scope": "当前plan.md及其技术基线；本轮仅行政状态同步",
+  "plan_before_status_correction_sha256": "edc7038a3c5d38885e23383e59a361189854d818428e0a8b3b041ac2150c372d",
+  "plan_after_status_correction_sha256": "7e1f5d8b9e93f54103bac41a3e65ef8762e5badd33fe02d295170a67f3a57cb7",
+  "approved_source": {
+    "source_id": "IVEY-W44694",
+    "former_issue_id": "C-01",
+    "status": "completed",
+    "path": "参考资料/5.安德鲁牙科连锁店：数据建模 Andrew’s Dental .pdf",
+    "sha256": "1a2655344337d570d5f77e2c3018d71ca0b7b3b8692eb97b4cdc13c9eba6027f",
+    "pages": 3,
+    "identity_checks": [
+      "file exists in project",
+      "first PDF page contains W44694"
+    ],
+    "changes_business_requirements": false
+  },
+  "administrative_documents": [
+    {
+      "path": ".specify/memory/constitution.md",
+      "before_sha256": "57a70771e1dcfabe8abdc1cf4c7b7ed860d6c9092f050409a27c67d6c53c730e",
+      "after_sha256": "0cade87029fb7802112a1cbdcdb293ea85df03390594a1fbb458142b36ae8376"
+    },
+    {
+      "path": "specs/001-system-specification/plan.md",
+      "before_sha256": "edc7038a3c5d38885e23383e59a361189854d818428e0a8b3b041ac2150c372d",
+      "after_sha256": "7e1f5d8b9e93f54103bac41a3e65ef8762e5badd33fe02d295170a67f3a57cb7"
+    },
+    {
+      "path": "specs/001-system-specification/research.md",
+      "before_sha256": "e5c0334d987d6c38a4f59f1bc572ac6fd85657730b43bf20a1c1ddfda46c219d",
+      "after_sha256": "d24bade38594c80d7df367544d6125dab06aa5d690e4b6f64252259733e31302"
+    },
+    {
+      "path": "specs/001-system-specification/plan-supplement-review.md",
+      "before_sha256": "95f8095c15269f02970acc097873aab7b9a2c4510b670e78944bd30f9adc4b81",
+      "after_sha256": "8c5ebcf39f0908924734a5da4f57ebae2367475c6eb011e7bfb90f5f52e6c9ba"
+    },
+    {
+      "path": "specs/001-system-specification/spec.md",
+      "before_sha256": "eeca99d9c6c74bb39c4597079ba3a58ce1a3e1ddc9cf78c8dba195b3c2d57d7c",
+      "after_sha256": "54c5fe887cf1f95ebd059d3420f8b92dc81bc255536fd9398ce08cb555c7f6c3"
+    },
+    {
+      "path": "specs/001-system-specification/checklists/requirements.md",
+      "before_sha256": "1ad7feb26d27965998c28266da4d941b8f602aab10dc3fe34d33df0f6d67f8fb",
+      "after_sha256": "b65c76ac9d8bb007f65b849182b36d31f12f00c0a7b2314b490e1f8aecd58b1e"
+    },
+    {
+      "path": "specs/001-system-specification/traceability.md",
+      "before_sha256": "4ec8c1916dc3d316abdb3fa139d91217a72e7c07b8e68f7dc51a2f349bca3518",
+      "after_sha256": "e8cd73dd325271ff1287d248a310b9e275e982f7346269dd5b427eb7102e072f"
+    },
+    {
+      "path": "specs/001-system-specification/quickstart.md",
+      "before_sha256": "2008405f23d181b22cdadfd57bdfc7d7e51bd426aa6ac87570978e881a983504",
+      "after_sha256": "e9dbbb5eb33aff0a79fe783f64b5a593ee74e39443dc704d5ad38fd08e91ac98"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/api.md",
+      "before_sha256": "a6def125b229eeaa7d29135f82f784ebd0291fcc0faa10fa21e2ae2dce18e251",
+      "after_sha256": "d46fbdcc2eac96a6338d1ab6fee4a7d3ca3d0dc0856de43d045d3b3db26e57aa"
+    },
+    {
+      "path": "specs/001-system-specification/contracts/identity.md",
+      "before_sha256": "73bba49703bbdd3d3227f96357a31f60ee29795525814595678d8682df934e1e",
+      "after_sha256": "5cee0ae0c34f48d6fbba32f01a83ecf0b52895467382b2b8cb5b40c15b039fba"
+    },
+    {
+      "path": "specs/001-system-specification/technical-data-model.md",
+      "before_sha256": "f0672589c2b10b55d1533d35f4af2755e2e28a712570ee84217da6242ad3072a",
+      "after_sha256": "afb34eabdb81cf6ccd0072b6f56fa2fec623e9bc353ee5c4fa7be692e40135fd"
+    },
+    {
+      "path": "docs/references/README.md",
+      "before_sha256": "30032f483c44dfab72c80177b31d569c38ce80ad3ddbd1d74b508833b3b3b543",
+      "after_sha256": "5f5edb115e9d0dd420f6146b15f3b8cc62bd9cb6566a2e76b9dd6cf5baf86d10"
+    },
+    {
+      "path": "docs/references/conversion-report.md",
+      "before_sha256": "f701d868fdfd9afdf9f50e955255b9a306bc691fb9aa09416a960b0e86c38904",
+      "after_sha256": "13d5d2bcac6da72779cd6d60ed0adfbebea0aaffd7bd96994223ddf3efbfd335"
+    }
+  ],
+  "unchanged_baseline": [
+    {
+      "path": "安德鲁牙科连锁管理系统需求分析与设计.docx",
+      "sha256": "b7f73501b2e25ea6cd489e8b25a8b9fcf01a65eb17160a69b6bca9a5d71dc564",
+      "unchanged": true
+    },
+    {
+      "path": "docs/diagrams/database/schema.json",
+      "sha256": "b0e834c226ce1a301bb8e8af2ace59646b84ee1de2b56bd1d8f379f18f9fc18b",
+      "unchanged": true
+    },
+    {
+      "path": "docs/diagrams/database/constraints.md",
+      "sha256": "be6f0c74d2d933096340a5a29f9a153f6288a28757267ada7168fd36699dca4e",
+      "unchanged": true
+    },
+    {
+      "path": "docs/diagrams/official/D1.png",
+      "sha256": "4655aca912c6f14846e03d6eb6f493feb5ab2ac8fcd1006ee4bcf47848669fb6",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/contracts/openapi.json",
+      "sha256": "f2767b4d11e121fa2fd3889f5e545f9e8c8d481ca7533c4d9f4d403cd5b76747",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/contracts/operations.md",
+      "sha256": "fbe22f2a63246de15c644aaab533bc0e38574f4967df469b9df12a32f12cc103",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/data-model.md",
+      "sha256": "f8bc3fa07974fb084523330a0bda810b0d5575db2330bb9814ceb0f28d0df6d7",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/technical-schema.json",
+      "sha256": "2997376f5ba5a2ec5cbe1040ad1b97c1fc2ad9bdfd4883bf96c4e1bdff19bc2f",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/technical-erd.mmd",
+      "sha256": "7d8ea2e40129ccb6871644c0ebcb53a16af5e8b850079009942e4d6bdfa1eddb",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+      "sha256": "9d8148936719b2d16f2c7165f803a92467547fcc4237584f3ad9e0d5c9602da7",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+      "sha256": "edb451e576d03ae128d60ad0c87ddb06c1b649af7f9cd862cc70b9771633d8c1",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/diagrams/technical-storage-overview.png",
+      "sha256": "479198fc717585beee98e628de742c1162121e6a1c2d0decdcf40a242e2b1b40",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/business-baseline-audit.md",
+      "sha256": "8cb24e08053a21068559486a70fc8050411123de4eb24853465d4586276c3950",
+      "unchanged": true
+    },
+    {
+      "path": "specs/001-system-specification/business-baseline-audit.json",
+      "sha256": "941118ce4f319f2b686ee6e5ee541cec6cb552708c627dd32964e1e7c34d3c90",
+      "unchanged": true
+    }
+  ],
+  "checks": {
+    "constitution_six_principles_unchanged": true,
+    "spec_requirement_acceptance_rows_unchanged": true,
+    "closed_items_removed_from_active_tables": true,
+    "technical_baseline_unchanged": true,
+    "tasks_created": false,
+    "analyze_executed": false,
+    "business_code_written": false,
+    "actual_wechat_or_database_tests_executed": false,
+    "all_spec_user_scenarios_unchanged": true,
+    "plan_technical_context_and_transaction_api_protocols_unchanged": true,
+    "research_architecture_decisions_R_D01_through_R_D07_unchanged": true,
+    "archived_case_file_hash_verified": true,
+    "markdown_table_errors": [],
+    "broken_local_links": [],
+    "current_status_checks_passed": true
+  },
+  "workflow_state": "Plan approved and frozen; waiting for next-stage instruction"
+}

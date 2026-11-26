@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-26",
+  "status": "PASS",
+  "human_experiment_required": false,
+  "admin_component_tests": 53,
+  "browser_tests": 19,
+  "patient_interaction_tests": 32,
+  "real_cloud_pages": 9,
+  "api_mocked_in_cloud_page_check": false,
+  "developer_tool_rechecked_this_run": false,
+  "limitations": [
+    "组件及本机浏览器夹具测试使用受控模拟接口，实际云端页面走查没有mock",
+    "现有真实微信业务联调保留原范围；本轮开发工具连接不可用，未声称重做原生或真机实验"
+  ],
+  "billing_list_lock_order_regression": "9 real MySQL/HTTP tests and actual cloud refunded record readback PASS"
+}

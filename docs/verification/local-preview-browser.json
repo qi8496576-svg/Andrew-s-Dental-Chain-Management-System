@@ -1,0 +1,34 @@
+{
+  "date": "2026-11-14T12:06:35.701Z",
+  "url": "https://localhost:19443",
+  "real_mysql": true,
+  "api_mocked": false,
+  "local_self_signed_certificate": true,
+  "real_wechat_verified": false,
+  "results": [
+    {
+      "role": "admin",
+      "route": "/organization-resources",
+      "real_browser_login_and_page": true,
+      "logout_verified": true
+    },
+    {
+      "role": "frontdesk",
+      "route": "/schedules",
+      "real_browser_login_and_page": true,
+      "logout_verified": true
+    },
+    {
+      "role": "dentist",
+      "route": "/clinical-treatment",
+      "real_browser_login_and_page": true,
+      "logout_verified": true
+    },
+    {
+      "role": "cashier",
+      "route": "/invoicing",
+      "real_browser_login_and_page": true,
+      "logout_verified": true
+    }
+  ]
+}

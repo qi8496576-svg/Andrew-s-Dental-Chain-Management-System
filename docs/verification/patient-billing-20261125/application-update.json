@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-25T10:05:21.649Z",
+  "candidate": {
+    "release": "adc-billing-fix-20261125-1795599242312",
+    "date": "2026-11-25T09:35:42.333Z",
+    "application_only": true,
+    "images": [
+      {
+        "reference": "adc/backend:adc-billing-fix-20261125-1795599242312",
+        "id": "sha256:5eb67ee9a8d6e65809de51093e9dd2f758023f1e3f170efd623a89244eca6499"
+      }
+    ],
+    "archive": {
+      "file": "images.tar.gz",
+      "sha256": "1f26eb5890ac488419c34cd99e769c664c4358d7b37af80badac59aee1e0b05a"
+    },
+    "files": [
+      {
+        "path": "ops/compose/compose.prod.yaml",
+        "sha256": "ffc9427e4897a2c4d82d5df46014f3a8791aeed734b0aee7fa2eac39437e384c"
+      },
+      {
+        "path": "ops/compose/compose.offline.yaml",
+        "sha256": "72d82746e85f9d6788de8251d4d4f58392eae22592f41ed7d7c266e488658cf7"
+      },
+      {
+        "path": "ops/compose/mysql/runtime-grants.sql",
+        "sha256": "e8f40a9c94b2918ba81e6a61f271bfe80568f9de6cf27f3440d7c66361c25000"
+      },
+      {
+        "path": "ops/scripts/apply-billing-app-update.sh",
+        "sha256": "1974e6be7e95391799c62837a1ffc4be914a5e3725e47a71f4ead6d2d56c6959"
+      }
+    ],
+    "backend_jar_sha256": "da3179fec6c7c67f6666fdaeb8f3b464dbde51ec9285109d6d54a8597094ea06",
+    "contains_secrets": false
+  },
+  "after": {
+    "date": "2026-11-25T10:05:20.437361+00:00",
+    "kind": "read-only-preflight",
+    "containers": [
+      {
+        "name": "adc-isolated-loopback-backend-1",
+        "image": "5eb67ee9a8d6",
+        "state": "Up 22 minutes (healthy)",
+        "ports": "8080/tcp, 9091/tcp"
+      },
+      {
+        "name": "adc-isolated-loopback-admin-1",
+        "image": "e63f27b58149",
+        "state": "Up About an hour (healthy)",
+        "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
+      },
+      {
+        "name": "adc-isolated-loopback-runtime-grants-1",
+        "image": "72c368d89886",
+        "state": "Exited (0) 7 days ago",
+        "ports": ""
+      },
+      {
+        "name": "adc-isolated-loopback-migrator-1",
+        "image": "626cddda4192",
+        "state": "Exited (0) 7 days ago",
+        "ports": ""
+      },
+      {
+        "name": "adc-isolated-loopback-mysql-1",
+        "image": "72c368d89886",
+        "state": "Up 7 days (healthy)",
+        "ports": "3306/tcp, 33060/tcp"
+      }
+    ],
+    "database": {
+      "business_tables": 24,
+      "business_columns": 209,
+      "business_foreign_keys": 44,
+      "migrations": 34,
+      "clinics": 1,
+      "patients": 3,
+      "staff_accounts": 5,
+      "grants": 9
+    },
+    "migration_fingerprints": [
+      "001\t642235063",
+      "002\t-139131776",
+      "003\t-1507794461",
+      "004\t-1105706124",
+      "005\t833339163",
+      "006\t-1676773693",
+      "007\t219203548",
+      "008\t-1141336440",
+      "009\t-177678172",
+      "010\t1749022404",
+      "011\t-1883091732",
+      "012\t362057578",
+      "013\t147781213",
+      "014\t928771891",
+      "015\t1048718105",
+      "016\t-612761375",
+      "017\t56339238",
+      "018\t-272594464",
+      "019\t-1471002546",
+      "101\t669295185",
+      "102\t-597604732",
+      "103\t-157074337",
+      "104\t-387096523",
+      "105\t-998553369",
+      "106\t-37646824",
+      "107\t1004684014",
+      "108\t-995260415",
+      "109\t-1359300733",
+      "110\t-1236276476",
+      "111\t943948527",
+      "112\t-1198056132",
+      "114\t-22664292",
+      "200\t1048949524",
+      "201\t2133159943"
+    ],
+    "listeners": "LISTEN 0      4096         0.0.0.0:22  0.0.0.0:*\nLISTEN 0      4096      127.0.0.54:53  0.0.0.0:*\nLISTEN 0      4096   127.0.0.53%lo:53  0.0.0.0:*\nLISTEN 0      4096         0.0.0.0:443 0.0.0.0:*\nLISTEN 0      4096            [::]:22     [::]:*",
+    "certificate_files": "/opt/andrew-dental/private/LoopbackTLS/localhost.crt"
+  },
+  "application_only_update": true,
+  "database_container_and_volume_preserved": true,
+  "no_migrations_during_application_update": true,
+  "original_33_migration_checksums_preserved": true,
+  "v201_checksum": 2133159943,
+  "demo_payment_only": true,
+  "independent_pre_migration_backup": {
+    "directory": "D:/secrets/AndrewDental/CloudIntegration/Backups/adc-billing-20261125-1795596673067",
+    "sha256": "2c000ceb831e033c483fe195b9b2ce4921930bbd89d754041f58976a11e52108",
+    "bytes": 171517,
+    "full_q05_restore_verified": false
+  },
+  "tls_preserved": true
+}

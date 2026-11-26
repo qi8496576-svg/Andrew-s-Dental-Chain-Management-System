@@ -1,0 +1,13 @@
+{
+  "backend_image": "sha256:626cddda4192fabcbb626f8a1680747bb618389cec0f86d647118de131a1f0af",
+  "frontend_image": "sha256:9bd33667f7d09d536b5f92f74ad73bfbbc58da4e55533d977eaa466502b5a868",
+  "ui_config": {
+    "date": "2026-11-19T02:09:13.603Z",
+    "project": "adc-local-preview",
+    "frontend_image": "adc/admin:workspace-20261118",
+    "url": "https://localhost:19443",
+    "current_sources_built": true,
+    "only_admin_recreated": true,
+    "backend_and_mysql_containers_preserved": true
+  }
+}

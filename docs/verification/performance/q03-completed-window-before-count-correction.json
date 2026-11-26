@@ -1,0 +1,1679 @@
+{
+  "profile": "Q03-SMALL-20261125",
+  "date": "2026-11-26T02:02:36.749Z",
+  "status": "FAIL",
+  "target": "new owned local Linux containers only",
+  "cloud_or_preview_modified": false,
+  "full_data_scale": true,
+  "load_generator": "Windows host outside constrained target containers",
+  "not_a_cloud_capacity_claim": true,
+  "resources": [
+    {
+      "at": "2026-11-26T02:04:13.799Z",
+      "rows": [
+        {
+          "BlockIO": "120MB / 1.22GB",
+          "CPUPerc": "0.73%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "67.61%",
+          "MemUsage": "605.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "565kB / 626kB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.17%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "34.27%",
+          "MemUsage": "263.2MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "288kB / 391kB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 0B",
+          "CPUPerc": "0.04%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.08%",
+          "MemUsage": "4.879MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "159kB / 180kB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:04:46.015Z",
+      "rows": [
+        {
+          "BlockIO": "123MB / 1.27GB",
+          "CPUPerc": "6.69%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "67.97%",
+          "MemUsage": "609MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "2.77MB / 2.94MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "21.64%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "34.96%",
+          "MemUsage": "268.5MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "2.76MB / 3.21MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.58%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.09%",
+          "MemUsage": "5.848MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "865kB / 930kB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:05:16.024Z",
+      "rows": [
+        {
+          "BlockIO": "124MB / 1.32GB",
+          "CPUPerc": "4.99%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.14%",
+          "MemUsage": "610.5MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "7MB / 176MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "3.64%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.07%",
+          "MemUsage": "277MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "176MB / 8MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.85%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.37%",
+          "MemUsage": "6.117MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "1.52MB / 1.61MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:05:46.025Z",
+      "rows": [
+        {
+          "BlockIO": "124MB / 1.36GB",
+          "CPUPerc": "5.72%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.15%",
+          "MemUsage": "610.6MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "9.03MB / 178MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "2.36%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.21%",
+          "MemUsage": "278.1MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "178MB / 10.6MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.84%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.61%",
+          "MemUsage": "6.348MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "2.18MB / 2.31MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:06:16.034Z",
+      "rows": [
+        {
+          "BlockIO": "124MB / 1.39GB",
+          "CPUPerc": "6.21%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.10%",
+          "MemUsage": "610.2MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "11.1MB / 180MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "2.67%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.84%",
+          "MemUsage": "282.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "180MB / 13.2MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.66%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.32%",
+          "MemUsage": "6.062MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "2.85MB / 3MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:06:46.040Z",
+      "rows": [
+        {
+          "BlockIO": "124MB / 1.42GB",
+          "CPUPerc": "4.90%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.20%",
+          "MemUsage": "611.1MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "13.1MB / 182MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.87%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.04%",
+          "MemUsage": "284.5MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "183MB / 15.8MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.64%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.70%",
+          "MemUsage": "5.473MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "3.51MB / 3.69MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:07:16.054Z",
+      "rows": [
+        {
+          "BlockIO": "124MB / 1.46GB",
+          "CPUPerc": "2.80%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.13%",
+          "MemUsage": "610.5MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "15.1MB / 184MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "88.92%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "42.29%",
+          "MemUsage": "324.8MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "185MB / 18.4MB",
+          "PIDs": "56"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.77%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.17%",
+          "MemUsage": "5.926MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "4.18MB / 4.39MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:07:46.061Z",
+      "rows": [
+        {
+          "BlockIO": "124MB / 1.49GB",
+          "CPUPerc": "2.31%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.14%",
+          "MemUsage": "610.5MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "17.2MB / 187MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.85%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.76%",
+          "MemUsage": "282.3MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "187MB / 21MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.49%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.83%",
+          "MemUsage": "5.594MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "4.85MB / 5.08MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:08:16.073Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.53GB",
+          "CPUPerc": "5.88%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.17%",
+          "MemUsage": "610.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "19.2MB / 189MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "2.03%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.13%",
+          "MemUsage": "285.2MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "189MB / 23.6MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.48%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.05%",
+          "MemUsage": "5.809MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "5.51MB / 5.78MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:08:46.074Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.55GB",
+          "CPUPerc": "4.83%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.12%",
+          "MemUsage": "610.4MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "21.2MB / 191MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "2.18%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.05%",
+          "MemUsage": "284.5MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "192MB / 26.3MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.48%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.81%",
+          "MemUsage": "5.574MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "6.18MB / 6.47MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:09:16.084Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.58GB",
+          "CPUPerc": "3.01%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.09%",
+          "MemUsage": "610.1MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "23.3MB / 193MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "23.01%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.19%",
+          "MemUsage": "285.6MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "194MB / 28.8MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.03%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.69%",
+          "MemUsage": "5.465MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "6.84MB / 7.16MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:09:46.094Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.59GB",
+          "CPUPerc": "3.98%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.17%",
+          "MemUsage": "610.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "25.3MB / 195MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.24%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.13%",
+          "MemUsage": "285.2MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "196MB / 31.5MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.67%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.25%",
+          "MemUsage": "5.996MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "7.51MB / 7.86MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:10:16.104Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.61GB",
+          "CPUPerc": "4.61%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.23%",
+          "MemUsage": "611.4MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "27.3MB / 197MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "2.30%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.10%",
+          "MemUsage": "285MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "199MB / 34.1MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "1.08%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.43%",
+          "MemUsage": "5.211MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "8.17MB / 8.55MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:10:46.117Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.64GB",
+          "CPUPerc": "33.45%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.17%",
+          "MemUsage": "610.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "29.3MB / 200MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.97%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.84%",
+          "MemUsage": "282.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "201MB / 36.7MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.03%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.01%",
+          "MemUsage": "5.773MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "8.84MB / 9.25MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:11:16.126Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.66GB",
+          "CPUPerc": "4.12%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.25%",
+          "MemUsage": "611.6MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "31.4MB / 202MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.24%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.81%",
+          "MemUsage": "282.7MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "203MB / 39.3MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.79%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.25%",
+          "MemUsage": "6MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "9.5MB / 9.94MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:11:46.127Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.69GB",
+          "CPUPerc": "4.47%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.23%",
+          "MemUsage": "611.4MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "33.4MB / 204MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.41%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.85%",
+          "MemUsage": "283MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "206MB / 41.9MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.56%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.73%",
+          "MemUsage": "5.496MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "10.2MB / 10.6MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:12:16.140Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.71GB",
+          "CPUPerc": "5.63%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.26%",
+          "MemUsage": "611.6MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "35.4MB / 206MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "2.07%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.80%",
+          "MemUsage": "282.6MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "208MB / 44.5MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.68%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.18%",
+          "MemUsage": "5.934MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "10.8MB / 11.3MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:12:46.141Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.74GB",
+          "CPUPerc": "4.09%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.22%",
+          "MemUsage": "611.3MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "37.5MB / 208MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.13%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.90%",
+          "MemUsage": "283.4MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "210MB / 47.1MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.68%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.11%",
+          "MemUsage": "5.863MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "11.5MB / 12MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:13:16.154Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.76GB",
+          "CPUPerc": "34.57%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.27%",
+          "MemUsage": "611.7MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "39.5MB / 210MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.90%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.94%",
+          "MemUsage": "283.7MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "213MB / 49.7MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.05%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.64%",
+          "MemUsage": "5.414MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "12.2MB / 12.7MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:13:46.160Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.79GB",
+          "CPUPerc": "3.71%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.29%",
+          "MemUsage": "611.9MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "41.5MB / 213MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "14.79%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.90%",
+          "MemUsage": "283.4MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "215MB / 52.3MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.07%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.75%",
+          "MemUsage": "5.516MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "12.8MB / 13.4MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:14:16.169Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.81GB",
+          "CPUPerc": "4.13%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.31%",
+          "MemUsage": "612MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "43.6MB / 215MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.48%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.92%",
+          "MemUsage": "283.5MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "217MB / 55MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.81%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.27%",
+          "MemUsage": "6.023MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "13.5MB / 14.1MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:14:46.183Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.84GB",
+          "CPUPerc": "3.43%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.33%",
+          "MemUsage": "612.2MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "45.6MB / 217MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "21.20%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "36.94%",
+          "MemUsage": "283.7MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "220MB / 57.5MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.06%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.32%",
+          "MemUsage": "6.062MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "14.2MB / 14.8MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:15:16.187Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.88GB",
+          "CPUPerc": "16.24%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.34%",
+          "MemUsage": "612.3MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "47.6MB / 219MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "61.99%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.12%",
+          "MemUsage": "285.1MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "222MB / 60.2MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.64%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.11%",
+          "MemUsage": "5.863MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "14.8MB / 15.5MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:15:46.190Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.89GB",
+          "CPUPerc": "22.41%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.32%",
+          "MemUsage": "612.1MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "49.7MB / 221MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "4.17%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.61%",
+          "MemUsage": "288.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "224MB / 62.8MB",
+          "PIDs": "44"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.03%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.78%",
+          "MemUsage": "5.547MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "15.5MB / 16.2MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:16:16.205Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.92GB",
+          "CPUPerc": "1.22%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.32%",
+          "MemUsage": "612.1MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "51.7MB / 224MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.17%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.10%",
+          "MemUsage": "284.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "227MB / 65.4MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.61%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.83%",
+          "MemUsage": "5.602MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "16.2MB / 16.9MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:16:46.215Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.94GB",
+          "CPUPerc": "29.39%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.38%",
+          "MemUsage": "612.6MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "53.7MB / 226MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.44%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.18%",
+          "MemUsage": "285.6MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "229MB / 68MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.05%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.84%",
+          "MemUsage": "5.605MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "16.8MB / 17.6MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:17:16.228Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.97GB",
+          "CPUPerc": "4.22%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.42%",
+          "MemUsage": "613MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "55.8MB / 228MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.56%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.25%",
+          "MemUsage": "286.1MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "231MB / 70.6MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.64%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.15%",
+          "MemUsage": "4.941MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "17.5MB / 18.3MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:17:46.229Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 1.99GB",
+          "CPUPerc": "23.66%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.40%",
+          "MemUsage": "612.9MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "57.8MB / 230MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.90%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.20%",
+          "MemUsage": "285.7MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "233MB / 73.2MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.05%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.69%",
+          "MemUsage": "5.461MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "18.2MB / 19MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:18:16.236Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 2.02GB",
+          "CPUPerc": "2.85%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.41%",
+          "MemUsage": "612.9MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "59.8MB / 232MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.57%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.12%",
+          "MemUsage": "285.1MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "236MB / 75.8MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.59%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.49%",
+          "MemUsage": "6.227MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "18.8MB / 19.7MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:18:46.247Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 2.05GB",
+          "CPUPerc": "21.09%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.31%",
+          "MemUsage": "612MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "61.8MB / 234MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.29%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.22%",
+          "MemUsage": "285.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "238MB / 78.4MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.06%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.95%",
+          "MemUsage": "5.711MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "19.5MB / 20.3MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:19:16.258Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 2.07GB",
+          "CPUPerc": "3.98%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.39%",
+          "MemUsage": "612.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "63.9MB / 237MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.29%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.22%",
+          "MemUsage": "285.8MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "240MB / 81MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.69%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.98%",
+          "MemUsage": "5.742MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "20.1MB / 21MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:19:46.260Z",
+      "rows": [
+        {
+          "BlockIO": "125MB / 2.1GB",
+          "CPUPerc": "4.33%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.39%",
+          "MemUsage": "612.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "65.9MB / 239MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.39%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.22%",
+          "MemUsage": "285.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "243MB / 83.6MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.78%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.21%",
+          "MemUsage": "5.957MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "20.8MB / 21.7MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:20:16.268Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.12GB",
+          "CPUPerc": "19.77%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.30%",
+          "MemUsage": "611.9MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "67.9MB / 241MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.42%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.32%",
+          "MemUsage": "286.6MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "245MB / 86.3MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.08%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.67%",
+          "MemUsage": "6.402MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "21.5MB / 22.4MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:20:46.280Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.15GB",
+          "CPUPerc": "27.87%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.31%",
+          "MemUsage": "612.1MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "70MB / 243MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.16%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.24%",
+          "MemUsage": "286MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "247MB / 88.9MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.04%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.95%",
+          "MemUsage": "5.715MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "22.1MB / 23.1MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:21:16.282Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.18GB",
+          "CPUPerc": "3.01%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.37%",
+          "MemUsage": "612.6MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "72MB / 245MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "13.01%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.27%",
+          "MemUsage": "286.3MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "250MB / 91.4MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.07%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.19%",
+          "MemUsage": "5.945MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "22.8MB / 23.8MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:21:46.295Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.2GB",
+          "CPUPerc": "2.91%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.34%",
+          "MemUsage": "612.3MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "74MB / 247MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.00%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.33%",
+          "MemUsage": "286.7MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "252MB / 94.1MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.53%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.61%",
+          "MemUsage": "5.383MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "23.5MB / 24.5MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:22:16.297Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.23GB",
+          "CPUPerc": "2.38%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "68.35%",
+          "MemUsage": "612.5MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "76.1MB / 250MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.77%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.33%",
+          "MemUsage": "286.7MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "254MB / 96.7MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.67%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.54%",
+          "MemUsage": "6.277MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "24.1MB / 25.2MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:22:46.312Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.26GB",
+          "CPUPerc": "4.85%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "69.30%",
+          "MemUsage": "620.9MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "78.1MB / 252MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "1.30%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.35%",
+          "MemUsage": "286.8MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "257MB / 99.3MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.55%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.86%",
+          "MemUsage": "5.625MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "24.8MB / 25.9MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:23:16.313Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.29GB",
+          "CPUPerc": "12.18%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "69.12%",
+          "MemUsage": "619.3MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "80.1MB / 254MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "53.12%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.06%",
+          "MemUsage": "284.6MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "259MB / 102MB",
+          "PIDs": "39"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.51%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.97%",
+          "MemUsage": "5.727MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "25.5MB / 26.6MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:23:46.320Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.32GB",
+          "CPUPerc": "20.62%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "69.25%",
+          "MemUsage": "620.5MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "82.2MB / 256MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "11.72%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "40.09%",
+          "MemUsage": "307.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "261MB / 105MB",
+          "PIDs": "51"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.06%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "6.13%",
+          "MemUsage": "5.883MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "26.1MB / 27.3MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:24:16.321Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.34GB",
+          "CPUPerc": "10.98%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "69.15%",
+          "MemUsage": "619.6MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "84.1MB / 258MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "0.16%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.22%",
+          "MemUsage": "285.9MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "263MB / 107MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.00%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.60%",
+          "MemUsage": "5.375MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "26.8MB / 27.9MB",
+          "PIDs": "2"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-26T02:24:20.182Z",
+      "rows": [
+        {
+          "BlockIO": "126MB / 2.36GB",
+          "CPUPerc": "0.46%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "ID": "4d2bf8061a52",
+          "MemPerc": "69.17%",
+          "MemUsage": "619.8MiB / 896MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+          "NetIO": "84.1MB / 258MB",
+          "PIDs": "42"
+        },
+        {
+          "BlockIO": "0B / 0B",
+          "CPUPerc": "19.62%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "ID": "c287ba7e5112",
+          "MemPerc": "37.31%",
+          "MemUsage": "286.5MiB / 768MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+          "NetIO": "263MB / 107MB",
+          "PIDs": "38"
+        },
+        {
+          "BlockIO": "28.7kB / 4.1kB",
+          "CPUPerc": "0.00%",
+          "Container": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "ID": "25a33ab993da",
+          "MemPerc": "5.51%",
+          "MemUsage": "5.293MiB / 96MiB",
+          "Name": "adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+          "NetIO": "26.8MB / 27.9MB",
+          "PIDs": "2"
+        }
+      ]
+    }
+  ],
+  "readiness": {
+    "status": 200
+  },
+  "nonempty_candidate_pages": 10,
+  "counts": {
+    "kind": "adc-q03-real-mysql-counts",
+    "clinics": 30,
+    "dentists": 100,
+    "patients": 10000,
+    "server_uuid": "752f0894-e93d-11f1-9a92-6e24e5c9b4cc",
+    "appointments": 100000,
+    "observed_at_utc": "2026-11-26T02:04:11.128004Z",
+    "applied_treatments": 200000
+  },
+  "inventory_before": {
+    "kind": "adc-q03-inventory-checks",
+    "care_inventory": 50000,
+    "business_tables": 24,
+    "business_columns": 209,
+    "invoice_inventory": 50000,
+    "missing_state_events": 0,
+    "preexisting_invoices": 0,
+    "business_foreign_keys": 44,
+    "ineligible_treatments": 0,
+    "duplicate_occupied_slots": 0
+  },
+  "images": {
+    "backend": "sha256:20295e8798948a974159ad822ec228bf293b309f07c9f56e818ef32f714db169",
+    "mysql": "mysql@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d",
+    "proxy": "nginxinc/nginx-unprivileged@sha256:f5116ed4606f3eb015dd4a8e28cb9b351476dc0ad4bc6e9f93b19cec130cdf03"
+  },
+  "resource_limits": [
+    {
+      "name": "/adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-db",
+      "nano_cpus": 1000000000,
+      "memory_bytes": 939524096,
+      "memory_swap_bytes": 939524096
+    },
+    {
+      "name": "/adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-app",
+      "nano_cpus": 900000000,
+      "memory_bytes": 805306368,
+      "memory_swap_bytes": 805306368
+    },
+    {
+      "name": "/adc-q03-33346af7-ef0f-481f-b735-6b0443461f8a-proxy",
+      "nano_cpus": 100000000,
+      "memory_bytes": 100663296,
+      "memory_swap_bytes": 100663296
+    }
+  ],
+  "load_started_at": "2026-11-26T02:04:16.012Z",
+  "load_finished_at": "2026-11-26T02:24:20.178Z",
+  "k6_exit_code": 0,
+  "operations": {
+    "candidates": 3600,
+    "treatments": 1200,
+    "invoices": 1200
+  },
+  "after": {
+    "invoices": 1200,
+    "audit_events": 6040,
+    "valid_totals": 1200,
+    "invoice_items": 2400,
+    "invoice_events": 1200,
+    "invoiced_visits": 1200,
+    "mutation_receipts": 2399,
+    "applied_treatments": 201199
+  },
+  "error": "Expected values to be strictly equal:\n\n1199 !== 1200\n",
+  "finished_at": "2026-11-26T02:24:25.183Z"
+}

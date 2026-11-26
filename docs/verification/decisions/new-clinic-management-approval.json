@@ -1,0 +1,24 @@
+{
+  "id": "ADC-OPS-20261114-01",
+  "status": "owner-approved-limited-operational-supplement",
+  "date": "2026-11-14",
+  "approval_source": "Project owner explicit reply in the current conversation; no separate signed record or time is invented",
+  "proposal": "docs/verification/decisions/new-clinic-authority-initialization-proposal.md",
+  "operational_contract": "ops/runbooks/new-clinic-management.md",
+  "owner_constraints": [
+    "Operator command only; original SF04 and permission checks unchanged",
+    "Authorized owner explicitly verifies evidence, target employee, target clinic and expiry per execution",
+    "No automatic creator privilege; do not modify or expand any existing grant scope",
+    "Existing authorization, audit and receipt storage only; complete traceability",
+    "No Web API, business table, field, database design or API contract changes",
+    "Test unauthorized, invalid, duplicate, expired and audit scenarios",
+    "First initialization only; never a general permission bypass"
+  ],
+  "implementation_interpretation": "Only a new separate explicitly approved first-management grant for the new clinic; all existing grants and scopes remain unchanged",
+  "public_api_amended": false,
+  "public_operation_count": 82,
+  "public_model_count": 91,
+  "database_design_amended": false,
+  "constitution_amended": false,
+  "production_execution_authorized_by_this_record": false
+}

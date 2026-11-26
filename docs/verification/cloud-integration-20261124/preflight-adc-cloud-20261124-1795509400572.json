@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-24T08:36:41.706320+00:00",
+  "kind": "read-only-preflight",
+  "containers": [
+    {
+      "name": "adc-isolated-loopback-admin-1",
+      "image": "49ee801d5424",
+      "state": "Up About an hour (healthy)",
+      "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
+    },
+    {
+      "name": "adc-isolated-loopback-backend-1",
+      "image": "5248726a007f",
+      "state": "Up 4 hours (healthy)",
+      "ports": "8080/tcp, 9091/tcp"
+    },
+    {
+      "name": "adc-isolated-loopback-runtime-grants-1",
+      "image": "72c368d89886",
+      "state": "Exited (0) 6 days ago",
+      "ports": ""
+    },
+    {
+      "name": "adc-isolated-loopback-migrator-1",
+      "image": "626cddda4192",
+      "state": "Exited (0) 6 days ago",
+      "ports": ""
+    },
+    {
+      "name": "adc-isolated-loopback-mysql-1",
+      "image": "72c368d89886",
+      "state": "Up 6 days (healthy)",
+      "ports": "3306/tcp, 33060/tcp"
+    }
+  ],
+  "database": {
+    "business_tables": 19,
+    "business_columns": 163,
+    "business_foreign_keys": 30,
+    "migrations": 33,
+    "clinics": 1,
+    "patients": 1,
+    "staff_accounts": 5,
+    "grants": 9
+  },
+  "migration_fingerprints": [
+    "001\t642235063",
+    "002\t-139131776",
+    "003\t-1507794461",
+    "004\t-1105706124",
+    "005\t833339163",
+    "006\t-1676773693",
+    "007\t219203548",
+    "008\t-1141336440",
+    "009\t-177678172",
+    "010\t1749022404",
+    "011\t-1883091732",
+    "012\t362057578",
+    "013\t147781213",
+    "014\t928771891",
+    "015\t1048718105",
+    "016\t-612761375",
+    "017\t56339238",
+    "018\t-272594464",
+    "019\t-1471002546",
+    "101\t669295185",
+    "102\t-597604732",
+    "103\t-157074337",
+    "104\t-387096523",
+    "105\t-998553369",
+    "106\t-37646824",
+    "107\t1004684014",
+    "108\t-995260415",
+    "109\t-1359300733",
+    "110\t-1236276476",
+    "111\t943948527",
+    "112\t-1198056132",
+    "114\t-22664292",
+    "200\t1048949524"
+  ],
+  "listeners": "LISTEN 0      4096         0.0.0.0:22  0.0.0.0:*\nLISTEN 0      4096      127.0.0.54:53  0.0.0.0:*\nLISTEN 0      4096   127.0.0.53%lo:53  0.0.0.0:*\nLISTEN 0      4096         0.0.0.0:443 0.0.0.0:*\nLISTEN 0      4096            [::]:22     [::]:*",
+  "certificate_files": "/opt/andrew-dental/private/LoopbackTLS/localhost.crt"
+}

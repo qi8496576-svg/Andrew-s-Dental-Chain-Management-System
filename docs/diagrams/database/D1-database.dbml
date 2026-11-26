@@ -1,0 +1,416 @@
+// Source: final Word D3-D24. 24 tables, 209 fields, 44 foreign keys.
+
+// Conditional uniqueness and cross-table rules remain in constraints.md; this is not executable DDL.
+
+Project ADC {
+  database_type: "MySQL"
+  Note: "业务基线：最终Word；身份组件独立于24张业务表。"
+}
+
+Table Patient {
+  Note: 'D3 患者；完整约束参见 constraints.md'
+  patient_id bigint [not null, pk]
+  patient_number varchar(30) [not null, unique]
+  full_name varchar(100) [not null]
+  date_of_birth date [not null]
+  billing_address varchar(255) [null]
+  phone varchar(30) [not null]
+  email varchar(254) [null]
+  emergency_contact_name varchar(100) [null]
+  emergency_contact_phone varchar(30) [null]
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  allergy_review_status varchar(20) [not null]
+}
+
+Table Allergy {
+  Note: 'D4 过敏症；完整约束参见 constraints.md'
+  allergy_id bigint [not null, pk]
+  allergy_name varchar(100) [not null, unique]
+  description varchar(255) [null]
+  is_active boolean [not null]
+}
+
+Table PatientAllergy {
+  Note: 'D5 患者过敏症；完整约束参见 constraints.md'
+  patient_id bigint [not null]
+  allergy_id bigint [not null]
+  noted_at timestamp [not null]
+  severity_note varchar(100) [null]
+  clinical_note varchar(255) [null]
+  is_retracted boolean [not null]
+  audit_history json [not null]
+  updated_at timestamp [not null]
+  indexes {
+    (patient_id, allergy_id) [pk]
+  }
+}
+
+Table Clinic {
+  Note: 'D6 诊所；完整约束参见 constraints.md'
+  clinic_id bigint [not null, pk]
+  clinic_code varchar(20) [not null, unique]
+  postal_address varchar(255) [not null]
+  manager_name varchar(100) [null]
+  phone varchar(30) [not null]
+  email varchar(254) [null]
+  office_area_sqm decimal(8,2) [null]
+  is_active boolean [not null]
+  created_at timestamp [not null]
+}
+
+Table Dentist {
+  Note: 'D7 牙医；完整约束参见 constraints.md'
+  dentist_id bigint [not null, pk]
+  employee_number varchar(30) [not null, unique]
+  full_name varchar(100) [not null]
+  date_of_birth date [not null]
+  home_address varchar(255) [null]
+  phone varchar(30) [not null]
+  email varchar(254) [null]
+  hire_date date [not null]
+  is_active boolean [not null]
+  created_at timestamp [not null]
+  termination_date date [null]
+  professional_title varchar(40) [null]
+  specialty varchar(255) [null]
+  introduction varchar(1000) [null]
+}
+
+Table Qualification {
+  Note: 'D8 专业资质；完整约束参见 constraints.md'
+  qualification_id bigint [not null, pk]
+  qualification_name varchar(120) [not null, unique]
+  description varchar(255) [null]
+  is_active boolean [not null]
+}
+
+Table DentistQualification {
+  Note: 'D9 牙医专业资质；完整约束参见 constraints.md'
+  dentist_id bigint [not null]
+  qualification_id bigint [not null]
+  certificate_number varchar(60) [not null]
+  granted_date date [not null]
+  expiry_date date [null]
+  verification_status varchar(20) [not null]
+  indexes {
+    (dentist_id, qualification_id) [pk]
+  }
+}
+
+Table DentistClinicAssignment {
+  Note: 'D10 牙医诊所委派；完整约束参见 constraints.md'
+  assignment_id bigint [not null, pk]
+  dentist_id bigint [not null]
+  clinic_id bigint [not null]
+  start_date date [not null]
+  end_date date [null]
+  availability_note varchar(255) [null]
+  is_active boolean [not null]
+}
+
+Table DentistSchedule {
+  Note: 'D11 出诊排班；完整约束参见 constraints.md'
+  schedule_id bigint [not null, pk]
+  dentist_id bigint [not null, note: '条件唯一：仅NORMAL；参见D22']
+  clinic_id bigint [not null]
+  schedule_date date [not null, note: '条件唯一：仅NORMAL；参见D22']
+  start_time time [not null, note: '条件唯一：仅NORMAL；参见D22']
+  end_time time [not null]
+  slot_minutes smallint [not null]
+  schedule_status varchar(20) [not null]
+  note varchar(255) [null]
+  created_at timestamp [not null]
+}
+
+Table Treatment {
+  Note: 'D12 治疗项目；完整约束参见 constraints.md'
+  treatment_id bigint [not null, pk]
+  treatment_code varchar(30) [not null, unique]
+  treatment_name varchar(120) [not null]
+  description varchar(255) [null]
+  default_unit_price decimal(12,2) [not null]
+  is_active boolean [not null]
+}
+
+Table TreatmentQualification {
+  Note: 'D13 治疗所需资质；完整约束参见 constraints.md'
+  treatment_id bigint [not null]
+  qualification_id bigint [not null]
+  is_mandatory boolean [not null]
+  indexes {
+    (treatment_id, qualification_id) [pk]
+  }
+}
+
+Table Appointment {
+  Note: 'D14 就诊；完整约束参见 constraints.md'
+  appointment_id bigint [not null, pk]
+  patient_id bigint [not null]
+  clinic_id bigint [not null]
+  dentist_id bigint [not null]
+  schedule_id bigint [not null]
+  scheduled_at timestamp [not null]
+  status varchar(20) [not null]
+  problems_or_special_needs text [null]
+  completed_at timestamp [null]
+  created_at timestamp [not null]
+  updated_at timestamp [not null]
+  attended_at timestamp [null]
+  cancelled_at timestamp [null]
+  cancellation_reason varchar(255) [null]
+  cancellation_kind varchar(30) [null]
+  rescheduled_from_id bigint [null, unique]
+}
+
+Table AppointmentRequestedTreatment {
+  Note: 'D15 就诊期望治疗；完整约束参见 constraints.md'
+  appointment_id bigint [not null]
+  treatment_id bigint [not null]
+  request_note varchar(255) [null]
+  indexes {
+    (appointment_id, treatment_id) [pk]
+  }
+}
+
+Table AppliedTreatment {
+  Note: 'D16 施用治疗；完整约束参见 constraints.md'
+  applied_treatment_id bigint [not null, pk]
+  appointment_id bigint [not null]
+  treatment_id bigint [not null]
+  dentist_id bigint [not null]
+  standard_units decimal(10,2) [not null]
+  unit_price decimal(12,2) [not null]
+  subtotal decimal(14,2) [not null]
+  performed_at timestamp [not null]
+}
+
+Table Invoice {
+  Note: 'D17 结算单；完整约束参见 constraints.md'
+  invoice_id bigint [not null, pk]
+  invoice_number varchar(40) [not null, unique]
+  appointment_id bigint [not null, unique]
+  issued_at timestamp [not null]
+  total_amount decimal(14,2) [not null]
+  invoice_status varchar(20) [not null]
+  created_at timestamp [not null]
+}
+
+Table InvoiceItem {
+  Note: 'D18 结算单明细；完整约束参见 constraints.md'
+  invoice_item_id bigint [not null, pk]
+  invoice_id bigint [not null]
+  applied_treatment_id bigint [not null, unique]
+  line_number int [not null]
+  treatment_name varchar(120) [not null]
+  standard_units decimal(10,2) [not null]
+  unit_price decimal(12,2) [not null]
+  subtotal decimal(14,2) [not null]
+  indexes {
+    (invoice_id, line_number) [unique]
+  }
+}
+
+Table CostEntry {
+  Note: 'D19 成本凭证；完整约束参见 constraints.md'
+  cost_entry_id bigint [not null, pk]
+  dentist_id bigint [null]
+  clinic_id bigint [not null]
+  appointment_id bigint [null]
+  applied_treatment_id bigint [null]
+  cost_type varchar(30) [not null]
+  amount decimal(14,2) [not null]
+  incurred_at timestamp [not null]
+  description varchar(255) [null]
+  source_reference varchar(100) [not null, unique]
+  source_batch varchar(60) [not null]
+  confirmed_at timestamp [not null]
+  confirmed_by varchar(100) [not null]
+  reversal_of_id bigint [null, unique]
+}
+
+Table QuarterlyPerformance {
+  Note: 'D20 季度绩效；完整约束参见 constraints.md'
+  quarterly_performance_id bigint [not null, pk]
+  dentist_id bigint [not null]
+  quarter_start date [not null]
+  quarter_end date [not null]
+  revenue decimal(14,2) [null]
+  medical_supply_cost decimal(14,2) [null]
+  operating_expense decimal(14,2) [null]
+  net_profit decimal(14,2) [null]
+  incentive_rate decimal(5,4) [not null]
+  incentive_amount decimal(14,2) [null]
+  calculation_status varchar(20) [not null]
+  calculated_at timestamp [null]
+  calculation_version int [not null]
+  source_snapshot json [not null]
+  input_hash char(64) [not null]
+  published_at timestamp [null]
+  indexes {
+    (dentist_id, quarter_start, quarter_end, calculation_version) [unique]
+  }
+}
+
+Table AppointmentEvent {
+  Note: 'D21 就诊事件；完整约束参见 constraints.md'
+  appointment_event_id bigint [not null, pk]
+  appointment_id bigint [not null]
+  event_type varchar(30) [not null]
+  from_status varchar(20) [null]
+  to_status varchar(20) [not null]
+  occurred_at timestamp [not null]
+  actor_role varchar(30) [not null]
+  actor_reference varchar(100) [not null]
+  reason varchar(255) [null]
+  request_key varchar(64) [not null]
+  details json [null]
+  indexes {
+    (appointment_id, event_type, request_key) [unique]
+  }
+}
+
+Ref: PatientAllergy.patient_id > Patient.patient_id
+
+Ref: PatientAllergy.allergy_id > Allergy.allergy_id
+
+Ref: DentistQualification.dentist_id > Dentist.dentist_id
+
+Ref: DentistQualification.qualification_id > Qualification.qualification_id
+
+Ref: DentistClinicAssignment.dentist_id > Dentist.dentist_id
+
+Ref: DentistClinicAssignment.clinic_id > Clinic.clinic_id
+
+Ref: DentistSchedule.dentist_id > Dentist.dentist_id
+
+Ref: DentistSchedule.clinic_id > Clinic.clinic_id
+
+Ref: TreatmentQualification.treatment_id > Treatment.treatment_id
+
+Ref: TreatmentQualification.qualification_id > Qualification.qualification_id
+
+Ref: Appointment.patient_id > Patient.patient_id
+
+Ref: Appointment.clinic_id > Clinic.clinic_id
+
+Ref: Appointment.dentist_id > Dentist.dentist_id
+
+Ref: Appointment.schedule_id > DentistSchedule.schedule_id
+
+Ref: Appointment.rescheduled_from_id > Appointment.appointment_id
+
+Ref: AppointmentRequestedTreatment.appointment_id > Appointment.appointment_id
+
+Ref: AppointmentRequestedTreatment.treatment_id > Treatment.treatment_id
+
+Ref: AppliedTreatment.appointment_id > Appointment.appointment_id
+
+Ref: AppliedTreatment.treatment_id > Treatment.treatment_id
+
+Ref: AppliedTreatment.dentist_id > Dentist.dentist_id
+
+Ref: Invoice.appointment_id > Appointment.appointment_id
+
+Ref: InvoiceItem.invoice_id > Invoice.invoice_id
+
+Ref: InvoiceItem.applied_treatment_id > AppliedTreatment.applied_treatment_id
+
+Ref: CostEntry.dentist_id > Dentist.dentist_id
+
+Ref: CostEntry.clinic_id > Clinic.clinic_id
+
+Ref: CostEntry.appointment_id > Appointment.appointment_id
+
+Ref: CostEntry.applied_treatment_id > AppliedTreatment.applied_treatment_id
+
+Ref: CostEntry.reversal_of_id > CostEntry.cost_entry_id
+
+Ref: QuarterlyPerformance.dentist_id > Dentist.dentist_id
+
+Ref: AppointmentEvent.appointment_id > Appointment.appointment_id
+
+
+Table RegistrationFeePolicy {
+  Note: 'D27 挂号费策略；完整约束参见 constraints.md'
+  clinic_id bigint [not null]
+  dentist_id bigint [not null]
+  amount_fen bigint [not null]
+  updated_at datetime(6) [not null]
+  indexes {
+    (clinic_id, dentist_id) [pk]
+  }
+}
+Ref: RegistrationFeePolicy.clinic_id > Clinic.clinic_id
+Ref: RegistrationFeePolicy.dentist_id > Dentist.dentist_id
+
+
+Table BookingHold {
+  Note: 'D28 预约号源保留；完整约束参见 constraints.md'
+  hold_id bigint [not null, pk]
+  patient_id bigint [not null]
+  clinic_id bigint [not null]
+  dentist_id bigint [not null]
+  schedule_id bigint [not null]
+  scheduled_at datetime(6) [not null]
+  slot_minutes smallint [not null]
+  requested_treatment_ids json [not null]
+  confirmation_digest binary(32) [not null]
+  expires_at datetime(6) [not null]
+  status varchar(20) [not null]
+  appointment_id bigint [null, unique]
+  created_at datetime(6) [not null]
+  updated_at datetime(6) [not null]
+}
+Ref: BookingHold.patient_id > Patient.patient_id
+Ref: BookingHold.clinic_id > Clinic.clinic_id
+Ref: BookingHold.dentist_id > Dentist.dentist_id
+Ref: BookingHold.schedule_id > DentistSchedule.schedule_id
+Ref: BookingHold.appointment_id > Appointment.appointment_id
+
+
+Table PatientBill {
+  Note: 'D29 患者账单；完整约束参见 constraints.md'
+  bill_id bigint [not null, pk]
+  patient_id bigint [not null]
+  clinic_id bigint [not null]
+  kind varchar(20) [not null]
+  hold_id bigint [null, unique]
+  appointment_id bigint [null]
+  invoice_id bigint [null, unique]
+  amount_fen bigint [not null]
+  status varchar(20) [not null]
+  created_at datetime(6) [not null]
+  updated_at datetime(6) [not null]
+}
+Ref: PatientBill.patient_id > Patient.patient_id
+Ref: PatientBill.clinic_id > Clinic.clinic_id
+Ref: PatientBill.hold_id > BookingHold.hold_id
+Ref: PatientBill.appointment_id > Appointment.appointment_id
+Ref: PatientBill.invoice_id > Invoice.invoice_id
+
+
+Table PaymentOrder {
+  Note: 'D30 支付订单；完整约束参见 constraints.md'
+  payment_id bigint [not null, pk]
+  bill_id bigint [not null, unique]
+  amount_fen bigint [not null]
+  mode varchar(10) [not null]
+  status varchar(20) [not null]
+  paid_at datetime(6) [not null]
+  created_at datetime(6) [not null]
+}
+Ref: PaymentOrder.bill_id > PatientBill.bill_id
+
+
+Table RefundOrder {
+  Note: 'D31 退款订单；完整约束参见 constraints.md'
+  refund_id bigint [not null, pk]
+  payment_id bigint [not null, unique]
+  amount_fen bigint [not null]
+  reason varchar(255) [not null]
+  actor_subject_id varchar(36) [not null]
+  status varchar(20) [not null]
+  created_at datetime(6) [not null]
+}
+Ref: RefundOrder.payment_id > PaymentOrder.payment_id

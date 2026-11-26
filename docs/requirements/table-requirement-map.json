@@ -1,0 +1,324 @@
+[
+  {
+    "analysis": "患者",
+    "table": "Patient",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC01",
+      "UC05"
+    ],
+    "schema_caption": "D3",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "过敏症",
+    "table": "Allergy",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC01",
+      "UC05"
+    ],
+    "schema_caption": "D4",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "患者—过敏症",
+    "table": "PatientAllergy",
+    "strategy": "多对多 → 关联表",
+    "requirements": [
+      "UC01",
+      "UC05"
+    ],
+    "schema_caption": "D5",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "诊所",
+    "table": "Clinic",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC01",
+      "UC06"
+    ],
+    "schema_caption": "D6",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "牙医",
+    "table": "Dentist",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC01",
+      "UC06"
+    ],
+    "schema_caption": "D7",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "专业资质",
+    "table": "Qualification",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC06"
+    ],
+    "schema_caption": "D8",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "牙医—专业资质",
+    "table": "DentistQualification",
+    "strategy": "多对多 → 关联表",
+    "requirements": [
+      "UC06"
+    ],
+    "schema_caption": "D9",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "牙医—诊所",
+    "table": "DentistClinicAssignment",
+    "strategy": "多对多（带有效期）→ 关联表",
+    "requirements": [
+      "UC02",
+      "UC06"
+    ],
+    "schema_caption": "D10",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "出诊排班",
+    "table": "DentistSchedule",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC01",
+      "UC02"
+    ],
+    "schema_caption": "D11",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "治疗项目",
+    "table": "Treatment",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC03"
+    ],
+    "schema_caption": "D12",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "治疗—所需资质",
+    "table": "TreatmentQualification",
+    "strategy": "多对多 → 关联表",
+    "requirements": [
+      "UC01",
+      "UC06"
+    ],
+    "schema_caption": "D13",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "就诊",
+    "table": "Appointment",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC01",
+      "UC03"
+    ],
+    "schema_caption": "D14",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "就诊—期望治疗",
+    "table": "AppointmentRequestedTreatment",
+    "strategy": "多对多 → 关联表",
+    "requirements": [
+      "UC01"
+    ],
+    "schema_caption": "D15",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "施用治疗",
+    "table": "AppliedTreatment",
+    "strategy": "组合（就诊 1:N）→ 非空外键",
+    "requirements": [
+      "UC03"
+    ],
+    "schema_caption": "D16",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "结算单",
+    "table": "Invoice",
+    "strategy": "实体类 → 表；与就诊 1:0..1",
+    "requirements": [
+      "UC04"
+    ],
+    "schema_caption": "D17",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "开票明细快照",
+    "table": "InvoiceItem",
+    "strategy": "设计细化 → 非空外键",
+    "requirements": [
+      "UC04"
+    ],
+    "schema_caption": "D18",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "成本凭证",
+    "table": "CostEntry",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC07"
+    ],
+    "schema_caption": "D19",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "季度绩效",
+    "table": "QuarterlyPerformance",
+    "strategy": "实体类 → 表",
+    "requirements": [
+      "UC07"
+    ],
+    "schema_caption": "D20",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "就诊状态事件",
+    "table": "AppointmentEvent",
+    "strategy": "审计细化 → 事件表",
+    "requirements": [
+      "UC01",
+      "UC03",
+      "UC04"
+    ],
+    "schema_caption": "D21",
+    "figures": [
+      "C1",
+      "D1"
+    ]
+  },
+  {
+    "analysis": "挂号费策略",
+    "table": "RegistrationFeePolicy",
+    "strategy": "费用业务事实 → 表",
+    "requirements": [
+      "UC06"
+    ],
+    "schema_caption": "D27",
+    "figures": [
+      "D1"
+    ]
+  },
+  {
+    "analysis": "预约号源保留",
+    "table": "BookingHold",
+    "strategy": "费用业务事实 → 表",
+    "requirements": [
+      "UC01",
+      "UC04"
+    ],
+    "schema_caption": "D28",
+    "figures": [
+      "D1"
+    ]
+  },
+  {
+    "analysis": "患者账单",
+    "table": "PatientBill",
+    "strategy": "费用业务事实 → 表",
+    "requirements": [
+      "UC01",
+      "UC04"
+    ],
+    "schema_caption": "D29",
+    "figures": [
+      "D1"
+    ]
+  },
+  {
+    "analysis": "支付订单",
+    "table": "PaymentOrder",
+    "strategy": "费用业务事实 → 表",
+    "requirements": [
+      "UC01",
+      "UC04"
+    ],
+    "schema_caption": "D30",
+    "figures": [
+      "D1"
+    ]
+  },
+  {
+    "analysis": "退款订单",
+    "table": "RefundOrder",
+    "strategy": "费用业务事实 → 表",
+    "requirements": [
+      "UC01",
+      "UC04"
+    ],
+    "schema_caption": "D31",
+    "figures": [
+      "D1"
+    ]
+  }
+]

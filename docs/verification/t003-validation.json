@@ -1,0 +1,180 @@
+{
+  "checked_at": "2026-11-10T15:27:51.152199+00:00",
+  "task": "T003",
+  "status": "PASS",
+  "tests": {
+    "vitest": 2,
+    "playwright": 2
+  },
+  "tasks_count": 186,
+  "completed_tasks": [
+    "T001",
+    "T002",
+    "T003"
+  ],
+  "protected_inputs_unchanged": [
+    "specs/001-system-specification/business-baseline-audit.json",
+    "specs/001-system-specification/business-baseline-audit.md",
+    "specs/001-system-specification/data-model.md",
+    "specs/001-system-specification/plan-approval.json",
+    "specs/001-system-specification/plan-approval.md",
+    "specs/001-system-specification/plan-dependency-amendment.json",
+    "specs/001-system-specification/plan-dependency-amendment.md",
+    "specs/001-system-specification/plan-supplement-review.md",
+    "specs/001-system-specification/plan.md",
+    "specs/001-system-specification/preimplement-sync.json",
+    "specs/001-system-specification/quickstart.md",
+    "specs/001-system-specification/research.md",
+    "specs/001-system-specification/spec.md",
+    "specs/001-system-specification/task-traceability.md",
+    "specs/001-system-specification/tasks-catalog.json",
+    "specs/001-system-specification/tasks-validation.json",
+    "specs/001-system-specification/technical-data-model.md",
+    "specs/001-system-specification/technical-schema.json",
+    "specs/001-system-specification/traceability.md",
+    "specs/001-system-specification/checklists/requirements.md",
+    "specs/001-system-specification/contracts/api.md",
+    "specs/001-system-specification/contracts/identity.md",
+    "specs/001-system-specification/contracts/openapi.json",
+    "specs/001-system-specification/contracts/operations.md",
+    "specs/001-system-specification/diagrams/storage-boundaries.mmd",
+    "specs/001-system-specification/diagrams/technical-erd.mmd",
+    "specs/001-system-specification/diagrams/technical-storage-overview.png",
+    "specs/001-system-specification/diagrams/technical-storage-overview.svg",
+    ".specify/memory/constitution.md",
+    "安德鲁牙科连锁管理系统需求分析与设计.docx",
+    "docs/diagrams/database/schema.json"
+  ],
+  "tasks_change": "Only T003 checkbox; content and dependencies unchanged",
+  "fingerprints": [
+    {
+      "path": "apps/admin/.npmrc",
+      "sha256": "60d44b93ef9759dc1b8b8df67d4fabd8e41af6a9956fefb5128166644c9c7298"
+    },
+    {
+      "path": "apps/admin/index.html",
+      "sha256": "03f5435e194b310435622d3f0af6efb767b4fd2f45eb97988c1db52117271c46"
+    },
+    {
+      "path": "apps/admin/package-lock.json",
+      "sha256": "66205d879bea66155d422472f660e91e85bf0ebd8ed0c38db4159cf9391b339f"
+    },
+    {
+      "path": "apps/admin/package.json",
+      "sha256": "be4e10764f8826ec76b3889bb928002b70602010668fa39d173fb07ade366a78"
+    },
+    {
+      "path": "apps/admin/playwright.config.ts",
+      "sha256": "5eca1e52480d75e6d8f6d763dd46a828d4851e12a7539b1b8c4f9bafc0033e0f"
+    },
+    {
+      "path": "apps/admin/README.md",
+      "sha256": "89b631fcdcca247c468c966b45bfe905b74004b6ab97fa918a0b67f6867617ad"
+    },
+    {
+      "path": "apps/admin/src/App.vue",
+      "sha256": "cef223541eba0a150e0869b95b36341e16a1735f72d00d472d19a7d2d42530a0"
+    },
+    {
+      "path": "apps/admin/src/main.ts",
+      "sha256": "3a61334ffc894092190dc76d1cade28637b2433eb9f5b2a0d24225aceca3d1d0"
+    },
+    {
+      "path": "apps/admin/src/router/index.spec.ts",
+      "sha256": "4f08c36e26abc9fd9a0dc0d33ee6a21be452e4596119cf546393b91fd974c76d"
+    },
+    {
+      "path": "apps/admin/src/router/index.ts",
+      "sha256": "fb3fe6d3dac9f0d9661c92c18d9c0e7f2bedd2ca27e8f2a908a371733a0fc322"
+    },
+    {
+      "path": "apps/admin/src/stores/shell.ts",
+      "sha256": "f2684e0c84b41e893bd01229e2dd0efa7002759bd75c8391b7f498f842bcb1d7"
+    },
+    {
+      "path": "apps/admin/src/style.css",
+      "sha256": "5d8e77ef9fb51768130c4b91075aab739f3173766b5b2a2868eb8a888be31b30"
+    },
+    {
+      "path": "apps/admin/src/views/HomeView.vue",
+      "sha256": "2c37c02413028d015667e0f2a5f625e4983a4aacd5cff5d801079344e0ec881c"
+    },
+    {
+      "path": "apps/admin/src/views/NotFoundView.vue",
+      "sha256": "7c8344699609a6f63e3e0aed9f02c5cf5835dd296fd54d726b7648450cbb6933"
+    },
+    {
+      "path": "apps/admin/tests/e2e/shell.spec.ts",
+      "sha256": "56ef207d6a59a2b112cc5e91cbdb2ad4f2708131ba66624c85bfd7ad599acfb4"
+    },
+    {
+      "path": "apps/admin/tsconfig.json",
+      "sha256": "d41e598ef16851c2554e9d0668fe811ace5ed4e59b4c777b554889e67f439a39"
+    },
+    {
+      "path": "apps/admin/vite.config.ts",
+      "sha256": "0be05893f028fad057a899d729478af4246cfa87ba4e3dcc1bfdbac72dc6ec25"
+    },
+    {
+      "path": "docs/ui/reference-brief.md",
+      "sha256": "6ac63e366b23a6ed2099dc5293360064a8253fbeb3848ed232e5efffa0a81fe8"
+    },
+    {
+      "path": "docs/verification/archive/t003-success/playwright.xml",
+      "sha256": "b048a9bf81fde50b44c45614fd37ad1f94954ee3a815df976ee8eaac261eb107"
+    },
+    {
+      "path": "docs/verification/archive/t003-success/vitest.xml",
+      "sha256": "1898ee8d46c867ba5942fc0a17c7820c942f426a6c278ceb9a4579dfd97e59b1"
+    },
+    {
+      "path": "docs/verification/implementation-status.md",
+      "sha256": "ecf7772784d28eec4c52c9b839a2b0e6a6c54bbcbc83074de5fda1c6501ead68"
+    },
+    {
+      "path": "docs/verification/t003-admin-build.md",
+      "sha256": "6b0db0d1e3824149aa0315ef69b134f91a3455f89be81b5fa7d6f7544c1d1918"
+    },
+    {
+      "path": "docs/verification/t003-browser.log",
+      "sha256": "4226ccf2db59adef0da681cc780927a597cf3152d7dc98597a2c09084f363ea2"
+    },
+    {
+      "path": "docs/verification/t003-build-result.json",
+      "sha256": "e5ee869dadb77f261ce7e7ae89325e3cac0a2464c2dedac432110f1b892e465c"
+    },
+    {
+      "path": "docs/verification/t003-build.log",
+      "sha256": "a200e23c4957a1beb785dfbb1ac8653e34ddfbd71e1e347da97eb1a4109f39ec"
+    },
+    {
+      "path": "docs/verification/t003-ci.log",
+      "sha256": "2f1586bb30ad59f6ba6242bf08502331a692e862f2812e6c5d28040f8bb364f1"
+    },
+    {
+      "path": "docs/verification/t003-dependencies.log",
+      "sha256": "80c343cadd281b4da3707db2298dd4ff0ad1b6217fd3b8047ef9d9c2caa087fd"
+    },
+    {
+      "path": "docs/verification/t003-lock.log",
+      "sha256": "6073ce90cd2a0ec713c5707ee4c834b9c101b28a22481f2da258f5bcda53e747"
+    },
+    {
+      "path": "docs/verification/t003-typecheck.log",
+      "sha256": "746f21176c498e0e7aa312700d9b93b3b491dbc56afcad0600139185d150ddae"
+    },
+    {
+      "path": "docs/verification/t003-unit.log",
+      "sha256": "7c85099968cfdab822d3a2847d54cd373fcd906627d35c72d4cebc5fd887bfae"
+    },
+    {
+      "path": "specs/001-system-specification/tasks.md",
+      "sha256": "5815e2956b00e352fabf3d7bb43845cc9e0eab254ec0dc4c3ae2cbfee9747b59"
+    },
+    {
+      "path": "tools/verification/Verify-AdminBuild.ps1",
+      "sha256": "706d44a1bcf4defd4712ffc0a73410f622e8d3ca46a24dc922dd494b40ce14d6"
+    }
+  ],
+  "tasks_byte_comparison": "Reverting only the T003 checkbox matches the T002 task file SHA-256 exactly; original CRLF preserved."
+}

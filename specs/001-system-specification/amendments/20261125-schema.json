@@ -1,0 +1,7 @@
+{
+  "authorization": "owner-approved",
+  "erd_publication": "owner-approved-and-published",
+  "business_tables": 24,
+  "business_fields": 209,
+  "business_foreign_keys": 44
+}

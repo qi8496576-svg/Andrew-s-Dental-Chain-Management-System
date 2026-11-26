@@ -1,0 +1,32 @@
+package com.adc.application;
+import com.adc.domain.appointmentbooking.AppointmentBookingRules;
+import com.adc.domain.appointmentrescheduling.AppointmentReschedulingRules;
+import com.adc.domain.patients.PatientRules;
+import com.adc.domain.shared.DomainFailure;
+import com.adc.identity.IdentityGate;
+import com.adc.infrastructure.*;
+import java.time.*;
+import java.util.*;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.*;
+import tools.jackson.databind.json.JsonMapper;
+
+@Service @Transactional(isolation=Isolation.READ_COMMITTED,rollbackFor=Exception.class)
+public class AppointmentReschedulingService implements ReceiptPolicy {
+    private final AtomicCommandExecutor commands;private final IdentityGate gate;private final AppointmentTransitionStore source;private final AppointmentReschedulingStore store;private final AppointmentBookingStore booking;private final ScheduleStore schedules;private final PatientStore patients;private final BusinessRowLocks locks;private final AuditWriter audit;private final Clock clock;private static final JsonMapper JSON=JsonMapper.builder().build();
+    public AppointmentReschedulingService(AtomicCommandExecutor commands,IdentityGate gate,AppointmentTransitionStore source,AppointmentReschedulingStore store,AppointmentBookingStore booking,ScheduleStore schedules,PatientStore patients,BusinessRowLocks locks,AuditWriter audit,Clock clock){this.commands=commands;this.gate=gate;this.source=source;this.store=store;this.booking=booking;this.schedules=schedules;this.patients=patients;this.locks=locks;this.audit=audit;this.clock=clock;}
+    public record Choice(String action,String reason,String verification,Long clinic,Long schedule,Instant at) { }
+    private void access(IdentityGate.Identity actor,long id){gate.requireStaff(actor,"RECEPTION","rescheduleAppointment",source.facts(id).clinic());}
+    private BusinessRowLocks.Plan plan(long id,Choice choice){var facts=source.facts(id);var doctors=new HashSet<Long>();doctors.add(facts.dentist());var shifts=new HashSet<Long>();shifts.add(facts.schedule());if(choice.schedule!=null){var target=schedules.get(choice.schedule);doctors.add(target.dentist());shifts.add(target.id());}return new BusinessRowLocks.Plan(doctors,shifts,Set.of(id));}
+    public Map<String,Object> reschedule(AtomicCommandExecutor.Command command,long id,Choice choice)throws Exception{
+        AppointmentReschedulingRules.branch(choice.action,choice.clinic,choice.schedule,choice.at);
+        var result=commands.execute(command,actor->{access(actor,id);if(choice.clinic!=null)gate.requireStaff(actor,"RECEPTION","rescheduleAppointment",choice.clinic);var facts=source.facts(id);if(!patients.verification(actor.subjectId(),facts.patient(),choice.verification,List.of(facts.clinic())))throw new DomainFailure(403,"PATIENT_VERIFICATION_REQUIRED");},actor->{PatientRules.text(choice.reason,255,false);var before=plan(id,choice);locks.acquire(before);before.verifyUnchanged(plan(id,choice));var old=source.facts(id);access(actor,id);AppointmentReschedulingRules.source(old.status(),source.schedule(old).status(),store.hasSuccessor(id));Long next=null;var scopes=new TreeSet<Long>();scopes.add(old.clinic());
+            if(choice.action.equals("RESCHEDULE")){var target=schedules.get(choice.schedule);if(target.clinic()!=choice.clinic)throw new DomainFailure(422,"SCHEDULE_CLINIC_MISMATCH");gate.requireStaff(actor,"RECEPTION","rescheduleAppointment",target.clinic());AppointmentBookingRules.slot(target,choice.at,clock.instant());schedules.eligible(target.dentist(),target.clinic(),target.date());patients.lock(old.patient());var treatments=store.requested(id);booking.treatments(target.dentist(),target.date(),treatments,true);var view=patients.view(old.patient());var details=new LinkedHashMap<String,Object>();for(String field:List.of("full_name","date_of_birth","phone","billing_address","email","emergency_contact_name","emergency_contact_phone"))details.put(field,view.get(field));PatientRules.details(details,false);if(view.get("allergy_confirmation_reference")==null)throw new DomainFailure(422,"ALLERGY_CONFIRMATION_REQUIRED");if(store.occupiedExcept(target.dentist(),choice.at,target.slot(),id))throw new DomainFailure(409,"SLOT_OCCUPIED");source.transition(old,"CANCELLED","CANCEL","CLINIC_RESCHEDULE",choice.reason,choice.verification,"RECEPTION",actor.subjectId(),command.key());next=store.successor(id,old.patient(),target,choice.at,treatments,actor.subjectId(),command.key());scopes.add(target.clinic());audit.success(actor,"rescheduleAppointment","Appointment",Long.toString(next),List.copyOf(scopes),command.requestId(),choice.reason,choice.verification);
+            }else source.transition(old,"CANCELLED","CANCEL","CLINIC_CANCEL",choice.reason,choice.verification,"RECEPTION",actor.subjectId(),command.key());
+            var minimal=new LinkedHashMap<String,Object>();minimal.put("old_appointment_id",Long.toString(id));minimal.put("new_appointment_id",next==null?null:Long.toString(next));var refs=new ArrayList<String>();refs.add("Appointment:"+id);if(next!=null)refs.add("Appointment:"+next);return new AtomicCommandExecutor.Result(JSON.writeValueAsString(refs),JSON.writeValueAsString(minimal),200,"Appointment",Long.toString(id),List.copyOf(scopes),choice.reason,choice.verification);
+        });var actor=gate.authenticate(command.token(),command.client());authorize(actor,"rescheduleAppointment",result.refs());var summary=JSON.readTree(result.summary());long old=Long.parseLong(summary.get("old_appointment_id").asText());var next=summary.get("new_appointment_id");var response=new LinkedHashMap<String,Object>();response.put("old_appointment",booking.view(old));response.put("new_appointment",next.isNull()?null:booking.view(Long.parseLong(next.asText())));return response;
+    }
+    @Override @Transactional(propagation=Propagation.NOT_SUPPORTED)public Set<String> operations(){return Set.of("rescheduleAppointment");}
+    @Override public void authorize(IdentityGate.Identity actor,String operation,String refs){if(!operation.equals("rescheduleAppointment"))throw new DomainFailure(403,"ACCESS_DENIED");gate.staffClinics(actor,"RECEPTION",operation);if(refs!=null)for(var node:JSON.readTree(refs)){String ref=node.asText();if(!ref.startsWith("Appointment:"))throw new DomainFailure(403,"ACCESS_DENIED");access(actor,Long.parseLong(ref.substring(12)));}}
+}
+

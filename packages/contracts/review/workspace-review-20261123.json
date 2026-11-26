@@ -1,0 +1,3699 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "ADC authorized workspace review extension",
+    "version": "2026-11-23",
+    "description": "User requested implementation of the 2026-11-23 design review while preserving the existing theme. Additive read projections and optional fields; the frozen 82-operation contract remains archived unchanged. Existing catalog reads accept optional q (max 100 chars; parameterized name/code substring search). No business tables, roles or write semantics added."
+  },
+  "servers": [
+    {
+      "url": "/api/v1"
+    }
+  ],
+  "paths": {
+    "/workspace/appointments": {
+      "get": {
+        "operationId": "listWorkspaceAppointments",
+        "description": "Existing listAppointments capability for the requested RECEPTION/DENTIST/CASHIER role. DENTIST is restricted to assigned dentist and current eligible clinics. Minimal patient identity only. Stable scheduled_at / appointment_id cursor; at most limit+1 rows, no per-row reads.",
+        "parameters": [
+          {
+            "name": "role",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "RECEPTION",
+                "DENTIST",
+                "CASHIER"
+              ]
+            }
+          },
+          {
+            "name": "clinic_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "dentist_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "review",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized read-only projection; Cache-Control: no-store",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/AppointmentView"
+                      }
+                    },
+                    "next_cursor": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Role, capability, clinic, effective dates or object access rejected"
+          }
+        }
+      }
+    },
+    "/workspace/summary": {
+      "get": {
+        "operationId": "getWorkspaceSummary",
+        "description": "HEADQUARTERS requires analysis.read; other roles require listAppointments. Counts are computed by the server over the full authorized range; no patient details are returned.",
+        "parameters": [
+          {
+            "name": "role",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "HEADQUARTERS",
+                "RECEPTION",
+                "DENTIST",
+                "CASHIER"
+              ]
+            }
+          },
+          {
+            "name": "clinic_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "start",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "end",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized read-only projection; Cache-Control: no-store",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/WorkspaceSummary"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Role, capability, clinic, effective dates or object access rejected"
+          }
+        }
+      }
+    },
+    "/workspace/applied-treatments": {
+      "get": {
+        "operationId": "listCostTreatmentSources",
+        "description": "HEADQUARTERS cost.verify only. Minimal actual-treatment association projection scoped by clinic; no clinical notes or allergies.",
+        "parameters": [
+          {
+            "name": "clinic_id",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cursor",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized read-only projection; Cache-Control: no-store",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "applied_treatment_id": {
+                            "type": "string"
+                          },
+                          "appointment_id": {
+                            "type": "string"
+                          },
+                          "clinic_id": {
+                            "type": "string"
+                          },
+                          "dentist_id": {
+                            "type": "string"
+                          },
+                          "dentist_name": {
+                            "type": "string"
+                          },
+                          "clinic_name": {
+                            "type": "string"
+                          },
+                          "treatment_name": {
+                            "type": "string"
+                          },
+                          "performed_at": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "next_cursor": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Role, capability, clinic, effective dates or object access rejected"
+          }
+        }
+      }
+    },
+    "/appointments/{appointmentId}/fee-preview": {
+      "get": {
+        "operationId": "previewInvoice",
+        "description": "CASHIER invoiceAppointment capability for the appointment clinic. COMPLETED only. Historical AppliedTreatment unit_price, units and subtotal, minimal identity. No clinical context and no mutation.",
+        "parameters": [
+          {
+            "name": "appointmentId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authorized read-only projection; Cache-Control: no-store",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeePreview"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Role, capability, clinic, effective dates or object access rejected"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Id": {
+        "type": "string",
+        "pattern": "^[1-9][0-9]*$"
+      },
+      "Money": {
+        "type": "string",
+        "pattern": "^-?[0-9]{1,12}\\.[0-9]{2}$"
+      },
+      "UnitPrice": {
+        "type": "string",
+        "pattern": "^[0-9]{1,10}\\.[0-9]{2}$"
+      },
+      "Units": {
+        "type": "string",
+        "pattern": "^(?!0+\\.00$)[0-9]{1,8}\\.[0-9]{2}$",
+        "description": "DECIMAL(10,2)范围内且数值严格大于零"
+      },
+      "AppointmentStatus": {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "IN_PROGRESS",
+          "COMPLETED",
+          "INVOICED",
+          "CANCELLED"
+        ]
+      },
+      "PerformanceStatus": {
+        "type": "string",
+        "enum": [
+          "DRAFT",
+          "INCOMPLETE",
+          "CALCULATED",
+          "PUBLISHED",
+          "SUPERSEDED"
+        ]
+      },
+      "Error": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "request_id": {
+            "type": "string"
+          },
+          "field_errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "field": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "field",
+                "code"
+              ]
+            }
+          },
+          "retry_with_same_key": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "message",
+          "request_id"
+        ]
+      },
+      "CsrfContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "csrf_token": {
+            "type": "string",
+            "description": "匿名CSRF值不是业务身份凭据"
+          }
+        },
+        "required": [
+          "csrf_token"
+        ]
+      },
+      "WechatLogin": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "wx.login临时代码；不接受自报OpenID"
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "StaffLogin": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "username",
+          "password"
+        ]
+      },
+      "WechatSession": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "description": "ADC opaque会话，禁止日志记录"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "subject_id": {
+            "type": "string"
+          },
+          "binding_status": {
+            "type": "string",
+            "enum": [
+              "UNBOUND",
+              "BOUND"
+            ]
+          },
+          "subject_type": {
+            "type": "string",
+            "const": "PATIENT"
+          }
+        },
+        "required": [
+          "access_token",
+          "expires_at",
+          "subject_id",
+          "binding_status",
+          "subject_type"
+        ]
+      },
+      "WebSession": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "expires_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "csrf_token": {
+            "type": "string"
+          },
+          "subject_type": {
+            "type": "string",
+            "const": "STAFF"
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "clinic_scope": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "subject_id",
+          "expires_at",
+          "csrf_token",
+          "subject_type",
+          "roles",
+          "clinic_scope",
+          "capabilities"
+        ]
+      },
+      "Binding": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "patient_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "verified_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "subject_id",
+          "patient_id",
+          "verified_at"
+        ]
+      },
+      "Identity": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "subject_type": {
+            "type": "string",
+            "enum": [
+              "PATIENT",
+              "STAFF"
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "clinic_scope": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "binding": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Binding"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "subject_id",
+          "subject_type",
+          "roles",
+          "clinic_scope",
+          "capabilities",
+          "binding"
+        ]
+      },
+      "BindingRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patient_number": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          }
+        },
+        "required": [
+          "patient_number",
+          "date_of_birth",
+          "clinic_id"
+        ],
+        "description": "仅申请线索和服务点，不要求申请人提供事先批准的核验引用，不授本人访问权。"
+      },
+      "BindingVerification": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "patient_number_checked": {
+            "type": "boolean",
+            "const": true
+          },
+          "date_of_birth_checked": {
+            "type": "boolean",
+            "const": true
+          },
+          "person_confirmed": {
+            "type": "boolean",
+            "const": true
+          },
+          "service_basis": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          }
+        },
+        "required": [
+          "clinic_id",
+          "patient_number_checked",
+          "date_of_birth_checked",
+          "person_confirmed",
+          "service_basis"
+        ],
+        "description": "仅授权前台提交本次服务点、本人核验结论和实际服务依据说明；后端比对Patient、申请线索及范围。批准/重绑服务点须与申请一致，解绑按本次服务点核验。服务器保存操作者、时间和服务上下文标识；不要求预先存在任意核验引用。"
+      },
+      "BindingApproval": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patient_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "verification_basis": {
+            "$ref": "#/components/schemas/BindingVerification"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "patient_id",
+          "verification_basis",
+          "reason"
+        ],
+        "description": "路径requestId定位PENDING申请；批准、当前绑定、历史、审计和回执同事务；成功后requestId成为可查verification_reference。"
+      },
+      "Rebind": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "new_subject_id": {
+            "type": "string"
+          },
+          "binding_request_id": {
+            "type": "string"
+          },
+          "verification_basis": {
+            "$ref": "#/components/schemas/BindingVerification"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "new_subject_id",
+          "binding_request_id",
+          "verification_basis",
+          "reason"
+        ],
+        "description": "新主体必须有匹配同一Patient的PENDING申请；一次核验批准并原子替换旧绑定，不先制造双有效绑定。"
+      },
+      "BindingRevocation": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "verification_basis": {
+            "$ref": "#/components/schemas/BindingVerification"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "verification_basis",
+          "reason"
+        ],
+        "description": "授权前台核实解绑本人及本次服务依据，证据保存BindingEvent；不要求先存在新的绑定申请。"
+      },
+      "Reason": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "BindingRequestView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "request_id": {
+            "type": "string"
+          },
+          "subject_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PENDING",
+              "APPROVED"
+            ]
+          },
+          "patient_number": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "submitted_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "request_id",
+          "subject_id",
+          "status",
+          "patient_number",
+          "date_of_birth",
+          "clinic_id",
+          "submitted_at"
+        ],
+        "description": "只返回本人申请或授权前台服务点核验所需的最小线索；不暴露Patient命中结果。"
+      },
+      "AccountCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "staff_reference": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "dentist_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          }
+        },
+        "required": [
+          "staff_reference",
+          "username"
+        ]
+      },
+      "SubjectView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "subject_id",
+          "enabled"
+        ]
+      },
+      "CredentialRecovery": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "verification_reference": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "replacement_password": {
+            "type": "string",
+            "writeOnly": true
+          }
+        },
+        "required": [
+          "verification_reference",
+          "reason",
+          "replacement_password"
+        ],
+        "description": "只在授权核验路径处理，不把明文凭据写回执或日志"
+      },
+      "GrantCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "subject_id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "RECEPTION",
+              "DENTIST",
+              "CASHIER",
+              "HEADQUARTERS"
+            ]
+          },
+          "clinic_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valid_until": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "subject_id",
+          "role",
+          "clinic_ids",
+          "capabilities",
+          "valid_from"
+        ]
+      },
+      "GrantView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "grant_id": {
+            "type": "string"
+          },
+          "subject_id": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "clinic_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "valid_from": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "valid_until": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "revoked": {
+            "type": "boolean"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Existing authorized grant list includes explicit capabilities."
+          }
+        },
+        "required": [
+          "grant_id",
+          "subject_id",
+          "role",
+          "clinic_ids",
+          "valid_from",
+          "revoked"
+        ]
+      },
+      "CatalogItem": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "label": {
+            "type": "string"
+          },
+          "code": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "current_price": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "required_qualifications": {
+            "type": "string"
+          },
+          "qualification_status": {
+            "type": "string"
+          },
+          "clinic_labels": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "active"
+        ]
+      },
+      "Candidate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_name": {
+            "type": "string"
+          },
+          "schedule_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "starts_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ends_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "clinic_id",
+          "dentist_id",
+          "dentist_name",
+          "schedule_id",
+          "starts_at",
+          "ends_at"
+        ]
+      },
+      "AppointmentCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "schedule_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "scheduled_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requested_treatment_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "allergy_confirmation_reference": {
+            "type": "string"
+          },
+          "patient_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "patient_verification_reference": {
+            "type": "string"
+          },
+          "patient_details": {
+            "$ref": "#/components/schemas/AppointmentPatientDetails"
+          },
+          "allergy_declaration": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "review_status": {
+                "type": "string",
+                "enum": [
+                  "NOT_REVIEWED",
+                  "NO_KNOWN",
+                  "RECORDED"
+                ]
+              },
+              "records": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "allergy_id": {
+                      "$ref": "#/components/schemas/Id"
+                    },
+                    "severity_note": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "allergy_id"
+                  ]
+                }
+              },
+              "confirmed": {
+                "type": "boolean",
+                "const": true
+              }
+            },
+            "required": [
+              "review_status",
+              "records",
+              "confirmed"
+            ],
+            "description": "提交全部已知过敏及本次确认；与受保护资料冲突转前台，不由另一份自助提交覆盖。"
+          }
+        },
+        "required": [
+          "clinic_id",
+          "schedule_id",
+          "scheduled_at",
+          "requested_treatment_ids",
+          "allergy_confirmation_reference",
+          "patient_details",
+          "allergy_declaration"
+        ],
+        "description": "患者禁止自报patient_id，从当前绑定取得；前台代办须patient_id及可核验的patient_verification_reference。资格/执业/NORMAL/占位提交时复核。"
+      },
+      "AppointmentView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "appointment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "patient_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "schedule_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "scheduled_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "$ref": "#/components/schemas/AppointmentStatus"
+          },
+          "attended_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "completed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "cancellation_kind": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "PATIENT_CANCEL",
+              "NO_SHOW",
+              "CLINIC_RESCHEDULE",
+              "CLINIC_CANCEL",
+              null
+            ]
+          },
+          "rescheduled_from_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          },
+          "invoice_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          },
+          "patient_name": {
+            "type": "string"
+          },
+          "patient_number": {
+            "type": "string"
+          },
+          "dentist_name": {
+            "type": "string"
+          },
+          "clinic_name": {
+            "type": "string"
+          },
+          "requested_treatments": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "appointment_id",
+          "patient_id",
+          "clinic_id",
+          "dentist_id",
+          "schedule_id",
+          "scheduled_at",
+          "status"
+        ]
+      },
+      "Attend": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "verification_reference"
+        ]
+      },
+      "Cancel": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason"
+        ]
+      },
+      "NoShow": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reason": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reason",
+          "verification_reference"
+        ]
+      },
+      "Reschedule": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": [
+              "RESCHEDULE",
+              "CLINIC_CANCEL"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          },
+          "new_clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "new_schedule_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "new_scheduled_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "action",
+          "reason",
+          "verification_reference"
+        ],
+        "description": "RESCHEDULE必须提供全部new_*；CLINIC_CANCEL禁止new_*。旧新同患者、无环、唯一直接后继；全部事件同事务。",
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "action": {
+                  "const": "RESCHEDULE"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "new_clinic_id",
+                "new_schedule_id",
+                "new_scheduled_at"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "action": {
+                  "const": "CLINIC_CANCEL"
+                }
+              }
+            },
+            "then": {
+              "not": {
+                "anyOf": [
+                  {
+                    "required": [
+                      "new_clinic_id"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "new_schedule_id"
+                    ]
+                  },
+                  {
+                    "required": [
+                      "new_scheduled_at"
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "RescheduleView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "old_appointment": {
+            "$ref": "#/components/schemas/AppointmentView"
+          },
+          "new_appointment": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AppointmentView"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "old_appointment",
+          "new_appointment"
+        ]
+      },
+      "ScheduleCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "schedule_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "HH:mm:ss，业务本地时间"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "HH:mm:ss，业务本地时间"
+          },
+          "slot_minutes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "dentist_id",
+          "clinic_id",
+          "schedule_date",
+          "start_time",
+          "end_time",
+          "slot_minutes"
+        ]
+      },
+      "ScheduleView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schedule_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "schedule_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "start_time": {
+            "type": "string",
+            "description": "HH:mm:ss，业务本地时间"
+          },
+          "end_time": {
+            "type": "string",
+            "description": "HH:mm:ss，业务本地时间"
+          },
+          "slot_minutes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "schedule_status": {
+            "type": "string",
+            "enum": [
+              "NORMAL",
+              "SUSPENDED"
+            ]
+          }
+        },
+        "required": [
+          "schedule_id",
+          "dentist_id",
+          "clinic_id",
+          "schedule_date",
+          "start_time",
+          "end_time",
+          "slot_minutes",
+          "schedule_status"
+        ]
+      },
+      "SuspendView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "schedule": {
+            "$ref": "#/components/schemas/ScheduleView"
+          },
+          "affected_appointment_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          }
+        },
+        "required": [
+          "schedule",
+          "affected_appointment_ids"
+        ]
+      },
+      "ClinicalNotes": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "problems_or_special_needs": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "problems_or_special_needs"
+        ]
+      },
+      "TreatmentRecord": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "treatment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "standard_units": {
+            "$ref": "#/components/schemas/Units"
+          },
+          "performed_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "treatment_id",
+          "standard_units",
+          "performed_at"
+        ],
+        "description": "实际牙医取可信账号；不接收dentist_id或unit_price。治疗日资格/执业有效，目录价冻结。"
+      },
+      "AppliedTreatmentView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "applied_treatment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "appointment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "treatment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "standard_units": {
+            "$ref": "#/components/schemas/Units"
+          },
+          "unit_price": {
+            "$ref": "#/components/schemas/UnitPrice"
+          },
+          "subtotal": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "performed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "etag": {
+            "type": "string",
+            "description": "基于当前原字段计算，不存业务version列"
+          }
+        },
+        "required": [
+          "applied_treatment_id",
+          "appointment_id",
+          "treatment_id",
+          "dentist_id",
+          "standard_units",
+          "unit_price",
+          "subtotal",
+          "performed_at"
+        ]
+      },
+      "PriceCorrection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "unit_price": {
+            "$ref": "#/components/schemas/UnitPrice"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "unit_price",
+          "reason",
+          "verification_reference"
+        ],
+        "description": "仅开票前另获价格纠错能力者，审计旧新值，不是普通牙医覆盖。"
+      },
+      "InvoiceItemView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "line_number": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "applied_treatment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "treatment_name": {
+            "type": "string"
+          },
+          "standard_units": {
+            "$ref": "#/components/schemas/Units"
+          },
+          "unit_price": {
+            "$ref": "#/components/schemas/UnitPrice"
+          },
+          "subtotal": {
+            "$ref": "#/components/schemas/Money"
+          }
+        },
+        "required": [
+          "line_number",
+          "applied_treatment_id",
+          "treatment_name",
+          "standard_units",
+          "unit_price",
+          "subtotal"
+        ]
+      },
+      "InvoiceView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "invoice_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "invoice_number": {
+            "type": "string"
+          },
+          "appointment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "issued_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "total_amount": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceItemView"
+            }
+          }
+        },
+        "required": [
+          "invoice_id",
+          "invoice_number",
+          "appointment_id",
+          "issued_at",
+          "total_amount",
+          "items"
+        ],
+        "description": "费用凭据不证明实收；不含支付状态/渠道/税费/折扣/退款。"
+      },
+      "PatientCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "full_name": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "billing_address": {
+            "type": "string"
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "emergency_contact_name": {
+            "type": "string"
+          },
+          "emergency_contact_phone": {
+            "type": "string"
+          },
+          "verification_basis": {
+            "$ref": "#/components/schemas/PatientCreationVerificationBasis"
+          }
+        },
+        "required": [
+          "full_name",
+          "date_of_birth",
+          "phone",
+          "billing_address",
+          "emergency_contact_name",
+          "emergency_contact_phone",
+          "verification_basis"
+        ]
+      },
+      "PatientPatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "full_name": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "billing_address": {
+            "type": "string"
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "emergency_contact_name": {
+            "type": "string"
+          },
+          "emergency_contact_phone": {
+            "type": "string"
+          }
+        },
+        "description": "前台核实并以If-Match防丢失更新，不自动电话合并。",
+        "minProperties": 1
+      },
+      "PatientView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patient_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "patient_number": {
+            "type": "string"
+          },
+          "full_name": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "billing_address": {
+            "type": "string"
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "emergency_contact_name": {
+            "type": "string"
+          },
+          "emergency_contact_phone": {
+            "type": "string"
+          },
+          "allergy_review_status": {
+            "type": "string",
+            "enum": [
+              "NOT_REVIEWED",
+              "NO_KNOWN",
+              "RECORDED"
+            ]
+          },
+          "allergy_confirmation_reference": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "patient_id",
+          "patient_number",
+          "full_name",
+          "allergy_review_status"
+        ],
+        "description": "完整档案仅核验本人/授权前台服务范围；牙医/收费通过本次就诊的岗位投影读取必要字段。"
+      },
+      "AllergyReview": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy_review_status": {
+            "type": "string",
+            "enum": [
+              "NOT_REVIEWED",
+              "NO_KNOWN",
+              "RECORDED"
+            ]
+          },
+          "verification_reference": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "allergy_review_status",
+          "verification_reference",
+          "reason"
+        ]
+      },
+      "AllergyRecord": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "severity_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "clinical_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verification_reference": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "allergy_id",
+          "verification_reference",
+          "reason"
+        ]
+      },
+      "AllergyCorrection": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "severity_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "clinical_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "verification_reference": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "verification_reference",
+          "reason"
+        ]
+      },
+      "QualificationEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qualification_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "certificate_number": {
+            "type": "string"
+          },
+          "granted_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "expiry_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "verification_status": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "qualification_id",
+          "certificate_number",
+          "granted_date",
+          "verification_status",
+          "verification_reference"
+        ]
+      },
+      "AssignmentEntry": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "availability_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "assignment_id": {
+            "$ref": "#/components/schemas/Id"
+          }
+        },
+        "required": [
+          "clinic_id",
+          "start_date",
+          "is_active"
+        ]
+      },
+      "TreatmentRequirements": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "requirements": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "qualification_id": {
+                  "$ref": "#/components/schemas/Id"
+                },
+                "is_mandatory": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "qualification_id",
+                "is_mandatory"
+              ]
+            }
+          }
+        },
+        "required": [
+          "requirements"
+        ]
+      },
+      "AllergyInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy_name": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "allergy_name",
+          "is_active"
+        ],
+        "description": "表D4可维护字段；编码/日期/引用/未来影响由领域检查。"
+      },
+      "AllergyPatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy_name": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "description": "仅总部资源能力，If-Match并发控制；保留引用及历史价格。",
+        "minProperties": 1
+      },
+      "AllergyView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "allergy_name": {
+            "type": "string"
+          },
+          "severity_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "clinical_note": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "is_retracted": {
+            "type": "boolean"
+          },
+          "etag": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "allergy_id",
+          "allergy_name",
+          "is_retracted"
+        ]
+      },
+      "ClinicInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_code": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "postal_address": {
+            "type": "string",
+            "maxLength": 255
+          },
+          "manager_name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 254
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "office_area_sqm": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^-?[0-9]{1,6}\\.[0-9]{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "clinic_code",
+          "postal_address",
+          "phone",
+          "is_active"
+        ],
+        "description": "表D6可维护字段；编码/日期/引用/未来影响由领域检查。"
+      },
+      "ClinicPatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_code": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "postal_address": {
+            "type": "string",
+            "maxLength": 255
+          },
+          "manager_name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 254
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "office_area_sqm": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^-?[0-9]{1,6}\\.[0-9]{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "description": "仅总部资源能力，If-Match并发控制；保留引用及历史价格。",
+        "minProperties": 1
+      },
+      "ClinicView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_code": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "postal_address": {
+            "type": "string",
+            "maxLength": 255
+          },
+          "manager_name": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 254
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "office_area_sqm": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^-?[0-9]{1,6}\\.[0-9]{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "future_impact": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFutureImpact"
+            }
+          }
+        },
+        "required": [
+          "clinic_id"
+        ],
+        "description": "仅总部资源详情；患者目录/候选使用最小投影。"
+      },
+      "DentistInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "employee_number": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "full_name": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "home_address": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 254
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "hire_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "termination_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "employee_number",
+          "full_name",
+          "date_of_birth",
+          "phone",
+          "hire_date",
+          "is_active"
+        ],
+        "description": "表D7可维护字段；编码/日期/引用/未来影响由领域检查。"
+      },
+      "DentistPatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "employee_number": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "full_name": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "home_address": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 254
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "hire_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "termination_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "description": "仅总部资源能力，If-Match并发控制；保留引用及历史价格。",
+        "minProperties": 1
+      },
+      "DentistView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "employee_number": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "full_name": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "home_address": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "phone": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "email": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 254
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "hire_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "termination_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "future_impact": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFutureImpact"
+            }
+          },
+          "qualifications": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DentistQualificationView"
+            }
+          },
+          "clinic_assignments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DentistAssignmentView"
+            }
+          }
+        },
+        "required": [
+          "dentist_id"
+        ],
+        "description": "仅总部资源详情；患者目录/候选使用最小投影。"
+      },
+      "QualificationInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qualification_name": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "qualification_name",
+          "is_active"
+        ],
+        "description": "表D8可维护字段；编码/日期/引用/未来影响由领域检查。"
+      },
+      "QualificationPatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qualification_name": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "description": "仅总部资源能力，If-Match并发控制；保留引用及历史价格。",
+        "minProperties": 1
+      },
+      "QualificationView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qualification_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "qualification_name": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "future_impact": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFutureImpact"
+            }
+          }
+        },
+        "required": [
+          "qualification_id"
+        ],
+        "description": "仅总部资源详情；患者目录/候选使用最小投影。"
+      },
+      "TreatmentInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "treatment_code": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "treatment_name": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "default_unit_price": {
+            "type": "string",
+            "pattern": "^[0-9]{1,10}\\.[0-9]{2}$"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "treatment_code",
+          "treatment_name",
+          "default_unit_price",
+          "is_active"
+        ],
+        "description": "表D12可维护字段；编码/日期/引用/未来影响由领域检查。"
+      },
+      "TreatmentPatch": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "treatment_code": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "treatment_name": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "default_unit_price": {
+            "type": "string",
+            "pattern": "^[0-9]{1,10}\\.[0-9]{2}$"
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "description": "仅总部资源能力，If-Match并发控制；保留引用及历史价格。",
+        "minProperties": 1
+      },
+      "TreatmentView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "treatment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "treatment_code": {
+            "type": "string",
+            "maxLength": 30
+          },
+          "treatment_name": {
+            "type": "string",
+            "maxLength": 120
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "default_unit_price": {
+            "type": "string",
+            "pattern": "^[0-9]{1,10}\\.[0-9]{2}$"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "future_impact": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ResourceFutureImpact"
+            }
+          },
+          "qualification_requirements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TreatmentQualificationView"
+            }
+          }
+        },
+        "required": [
+          "treatment_id"
+        ],
+        "description": "仅总部资源详情；患者目录/候选使用最小投影。"
+      },
+      "CostCreate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          },
+          "appointment_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          },
+          "applied_treatment_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          },
+          "cost_type": {
+            "type": "string",
+            "enum": [
+              "MEDICAL_SUPPLY",
+              "OPERATING"
+            ]
+          },
+          "amount": {
+            "$ref": "#/components/schemas/CostAmount"
+          },
+          "incurred_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_reference": {
+            "type": "string"
+          },
+          "source_batch": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "clinic_id",
+          "cost_type",
+          "amount",
+          "incurred_at",
+          "source_reference",
+          "source_batch",
+          "verification_reference"
+        ],
+        "description": "金额为原DECIMAL(14,2)非负范围；MEDICAL_SUPPLY必须归实施牙医，关联一致；零额description明确零成本范围；确认主体/时点由服务端取。"
+      },
+      "CostView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "cost_entry_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          },
+          "cost_type": {
+            "type": "string"
+          },
+          "amount": {
+            "$ref": "#/components/schemas/Money"
+          },
+          "incurred_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source_reference": {
+            "type": "string"
+          },
+          "source_batch": {
+            "type": "string"
+          },
+          "confirmed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "confirmed_by": {
+            "type": "string"
+          },
+          "reversal_of_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[1-9][0-9]*$"
+          }
+        },
+        "required": [
+          "cost_entry_id",
+          "clinic_id",
+          "cost_type",
+          "amount",
+          "incurred_at",
+          "source_reference",
+          "confirmed_at",
+          "confirmed_by"
+        ]
+      },
+      "QuarterPreparation": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quarter_start": {
+            "type": "string",
+            "format": "date"
+          },
+          "quarter_end": {
+            "type": "string",
+            "format": "date"
+          },
+          "cutoff": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clinic_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            },
+            "minItems": 1
+          },
+          "closure_evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "clinic_id": {
+                  "$ref": "#/components/schemas/Id"
+                },
+                "source_reference": {
+                  "type": "string"
+                },
+                "verification_reference": {
+                  "type": "string"
+                },
+                "zero_cost_scope": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "clinic_id",
+                "source_reference",
+                "verification_reference"
+              ]
+            }
+          },
+          "personnel_verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "quarter_start",
+          "quarter_end",
+          "cutoff",
+          "clinic_ids",
+          "closure_evidence",
+          "personnel_verification_reference"
+        ],
+        "description": "核验人员准备DRAFT；证据写原QuarterlyPerformance.source_snapshot，不新建封账/分摊业务表。核实主体和时点不能由客户端自称。"
+      },
+      "QuarterCalculate": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quarter_start": {
+            "type": "string",
+            "format": "date"
+          },
+          "quarter_end": {
+            "type": "string",
+            "format": "date"
+          },
+          "cutoff": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clinic_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            },
+            "minItems": 1
+          },
+          "preparation_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          }
+        },
+        "required": [
+          "quarter_start",
+          "quarter_end",
+          "cutoff",
+          "clinic_ids"
+        ],
+        "description": "只算已结束季度；系统生成全部人员/来源，不收客户端金额结果。缺准备/封账形成INCOMPLETE，不默认零。"
+      },
+      "PerformanceView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quarterly_performance_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "dentist_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "quarter_start": {
+            "type": "string",
+            "format": "date"
+          },
+          "quarter_end": {
+            "type": "string",
+            "format": "date"
+          },
+          "calculation_version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "calculation_status": {
+            "$ref": "#/components/schemas/PerformanceStatus"
+          },
+          "revenue": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "medical_supply_cost": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "operating_expense": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "net_profit": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "incentive_rate": {
+            "type": "string",
+            "const": "0.1000"
+          },
+          "incentive_amount": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Money"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "input_hash": {
+            "type": "string"
+          },
+          "incomplete_reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "published_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          },
+          "cutoff": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clinic_ids": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          }
+        },
+        "required": [
+          "quarterly_performance_id",
+          "dentist_id",
+          "quarter_start",
+          "quarter_end",
+          "calculation_version",
+          "calculation_status",
+          "incentive_rate",
+          "input_hash",
+          "incomplete_reasons"
+        ]
+      },
+      "PerformanceSource": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "quarterly_performance_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "rule_version": {
+            "type": "string",
+            "const": "R1"
+          },
+          "cutoff": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "input_hash": {
+            "type": "string"
+          },
+          "source_snapshot": {
+            "type": "object",
+            "description": "冻结规则/人员/结算/成本/封账/分摊及尾差；结构见data-model；读取须敏感来源授权"
+          }
+        },
+        "required": [
+          "quarterly_performance_id",
+          "rule_version",
+          "cutoff",
+          "input_hash",
+          "source_snapshot"
+        ]
+      },
+      "PublishInput": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "expected_input_hash": {
+            "type": "string"
+          },
+          "review_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "expected_input_hash",
+          "review_reference"
+        ]
+      },
+      "AnalysisView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "metric": {
+            "type": "string",
+            "enum": [
+              "cancellations",
+              "treatment-comparison",
+              "skill-slot-coverage",
+              "skill-structure",
+              "performance",
+              "coverage",
+              "traceability",
+              "calculation-time"
+            ]
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "cutoff": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "rule_version": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "numerator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "denominator": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "sample_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "excluded_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "missing_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "unprocessed_count": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "provisional": {
+            "type": "boolean"
+          },
+          "not_computable_reason": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "description": "所选指标分项字段由api.md指标表定义，不是任意临床下钻"
+            }
+          }
+        },
+        "required": [
+          "metric",
+          "start",
+          "end",
+          "cutoff",
+          "rule_version",
+          "value",
+          "sample_count",
+          "excluded_count",
+          "missing_count",
+          "unprocessed_count",
+          "provisional",
+          "not_computable_reason",
+          "source_references"
+        ]
+      },
+      "AuditView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "audit_id": {
+            "type": "string"
+          },
+          "subject_id": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "object_reference": {
+            "type": "string"
+          },
+          "clinic_scope": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Id"
+            }
+          },
+          "occurred_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "request_id": {
+            "type": "string"
+          },
+          "result": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "audit_id",
+          "subject_id",
+          "action",
+          "object_reference",
+          "occurred_at",
+          "request_id",
+          "result"
+        ]
+      },
+      "RequestReceiptView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "operation": {
+            "type": "string"
+          },
+          "request_key": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "PENDING",
+              "SUCCEEDED"
+            ]
+          },
+          "resource_references": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "request_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "operation",
+          "request_key",
+          "status",
+          "resource_references",
+          "request_id"
+        ]
+      },
+      "CostAmount": {
+        "type": "string",
+        "pattern": "^[0-9]{1,12}\\.[0-9]{2}$"
+      },
+      "CostReversal": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "incurred_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source_reference": {
+            "type": "string"
+          },
+          "source_batch": {
+            "type": "string"
+          },
+          "verification_reference": {
+            "type": "string"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "incurred_at",
+          "source_reference",
+          "source_batch",
+          "verification_reference",
+          "reason"
+        ],
+        "description": "输入为冲销凭证经核验的发生时点及新来源；不静默沿用原发生时点或当前时间。金额/类型/归属由原正额产生，reversal_of_id唯一，confirmed_at/by取可信服务端。"
+      },
+      "ClinicalContext": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "appointment": {
+            "$ref": "#/components/schemas/AppointmentView"
+          },
+          "patient_allergy_review_status": {
+            "type": "string",
+            "enum": [
+              "NOT_REVIEWED",
+              "NO_KNOWN",
+              "RECORDED"
+            ]
+          },
+          "allergy_records": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AllergyView"
+            }
+          },
+          "problems_or_special_needs": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "applied_treatments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AppliedTreatmentView"
+            }
+          }
+        },
+        "required": [
+          "appointment",
+          "patient_allergy_review_status",
+          "allergy_records",
+          "applied_treatments"
+        ],
+        "description": "只对获授权本次就诊的接诊牙医提供必要风险及实际治疗，不包含患者账单地址/员工家庭地址等无关资料。"
+      },
+      "PatientVerificationBasis": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "person_confirmed": {
+            "type": "boolean"
+          },
+          "service_basis": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          }
+        },
+        "required": [
+          "clinic_id",
+          "person_confirmed",
+          "service_basis"
+        ]
+      },
+      "PatientCreationVerificationBasis": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "person_confirmed": {
+            "type": "boolean"
+          },
+          "service_basis": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+          },
+          "duplicate_reviewed": {
+            "type": "boolean",
+            "default": false
+          },
+          "review_reason": {
+            "type": "string",
+            "maxLength": 255
+          }
+        },
+        "required": [
+          "clinic_id",
+          "person_confirmed",
+          "service_basis"
+        ]
+      },
+      "PatientLookup": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patient_number": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 30
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "verification_basis": {
+            "$ref": "#/components/schemas/PatientVerificationBasis"
+          }
+        },
+        "required": [
+          "patient_number",
+          "date_of_birth",
+          "verification_basis"
+        ]
+      },
+      "PatientLookupResult": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "patient": {
+            "$ref": "#/components/schemas/PatientView"
+          },
+          "verification_reference": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "patient",
+          "verification_reference"
+        ]
+      },
+      "DentistQualificationView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qualification_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "certificate_number": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "granted_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "expiry_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "verification_status": {
+            "type": "string",
+            "maxLength": 20
+          }
+        },
+        "required": [
+          "qualification_id",
+          "certificate_number",
+          "granted_date",
+          "expiry_date",
+          "verification_status"
+        ]
+      },
+      "DentistAssignmentView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "assignment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "start_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "end_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "availability_note": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "maxLength": 255
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "assignment_id",
+          "clinic_id",
+          "start_date",
+          "end_date",
+          "availability_note",
+          "is_active"
+        ]
+      },
+      "TreatmentQualificationView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "qualification_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "is_mandatory": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "qualification_id",
+          "is_mandatory"
+        ]
+      },
+      "ResourceFutureImpact": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "object_kind": {
+            "type": "string",
+            "enum": [
+              "DentistSchedule",
+              "Appointment"
+            ]
+          },
+          "object_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "clinic_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "affected_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "object_kind",
+          "object_id",
+          "clinic_id",
+          "reason"
+        ]
+      },
+      "AllergyResourceView": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "allergy_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "allergy_name": {
+            "type": "string",
+            "maxLength": 100
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 255
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "allergy_id",
+          "allergy_name",
+          "is_active"
+        ]
+      },
+      "AppointmentPatientDetails": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "full_name": {
+            "type": "string"
+          },
+          "date_of_birth": {
+            "type": "string",
+            "format": "date"
+          },
+          "phone": {
+            "type": "string"
+          },
+          "billing_address": {
+            "type": "string"
+          },
+          "email": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "emergency_contact_name": {
+            "type": "string"
+          },
+          "emergency_contact_phone": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "full_name",
+          "date_of_birth",
+          "phone",
+          "billing_address",
+          "emergency_contact_name",
+          "emergency_contact_phone"
+        ]
+      },
+      "FeePreview": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "appointment_id",
+          "patient_name",
+          "patient_number",
+          "clinic_name",
+          "items",
+          "total_amount"
+        ],
+        "properties": {
+          "appointment_id": {
+            "$ref": "#/components/schemas/Id"
+          },
+          "patient_name": {
+            "type": "string"
+          },
+          "patient_number": {
+            "type": "string"
+          },
+          "clinic_name": {
+            "type": "string"
+          },
+          "total_amount": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "treatment_name",
+                "standard_units",
+                "unit_price",
+                "subtotal"
+              ],
+              "properties": {
+                "treatment_name": {
+                  "type": "string"
+                },
+                "standard_units": {
+                  "type": "string"
+                },
+                "unit_price": {
+                  "type": "string"
+                },
+                "subtotal": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "WorkspaceSummary": {
+        "type": "object",
+        "required": [
+          "states",
+          "start",
+          "end",
+          "clinic_ids"
+        ],
+        "properties": {
+          "start": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "clinic_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "states": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "status",
+                "count"
+              ],
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
