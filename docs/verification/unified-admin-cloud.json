@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-11-26T12:42:52.480Z",
+  "origin": "https://andrewdental.cn",
+  "username": "admin-demo",
+  "roles": [
+    "CASHIER",
+    "DENTIST",
+    "HEADQUARTERS",
+    "RECEPTION"
+  ],
+  "clinic_scope": [
+    "1"
+  ],
+  "all_registered_capabilities_verified": true,
+  "authentication_and_authorization_via_existing_api": true,
+  "database_recreated": false
+}
