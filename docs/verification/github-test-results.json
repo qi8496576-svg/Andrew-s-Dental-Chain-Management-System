@@ -1,0 +1,413 @@
+{
+  "checked_at": "2026-11-26T05:22:21.564414+00:00",
+  "environment": {
+    "host": "Windows",
+    "jdk": 21,
+    "node": "24.22.1",
+    "database": "isolated Docker Linux MySQL 8.4.13",
+    "fresh_source_outputs_and_database": true,
+    "dependency_and_image_download_caches_reused": true,
+    "second_physical_computer": false
+  },
+  "initial_full_integration": {
+    "tests": 175,
+    "errors": 5,
+    "failures": 0,
+    "reason": "missing pre-existing local temporary directory"
+  },
+  "recheck": {
+    "classes": 6,
+    "tests": 17,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "final_integration": {
+    "tests": 175,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0,
+    "classes": 40,
+    "basis": "full initial run plus repaired related tests; latest result per test class",
+    "details": [
+      {
+        "name": "com.adc.infrastructure.AnalyticsIT",
+        "tests": "9",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.ApiAuthorizationMatrixIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AppointmentBookingIT",
+        "tests": "6",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AppointmentNoShowIT",
+        "tests": "5",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AppointmentReschedulingIT",
+        "tests": "7",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AppointmentTransitionsIT",
+        "tests": "9",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AuthenticationBrowserIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AuthenticationHttpIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.AuthenticationIT",
+        "tests": "5",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.BackupRecoveryIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.ClinicalTreatmentsIT",
+        "tests": "9",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.ClinicGrantsIT",
+        "tests": "7",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.ConcurrencyFailureIT",
+        "tests": "2",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.ConstraintBehaviorIT",
+        "tests": "3",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.CostEntriesIT",
+        "tests": "4",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.CourseQuarterAcceptanceIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.DatabasePrivilegesIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.FlywayHistoryIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.HeadquartersBootstrapIT",
+        "tests": "2",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.InvoicingIT",
+        "tests": "9",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.LifecycleHistoryIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.MigrationContainerIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.MySqlEnvironmentIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.NewClinicAuthorityBoundaryIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.NewClinicInitializationIT",
+        "tests": "8",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.OperationalHealthIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.OrganizationResourcesIT",
+        "tests": "11",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.PatientBillingHttpIT",
+        "tests": "1",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.PatientBillingIT",
+        "tests": "8",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.PatientBindingsIT",
+        "tests": "4",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.PatientRegistrationIT",
+        "tests": "3",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.PatientsIT",
+        "tests": "9",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.QuarterlyPerformanceIT",
+        "tests": "12",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.SchedulesIT",
+        "tests": "5",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.SchemaBaselineIT",
+        "tests": "3",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.SharedCommandIT",
+        "tests": "7",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.StaffAccountsIT",
+        "tests": "5",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.TransactionLocksIT",
+        "tests": "4",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.infrastructure.WorkspaceReviewIT",
+        "tests": "4",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      },
+      {
+        "name": "com.adc.support.MySqlFixtureIT",
+        "tests": "2",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0"
+      }
+    ]
+  },
+  "backend_unit": {
+    "tests": 24,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "admin_unit": {
+    "tests": 53,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "admin_browser": {
+    "tests": 19,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "real_https_authentication_browser": {
+    "tests": 2,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "mini_unit": {
+    "tests": 32,
+    "failures": 0
+  },
+  "mini_compilation": {
+    "typescript_compiled": true,
+    "page_assets_present": 8,
+    "native_wxml_wxss_compiled": true,
+    "devtools_root": "dist/miniprogram/",
+    "appid_configured": true,
+    "local_preview": false,
+    "wechat_runtime_verified": false
+  },
+  "independent_demo_browser": {
+    "checked_at": "2026-11-26T05:06:58.420Z",
+    "origin": "https://localhost:19444",
+    "api_mocked": false,
+    "pages": [
+      {
+        "route": "/appointment-booking",
+        "title": "预约管理 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/schedules",
+        "title": "出诊排班 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/patients",
+        "title": "患者资料 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/clinical-treatment",
+        "title": "医生工作台 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/invoicing",
+        "title": "结算就诊 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/patient-bills",
+        "title": "费用与缴费 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/quarterly-performance",
+        "title": "季度个人绩效 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/analytics",
+        "title": "运营分析 · 安德鲁牙科连锁管理系统"
+      },
+      {
+        "route": "/management",
+        "title": "系统管理与基础配置 · 安德鲁牙科连锁管理系统"
+      }
+    ],
+    "errors": [],
+    "service_errors": [],
+    "status": "PASS"
+  },
+  "test_portability_compile": "PASS",
+  "source_published_commit": "d677b9d14405715d9f69600614e1d57836a2e6e5",
+  "source_integrity": {
+    "files_compared": 1206,
+    "mismatches": 0,
+    "original_erd_extra_file_preserved": true
+  },
+  "cloud_last_read_only_check": "2026-11-26T05:21:03.888600Z",
+  "cloud_containers_healthy": 3,
+  "cloud_database_overwritten": false,
+  "new_cloud_deployment": false,
+  "new_phone_wechat_test_performed": false,
+  "production_payment": "not enabled; DEMO only",
+  "tags_created": false,
+  "raw_log_directory": "tmp/github-publication/shallow/tmp/reproduction/"
+}

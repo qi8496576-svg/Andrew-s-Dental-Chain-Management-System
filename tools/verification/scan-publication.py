@@ -29,10 +29,10 @@ if private.is_dir():
     if len(v)>=12:secrets.add(v)
    except OSError:pass
 findings=[];count=0
-for folder,dirs,files in os.walk(DEST):
- dirs[:]=[d for d in dirs if d not in {'.git','node_modules','target','dist','tmp','.local-demo','test-results'}]
- for name in files:
-  p=Path(folder)/name;rel=p.relative_to(DEST).as_posix();data=p.read_bytes();count+=1
+manifest=json.loads((ROOT/'tmp/github-publication/inventory.json').read_text('utf8'))
+paths=set(manifest['files'])|{'D1_数据库ER图.pdf'}
+for rel in sorted(paths):
+  p=DEST/rel;data=p.read_bytes();count+=1
   buffers=[data]
   if p.suffix=='.docx':
    with zipfile.ZipFile(p) as z:buffers.extend(z.read(n) for n in z.namelist() if n.endswith('.xml'))

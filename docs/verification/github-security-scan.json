@@ -1,0 +1,8 @@
+{
+  "files_scanned": 1210,
+  "known_owner_values_checked": 5,
+  "findings": [],
+  "passed": true,
+  "secret_values_printed": false,
+  "scope": "exact publication manifest plus preserved original ERD"
+}
