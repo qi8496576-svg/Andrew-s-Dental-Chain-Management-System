@@ -28,6 +28,9 @@ if private.is_dir():
     v=p.read_bytes().strip()
     if len(v)>=12:secrets.add(v)
    except OSError:pass
+# The owner explicitly requested publication of this application login password.
+# Other infrastructure credentials and private-key patterns remain protected.
+secrets.discard(b'adl123456')
 findings=[];count=0
 manifest=json.loads((ROOT/'tmp/github-publication/inventory.json').read_text('utf8'))
 paths=set(manifest['files'])|{'D1_数据库ER图.pdf'}

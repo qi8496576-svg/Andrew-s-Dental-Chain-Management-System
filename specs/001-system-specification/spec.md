@@ -1,10 +1,10 @@
 # Feature Specification: Andrew's Dental Chain 系统级需求规约
 
-**Feature Branch**: 未创建；当前工作区不是 Git 仓库，且无分支扩展钩子。
+管理端使用统一管理员账号 admin-demo，密码为 adl123456，具备总部、前台、牙医及收费员业务管理权限。登录页仅展示账号、密码及复制、一键填入操作。管理员及其他工作人员均经过真实身份认证，服务端按其岗位和门店授权校验访问；数据库、服务器与微信密钥不作为应用登录凭据展示。
 
 **Created**: 2026-11-07
 
-**Status**: 持续实施与验收；当前64项任务完成59项，T052—T056按实测证据验收。
+**Status**: 当前64项任务完成，业务实现与自动化验收证据见任务清单。
 
 **Input**: 基于已批准 Constitution、最终 Word、A—D 需求检索副本、正式 UML/状态机/ERD 和课程资料，为整个系统建立功能与质量规约；完整保留 UC01—UC08、UC01-S1—S5、SF01—SF04、Q01—Q09 和 R1。包括首次本人登记直接预约及已有档案安全关联。
 
@@ -467,7 +467,7 @@ FR 是本规约对原要求的可验证拆分，UC/SF/Q/R1 的原定义及编号
 
 ### 实施与验收状态
 
-当前任务共64项，已完成59项；完整追踪见tasks.md、tasks-catalog.json及task-traceability.md。真实微信、正式域名和两端数据联动证据见docs/verification/cloud-integration-20261124/summary.md；首次本人登记、预约及取消证据见docs/verification/patient-onboarding-20261124/README.md。
+当前任务共64项，已全部完成；完整追踪见tasks.md、tasks-catalog.json及task-traceability.md。真实微信、正式域名和两端数据联动证据见docs/verification/cloud-integration-20261124/summary.md；首次本人登记、预约及取消证据见docs/verification/patient-onboarding-20261124/README.md。
 
 当前已批准课程实现及验收任务均有对应证据：Q01自动化、Q03当前小规模部署、Q05恢复及T056受控虚构完整季度演练已通过，TD-01一期不自动删除。正式发布与平台上架未执行，不将演练表述为真实营业结果。
 

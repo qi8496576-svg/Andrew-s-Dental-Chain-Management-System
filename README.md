@@ -1,25 +1,51 @@
 # 安德鲁牙科连锁管理系统
 
-患者微信小程序、员工 Web 管理端与 Spring Boot 后端共用 MySQL。包含门店与医生资源、排班预约、本人登记与旧档案安全关联、诊疗及费用凭据、演示支付退款、季度绩效与经营分析、授权和审计。
+安德鲁牙科连锁管理系统由员工 Web 管理端、患者微信小程序和统一后端组成，支持多门店的预约、诊疗、费用与经营管理。两端共用 MySQL，预约、排班、就诊和账单数据保持一致。
 
-当前支付为 **DEMO 演示支付，不扣真实款**，不包含微信商户收款能力。线上演示使用虚构资料，请勿录入真实患者信息。本仓库继续迭代，本次不创建版本标签。
+## 在线访问
 
-## 文档与目录
+**管理端：https://andrewdental.cn**
+
+管理员登录信息在登录页查看，支持复制账号、复制密码及一键填入。管理员可访问各业务管理模块，其他工作人员按照岗位和门店权限访问系统。
+
+缴费与退款当前不扣真实款。
+
+## 主要功能
+
+| 模块 | 功能 |
+| --- | --- |
+| 门店与医生 | 门店资料、医生职称与擅长、任职关系、资质及服务项目 |
+| 排班与预约 | 出诊排班、可约时段、在线预约、取消和改约、到诊处理 |
+| 患者与诊疗 | 首次登记、本人档案关联、过敏声明与核实、诊疗记录 |
+| 费用管理 | 挂号费、诊疗费用凭据、账单、缴费与退款 |
+| 经营管理 | 成本记录、季度绩效计算与复核、经营分析 |
+| 权限与审计 | 员工账号、角色授权、门店范围控制、操作审计 |
+
+管理端主导航组织日常业务，左下角齿轮入口管理基础资料和权限。患者端按门店、就诊需求、医生及实际排班预约；首次患者不需要先取得诊所患者编号，地址和紧急联系人可后补。已有档案通过安全关联访问本人信息。
+
+## 项目资料
 
 | 内容 | 入口 |
 | --- | --- |
-| 最终需求分析与设计（62 页） | [PDF](信管2402班刘阳1602240217.pdf)、[Word](安德鲁牙科连锁管理系统需求分析与设计.docx) |
-| 原仓库 ERD（原样保留） | [D1_数据库ER图.pdf](D1_数据库ER图.pdf) |
-| 当前正式图源与字段基线 | [图源](图源/说明.md)、[22 幅图](docs/diagrams/official/index.html)、[字段](docs/diagrams/database/schema.json) |
-| 既有 Spec Kit | [spec.md](specs/001-system-specification/spec.md)、[plan.md](specs/001-system-specification/plan.md)、[tasks.md](specs/001-system-specification/tasks.md) |
-| 后端 / 管理端 / 患者端 / 共享契约 | `backend/`、`apps/admin/`、`apps/patient-miniprogram/`、`packages/contracts/` |
-| 运维、测试与复现结果 | `ops/`、`tests/`、[本次复现记录](docs/verification/github-reproduction.md) |
+| 需求分析与设计（62页） | [PDF](信管2402班刘阳1602240217.pdf)、[Word](安德鲁牙科连锁管理系统需求分析与设计.docx) |
+| 数据库 ERD | [ERD](D1_数据库ER图.pdf)、[字段基线](docs/diagrams/database/schema.json) |
+| UML 与可编辑图源 | [22幅正式图](docs/diagrams/official/index.html)、[图源说明](图源/说明.md) |
+| 系统规约 | [需求](specs/001-system-specification/spec.md)、[实施方案](specs/001-system-specification/plan.md)、[任务](specs/001-system-specification/tasks.md) |
+| 测试结果 | [复现记录](docs/verification/github-reproduction.md)、[测试汇总](docs/verification/github-test-results.json) |
 
-根目录 ERD 按要求保留原仓库文件。当前实现的业务表、技术表及迁移对应 `docs/diagrams/database/`、`specs/001-system-specification/technical-schema.json` 和 `backend/src/main/resources/db/migration/`。没有重新生成 Spec Kit。
+## 技术与目录
 
-## 独立复现
+- 后端：Java 21、Spring Boot、MyBatis、Flyway，位于 `backend/`。
+- 管理端：Vue 3、TypeScript、Vite、Element Plus，位于 `apps/admin/`。
+- 患者端：原生微信小程序、TypeScript，位于 `apps/patient-miniprogram/`。
+- 数据与部署：MySQL 8.4、Docker Compose，位于 `ops/`。
+- 接口契约：`packages/contracts/`；测试：`tests/`。
 
-准备 Git、**JDK 21**（设置 `JAVA_HOME`）、**Node.js 24.12+ / npm 11**、Docker Engine 或 Docker Desktop（Linux containers、Compose v2）。Maven Wrapper 固定 3.9.16，无需另装 Maven。建议电脑至少 8GB 内存，Docker 可用内存至少 4GB、磁盘空闲 10GB。首次下载依赖和镜像需要网络，以下命令在项目根目录执行。
+## 本地运行
+
+运行环境：JDK 21（设置 `JAVA_HOME`）、Node.js 24.12+、npm 11、Docker Linux 容器与 Compose v2。Maven Wrapper 固定为 3.9.16，无需单独安装 Maven。建议内存8GB，Docker可用内存4GB，空闲磁盘10GB。
+
+在项目根目录执行：
 
 ```sh
 git clone https://github.com/qi8496576-svg/Andrew-s-Dental-Chain-Management-System.git
@@ -29,38 +55,36 @@ node tools/demo/demo.mjs up
 node tools/demo/demo.mjs status
 ```
 
-Linux/macOS 若 Maven Wrapper 没有执行权限，先执行 `chmod +x backend/mvnw`。Windows 使用 PowerShell；脚本自动选用 `mvnw.cmd`。Docker 不在 PATH 时可设置环境变量 `ADC_DOCKER` 为可执行文件路径。
+打开 **https://localhost:19444/**，在登录页查看账号和密码。管理员具备总部、前台、牙医和收费员的业务管理权限。
 
-打开 **https://localhost:19444/**，从本机生成的 `.local-demo/login.txt` 读取 `teacher-admin` 及随机口令。该账号通过真实授权 API 获得总部、前台、牙医、收费员角色，方便验收全部业务菜单；后台仍执行权限和门店校验。普通账号须单独创建、授权，仓库没有默认口令。
+脚本创建独立数据库和命名卷，运行现有迁移，并初始化虚构门店、医生、资质、口腔检查项目及未来七天排班。重复启动保留数据，不覆盖已有云端数据库。
 
-本地证书只用于 localhost，首次访问会提示不受信任，可仅对该本地演示确认继续；无需关闭浏览器全局证书检查。正式域名使用受信任证书。端口冲突可设置 `ADC_DEMO_PORT`；网段冲突可设置 `ADC_DEMO_NETWORK`（如 `172.30.220`），已有环境不要随意切换这些值。
+本地使用 localhost 自签名证书，首次访问可仅对该本地站点确认继续。Windows 使用 PowerShell；Linux/macOS 可先执行 `chmod +x backend/mvnw`。Docker 不在 PATH 时使用 `ADC_DOCKER` 指定路径。端口和网段可分别通过 `ADC_DEMO_PORT`、`ADC_DEMO_NETWORK` 配置。
 
-脚本采用独立 Compose 项目、命名卷和随机数据库口令，自动运行原有 Flyway 迁移；只初始化自己新建且为空的数据库，不连接或覆盖云端数据库。首次生成虚构门店、医生、资质、口腔检查项目和未来七天排班，再次执行保留数据并补齐未来日期。口令与状态保存在被 Git 忽略的 `.local-demo/`。
+## 小程序运行
 
-构建不会调用云端业务 API。应用 Dockerfile 使用已构建的 JAR / dist，必须先执行构建。生产配置见 [Compose](ops/compose/compose.prod.yaml) 和 [运维手册](ops/runbooks/)，须提供自己的域名、证书与密钥。旧 `tools/preview/` 及部分 PowerShell 脚本保留历史环境用途，教师复现使用上述 `tools/demo/` 入口。
+构建后，在微信开发者工具中导入 `apps/patient-miniprogram/`，编译目录为 `dist/miniprogram/`。
 
-## 业务演示
+- 默认构建连接 `https://andrewdental.cn`，与在线管理端共用后端。
+- `miniprogram/config.ts` 中的 `API_ORIGIN` 指定后端地址。
+- `npm run build:local` 连接 `https://localhost:19443`，用于本机模拟器；对应本地环境可设置 `ADC_DEMO_PORT=19443`。
+- 微信登录使用小程序 AppID 和后端受控 AppSecret，服务端完成身份交换。独立本地环境与线上数据库相互隔离。
 
-1. 登录管理端，通过左下齿轮管理门店、医生、治疗项目、资质与授权，主导航处理日常业务和排班。
-2. 查看未来出诊，或为医生新增排班。患者时段由真实排班、资质和号源占用计算。
-3. 前台建立虚构患者、确认过敏信息后预约和到诊；牙医录入实际诊疗并完成就诊；收费员生成费用凭据和账单。后端执行角色权限。
-4. 患者在小程序查看自己的预约、账单并完成演示支付；支付、退款及审计真实落库。挂号费与诊疗账单独立，未配置挂号费时不会凭空收费。
+## 业务流程
 
-首次患者微信登录后填写姓名、生日、联系电话及过敏声明即可登记预约，无需先取得患者编号；地址及紧急联系人可后补。旧档案关联须走安全关联流程，不能输入他人编号直接取得其就诊信息。
+1. 在齿轮菜单查看门店、医生、资质和治疗项目，在主导航查看或新增出诊排班。
+2. 患者端登录，登记本人资料，选择门店、就诊需求、医生和时段，提交预约。
+3. 管理端查看同一预约，办理到诊；牙医记录实际诊疗项目并完成就诊。
+4. 收费岗位生成费用凭据和账单，患者端查看并处理缴费；管理端可查看支付结果及办理退款。
+5. 经营管理模块记录成本，计算、复核季度绩效，并查看分析结果。
 
-## 微信小程序
+支付、退款与诊疗费用凭据分别记录，支付状态不改变原有开票及绩效核算口径。
 
-构建后用微信开发者工具导入 **`apps/patient-miniprogram/`**，编译目录 `dist/miniprogram/`。项目 AppID 不是密钥，但实际微信登录、扫码预览需要开发成员权限。自行部署时改成自己的 AppID，并在后端配置对应 AppSecret（不得提交 Git）。
+## 测试
 
-默认小程序构建连接 `https://andrewdental.cn`，仅用于本项目已授权的在线演示。**独立本地管理端与线上患者端不会共享数据库。** 联调自己的后端时，修改 `apps/patient-miniprogram/miniprogram/config.ts` 的 `API_ORIGIN` 为自己的受信任 HTTPS 域名，重新构建，配置微信 request 合法域名，并给后端提供相同小程序的 AppID/AppSecret。手机不能通过 localhost 访问电脑。
+`node tools/demo/build.mjs` 执行依赖安装、契约检查、前端类型检查与单测、小程序编译与单测，以及后端单测和打包。日志位于 `tmp/reproduction/`。
 
-`npm run build:local` 使用 localhost:19443，供本机模拟器使用，不能直接连接默认 19444 教学环境；可在首次启动前设置 `ADC_DEMO_PORT=19443`，并自行配置开发工具对本地证书的信任。代码不伪造微信身份，不建议关闭域名及证书校验。缺少 AppSecret 时管理端可演示，微信身份登录不能离线伪造。
-
-小程序 ICP 备案由负责人自行办理；真实微信支付须另行接入商户。本次不提交备案、不发布小程序正式版。
-
-## 验证
-
-`build.mjs` 全新安装锁定依赖，验证共享契约、管理端类型与单测、小程序类型/构建及单测，运行后端单测并打包。日志位于 `tmp/reproduction/`。完整 MySQL 集成测试通过 Testcontainers 创建隔离数据库：
+完整 MySQL 集成测试：
 
 ```sh
 cd apps/admin
@@ -68,16 +92,9 @@ npx playwright install chromium
 cd ../..
 node tools/demo/prepare-backup-tools.mjs
 cd backend
-# Windows 用 .\mvnw.cmd 替换 ./mvnw
 ./mvnw --batch-mode --no-transfer-progress --settings .mvn/settings.xml verify
 ```
 
-备份恢复测试需要签名验证过的 MySQL 8.4.13 mysqlbinlog，准备脚本从 MySQL 官方 RPM 获取并验证。云端恢复、微信真机、独立性能验收各有受控环境前提，不应将离线构建称为真机验收。
+Windows 使用 `.\mvnw.cmd`。集成测试通过 Testcontainers 创建隔离数据库，备份工具脚本验证 MySQL 官方软件包签名。管理端浏览器测试在 `apps/admin` 中执行 `npm run test:e2e`。
 
-管理端浏览器测试：先在 `apps/admin` 执行 `npx playwright install chromium`，再执行 `npm run test:e2e`。默认 UI 测试与需要真实 API 的专项场景分别配置，详见现有 Playwright 配置。
-
-## 数据与配置保护
-
-仓库不含数据库快照、生产口令、微信 AppSecret、SSH/TLS 私钥、开发工具个人配置或 node_modules。勿提交 `.local-demo/`、`.secrets/`、`tmp/` 或真实患者资料。停止演示可在 `.local-demo` 中运行 `docker compose --project-name <status中项目名> --env-file compose.env -f compose.yaml stop`；不要用 `down -v` 删除需保留的数据。
-
-线上演示：[https://andrewdental.cn](https://andrewdental.cn)。登录资料由负责人私下提供，不写入公开仓库。后续正常修改、提交更新即可。
+仓库不包含数据库快照、部署密钥、微信 AppSecret、SSH/TLS 私钥及个人开发工具配置。应用登录账号与部署凭据分开管理；本地运行数据位于被 Git 忽略的 `.local-demo/`。

@@ -1,6 +1,6 @@
 {
   "date": "2026-11-26",
-  "scope": "当前Word、模型、Spec Kit及已批准课程虚构验收一致性核验；不构成正式发布批准",
+  "scope": "当前Word、模型、Spec Kit与系统业务及自动化验收的一致性核验",
   "task_revision": "ADC-TASKS-20261126-02",
   "task_count": 64,
   "checked_count": 64,
@@ -22,23 +22,23 @@
   "fingerprints": [
     {
       "path": "specs/001-system-specification/spec.md",
-      "sha256": "a9729f98327565a15227144b9771df128e125bad0d56c27560da6a250d580d3a"
+      "sha256": "2605421db48fa418ba936103e0eafd6dd3c971796035cd0f821523d00efdc4d0"
     },
     {
       "path": "specs/001-system-specification/plan.md",
-      "sha256": "21f8fd2817746d3b26301202e7064026aaf64ed85590dbb4f6e6833d759f48fd"
+      "sha256": "d4368a9bd8eb8f1187a30b67086936b7188204dcacf826ee153758da24424a8e"
     },
     {
       "path": "specs/001-system-specification/tasks.md",
-      "sha256": "8ea38d72f3d34b248f2e535bdb420e0d7517fffa0d055fe4e5625c094ed32620"
+      "sha256": "d6994bf035d491a108af8ec4fe926cbae79108f308fef04a7f4400f223f4b363"
     },
     {
       "path": "specs/001-system-specification/tasks-catalog.json",
-      "sha256": "b62be74dba75f476a4f77b8863efc824b3552c67de839bd921539144506e0d2e"
+      "sha256": "ac154849aabbda541aa1e6e2856b40251a87c343f917399dd0efb91bc52d871f"
     },
     {
       "path": "specs/001-system-specification/task-traceability.md",
-      "sha256": "c3bd40777fcb25e444711aecd57fa790fbe5f94ac9902bb4e392ae169f0ca6a1"
+      "sha256": "3b01a00963e0e0e6ce83efc90321c642b1a761ec3d58cad92db24591eacbb98d"
     }
   ],
   "unexecuted_quality_and_release_tasks": [

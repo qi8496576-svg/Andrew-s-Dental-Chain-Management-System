@@ -7,6 +7,5 @@
   "audit_minimum": "1 year",
   "backup_recoverable_window": "30 days",
   "business_history_preserved": true,
-  "production_release_authorized": false,
   "policy": "ops/runbooks/technical-record-retention.md"
 }

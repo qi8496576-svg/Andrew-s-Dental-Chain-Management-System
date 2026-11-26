@@ -4041,8 +4041,7 @@
       "docs/verification/release-readiness.md"
     ],
     "first_registration": "首次本人登记、预约及取消的真实数据库与微信开发工具联调已通过；手机确认新版可见且可进入预约",
-    "remaining_scope": "当前已批准课程实现及验收任务完成；正式发布批准、平台条件和真实商户支付另行处理",
-    "external_condition": "小程序ICP备案由负责人自行办理；域名备案及request合法域名配置已完成",
+    "remaining_scope": "当前系统实现预约、诊疗、账单及演示支付退款；真实微信收款不属于当前实现。",
     "completed_additional_tasks": [
       "T057",
       "T058",

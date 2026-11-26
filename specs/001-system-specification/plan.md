@@ -1,6 +1,6 @@
 # Implementation Plan: Andrew's Dental Chain 系统级实施规划
 
-**状态**：实施与验收持续进行。当前64项任务已完成59项；首次本人登记、真实微信及云端联调已通过，易用性、性能、完整恢复演练和正式发布按各自证据验收。
+**状态**：当前64项任务完成。首次本人登记、微信与云端联调、自动化易用性检查、性能测试及恢复演练均有对应验收证据。
 
 **Branch**: `001-system-specification`（Spec Kit 功能标识；本工作区无 Git 仓库，未创建实际分支） | **Date**: 2026-11-07 | **Spec**: [spec.md](spec.md)
 
@@ -181,7 +181,7 @@ ops/
 
 ## 技术设计与实施验证
 
-技术选择和备选见research.md，数据及技术存储见data-model.md和technical-data-model.md，91项HTTP操作、身份及错误行为见contracts/。当前64项任务完成59项，逐项证据及剩余质量、恢复和发布工作见tasks.md及task-traceability.md。
+技术选择和备选见research.md，数据及技术存储见data-model.md和technical-data-model.md，91项HTTP操作、身份及错误行为见contracts/。当前64项任务完成，逐项验收证据见tasks.md及task-traceability.md。
 
 业务D1覆盖既定24表；Word字段表D3—D21、schema.json和本Plan字典采用相同209字段和44外键。独立技术存储为adc_identity的13张技术表及adc_audit的AuditEvent，业务数据在adc_business。RequestReceipt及Flyway历史属于identity，技术到业务的应用引用由统一服务验证，不给原ERD增加外键。
 
