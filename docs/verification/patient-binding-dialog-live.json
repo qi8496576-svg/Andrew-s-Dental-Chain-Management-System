@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-26T13:52:15.243Z",
+  "origin": "https://andrewdental.cn",
+  "api_mocked": false,
+  "rows_checked": [
+    {
+      "index": 0,
+      "visible_immediately": true,
+      "verification_guard_preserved": true
+    },
+    {
+      "index": 1,
+      "visible_immediately": true,
+      "verification_guard_preserved": true
+    },
+    {
+      "index": 19,
+      "visible_immediately": true,
+      "verification_guard_preserved": true
+    }
+  ],
+  "business_writes": [],
+  "errors": [],
+  "status": "PASS"
+}

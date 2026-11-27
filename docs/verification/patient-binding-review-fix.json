@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-11-26T13:52:31.547264+00:00",
+  "cause": "Review form was rendered after the entire long table, outside the visible viewport.",
+  "change": "Immediate modal review with focus, responsive width and the original verification gates; no binding-rule changes.",
+  "browser_regression": {
+    "cases": 2,
+    "widths": [
+      1440,
+      390
+    ],
+    "passed": 2
+  },
+  "mini_program": {
+    "typescript_and_native_compilation": "PASS",
+    "pages": 8,
+    "api_origin": "https://andrewdental.cn",
+    "ordinary_preview_created": true,
+    "preview_package_bytes": 130408,
+    "affected_phone_user_confirmed_home_display": true,
+    "confirmation": "Affected member can display the ordinary preview normally; remote-debug screenshot was not the ordinary preview experience.",
+    "simulator_automation_connected": false
+  },
+  "database_structure_changed": false,
+  "bindings_approved_or_changed_for_test": false
+}

@@ -1,16 +1,16 @@
 {
   "candidate": {
-    "release": "adc-admin-20261126-1795696783356",
-    "created_at": "2026-11-26T12:39:46.897Z",
+    "release": "adc-admin-20261126-1795700797749",
+    "created_at": "2026-11-26T13:46:46.113Z",
     "frontend_only": true,
     "contains_secrets": false,
     "image": {
-      "reference": "adc/admin:adc-admin-20261126-1795696783356",
-      "id": "sha256:59fa75a5ea8a3b6cc3afadb8f695055e1138a17eeb5056be5bac08e8e7a2e24e"
+      "reference": "adc/admin:adc-admin-20261126-1795700797749",
+      "id": "sha256:b155eb2bd6b89b2c32a4317ffb1f45170c28e7cdac48a9d748f8b3eeb04daa31"
     },
     "archive": {
       "file": "images.tar.gz",
-      "sha256": "2e740014b7d9cebcebac9ece67aab655d97e37faecec4f03508415de7987b1e8"
+      "sha256": "1340fbac202d7fb808b0bc055b9ada88801e6769e8de975b0dc378068434ab1b"
     },
     "files": [
       {
@@ -28,20 +28,20 @@
     ]
   },
   "pre": {
-    "date": "2026-11-26T12:39:42.988896+00:00",
+    "date": "2026-11-26T13:46:37.377201+00:00",
     "kind": "read-only-preflight",
     "containers": [
       {
-        "name": "adc-isolated-loopback-backend-1",
-        "image": "a91358517764",
-        "state": "Up 10 hours (healthy)",
-        "ports": "8080/tcp, 9091/tcp"
+        "name": "adc-isolated-loopback-admin-1",
+        "image": "59fa75a5ea8a",
+        "state": "Up About an hour (healthy)",
+        "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
       },
       {
-        "name": "adc-isolated-loopback-admin-1",
-        "image": "e63f27b58149",
-        "state": "Up 28 hours (healthy)",
-        "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
+        "name": "adc-isolated-loopback-backend-1",
+        "image": "a91358517764",
+        "state": "Up 11 hours (healthy)",
+        "ports": "8080/tcp, 9091/tcp"
       },
       {
         "name": "adc-isolated-loopback-runtime-grants-1",
@@ -112,19 +112,19 @@
     "certificate_files": "/opt/andrew-dental/private/LoopbackTLS/localhost.crt"
   },
   "after": {
-    "date": "2026-11-26T12:40:05.469339+00:00",
+    "date": "2026-11-26T13:47:06.319140+00:00",
     "kind": "read-only-preflight",
     "containers": [
       {
         "name": "adc-isolated-loopback-admin-1",
-        "image": "59fa75a5ea8a",
+        "image": "b155eb2bd6b8",
         "state": "Up 6 seconds (healthy)",
         "ports": "8080/tcp, 0.0.0.0:443->8443/tcp"
       },
       {
         "name": "adc-isolated-loopback-backend-1",
         "image": "a91358517764",
-        "state": "Up 10 hours (healthy)",
+        "state": "Up 11 hours (healthy)",
         "ports": "8080/tcp, 9091/tcp"
       },
       {

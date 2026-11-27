@@ -65,6 +65,8 @@ node tools/demo/demo.mjs status
 
 构建后，在微信开发者工具中导入 `apps/patient-miniprogram/`，编译目录为 `dist/miniprogram/`。
 
+日常扫码查看使用开发者工具“预览”生成的二维码；“真机调试”用于连接电脑调试会话。
+
 - 默认构建连接 `https://andrewdental.cn`，与在线管理端共用后端。
 - `miniprogram/config.ts` 中的 `API_ORIGIN` 指定后端地址。
 - `npm run build:local` 连接 `https://localhost:19443`，用于本机模拟器；对应本地环境可设置 `ADC_DEMO_PORT=19443`。
