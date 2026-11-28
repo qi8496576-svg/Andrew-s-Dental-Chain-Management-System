@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-28T07:45:36.385475Z",
+  "version": "1.0.20261128",
+  "appid": "wxec68a89f6c182edf",
+  "typecheck": "PASS",
+  "native_compile": "PASS",
+  "page_count": 8,
+  "api_origin": "https://andrewdental.cn",
+  "upload": "PASS",
+  "package_bytes": 130476,
+  "experience_selected": true,
+  "platform_icon_updated": true,
+  "icon_primary": "#17778b",
+  "icon_asset": "docs/brand/andrew-dental-icon.png",
+  "review_submitted": false,
+  "official_release_published": false,
+  "qr_platform_expiry_text": "该二维码12月5日前有效"
+}
